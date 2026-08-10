@@ -1,0 +1,19 @@
+# Núcleo
+pandas>=2.0
+numpy>=1.26
+pyyaml>=6.0
+pydantic>=2.0
+
+# Indicadores técnicos
+ta>=0.11
+
+# Agendamento e utilidades
+python-dotenv>=1.0
+
+# Testes
+pytest>=8.0
+
+# Conectores de mercado — descomente conforme a corretora escolhida:
+# MetaTrader5>=5.0        # B3 / Forex via MetaTrader 5 (Windows)
+# ccxt>=4.0               # Exchanges de criptomoedas (Binance, Bybit, etc.)
+# yfinance>=0.2           # Dados históricos gratuitos para backtest

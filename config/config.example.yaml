@@ -1,0 +1,39 @@
+# Copie este arquivo para config.yaml e preencha com seus dados.
+# config.yaml está no .gitignore e nunca deve ser versionado.
+
+bot:
+  # paper = simulado (sem dinheiro real) | live = conta real
+  mode: paper
+  # day_trade = abre e fecha posições no mesmo dia | swing_trade = mantém por dias
+  style: day_trade
+
+broker:
+  # Corretora/exchange: metatrader5 | binance | (a definir)
+  name: ""
+  api_key: ""
+  api_secret: ""
+
+market:
+  # Ativos a operar, ex.: [WINFUT, WDOFUT] para B3 ou [BTC/USDT] para cripto
+  symbols: []
+  # Timeframe dos candles: 1m, 5m, 15m, 1h, 4h, 1d
+  timeframe: 5m
+
+risk:
+  # Capital total disponível para o bot
+  capital: 10000.0
+  # Risco máximo por operação (% do capital)
+  max_risk_per_trade_pct: 1.0
+  # Perda máxima diária (% do capital) — o bot para de operar ao atingir
+  max_daily_loss_pct: 3.0
+  # Número máximo de posições abertas simultaneamente
+  max_open_positions: 2
+  # Janela de operação (day trade) — fora dela o bot não abre posições
+  trading_hours:
+    start: "09:15"
+    end: "17:30"
+
+strategy:
+  # Nome da estratégia ativa (deve existir em src/bot/strategies/)
+  name: ""
+  params: {}
