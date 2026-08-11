@@ -8,15 +8,20 @@ bot:
   style: day_trade
 
 broker:
-  # Corretora/exchange: metatrader5 | binance | (a definir)
-  name: ""
-  api_key: ""
-  api_secret: ""
+  name: metatrader5
+  # Deixe login/senha vazios para usar a conta já logada no terminal MT5.
+  # Preencha para o bot fazer o login sozinho (conta da corretora, ex.: XP, Clear, Rico).
+  login: 0
+  password: ""
+  server: ""
+  # Caminho do terminal64.exe (vazio = detecção automática)
+  terminal_path: ""
 
 market:
-  # Ativos a operar, ex.: [WINFUT, WDOFUT] para B3 ou [BTC/USDT] para cripto
-  symbols: []
-  # Timeframe dos candles: 1m, 5m, 15m, 1h, 4h, 1d
+  # WIN e WDO são resolvidos automaticamente para o contrato vigente
+  # (ex.: em ago/2026 → WINQ26 e WDOU26). Também aceita o código exato.
+  symbols: [WIN, WDO]
+  # Timeframe dos candles: 1m, 5m, 15m, 30m, 1h, 4h, 1d
   timeframe: 5m
 
 risk:

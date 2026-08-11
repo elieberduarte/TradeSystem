@@ -13,7 +13,5 @@ python-dotenv>=1.0
 # Testes
 pytest>=8.0
 
-# Conectores de mercado — descomente conforme a corretora escolhida:
-# MetaTrader5>=5.0        # B3 / Forex via MetaTrader 5 (Windows)
-# ccxt>=4.0               # Exchanges de criptomoedas (Binance, Bybit, etc.)
-# yfinance>=0.2           # Dados históricos gratuitos para backtest
+# Conector de mercado — B3 (WIN/WDO) via MetaTrader 5
+MetaTrader5>=5.0

@@ -1,6 +1,13 @@
 # Trade Bot
 
-Bot para operações de **day trade** e **swing trade**, com arquitetura modular que separa coleta de dados, estratégias, gestão de risco e execução de ordens.
+Bot para operações de **day trade** e **swing trade** nos futuros da B3 — **mini-índice (WIN)** e **mini-dólar (WDO)** — via **MetaTrader 5**, com arquitetura modular que separa coleta de dados, estratégias, gestão de risco e execução de ordens.
+
+## Requisitos
+
+- Windows com o terminal **MetaTrader 5** instalado e logado numa conta de corretora com acesso à B3 (XP, Clear, Rico, etc.)
+- Python 3.10+
+
+Os códigos dos contratos mudam a cada vencimento (ex.: `WINQ26` → `WINV26`). O bot resolve isso sozinho: basta configurar `WIN` e `WDO` que ele calcula o contrato vigente pela regra de vencimento da B3.
 
 ## Estrutura do projeto
 
