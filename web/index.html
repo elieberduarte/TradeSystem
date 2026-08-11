@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TradeSystem — Painel (esboço)</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:        #f9f9f7;
+    --surface:     #fcfcfb;
+    --ink:         #0b0b0b;
+    --ink-2:       #52514e;
+    --muted:       #898781;
+    --grid:        #e1e0d9;
+    --baseline:    #c3c2b7;
+    --border:      rgba(11,11,11,0.10);
+    --series-1:    #2a78d6;  /* azul — curva de capital / PnL positivo */
+    --series-8:    #e34948;  /* vermelho — PnL negativo (par divergente) */
+    --delta-good:  #006300;
+    --delta-bad:   #d03b3b;
+    --status-good: #0ca30c;
+    --status-warn: #fab219;
+    --status-crit: #d03b3b;
+    --chip:        #f0efec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:        #0d0d0d;
+      --surface:     #1a1a19;
+      --ink:         #ffffff;
+      --ink-2:       #c3c2b7;
+      --muted:       #898781;
+      --grid:        #2c2c2a;
+      --baseline:    #383835;
+      --border:      rgba(255,255,255,0.10);
+      --series-1:    #3987e5;
+      --series-8:    #e66767;
+      --delta-good:  #0ca30c;
+      --delta-bad:   #d03b3b;
+      --chip:        #383835;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:        #0d0d0d;
+    --surface:     #1a1a19;
+    --ink:         #ffffff;
+    --ink-2:       #c3c2b7;
+    --muted:       #898781;
+    --grid:        #2c2c2a;
+    --baseline:    #383835;
+    --border:      rgba(255,255,255,0.10);
+    --series-1:    #3987e5;
+    --series-8:    #e66767;
+    --delta-good:  #0ca30c;
+    --delta-bad:   #d03b3b;
+    --chip:        #383835;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    padding: 16px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 12px; }
+  header h1 { font-size: 20px; font-weight: 700; margin-right: 6px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--chip); color: var(--ink-2);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 3px 12px; font-size: 12px; font-weight: 600;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .banner {
+    background: var(--chip); border: 1px dashed var(--baseline); border-radius: 10px;
+    padding: 8px 14px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 16px;
+  }
+  .banner strong { color: var(--ink); }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 16px; }
+  .tile {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .tile .label { font-size: 11.5px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .tile .value { font-size: 24px; font-weight: 700; margin-top: 2px; }
+  .tile .delta { font-size: 12px; font-weight: 600; margin-top: 2px; }
+  .up   { color: var(--delta-good); }
+  .down { color: var(--delta-bad); }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  @media (max-width: 860px) { .grid, .grid3 { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 14px 16px; overflow: hidden;
+  }
+  .card h2 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+  .card .sub { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); margin-bottom: 6px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 10px; height: 10px; border-radius: 3px; }
+  svg { display: block; width: 100%; height: auto; }
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 10; display: none;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18); padding: 7px 10px; font-size: 12px; color: var(--ink);
+  }
+  .tooltip .t-title { font-weight: 700; margin-bottom: 2px; }
+  .tooltip .t-row { color: var(--ink-2); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { text-align: left; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 6px 8px; border-bottom: 1px solid var(--grid); }
+  td { padding: 7px 8px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: none; }
+  .num { text-align: right; }
+  .tag { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--ink-2); }
+  .scroll-x { overflow-x: auto; }
+
+  .approve-card { border-left: 3px solid var(--status-warn); }
+  .order-box { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-top: 8px; }
+  .order-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+  .order-head b { font-size: 14px; }
+  .countdown { font-size: 12px; color: var(--status-crit); font-weight: 700; }
+  .order-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 8px 0; font-size: 12px; }
+  .order-grid .k { color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em; }
+  .order-grid .v { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .btn-row { display: flex; gap: 8px; }
+  button {
+    flex: 1; padding: 9px 0; border-radius: 9px; border: 1px solid var(--border);
+    font-weight: 700; font-size: 13px; cursor: pointer; font-family: inherit;
+  }
+  .btn-approve { background: var(--status-good); color: #fff; border-color: transparent; }
+  .btn-reject  { background: transparent; color: var(--ink-2); }
+  .empty-note { color: var(--muted); font-size: 12.5px; padding: 10px 0; }
+
+  .regime-badge { display: flex; align-items: center; gap: 10px; margin: 8px 0 10px; }
+  .regime-badge .big { font-size: 19px; font-weight: 700; }
+  .meter { height: 8px; background: var(--chip); border-radius: 999px; overflow: hidden; margin-top: 4px; }
+  .meter > div { height: 100%; background: var(--series-1); border-radius: 999px; }
+  .kv { display: flex; justify-content: space-between; font-size: 12.5px; padding: 4px 0; color: var(--ink-2); }
+  .kv b { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+  footer { color: var(--muted); font-size: 12px; text-align: center; margin: 18px 0 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📈 TradeSystem</h1>
+  <span class="chip"><span class="dot" style="background:var(--status-warn)"></span>MT5: aguardando conexão</span>
+  <span class="chip"><span class="dot" style="background:var(--status-good)"></span>Modo: paper</span>
+  <span class="chip">WINQ26 · WDOU26</span>
+</header>
+
+<div class="banner">
+  <strong>Esboço com dados fictícios.</strong> Este é o rascunho do painel que será publicado no Cloudflare.
+  Todos os números abaixo são simulados para desenharmos o layout — nada aqui é resultado real.
+</div>
+
+<!-- ══════════ KPIs ══════════ -->
+<div class="tiles">
+  <div class="tile"><div class="label">PnL do dia</div><div class="value">R$ 142</div><div class="delta up">▲ +2,4% do capital</div></div>
+  <div class="tile"><div class="label">PnL do mês</div><div class="value">R$ 418</div><div class="delta up">▲ +7,0% · CDI 1,1%</div></div>
+  <div class="tile"><div class="label">Win rate (30d)</div><div class="value">46%</div><div class="delta" style="color:var(--muted)">alvo ≥ 45%</div></div>
+  <div class="tile"><div class="label">Profit factor</div><div class="value">1,58</div><div class="delta up">▲ meta ≥ 1,3</div></div>
+  <div class="tile"><div class="label">Drawdown máx.</div><div class="value">R$ 312</div><div class="delta" style="color:var(--muted)">5,2% do capital</div></div>
+  <div class="tile"><div class="label">Risco usado hoje</div><div class="value">1 / 3</div><div class="delta" style="color:var(--muted)">stops até a trava diária</div></div>
+</div>
+
+<!-- ══════════ Gráficos principais ══════════ -->
+<div class="grid">
+  <div class="card">
+    <h2>Curva de capital</h2>
+    <div class="sub">PnL acumulado (R$) · últimos 45 pregões · simulação</div>
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--series-1)"></span>Bot (paper)</span>
+      <span><span class="swatch" style="background:var(--baseline)"></span>CDI (mesmo capital)</span>
+    </div>
+    <svg id="equity" viewBox="0 0 560 240" role="img" aria-label="Curva de capital do bot comparada ao CDI"></svg>
+  </div>
+
+  <div class="card">
+    <h2>Resultado por dia</h2>
+    <div class="sub">PnL diário (R$) · últimos 20 pregões · simulação</div>
+    <svg id="daily" viewBox="0 0 560 240" role="img" aria-label="Barras de resultado diário"></svg>
+  </div>
+</div>
+
+<!-- ══════════ Regime + capital + aprovações ══════════ -->
+<div class="grid3">
+  <div class="card">
+    <h2>Regime do dia</h2>
+    <div class="sub">Diagnóstico automático (ADX 14) · WINQ26 5min</div>
+    <div class="regime-badge">
+      <span class="dot" style="width:14px;height:14px;background:var(--series-1)"></span>
+      <span class="big">Tendência de alta</span>
+    </div>
+    <div class="kv"><span>ADX</span><b>31,4</b></div>
+    <div class="meter"><div style="width:63%"></div></div>
+    <div class="kv" style="margin-top:8px"><span>Estratégia liberada</span><b>opening_range · ema_cross</b></div>
+    <div class="kv"><span>Estratégia vetada</span><b>—</b></div>
+    <div class="kv"><span>ATR diário (14)</span><b>2.840 pts</b></div>
+  </div>
+
+  <div class="card">
+    <h2>Capital &amp; exposição</h2>
+    <div class="sub">Dimensionamento pela volatilidade atual</div>
+    <div class="kv"><span>Capital de giro</span><b>R$ 6.000</b></div>
+    <div class="kv"><span>Risco por trade (1%)</span><b>R$ 60</b></div>
+    <div class="kv"><span>Stop típico (ATR)</span><b>300 pts ≈ R$ 60</b></div>
+    <div class="kv"><span>Mão máxima</span><b>1 mini-WIN</b></div>
+    <div class="kv"><span>Trava diária (3%)</span><b>−R$ 180</b></div>
+    <div class="kv"><span>Margem day trade</span><b>R$ 155–500 /ctr</b></div>
+  </div>
+
+  <div class="card approve-card">
+    <h2>Aprovações pendentes · swing</h2>
+    <div class="sub">Ordens aguardando o seu OK pelo celular</div>
+    <div class="order-box">
+      <div class="order-head">
+        <b>COMPRA · WDOU26</b>
+        <span class="countdown" id="countdown">expira em 12:40</span>
+      </div>
+      <div class="order-grid">
+        <div><div class="k">Entrada</div><div class="v">5.412,5</div></div>
+        <div><div class="k">Stop</div><div class="v">5.372,0</div></div>
+        <div><div class="k">Alvo</div><div class="v">5.493,5</div></div>
+        <div><div class="k">Risco</div><div class="v">R$ 60</div></div>
+      </div>
+      <div class="sub" style="margin-bottom:8px">ema_cross · swing · regime: tendência de alta · R:R 2,0</div>
+      <div class="btn-row">
+        <button class="btn-approve" onclick="mockApprove(this)">✓ Aprovar</button>
+        <button class="btn-reject" onclick="mockReject(this)">✕ Rejeitar</button>
+      </div>
+    </div>
+    <div class="empty-note" id="queue-note" style="display:none">Nenhuma ordem pendente.</div>
+  </div>
+</div>
+
+<!-- ══════════ Trades ══════════ -->
+<div class="card" style="margin-bottom:12px">
+  <h2>Últimos trades</h2>
+  <div class="sub">Paper trading · simulação</div>
+  <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Ativo</th><th>Lado</th><th>Setup</th><th>Regime</th><th class="num">Entrada</th><th class="num">Saída</th><th>Motivo</th><th class="num">PnL (R$)</th></tr>
+      </thead>
+      <tbody id="trades"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════ Walk-forward ══════════ -->
+<div class="card">
+  <h2>Walk-forward · opening_range (WIN 5min)</h2>
+  <div class="sub">Otimizado no treino, medido no teste (out-of-sample) — o número honesto é a coluna Teste</div>
+  <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>Janela de teste</th><th>Parâmetros vencedores</th><th class="num">Treino (R$)</th><th class="num">Teste (R$)</th><th class="num">Trades</th><th>Veredito</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>abr/26</td><td>range 3 · rr 1,5</td><td class="num">+612</td><td class="num" style="color:var(--delta-good);font-weight:700">+188</td><td class="num">22</td><td><span class="tag">consistente</span></td></tr>
+        <tr><td>mai/26</td><td>range 3 · rr 2,0</td><td class="num">+540</td><td class="num" style="color:var(--delta-good);font-weight:700">+95</td><td class="num">19</td><td><span class="tag">consistente</span></td></tr>
+        <tr><td>jun/26</td><td>range 4 · rr 1,5</td><td class="num">+688</td><td class="num" style="color:var(--delta-bad);font-weight:700">−74</td><td class="num">21</td><td><span class="tag">degradou</span></td></tr>
+        <tr><td>jul/26</td><td>range 3 · rr 1,5</td><td class="num">+571</td><td class="num" style="color:var(--delta-good);font-weight:700">+142</td><td class="num">24</td><td><span class="tag">consistente</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer>TradeSystem · esboço local · os dados são fictícios · próximo passo: publicar no Cloudflare com dados reais</footer>
+
+<div class="tooltip" id="tip"></div>
+
+<script>
+"use strict";
+/* ─── Dados fictícios (deterministas, para desenho do layout) ─── */
+const equityBot = [0,35,18,63,102,88,140,121,167,149,196,232,205,251,229,278,262,310,289,258,224,251,287,266,312,349,331,296,321,358,340,309,344,381,362,398,371,342,378,415,394,430,412,447,418];
+const equityCdi = equityBot.map((_, i) => +(i * 3.1).toFixed(0));
+const dailyPnl  = [64,-58,92,41,-60,118,-55,73,88,-180,47,96,-60,124,58,-57,81,-60,110,142];
+const trades = [
+  ["10/08","WINQ26","C","opening_range","tend. alta","136.480","136.910","alvo","+86"],
+  ["10/08","WINQ26","V","opening_range","tend. alta","136.850","137.130","stop","−56"],
+  ["10/08","WDOU26","C","ema_cross","tend. alta","5.398,0","5.409,5","alvo","+115"],
+  ["07/08","WINQ26","C","ema_cross","lateral","135.960","135.960","vetado (regime)","0"],
+  ["07/08","WINQ26","V","opening_range","tend. baixa","135.720","135.410","alvo","+62"],
+  ["06/08","WINQ26","C","opening_range","lateral","135.140","134.860","stop","−56"],
+  ["06/08","WDOU26","V","ema_cross","tend. baixa","5.421,0","5.400,5","zeragem diária","+41"],
+  ["05/08","WINQ26","C","opening_range","tend. alta","134.520","135.190","alvo","+134"],
+];
+
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const tip = document.getElementById("tip");
+const fmtBRL = v => (v < 0 ? "−R$ " : "R$ ") + Math.abs(v).toLocaleString("pt-BR");
+
+function showTip(evt, html) {
+  tip.innerHTML = html;
+  tip.style.display = "block";
+  const pad = 14, w = tip.offsetWidth;
+  let x = evt.clientX + pad;
+  if (x + w > window.innerWidth - 8) x = evt.clientX - w - pad;
+  tip.style.left = x + "px";
+  tip.style.top = (evt.clientY + pad) + "px";
+}
+function hideTip() { tip.style.display = "none"; }
+
+/* ─── Curva de capital (linha, 2 séries, crosshair) ─── */
+(function () {
+  const svg = document.getElementById("equity");
+  const W = 560, H = 240, m = { t: 12, r: 14, b: 24, l: 46 };
+  const all = equityBot.concat(equityCdi);
+  const yMin = Math.min(0, ...all), yMax = Math.max(...all) * 1.08;
+  const x = i => m.l + (i / (equityBot.length - 1)) * (W - m.l - m.r);
+  const y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (H - m.t - m.b);
+  let el = "";
+  // grid + eixo y
+  const steps = 4;
+  for (let s = 0; s <= steps; s++) {
+    const v = yMin + (s / steps) * (yMax - yMin), yy = y(v);
+    el += `<line x1="${m.l}" y1="${yy}" x2="${W - m.r}" y2="${yy}" stroke="var(--grid)" stroke-width="1"/>`;
+    el += `<text x="${m.l - 6}" y="${yy + 4}" text-anchor="end" font-size="10" fill="var(--muted)">${Math.round(v)}</text>`;
+  }
+  const path = arr => arr.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  el += `<path d="${path(equityCdi)}" fill="none" stroke="var(--baseline)" stroke-width="2" stroke-dasharray="5 4"/>`;
+  el += `<path d="${path(equityBot)}" fill="none" stroke="var(--series-1)" stroke-width="2"/>`;
+  // rótulos diretos no fim das linhas
+  el += `<text x="${W - m.r - 2}" y="${y(equityBot.at(-1)) - 7}" text-anchor="end" font-size="11" font-weight="700" fill="var(--ink)">Bot</text>`;
+  el += `<text x="${W - m.r - 2}" y="${y(equityCdi.at(-1)) - 7}" text-anchor="end" font-size="11" fill="var(--ink-2)">CDI</text>`;
+  el += `<line id="eq-cross" x1="0" y1="${m.t}" x2="0" y2="${H - m.b}" stroke="var(--baseline)" stroke-width="1" visibility="hidden"/>`;
+  el += `<circle id="eq-dot" r="4" fill="var(--series-1)" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>`;
+  svg.innerHTML = el;
+  const cross = svg.querySelector("#eq-cross"), dot = svg.querySelector("#eq-dot");
+  svg.addEventListener("mousemove", evt => {
+    const r = svg.getBoundingClientRect();
+    const px = (evt.clientX - r.left) * (W / r.width);
+    const i = Math.max(0, Math.min(equityBot.length - 1, Math.round((px - m.l) / (W - m.l - m.r) * (equityBot.length - 1))));
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", x(i)); dot.setAttribute("cy", y(equityBot[i])); dot.setAttribute("visibility", "visible");
+    showTip(evt, `<div class="t-title">Pregão ${i + 1}</div>
+      <div class="t-row">Bot: <b>${fmtBRL(equityBot[i])}</b></div>
+      <div class="t-row">CDI: ${fmtBRL(equityCdi[i])}</div>`);
+  });
+  svg.addEventListener("mouseleave", () => { cross.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); hideTip(); });
+})();
+
+/* ─── PnL diário (barras divergentes azul/vermelho) ─── */
+(function () {
+  const svg = document.getElementById("daily");
+  const W = 560, H = 240, m = { t: 12, r: 14, b: 24, l: 46 };
+  const yMax = Math.max(...dailyPnl.map(Math.abs)) * 1.15;
+  const y = v => m.t + (1 - (v + yMax) / (2 * yMax)) * (H - m.t - m.b);
+  const bw = (W - m.l - m.r) / dailyPnl.length;
+  let el = "";
+  for (const v of [-yMax, 0, yMax]) {
+    el += `<line x1="${m.l}" y1="${y(v)}" x2="${W - m.r}" y2="${y(v)}" stroke="${v === 0 ? "var(--baseline)" : "var(--grid)"}" stroke-width="1"/>`;
+    el += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" font-size="10" fill="var(--muted)">${Math.round(v)}</text>`;
+  }
+  dailyPnl.forEach((v, i) => {
+    const bx = m.l + i * bw + 2, w = Math.max(2, bw - 4);
+    const y0 = y(0), y1 = y(v);
+    const top = Math.min(y0, y1), h = Math.max(2, Math.abs(y1 - y0));
+    const color = v >= 0 ? "var(--series-1)" : "var(--series-8)";
+    const rTop = v >= 0 ? 4 : 0, rBot = v >= 0 ? 0 : 4;
+    el += `<path data-i="${i}" d="M${bx} ${top + rTop}
+      q0 ${-rTop} ${rTop} ${-rTop} h${w - 2 * rTop} q${rTop} 0 ${rTop} ${rTop}
+      v${h - rTop - rBot}
+      q0 ${rBot} ${-rBot} ${rBot} h${-(w - 2 * rBot)} q${-rBot} 0 ${-rBot} ${-rBot} z"
+      fill="${color}"/>`;
+  });
+  svg.innerHTML = el;
+  svg.querySelectorAll("path[data-i]").forEach(p => {
+    p.addEventListener("mousemove", evt => {
+      const i = +p.dataset.i, v = dailyPnl[i];
+      showTip(evt, `<div class="t-title">Pregão −${dailyPnl.length - i}</div>
+        <div class="t-row">Resultado: <b style="color:${v >= 0 ? "var(--delta-good)" : "var(--delta-bad)"}">${fmtBRL(v)}</b></div>`);
+    });
+    p.addEventListener("mouseleave", hideTip);
+  });
+})();
+
+/* ─── Tabela de trades ─── */
+(function () {
+  const tbody = document.getElementById("trades");
+  tbody.innerHTML = trades.map(t => {
+    const pnl = t[8];
+    const cls = pnl.startsWith("+") ? "up" : (pnl.startsWith("−") ? "down" : "");
+    return `<tr><td>${t[0]}</td><td>${t[1]}</td><td>${t[2] === "C" ? "Compra" : "Venda"}</td>
+      <td>${t[3]}</td><td><span class="tag">${t[4]}</span></td>
+      <td class="num">${t[5]}</td><td class="num">${t[6]}</td><td>${t[7]}</td>
+      <td class="num ${cls}" style="font-weight:700">${pnl}</td></tr>`;
+  }).join("");
+})();
+
+/* ─── Fila de aprovação (mock) ─── */
+let secs = 12 * 60 + 40;
+setInterval(() => {
+  if (secs <= 0) return;
+  secs--;
+  const el = document.getElementById("countdown");
+  if (el) el.textContent = `expira em ${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}`;
+}, 1000);
+function resolveOrder(btn, text, color) {
+  const box = btn.closest(".order-box");
+  box.innerHTML = `<div style="font-weight:700;color:${color};padding:6px 0">${text}</div>
+    <div class="sub">No painel real, o bot local recebe a decisão em segundos e executa (ou descarta) no MT5.</div>`;
+}
+function mockApprove(btn) { resolveOrder(btn, "✓ Ordem aprovada (simulação)", "var(--status-good)"); }
+function mockReject(btn)  { resolveOrder(btn, "✕ Ordem rejeitada (simulação)", "var(--ink-2)"); }
+</script>
+</body>
+</html>
