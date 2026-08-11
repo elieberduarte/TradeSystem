@@ -4,8 +4,6 @@
 bot:
   # paper = simulado (sem dinheiro real) | live = conta real
   mode: paper
-  # day_trade = abre e fecha posições no mesmo dia | swing_trade = mantém por dias
-  style: day_trade
 
 broker:
   name: metatrader5
@@ -44,7 +42,15 @@ risk:
   # Zeragem: posições ainda abertas são fechadas neste horário
   flat_time: "17:45"
 
-strategy:
-  # Nome da estratégia ativa (deve existir em src/bot/strategies/)
-  name: ""
-  params: {}
+# Cada estratégia tem seu modo e seu símbolo. IMPORTANTE: um mesmo símbolo
+# não pode aparecer em day trade E swing trade — a conta B3 é netting (uma
+# posição líquida por símbolo) e os modos se anulariam.
+strategies:
+  - name: opening_range
+    mode: day_trade
+    symbol: WIN
+    params: { range_bars: 3, rr: 1.5 }
+  - name: ema_cross
+    mode: swing_trade
+    symbol: WDO
+    params: { fast: 9, slow: 21, trend: 80 }

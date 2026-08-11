@@ -91,6 +91,7 @@ class BacktestEngine:
         open_trade: Trade | None = None
         equity = 0.0
         current_day = None
+        current_week = None
 
         for i in range(self.warmup, len(candles)):
             candle = candles.iloc[i]
@@ -99,6 +100,10 @@ class BacktestEngine:
             if current_day != ts.date():
                 current_day = ts.date()
                 self.risk.reset_day()
+            week = ts.isocalendar()[:2]
+            if current_week != week:
+                current_week = week
+                self.risk.reset_week()
 
             if open_trade is not None and self.risk.should_flatten(ts.to_pydatetime()):
                 open_trade, equity = self._close(
@@ -152,15 +157,27 @@ class BacktestEngine:
         )
 
     def _check_exit(self, trade: Trade, candle, ts, result, equity):
+        """Stop/alvo contra o candle. Gap de abertura que pula o nível sai
+        pelo preço de abertura — no swing, o gap contra é pior que o stop
+        nominal, e o backtest precisa refletir isso."""
+        open_ = float(candle["open"])
         low, high = float(candle["low"]), float(candle["high"])
         if trade.side == "buy":
+            if open_ <= trade.stop_loss:
+                return self._close(trade, open_, ts, "stop (gap)", result, equity)
             if low <= trade.stop_loss:
                 return self._close(trade, trade.stop_loss, ts, "stop", result, equity)
+            if open_ >= trade.take_profit:
+                return self._close(trade, open_, ts, "alvo (gap)", result, equity)
             if high >= trade.take_profit:
                 return self._close(trade, trade.take_profit, ts, "alvo", result, equity)
         else:
+            if open_ >= trade.stop_loss:
+                return self._close(trade, open_, ts, "stop (gap)", result, equity)
             if high >= trade.stop_loss:
                 return self._close(trade, trade.stop_loss, ts, "stop", result, equity)
+            if open_ <= trade.take_profit:
+                return self._close(trade, open_, ts, "alvo (gap)", result, equity)
             if low <= trade.take_profit:
                 return self._close(trade, trade.take_profit, ts, "alvo", result, equity)
         return trade, equity

@@ -34,6 +34,9 @@ class BaseStrategy(ABC):
     dados e opina. Execução e risco são responsabilidade de outros módulos.
     """
 
+    # day_trade = posições zeradas no fim do pregão | swing_trade = overnight
+    mode: str = "day_trade"
+
     def __init__(self, params: dict | None = None):
         self.params = params or {}
 

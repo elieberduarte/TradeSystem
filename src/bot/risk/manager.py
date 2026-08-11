@@ -18,6 +18,8 @@ class RiskConfig:
     max_risk_per_trade_pct: float
     max_daily_loss_pct: float
     max_open_positions: int
+    # day_trade = zera no fim do pregão | swing_trade = carrega overnight
+    mode: str = "day_trade"
     trading_start: time = time(9, 15)
     trading_end: time = time(17, 30)
     # Horário de zeragem: posições abertas devem ser fechadas (day trade
@@ -27,12 +29,16 @@ class RiskConfig:
     max_trades_per_day: int = 0
     # Derrotas seguidas que pausam o dia (0 = desativado)
     max_consecutive_losses: int = 3
+    # Perda máxima na semana em % do capital (0 = desativado) — pensada
+    # para swing, onde a perda se acumula em dias, não em horas
+    max_weekly_loss_pct: float = 0.0
 
 
 @dataclass
 class RiskManager:
     config: RiskConfig
     daily_pnl: float = 0.0
+    weekly_pnl: float = 0.0
     open_positions_count: int = 0
     trades_today: int = 0
     consecutive_losses: int = 0
@@ -52,6 +58,14 @@ class RiskManager:
                 f"Perda diária de {self.daily_pnl:.2f} atingiu o limite de {max_loss:.2f}"
             )
             return False, self._block_reason
+
+        if self.config.max_weekly_loss_pct:
+            max_weekly = self.config.capital * self.config.max_weekly_loss_pct / 100
+            if self.weekly_pnl <= -max_weekly:
+                return False, (
+                    f"Perda semanal de {self.weekly_pnl:.2f} atingiu o limite "
+                    f"de {max_weekly:.2f} — sem novas entradas nesta semana"
+                )
 
         if (
             self.config.max_consecutive_losses
@@ -74,7 +88,12 @@ class RiskManager:
         return True, "ok"
 
     def should_flatten(self, now: datetime | None = None) -> bool:
-        """Chegou a hora de zerar posições abertas (fim do dia)?"""
+        """Chegou a hora de zerar posições abertas (fim do dia)?
+
+        Swing trade carrega posição overnight — nunca zera por horário.
+        """
+        if self.config.mode == "swing_trade":
+            return False
         now = now or datetime.now()
         return now.time() >= self.config.flat_time
 
@@ -92,6 +111,7 @@ class RiskManager:
 
     def register_trade_result(self, pnl: float) -> None:
         self.daily_pnl += pnl
+        self.weekly_pnl += pnl
         self.trades_today += 1
         if pnl < 0:
             self.consecutive_losses += 1
@@ -104,6 +124,9 @@ class RiskManager:
         self.consecutive_losses = 0
         self._blocked_today = False
         self._block_reason = ""
+
+    def reset_week(self) -> None:
+        self.weekly_pnl = 0.0
 
     def _block_day(self, reason: str) -> None:
         self._blocked_today = True
