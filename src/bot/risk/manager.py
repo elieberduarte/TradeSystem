@@ -1,8 +1,11 @@
 """Gestão de risco: valida sinais antes de virarem ordens.
 
 O risk manager tem poder de veto — nenhuma ordem é enviada sem passar
-por aqui. Regras: risco máximo por trade, perda máxima diária, limite
-de posições abertas e janela de horário permitida.
+por aqui. Camadas:
+
+1. Por operação: risco máximo por trade define o tamanho da posição.
+2. Por dia: perda máxima diária, limite de trades, trava de derrotas
+   consecutivas e janela de horário (com zeragem antes do fechamento).
 """
 
 from dataclasses import dataclass, field
@@ -17,6 +20,13 @@ class RiskConfig:
     max_open_positions: int
     trading_start: time = time(9, 15)
     trading_end: time = time(17, 30)
+    # Horário de zeragem: posições abertas devem ser fechadas (day trade
+    # não dorme posicionado). Novas entradas param em trading_end.
+    flat_time: time = time(17, 45)
+    # 0 = sem limite
+    max_trades_per_day: int = 0
+    # Derrotas seguidas que pausam o dia (0 = desativado)
+    max_consecutive_losses: int = 3
 
 
 @dataclass
@@ -24,19 +34,36 @@ class RiskManager:
     config: RiskConfig
     daily_pnl: float = 0.0
     open_positions_count: int = 0
+    trades_today: int = 0
+    consecutive_losses: int = 0
     _blocked_today: bool = field(default=False, init=False)
+    _block_reason: str = field(default="", init=False)
 
     def can_open_position(self, now: datetime | None = None) -> tuple[bool, str]:
         """Retorna (permitido, motivo). Motivo explica o veto quando negado."""
         now = now or datetime.now()
 
         if self._blocked_today:
-            return False, "Limite de perda diária atingido — bot pausado até amanhã"
+            return False, self._block_reason
 
         max_loss = self.config.capital * self.config.max_daily_loss_pct / 100
         if self.daily_pnl <= -max_loss:
-            self._blocked_today = True
-            return False, f"Perda diária de {self.daily_pnl:.2f} atingiu o limite de {max_loss:.2f}"
+            self._block_day(
+                f"Perda diária de {self.daily_pnl:.2f} atingiu o limite de {max_loss:.2f}"
+            )
+            return False, self._block_reason
+
+        if (
+            self.config.max_consecutive_losses
+            and self.consecutive_losses >= self.config.max_consecutive_losses
+        ):
+            self._block_day(
+                f"{self.consecutive_losses} derrotas consecutivas — dia encerrado"
+            )
+            return False, self._block_reason
+
+        if self.config.max_trades_per_day and self.trades_today >= self.config.max_trades_per_day:
+            return False, f"Limite de {self.config.max_trades_per_day} trades no dia atingido"
 
         if self.open_positions_count >= self.config.max_open_positions:
             return False, f"Já existem {self.open_positions_count} posições abertas (máx: {self.config.max_open_positions})"
@@ -45,6 +72,11 @@ class RiskManager:
             return False, f"Fora da janela de operação ({self.config.trading_start}–{self.config.trading_end})"
 
         return True, "ok"
+
+    def should_flatten(self, now: datetime | None = None) -> bool:
+        """Chegou a hora de zerar posições abertas (fim do dia)?"""
+        now = now or datetime.now()
+        return now.time() >= self.config.flat_time
 
     def position_size(self, entry_price: float, stop_loss: float) -> float:
         """Calcula a quantidade com base no risco máximo por trade.
@@ -60,7 +92,19 @@ class RiskManager:
 
     def register_trade_result(self, pnl: float) -> None:
         self.daily_pnl += pnl
+        self.trades_today += 1
+        if pnl < 0:
+            self.consecutive_losses += 1
+        elif pnl > 0:
+            self.consecutive_losses = 0
 
     def reset_day(self) -> None:
         self.daily_pnl = 0.0
+        self.trades_today = 0
+        self.consecutive_losses = 0
         self._blocked_today = False
+        self._block_reason = ""
+
+    def _block_day(self, reason: str) -> None:
+        self._blocked_today = True
+        self._block_reason = f"{reason} — bot pausado até amanhã"

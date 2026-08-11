@@ -100,6 +100,11 @@ class BacktestEngine:
                 current_day = ts.date()
                 self.risk.reset_day()
 
+            if open_trade is not None and self.risk.should_flatten(ts.to_pydatetime()):
+                open_trade, equity = self._close(
+                    open_trade, float(candle["open"]), ts, "zeragem diária", result, equity
+                )
+
             if open_trade is not None:
                 open_trade, equity = self._check_exit(open_trade, candle, ts, result, equity)
 

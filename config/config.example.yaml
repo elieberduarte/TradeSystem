@@ -33,10 +33,16 @@ risk:
   max_daily_loss_pct: 3.0
   # Número máximo de posições abertas simultaneamente
   max_open_positions: 2
+  # Máximo de trades por dia (0 = sem limite) — proteção contra overtrading
+  max_trades_per_day: 5
+  # Derrotas consecutivas que encerram o dia (0 = desativado)
+  max_consecutive_losses: 3
   # Janela de operação (day trade) — fora dela o bot não abre posições
   trading_hours:
     start: "09:15"
     end: "17:30"
+  # Zeragem: posições ainda abertas são fechadas neste horário
+  flat_time: "17:45"
 
 strategy:
   # Nome da estratégia ativa (deve existir em src/bot/strategies/)
