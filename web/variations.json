@@ -1,0 +1,172 @@
+[
+ {
+  "label": "BASE  alvo 3x risco",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 853.81,
+  "total_pnl": 11035.02,
+  "trades": 222,
+  "win_rate": 0.374
+ },
+ {
+  "label": "R:R  1:1",
+  "tested": 11,
+  "positive": 9,
+  "rate": 0.818,
+  "median_pnl": 666.78,
+  "total_pnl": 7221.26,
+  "trades": 460,
+  "win_rate": 0.578
+ },
+ {
+  "label": "R:R  2:1",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 853.9,
+  "total_pnl": 9617.43,
+  "trades": 287,
+  "win_rate": 0.446
+ },
+ {
+  "label": "R:R  5:1",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 864.05,
+  "total_pnl": 11103.16,
+  "trades": 155,
+  "win_rate": 0.29
+ },
+ {
+  "label": "R:R  0,5:1 (invertido)",
+  "tested": 11,
+  "positive": 9,
+  "rate": 0.818,
+  "median_pnl": 647.1,
+  "total_pnl": 5236.04,
+  "trades": 669,
+  "win_rate": 0.72
+ },
+ {
+  "label": "R:R  0,33:1 (invertido)",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 511.23,
+  "total_pnl": 5881.82,
+  "trades": 815,
+  "win_rate": 0.805
+ },
+ {
+  "label": "sem alvo (deixa correr)",
+  "tested": 11,
+  "positive": 8,
+  "rate": 0.727,
+  "median_pnl": 1319.93,
+  "total_pnl": 14870.8,
+  "trades": 59,
+  "win_rate": 0.186
+ },
+ {
+  "label": "stop 0,5x (apertado)",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 1523.66,
+  "total_pnl": 15953.63,
+  "trades": 415,
+  "win_rate": 0.352
+ },
+ {
+  "label": "stop 1,5x (largo)",
+  "tested": 11,
+  "positive": 11,
+  "rate": 1.0,
+  "median_pnl": 663.08,
+  "total_pnl": 9112.56,
+  "trades": 133,
+  "win_rate": 0.421
+ },
+ {
+  "label": "breakeven a 1x",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 880.95,
+  "total_pnl": 9398.49,
+  "trades": 252,
+  "win_rate": 0.286
+ },
+ {
+  "label": "breakeven a 2x",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 752.26,
+  "total_pnl": 10791.81,
+  "trades": 228,
+  "win_rate": 0.351
+ },
+ {
+  "label": "stop móvel a 1x",
+  "tested": 11,
+  "positive": 9,
+  "rate": 0.818,
+  "median_pnl": 610.38,
+  "total_pnl": 6716.59,
+  "trades": 265,
+  "win_rate": 0.525
+ },
+ {
+  "label": "stop móvel a 2x",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 845.22,
+  "total_pnl": 11188.91,
+  "trades": 228,
+  "win_rate": 0.408
+ },
+ {
+  "label": "parcial a 1x",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 798.59,
+  "total_pnl": 8364.21,
+  "trades": 222,
+  "win_rate": 0.505
+ },
+ {
+  "label": "parcial a 2x",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 658.65,
+  "total_pnl": 9424.42,
+  "trades": 222,
+  "win_rate": 0.414
+ },
+ {
+  "label": "sem alvo + móvel 2x",
+  "tested": 11,
+  "positive": 10,
+  "rate": 0.909,
+  "median_pnl": 895.65,
+  "total_pnl": 12593.92,
+  "trades": 150,
+  "win_rate": 0.413
+ },
+ {
+  "label": "parcial 1x + breakeven",
+  "tested": 11,
+  "positive": 9,
+  "rate": 0.818,
+  "median_pnl": 660.78,
+  "total_pnl": 7011.14,
+  "trades": 252,
+  "win_rate": 0.524
+ }
+]
