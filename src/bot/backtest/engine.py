@@ -32,6 +32,8 @@ class Trade:
     exit_price: float | None = None
     exit_reason: str = ""
     pnl: float = 0.0
+    # Barras decorridas desde a entrada (para a saída por tempo)
+    bars_held: int = 0
 
 
 @dataclass
@@ -88,6 +90,10 @@ class BacktestEngine:
         slippage_points: float = 0.0,
         # Custo fixo em R$ por contrato na ida e volta (emolumentos etc.)
         cost_per_contract: float = 0.0,
+        # Saída por tempo: fecha a posição após N barras (0 = desativado).
+        # Evidência recorrente: sinais que seguram 12–15 barras superam a
+        # fricção; os que saem em 1–6 barras não.
+        max_holding_bars: int = 0,
     ):
         self.strategy = strategy
         self.risk = risk
@@ -96,6 +102,7 @@ class BacktestEngine:
         self.lookback = lookback
         self.slippage_points = slippage_points
         self.cost_per_contract = cost_per_contract
+        self.max_holding_bars = max_holding_bars
 
     def run(self, symbol: str, candles: pd.DataFrame) -> BacktestResult:
         result = BacktestResult()
@@ -122,7 +129,18 @@ class BacktestEngine:
                 )
 
             if open_trade is not None:
+                open_trade.bars_held += 1
                 open_trade, equity = self._check_exit(open_trade, candle, ts, result, equity)
+
+            # Saída por tempo: a posição já teve as barras que o setup previa
+            if (
+                open_trade is not None
+                and self.max_holding_bars
+                and open_trade.bars_held >= self.max_holding_bars
+            ):
+                open_trade, equity = self._close(
+                    open_trade, float(candle["close"]), ts, "tempo", result, equity
+                )
 
             window_start = max(0, i + 1 - self.lookback)
             signal = self.strategy.generate_signal(symbol, candles.iloc[window_start : i + 1])

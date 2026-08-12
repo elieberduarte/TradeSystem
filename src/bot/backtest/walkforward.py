@@ -24,6 +24,20 @@ def param_grid(grid: dict[str, list]) -> Iterator[dict]:
         yield dict(zip(keys, values))
 
 
+def robust_score(result: BacktestResult, min_trades: int = 10) -> float:
+    """Critério de otimização resistente a sorte.
+
+    Otimizar por PnL bruto premia a janela em que dois trades deram
+    certo. Aqui exigimos amostra mínima e dividimos o lucro pelo pior
+    drawdown — preferindo o parâmetro que ganhou de forma estável ao
+    que ganhou mais com um susto pelo caminho.
+    """
+    if len(result.trades) < min_trades:
+        return float("-inf")
+    drawdown = max(result.max_drawdown, 1.0)
+    return result.total_pnl / drawdown
+
+
 @dataclass
 class WalkForwardWindow:
     train_start: pd.Timestamp
@@ -69,7 +83,7 @@ class WalkForward:
         warmup: int = 100,
         slippage_points: float = 0.0,
         cost_per_contract: float = 0.0,
-        # Critério de otimização; padrão: PnL total do treino
+        # Critério de otimização; padrão: PnL sobre drawdown com amostra mínima
         metric: Callable[[BacktestResult], float] | None = None,
     ):
         self.strategy_factory = strategy_factory
@@ -78,7 +92,7 @@ class WalkForward:
         self.warmup = warmup
         self.slippage_points = slippage_points
         self.cost_per_contract = cost_per_contract
-        self.metric = metric or (lambda r: r.total_pnl)
+        self.metric = metric or robust_score
 
     def _backtest(self, symbol: str, candles: pd.DataFrame, params: dict) -> BacktestResult:
         engine = BacktestEngine(
@@ -100,6 +114,10 @@ class WalkForward:
             score = self.metric(result)
             if score > best_score:
                 best_params, best_result, best_score = params, result, score
+        if best_params is None:
+            # Nenhuma combinação atingiu a amostra mínima: fica com a primeira
+            best_params = next(param_grid(grid))
+            best_result = self._backtest(symbol, candles, best_params)
         return best_params, best_result
 
     def run(
