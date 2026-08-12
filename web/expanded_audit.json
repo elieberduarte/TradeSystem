@@ -1,0 +1,297 @@
+{
+ "original": {
+  "label": "UNIVERSO ORIGINAL",
+  "instruments": 13,
+  "positive": 11,
+  "mean_correlation": 0.222,
+  "effective_bets": 6.9,
+  "p_value": 0.0978,
+  "significant": false
+ },
+ "expanded": {
+  "label": "UNIVERSO AMPLIADO",
+  "instruments": 28,
+  "positive": 22,
+  "mean_correlation": 0.08,
+  "effective_bets": 14.4,
+  "p_value": 0.0318,
+  "significant": true
+ },
+ "by_block": [
+  {
+   "bloco": "alternativos",
+   "instrumentos": 2,
+   "positivos": 2,
+   "sharpe_medio": 0.372,
+   "acerto_medio": 45.1
+  },
+  {
+   "bloco": "exterior",
+   "instrumentos": 3,
+   "positivos": 3,
+   "sharpe_medio": 0.341,
+   "acerto_medio": 45.3
+  },
+  {
+   "bloco": "índices BR",
+   "instrumentos": 3,
+   "positivos": 3,
+   "sharpe_medio": 0.279,
+   "acerto_medio": 40.8
+  },
+  {
+   "bloco": "juros",
+   "instrumentos": 3,
+   "positivos": 3,
+   "sharpe_medio": 0.15,
+   "acerto_medio": 34.4
+  },
+  {
+   "bloco": "ações BR",
+   "instrumentos": 13,
+   "positivos": 9,
+   "sharpe_medio": 0.103,
+   "acerto_medio": 31.2
+  },
+  {
+   "bloco": "commodities",
+   "instrumentos": 3,
+   "positivos": 2,
+   "sharpe_medio": 0.029,
+   "acerto_medio": 37.3
+  },
+  {
+   "bloco": "câmbio",
+   "instrumentos": 1,
+   "positivos": 0,
+   "sharpe_medio": -0.026,
+   "acerto_medio": 28.6
+  }
+ ],
+ "per_symbol": [
+  {
+   "symbol": "PETR4",
+   "bloco": "ações BR",
+   "trades": 23,
+   "sharpe_trade": 0.444,
+   "win_rate": 0.522,
+   "positivo": true
+  },
+  {
+   "symbol": "VALE3",
+   "bloco": "ações BR",
+   "trades": 21,
+   "sharpe_trade": 0.047,
+   "win_rate": 0.286,
+   "positivo": true
+  },
+  {
+   "symbol": "ITUB4",
+   "bloco": "ações BR",
+   "trades": 24,
+   "sharpe_trade": 0.395,
+   "win_rate": 0.458,
+   "positivo": true
+  },
+  {
+   "symbol": "BBDC4",
+   "bloco": "ações BR",
+   "trades": 22,
+   "sharpe_trade": 0.099,
+   "win_rate": 0.318,
+   "positivo": true
+  },
+  {
+   "symbol": "ABEV3",
+   "bloco": "ações BR",
+   "trades": 16,
+   "sharpe_trade": 0.098,
+   "win_rate": 0.312,
+   "positivo": true
+  },
+  {
+   "symbol": "B3SA3",
+   "bloco": "ações BR",
+   "trades": 20,
+   "sharpe_trade": -0.018,
+   "win_rate": 0.25,
+   "positivo": false
+  },
+  {
+   "symbol": "WEGE3",
+   "bloco": "ações BR",
+   "trades": 20,
+   "sharpe_trade": 0.198,
+   "win_rate": 0.35,
+   "positivo": true
+  },
+  {
+   "symbol": "PRIO3",
+   "bloco": "ações BR",
+   "trades": 19,
+   "sharpe_trade": 0.122,
+   "win_rate": 0.316,
+   "positivo": true
+  },
+  {
+   "symbol": "MGLU3",
+   "bloco": "ações BR",
+   "trades": 15,
+   "sharpe_trade": 0.025,
+   "win_rate": 0.267,
+   "positivo": true
+  },
+  {
+   "symbol": "SUZB3",
+   "bloco": "ações BR",
+   "trades": 21,
+   "sharpe_trade": -0.027,
+   "win_rate": 0.238,
+   "positivo": false
+  },
+  {
+   "symbol": "RENT3",
+   "bloco": "ações BR",
+   "trades": 19,
+   "sharpe_trade": -0.1,
+   "win_rate": 0.211,
+   "positivo": false
+  },
+  {
+   "symbol": "RADL3",
+   "bloco": "ações BR",
+   "trades": 18,
+   "sharpe_trade": -0.05,
+   "win_rate": 0.222,
+   "positivo": false
+  },
+  {
+   "symbol": "TOTS3",
+   "bloco": "ações BR",
+   "trades": 20,
+   "sharpe_trade": 0.103,
+   "win_rate": 0.3,
+   "positivo": true
+  },
+  {
+   "symbol": "WIN$N",
+   "bloco": "índices BR",
+   "trades": 19,
+   "sharpe_trade": 0.361,
+   "win_rate": 0.474,
+   "positivo": true
+  },
+  {
+   "symbol": "BOVA11",
+   "bloco": "índices BR",
+   "trades": 24,
+   "sharpe_trade": 0.164,
+   "win_rate": 0.333,
+   "positivo": true
+  },
+  {
+   "symbol": "SMAL11",
+   "bloco": "índices BR",
+   "trades": 12,
+   "sharpe_trade": 0.313,
+   "win_rate": 0.417,
+   "positivo": true
+  },
+  {
+   "symbol": "WDO$N",
+   "bloco": "câmbio",
+   "trades": 14,
+   "sharpe_trade": -0.026,
+   "win_rate": 0.286,
+   "positivo": false
+  },
+  {
+   "symbol": "DI1F27",
+   "bloco": "juros",
+   "trades": 20,
+   "sharpe_trade": 0.173,
+   "win_rate": 0.35,
+   "positivo": true
+  },
+  {
+   "symbol": "DI1F28",
+   "bloco": "juros",
+   "trades": 22,
+   "sharpe_trade": 0.223,
+   "win_rate": 0.364,
+   "positivo": true
+  },
+  {
+   "symbol": "DI1F29",
+   "bloco": "juros",
+   "trades": 22,
+   "sharpe_trade": 0.053,
+   "win_rate": 0.318,
+   "positivo": true
+  },
+  {
+   "symbol": "CCM$N",
+   "bloco": "commodities",
+   "trades": 21,
+   "sharpe_trade": -0.346,
+   "win_rate": 0.286,
+   "positivo": false
+  },
+  {
+   "symbol": "BGI$N",
+   "bloco": "commodities",
+   "trades": 18,
+   "sharpe_trade": 0.133,
+   "win_rate": 0.389,
+   "positivo": true
+  },
+  {
+   "symbol": "ICF$N",
+   "bloco": "commodities",
+   "trades": 18,
+   "sharpe_trade": 0.299,
+   "win_rate": 0.444,
+   "positivo": true
+  },
+  {
+   "symbol": "IVVB11",
+   "bloco": "exterior",
+   "trades": 21,
+   "sharpe_trade": 0.482,
+   "win_rate": 0.524,
+   "positivo": true
+  },
+  {
+   "symbol": "NASD11",
+   "bloco": "exterior",
+   "trades": 22,
+   "sharpe_trade": 0.365,
+   "win_rate": 0.455,
+   "positivo": true
+  },
+  {
+   "symbol": "XINA11",
+   "bloco": "exterior",
+   "trades": 21,
+   "sharpe_trade": 0.175,
+   "win_rate": 0.381,
+   "positivo": true
+  },
+  {
+   "symbol": "GOLD11",
+   "bloco": "alternativos",
+   "trades": 22,
+   "sharpe_trade": 0.523,
+   "win_rate": 0.545,
+   "positivo": true
+  },
+  {
+   "symbol": "HASH11",
+   "bloco": "alternativos",
+   "trades": 28,
+   "sharpe_trade": 0.222,
+   "win_rate": 0.357,
+   "positivo": true
+  }
+ ]
+}
