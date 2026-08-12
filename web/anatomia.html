@@ -82,6 +82,13 @@
   .legend span { display: inline-flex; align-items: center; gap: 6px; }
   .sw { width: 14px; height: 3px; border-radius: 2px; }
   .loading { color: var(--muted); padding: 20px 0; }
+
+  .tf-banner {
+    background: var(--chip); border: 1px solid var(--border); border-left: 3px solid var(--entry);
+    border-radius: 10px; padding: 11px 14px; margin-bottom: 16px; font-size: 13px; color: var(--ink-2);
+  }
+  .tf-banner b { color: var(--ink); }
+  .bar-note { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -92,6 +99,14 @@
   a posição foi encerrada — operação por operação, com dados reais do backtest.
   <a href="index.html">← voltar ao painel</a>
 </p>
+
+<div class="tf-banner" id="tf-banner">
+  <b>Cada candle destes gráficos é um pregão inteiro (gráfico diário), não 5 minutos.</b>
+  Estas são operações de <b>swing trade</b>, mantidas por dias ou semanas. Isso não é detalhe:
+  em candles de 5 minutos <b>todas</b> as estratégias que testamos foram reprovadas — a fricção
+  (spread + emolumentos ≈ 7,5 pontos por giro no WIN) consome o ganho bruto de sinais dessa
+  frequência. O mesmo padrão de reversão que lucrou no diário perdeu R$ 22.686 no intradiário.
+</div>
 
 <div class="card">
   <h2>As regras, em uma tela</h2>
@@ -249,7 +264,8 @@ async function load() {
 
   const p = data.params;
   $("rules-sub").textContent =
-    `${data.strategy} · canal ${p.channel} pregões · stop ${p.stop_atr}×ATR · alvo ${p.rr}× o risco · ${data.symbol}`;
+    `${data.strategy} · ${data.symbol} · GRÁFICO DIÁRIO · canal ${p.channel} pregões · ` +
+    `stop ${p.stop_atr}×ATR(14) · alvo ${p.rr}× o risco`;
 
   const s = data.summary;
   $("summary").innerHTML = `
@@ -267,7 +283,7 @@ async function load() {
       <div class="trade-head">
         <span class="tag ${t.side}">${t.side === "buy" ? "COMPRA" : "VENDA"}</span>
         <b>${t.symbol}</b>
-        <span style="color:var(--muted)">${t.entry_time} → ${t.exit_time} · ${t.bars_held} dias · ${t.quantity} ${data.point_value === 1 ? "ações" : "contratos"}</span>
+        <span style="color:var(--muted)">${t.entry_time} → ${t.exit_time} · <b>${t.bars_held} dias na posição</b> · ${t.quantity} ${data.point_value === 1 ? "ações" : "contratos"}</span>
         <span class="pnl ${t.pnl >= 0 ? "win" : "loss"}">${t.pnl >= 0 ? "+" : "−"}R$ ${money(Math.abs(t.pnl), 2)}</span>
       </div>
       <div class="levels">
@@ -286,6 +302,8 @@ async function load() {
         <span><span class="sw" style="background:var(--target)"></span>alvo</span>
         <span>○ saída: <b>${reasonText(t.exit_reason)}</b></span>
       </div>
+      <div class="bar-note">Cada candle = 1 pregão · ${t.candles.length} pregões no gráfico ·
+        ATR na entrada: ${money(t.atr_at_entry)} (o stop é o dobro disso)</div>
     </div>`;
   }).join("");
 }
