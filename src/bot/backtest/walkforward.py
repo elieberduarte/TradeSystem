@@ -83,6 +83,7 @@ class WalkForward:
         warmup: int = 100,
         slippage_points: float = 0.0,
         cost_per_contract: float = 0.0,
+        max_holding_bars: int = 0,
         # Critério de otimização; padrão: PnL sobre drawdown com amostra mínima
         metric: Callable[[BacktestResult], float] | None = None,
     ):
@@ -92,6 +93,7 @@ class WalkForward:
         self.warmup = warmup
         self.slippage_points = slippage_points
         self.cost_per_contract = cost_per_contract
+        self.max_holding_bars = max_holding_bars
         self.metric = metric or robust_score
 
     def _backtest(self, symbol: str, candles: pd.DataFrame, params: dict) -> BacktestResult:
@@ -102,6 +104,7 @@ class WalkForward:
             warmup=self.warmup,
             slippage_points=self.slippage_points,
             cost_per_contract=self.cost_per_contract,
+            max_holding_bars=self.max_holding_bars,
         )
         return engine.run(symbol, candles)
 

@@ -13,12 +13,17 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from datetime import time
+
 from src.bot.analysis.regime import Regime
 from src.bot.backtest.walkforward import WalkForward
 from src.bot.data.history import HistoryStore
 from src.bot.risk.manager import RiskConfig, RiskManager
+from src.bot.strategies.band_fade import BandFadeStrategy
 from src.bot.strategies.ema_cross import EmaCrossStrategy
+from src.bot.strategies.intraday_momentum import IntradayMomentumStrategy
 from src.bot.strategies.opening_range import OpeningRangeStrategy
+from src.bot.strategies.pfr import PfrStrategy
 from src.bot.strategies.regime_filter import RegimeFilteredStrategy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +42,20 @@ def risk_factory() -> RiskManager:
             max_open_positions=1,
             max_trades_per_day=5,
             max_consecutive_losses=3,
+        )
+    )
+
+
+def risk_late() -> RiskManager:
+    """Risco para setups que operam no fim do pregão (momentum de horário)."""
+    return RiskManager(
+        RiskConfig(
+            capital=CAPITAL,
+            max_risk_per_trade_pct=1.0,
+            max_daily_loss_pct=3.0,
+            max_open_positions=1,
+            trading_end=time(17, 30),
+            flat_time=time(17, 55),
         )
     )
 
@@ -108,14 +127,34 @@ def main() -> None:
     train_bars, test_bars = (6000, 3000) if long_history else (2500, 1250)
 
     trend_only = {Regime.TREND_UP, Regime.TREND_DOWN}
+    # (nome, fábrica, grade, risco, barras de holding máximo)
     runs = [
-        ("opening_range", lambda p: OpeningRangeStrategy(p), {"range_bars": [3, 6], "rr": [1.5, 2.0]}),
-        ("ema_cross", lambda p: EmaCrossStrategy(p), {"fast": [9], "slow": [21], "trend": [0, 80], "rr": [1.5, 2.5]}),
+        ("opening_range", lambda p: OpeningRangeStrategy(p),
+         {"range_bars": [3, 6], "rr": [1.5, 2.0]}, risk_factory, 0),
+        ("ema_cross", lambda p: EmaCrossStrategy(p),
+         {"fast": [9], "slow": [21], "trend": [0, 80], "rr": [1.5, 2.5]}, risk_factory, 0),
         (
             # Só opera rompimento quando o dia já mostra direção (ADX > 25)
             "opening_range_regime",
             lambda p: RegimeFilteredStrategy(OpeningRangeStrategy(p), allowed=trend_only),
-            {"range_bars": [3, 6], "rr": [1.5, 2.0]},
+            {"range_bars": [3, 6], "rr": [1.5, 2.0]}, risk_factory, 0,
+        ),
+        (
+            # Reversão em regime lateral com holding longo — a arquitetura
+            # que sobreviveu à validação rigorosa em futuros de índice
+            "band_fade_regime",
+            lambda p: RegimeFilteredStrategy(BandFadeStrategy(p), allowed={Regime.RANGE}),
+            {"period": [20], "mult": [2.0, 2.5], "band": ["bollinger", "keltner"], "target": ["mid"]},
+            risk_factory, 13,
+        ),
+        ("pfr", lambda p: PfrStrategy(p), {"rr": [1.0, 2.0]}, risk_factory, 13),
+        (
+            # Hipótese prioritária: gap + 1ª meia hora prevê a última meia
+            # hora. 1 trade/dia. Testa também a variante contrária.
+            "intraday_momentum",
+            lambda p: IntradayMomentumStrategy(p),
+            {"contrarian": [False, True], "min_move_mult": [0.0, 0.15]},
+            risk_late, 0,
         ),
     ]
     if only:
@@ -136,15 +175,16 @@ def main() -> None:
         except (json.JSONDecodeError, OSError):
             pass
 
-    for name, factory, grid in runs:
+    for name, factory, grid, risk, holding in runs:
         print(f"═══ {name} · {symbol} {timeframe} · capital R$ {CAPITAL:,.0f} ═══")
         wf = WalkForward(
             strategy_factory=factory,
-            risk_factory=risk_factory,
+            risk_factory=risk,
             point_value=WIN_POINT_VALUE,
             warmup=110,
             slippage_points=SLIPPAGE_POINTS,
             cost_per_contract=COST_PER_CONTRACT,
+            max_holding_bars=holding,
         )
         report = wf.run("WIN", candles, grid, train_bars=train_bars, test_bars=test_bars)
         print(report.summary())

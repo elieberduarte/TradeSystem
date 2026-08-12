@@ -6,6 +6,8 @@ têm continuação ou reversão. Cada função devolve um DataFrame pronto
 para leitura (e para o painel).
 """
 
+from datetime import time
+
 import numpy as np
 import pandas as pd
 
@@ -119,6 +121,142 @@ def opening_range_study(
             )
             break  # só o primeiro rompimento do dia
     return pd.DataFrame(rows)
+
+
+def early_regimes(
+    candles: pd.DataFrame, until: time = time(10, 0), threshold: float = 25.0
+) -> pd.DataFrame:
+    """Classifica o pregão usando SÓ os candles até `until`.
+
+    Diferença crítica para `daily_regimes`: aquela usa o ADX do último
+    candle do dia — informação que só existe depois que o pregão acabou.
+    Condicionar uma estratégia àquele rótulo é look-ahead. Esta versão
+    responde a pergunta operacional: dá para saber o regime cedo, com a
+    informação que o bot realmente teria na hora de decidir?
+    """
+    # O ADX é calculado sobre a série contínua e depois lido no candle de
+    # corte de cada dia — é o que o bot ao vivo enxerga, já que às 10h
+    # existem poucos candles do dia mas o histórico anterior está lá.
+    indicators = adx(candles, 14)
+    days = candles.index.normalize()
+
+    rows = []
+    for day in days.unique():
+        mask = (days == day) & (candles.index.time <= until)
+        if not mask.any():
+            continue
+        row = indicators[mask].iloc[-1]
+        if pd.isna(row["adx"]) or row["adx"] < threshold:
+            regime = Regime.RANGE
+        elif row["plus_di"] >= row["minus_di"]:
+            regime = Regime.TREND_UP
+        else:
+            regime = Regime.TREND_DOWN
+        rows.append(
+            {"day": day, "regime_cedo": regime.value, "adx_cedo": round(float(row["adx"]), 1)}
+        )
+    return pd.DataFrame(rows)
+
+
+def regime_persistence(
+    candles: pd.DataFrame, until: time = time(10, 0), threshold: float = 25.0
+) -> pd.DataFrame:
+    """O regime detectado de manhã se confirma no fim do dia?
+
+    Matriz de transição entre `early_regimes` e `daily_regimes`. Se o
+    regime da manhã não prevê o do fim do dia, filtrar por ele não
+    ajuda — seria adivinhar, não classificar.
+    """
+    early = early_regimes(candles, until, threshold).set_index("day")["regime_cedo"]
+    late = daily_regimes(candles, threshold).set_index("day")["regime"]
+    joined = pd.concat([early, late], axis=1).dropna()
+    if joined.empty:
+        return pd.DataFrame()
+    return pd.crosstab(joined["regime_cedo"], joined["regime"], normalize="index").round(3)
+
+
+def breakout_by_early_regime(
+    candles: pd.DataFrame,
+    range_bars: int = 3,
+    horizon_bars: int = 12,
+    until: time = time(10, 0),
+) -> pd.DataFrame:
+    """MFE/MAE dos rompimentos por regime CONHECIDO NA HORA (sem look-ahead)."""
+    breakouts = opening_range_study(candles, range_bars, horizon_bars)
+    if breakouts.empty:
+        return pd.DataFrame()
+    early = early_regimes(candles, until).set_index("day")["regime_cedo"]
+    breakouts = breakouts.assign(regime=breakouts["day"].map(early)).dropna(subset=["regime"])
+    if breakouts.empty:
+        return pd.DataFrame()
+
+    grouped = breakouts.groupby("regime")
+    out = pd.DataFrame(
+        {
+            "rompimentos": grouped.size(),
+            "mfe_medio": grouped["mfe"].mean().round(1),
+            "mae_medio": grouped["mae"].mean().round(1),
+        }
+    )
+    out["razao"] = (out["mfe_medio"] / out["mae_medio"]).round(3)
+    return out
+
+
+def autocorrelation_by_regime(
+    candles: pd.DataFrame, lags: tuple[int, ...] = (1, 3, 6, 12)
+) -> pd.DataFrame:
+    """Autocorrelação dos retornos, separada por regime do pregão.
+
+    A pergunta central: o WIN se comporta de forma diferente em dias de
+    tendência e em dias laterais? Autocorrelação positiva = continuação
+    (favorece seguir movimento); negativa = reversão (favorece contra);
+    zero = passeio aleatório, sem estrutura explorável.
+    """
+    regimes = daily_regimes(candles).set_index("day")["regime"]
+    df = candles.copy()
+    df["day"] = df.index.normalize()
+    df["regime"] = df["day"].map(regimes)
+    df["ret"] = df["close"].diff()
+
+    rows = []
+    for regime, group in df.dropna(subset=["regime"]).groupby("regime"):
+        row = {"regime": regime, "candles": len(group)}
+        for lag in lags:
+            # Correlação entre o retorno e o retorno `lag` barras à frente,
+            # calculada dentro de cada dia (não atravessa a virada)
+            pairs = group.groupby("day")["ret"].apply(
+                lambda s: s.corr(s.shift(-lag)) if len(s) > lag + 5 else float("nan")
+            )
+            row[f"lag_{lag}"] = round(float(pairs.mean()), 4)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def breakout_by_regime(
+    candles: pd.DataFrame, range_bars: int = 3, horizon_bars: int = 12
+) -> pd.DataFrame:
+    """MFE/MAE do rompimento da abertura, separado por regime do dia.
+
+    Se a razão for ~1,0 em todos os regimes, o rompimento não tem
+    assimetria escondida pela agregação — a ausência de edge é real,
+    não um artefato de misturar mercados diferentes.
+    """
+    breakouts = opening_range_study(candles, range_bars, horizon_bars)
+    if breakouts.empty:
+        return pd.DataFrame()
+    regimes = daily_regimes(candles).set_index("day")["regime"]
+    breakouts = breakouts.assign(regime=breakouts["day"].map(regimes)).dropna(subset=["regime"])
+
+    grouped = breakouts.groupby("regime")
+    out = pd.DataFrame(
+        {
+            "rompimentos": grouped.size(),
+            "mfe_medio": grouped["mfe"].mean().round(1),
+            "mae_medio": grouped["mae"].mean().round(1),
+        }
+    )
+    out["razao"] = (out["mfe_medio"] / out["mae_medio"]).round(3)
+    return out
 
 
 def gap_study(candles: pd.DataFrame) -> pd.DataFrame:

@@ -12,10 +12,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.bot.analysis.profile import (
+    autocorrelation_by_regime,
+    breakout_by_early_regime,
+    breakout_by_regime,
     by_hour,
     daily_regimes,
     gap_study,
     opening_range_study,
+    regime_persistence,
     summarize,
 )
 from src.bot.data.history import HistoryStore
@@ -62,6 +66,29 @@ def main() -> None:
         )
         per_hour["razao"] = (per_hour["mfe"] / per_hour["mae"]).round(2)
         print(per_hour[per_hour["n"] >= 20].round(0).to_string())
+        print()
+
+    print("── O comportamento muda por regime? ──")
+    print("Autocorrelação dos retornos (positiva = continuação, negativa = reversão,")
+    print("zero = sem estrutura). Lags em candles de 5min:")
+    print(autocorrelation_by_regime(candles).to_string(index=False))
+    print()
+    by_regime = breakout_by_regime(candles)
+    if not by_regime.empty:
+        print("Rompimento por regime do FIM do dia (contém look-ahead — só diagnóstico):")
+        print(by_regime.to_string())
+        print()
+
+    print("── O regime pode ser conhecido a tempo? ──")
+    persistence = regime_persistence(candles)
+    if not persistence.empty:
+        print("Regime às 10h (linhas) → regime no fim do dia (colunas), em proporção:")
+        print(persistence.to_string())
+        print()
+    early_breakouts = breakout_by_early_regime(candles)
+    if not early_breakouts.empty:
+        print("Rompimento por regime conhecido às 10h (SEM look-ahead — operável):")
+        print(early_breakouts.to_string())
         print()
 
     gaps = gap_study(candles)
