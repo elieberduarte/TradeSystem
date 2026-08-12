@@ -97,14 +97,17 @@ class RiskManager:
         now = now or datetime.now()
         return now.time() >= self.config.flat_time
 
-    def position_size(self, entry_price: float, stop_loss: float) -> float:
+    def position_size(
+        self, entry_price: float, stop_loss: float, point_value: float = 1.0
+    ) -> float:
         """Calcula a quantidade com base no risco máximo por trade.
 
         Quantidade tal que, se o stop for atingido, a perda não passa de
-        max_risk_per_trade_pct do capital.
+        max_risk_per_trade_pct do capital. `point_value` converte pontos
+        do contrato em R$ (WIN: 0.20/pt; WDO: 10.00/pt).
         """
         risk_amount = self.config.capital * self.config.max_risk_per_trade_pct / 100
-        risk_per_unit = abs(entry_price - stop_loss)
+        risk_per_unit = abs(entry_price - stop_loss) * point_value
         if risk_per_unit == 0:
             return 0.0
         return risk_amount / risk_per_unit

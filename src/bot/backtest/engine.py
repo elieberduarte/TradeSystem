@@ -140,7 +140,9 @@ class BacktestEngine:
         allowed, _ = self.risk.can_open_position(now=ts.to_pydatetime())
         if not allowed:
             return None
-        quantity = self.risk.position_size(signal.entry_price, signal.stop_loss)
+        quantity = self.risk.position_size(
+            signal.entry_price, signal.stop_loss, self.point_value
+        )
         # Contratos são negociados em quantidades inteiras
         quantity = int(quantity)
         if quantity <= 0:

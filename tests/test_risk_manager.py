@@ -50,3 +50,11 @@ def test_position_size_respeita_risco_por_trade():
 def test_position_size_zero_quando_stop_igual_entrada():
     manager = make_manager()
     assert manager.position_size(entry_price=100.0, stop_loss=100.0) == 0.0
+
+
+def test_position_size_considera_valor_do_ponto():
+    manager = make_manager()
+    # Risco 1% de 10.000 = R$ 100. WIN: 500 pts de stop × R$ 0,20 = R$ 100
+    # por contrato → exatamente 1 contrato.
+    qty = manager.position_size(entry_price=136_500.0, stop_loss=136_000.0, point_value=0.20)
+    assert qty == 1.0
