@@ -18,8 +18,10 @@ from src.bot.analysis.regime import Regime
 from src.bot.backtest.walkforward import WalkForward
 from src.bot.data.history import HistoryStore
 from src.bot.risk.manager import RiskConfig, RiskManager
+from src.bot.strategies.band_fade import BandFadeStrategy
 from src.bot.strategies.donchian import DonchianStrategy
 from src.bot.strategies.ema_cross import EmaCrossStrategy
+from src.bot.strategies.ibs import IbsStrategy
 from src.bot.strategies.regime_filter import RegimeFilteredStrategy
 from src.bot.strategies.swing_reversion import SwingReversionStrategy
 
@@ -74,6 +76,7 @@ def export(report, symbol: str, strategy: str) -> dict:
         "trades": len(trades),
         "win_rate": round(wins / len(trades), 4) if trades else 0,
         "profit_factor": round(gains / losses, 2) if losses else None,
+        "risk": report.risk_metrics(),
         "equity": equity,
         "daily_pnl": [{"date": d, "value": round(daily[d], 2)} for d in days],
         "windows": [
@@ -111,10 +114,18 @@ def main() -> None:
 
     trend_only = {Regime.TREND_UP, Regime.TREND_DOWN}
     runs = [
-        ("swing_reversion", lambda p: SwingReversionStrategy(p),
-         {"lookback": [40, 60], "threshold_std": [1.0, 1.5], "rr": [1.5, 2.0]}),
         ("donchian", lambda p: DonchianStrategy(p),
          {"channel": [20, 40], "stop_atr": [2.0], "rr": [2.0, 3.0]}),
+        # Candidatas a curva mais suave: reversão com alvo curto acerta
+        # mais vezes e sofre mergulhos menores que seguir tendência
+        ("ibs", lambda p: IbsStrategy(p),
+         {"entry_low": [0.1, 0.2], "target_atr": [0.5, 1.0], "stop_atr": [2.0]}),
+        ("ibs_trend", lambda p: IbsStrategy(p),
+         {"entry_low": [0.1, 0.2], "target_atr": [0.5, 1.0], "trend_filter": [200]}),
+        ("band_fade_daily", lambda p: BandFadeStrategy(p),
+         {"period": [20], "mult": [2.0, 2.5], "band": ["keltner"], "target": ["mid", 1.5]}),
+        ("swing_reversion", lambda p: SwingReversionStrategy(p),
+         {"lookback": [40, 60], "threshold_std": [1.0, 1.5], "rr": [1.5, 2.0]}),
         ("donchian_regime", lambda p: RegimeFilteredStrategy(DonchianStrategy(p), allowed=trend_only),
          {"channel": [20, 40], "stop_atr": [2.0], "rr": [2.0, 3.0]}),
         ("ema_cross_swing", lambda p: EmaCrossStrategy(p),

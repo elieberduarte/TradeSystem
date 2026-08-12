@@ -60,11 +60,51 @@ class WalkForwardReport:
     def oos_pnl(self) -> float:
         return sum(t.pnl for t in self.oos_trades)
 
+    def risk_metrics(self) -> dict:
+        """Métricas de segurança do resultado out-of-sample agregado.
+
+        A curva OOS é a emenda das janelas de teste: é ela que
+        representa o que o operador teria vivido.
+        """
+        trades = self.oos_trades
+        if not trades:
+            return {}
+        equity, peak, max_dd, cum = [], float("-inf"), 0.0, 0.0
+        streak = longest = 0
+        for trade in trades:
+            cum += trade.pnl
+            equity.append(cum)
+            peak = max(peak, cum)
+            max_dd = max(max_dd, peak - cum)
+            streak = streak + 1 if trade.pnl < 0 else 0
+            longest = max(longest, streak)
+        mean = cum / len(trades)
+        variance = sum((t.pnl - mean) ** 2 for t in trades) / max(len(trades) - 1, 1)
+        std = variance**0.5
+        return {
+            "expectancy": round(mean, 2),
+            "pnl_std": round(std, 2),
+            "trade_sharpe": round(mean / std, 3) if std > 0 else 0.0,
+            "max_drawdown": round(max_dd, 2),
+            "calmar": round(cum / max_dd, 2) if max_dd > 0 else None,
+            "longest_losing_streak": longest,
+            "windows_positive": sum(1 for w in self.windows if w.test_result.total_pnl >= 0),
+        }
+
     def summary(self) -> str:
+        metrics = self.risk_metrics()
         lines = [
             f"Janelas: {len(self.windows)} | Trades out-of-sample: "
             f"{len(self.oos_trades)} | PnL out-of-sample: {self.oos_pnl:.2f}"
         ]
+        if metrics:
+            lines.append(
+                f"  Drawdown máx: {metrics['max_drawdown']:.0f} | "
+                f"Calmar: {metrics['calmar']} | "
+                f"Expectativa/trade: {metrics['expectancy']:.0f} ± {metrics['pnl_std']:.0f} | "
+                f"Consistência: {metrics['trade_sharpe']} | "
+                f"Pior sequência: {metrics['longest_losing_streak']} perdas"
+            )
         for w in self.windows:
             lines.append(
                 f"  {w.test_start:%Y-%m-%d} → {w.test_end:%Y-%m-%d} | "

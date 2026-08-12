@@ -66,6 +66,39 @@ class BacktestResult:
             max_dd = max(max_dd, peak - value)
         return max_dd
 
+    @property
+    def expectancy(self) -> float:
+        """Resultado médio por trade — o número que multiplica pela frequência."""
+        return self.total_pnl / len(self.trades) if self.trades else 0.0
+
+    @property
+    def longest_losing_streak(self) -> int:
+        """Maior sequência de trades perdedores — o que testa a paciência."""
+        longest = streak = 0
+        for trade in self.trades:
+            streak = streak + 1 if trade.pnl < 0 else 0
+            longest = max(longest, streak)
+        return longest
+
+    @property
+    def calmar(self) -> float:
+        """Lucro dividido pelo pior mergulho: retorno por unidade de dor."""
+        return self.total_pnl / self.max_drawdown if self.max_drawdown > 0 else float("inf")
+
+    @property
+    def pnl_std(self) -> float:
+        """Desvio-padrão do resultado por trade — dispersão dos resultados."""
+        if len(self.trades) < 2:
+            return 0.0
+        mean = self.expectancy
+        variance = sum((t.pnl - mean) ** 2 for t in self.trades) / (len(self.trades) - 1)
+        return variance**0.5
+
+    @property
+    def trade_sharpe(self) -> float:
+        """Expectativa sobre dispersão: quão consistente é o resultado."""
+        return self.expectancy / self.pnl_std if self.pnl_std > 0 else 0.0
+
     def summary(self) -> str:
         return (
             f"Trades: {len(self.trades)} | Win rate: {self.win_rate:.1%} | "
