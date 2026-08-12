@@ -17,6 +17,12 @@ DEFAULTS = {
     "stop_atr": 2.0,
     "rr": 3.0,
     "atr_period": 14,
+    # Só compras. Faz sentido estrutural em ações e ETFs: o prêmio de
+    # risco de renda variável dá deriva positiva de longo prazo, então
+    # vender a descoberto opera contra a maré. Além disso, no mercado à
+    # vista brasileiro vender exige ALUGAR o papel — custo que este
+    # backtest não modela.
+    "long_only": False,
 }
 
 
@@ -47,7 +53,7 @@ class DonchianStrategy(BaseStrategy):
                 stop_loss=close_now - stop_distance,
                 take_profit=close_now + p["rr"] * stop_distance,
             )
-        if close_now < lower:
+        if close_now < lower and not p["long_only"]:
             return Signal(
                 symbol=symbol, type=SignalType.SELL, entry_price=close_now,
                 stop_loss=close_now + stop_distance,

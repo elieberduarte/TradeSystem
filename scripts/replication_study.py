@@ -49,6 +49,10 @@ STRATEGIES = {
         lambda p: DonchianStrategy(p),
         {"channel": [20, 40], "stop_atr": [2.0], "rr": [2.0, 3.0]},
     ),
+    "donchian_long": (
+        lambda p: DonchianStrategy(p),
+        {"channel": [20, 40], "stop_atr": [2.0], "rr": [2.0, 3.0], "long_only": [True]},
+    ),
     "swing_reversion": (
         lambda p: SwingReversionStrategy(p),
         {"lookback": [40, 60], "threshold_std": [1.0, 1.5], "rr": [1.5, 2.0]},

@@ -121,5 +121,128 @@
   ],
   "positive": 10,
   "tested": 13
+ },
+ "donchian_long": {
+  "rows": [
+   {
+    "symbol": "WIN$N",
+    "pnl": 7461.57,
+    "trades": 18,
+    "win_rate": 0.5,
+    "calmar": 2.12,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "WDO$N",
+    "pnl": -3550.83,
+    "trades": 12,
+    "win_rate": 0.25,
+    "calmar": -1.17,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "BOVA11",
+    "pnl": 8006.0,
+    "trades": 20,
+    "win_rate": 0.45,
+    "calmar": 0.79,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "SMAL11",
+    "pnl": 4352.81,
+    "trades": 14,
+    "win_rate": 0.357,
+    "calmar": 1.38,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "IVVB11",
+    "pnl": 11574.32,
+    "trades": 22,
+    "win_rate": 0.455,
+    "calmar": 1.49,
+    "windows_positive": 4,
+    "windows": 5
+   },
+   {
+    "symbol": "PETR4",
+    "pnl": 8095.31,
+    "trades": 19,
+    "win_rate": 0.474,
+    "calmar": 0.97,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "VALE3",
+    "pnl": 15584.26,
+    "trades": 18,
+    "win_rate": 0.556,
+    "calmar": 1.83,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "ITUB4",
+    "pnl": 17236.73,
+    "trades": 21,
+    "win_rate": 0.524,
+    "calmar": 3.35,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "BBDC4",
+    "pnl": 8341.3,
+    "trades": 16,
+    "win_rate": 0.5,
+    "calmar": 1.39,
+    "windows_positive": 4,
+    "windows": 5
+   },
+   {
+    "symbol": "ABEV3",
+    "pnl": 13392.29,
+    "trades": 19,
+    "win_rate": 0.526,
+    "calmar": 2.61,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "B3SA3",
+    "pnl": -3533.84,
+    "trades": 18,
+    "win_rate": 0.333,
+    "calmar": -0.34,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "WEGE3",
+    "pnl": 17089.2,
+    "trades": 15,
+    "win_rate": 0.6,
+    "calmar": 3.75,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "PRIO3",
+    "pnl": 3181.5,
+    "trades": 16,
+    "win_rate": 0.375,
+    "calmar": 0.47,
+    "windows_positive": 2,
+    "windows": 5
+   }
+  ],
+  "positive": 11,
+  "tested": 13
  }
 }
