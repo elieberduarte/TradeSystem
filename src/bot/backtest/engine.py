@@ -80,11 +80,22 @@ class BacktestEngine:
         # Valor financeiro de 1 ponto por contrato (WIN: 0.20; WDO: 10.00)
         point_value: float = 1.0,
         warmup: int = 100,
+        # Candles passados à estratégia a cada barra (limita custo de CPU
+        # em históricos longos; 500 x 5min cobre ~2 pregões)
+        lookback: int = 500,
+        # Pontos perdidos em cada execução A MERCADO (entrada, stop, zeragem).
+        # Saída no alvo é ordem limitada — sem slippage.
+        slippage_points: float = 0.0,
+        # Custo fixo em R$ por contrato na ida e volta (emolumentos etc.)
+        cost_per_contract: float = 0.0,
     ):
         self.strategy = strategy
         self.risk = risk
         self.point_value = point_value
         self.warmup = warmup
+        self.lookback = lookback
+        self.slippage_points = slippage_points
+        self.cost_per_contract = cost_per_contract
 
     def run(self, symbol: str, candles: pd.DataFrame) -> BacktestResult:
         result = BacktestResult()
@@ -113,7 +124,8 @@ class BacktestEngine:
             if open_trade is not None:
                 open_trade, equity = self._check_exit(open_trade, candle, ts, result, equity)
 
-            signal = self.strategy.generate_signal(symbol, candles.iloc[: i + 1])
+            window_start = max(0, i + 1 - self.lookback)
+            signal = self.strategy.generate_signal(symbol, candles.iloc[window_start : i + 1])
 
             if open_trade is not None and self._is_opposite(signal.type, open_trade.side):
                 open_trade, equity = self._close(
@@ -148,11 +160,16 @@ class BacktestEngine:
         if quantity <= 0:
             return None
         self.risk.open_positions_count += 1
+        side = "buy" if signal.type == SignalType.BUY else "sell"
+        # Entrada a mercado: paga slippage contra a direção da ordem
+        entry = signal.entry_price + (
+            self.slippage_points if side == "buy" else -self.slippage_points
+        )
         return Trade(
             symbol=signal.symbol,
-            side="buy" if signal.type == SignalType.BUY else "sell",
+            side=side,
             entry_time=ts,
-            entry_price=signal.entry_price,
+            entry_price=entry,
             quantity=quantity,
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
@@ -185,11 +202,16 @@ class BacktestEngine:
         return trade, equity
 
     def _close(self, trade: Trade, price: float, ts, reason: str, result, equity):
+        direction = 1 if trade.side == "buy" else -1
+        # Só a saída no alvo é ordem limitada; o resto executa a mercado
+        # e paga slippage contra a posição
+        if reason != "alvo":
+            price -= direction * self.slippage_points
         trade.exit_time = ts
         trade.exit_price = price
         trade.exit_reason = reason
-        direction = 1 if trade.side == "buy" else -1
-        trade.pnl = direction * (price - trade.entry_price) * trade.quantity * self.point_value
+        gross = direction * (price - trade.entry_price) * trade.quantity * self.point_value
+        trade.pnl = gross - self.cost_per_contract * trade.quantity
         result.trades.append(trade)
         self.risk.register_trade_result(trade.pnl)
         self.risk.open_positions_count -= 1
