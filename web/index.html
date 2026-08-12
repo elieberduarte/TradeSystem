@@ -281,6 +281,23 @@
   </div>
 </div>
 
+<!-- ══════════ Replicação ══════════ -->
+<div class="card" id="replication-card" style="display:none; margin-top:12px">
+  <h2>Teste de replicação</h2>
+  <div class="sub">A estratégia funciona em quantos instrumentos? Edge real replica; sorte não.</div>
+  <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>Estratégia</th><th>Instrumentos positivos</th><th class="num">Taxa</th><th class="num">PnL mediano</th><th class="num">PnL total</th><th>Veredito</th></tr>
+      </thead>
+      <tbody id="replication"></tbody>
+    </table>
+  </div>
+  <div class="sub" style="margin-top:10px">
+    Referência: abaixo de 50% é pior que moeda. Acima de 70%, há indício de vantagem estrutural.
+  </div>
+</div>
+
 <!-- ══════════ Comparativo ══════════ -->
 <div class="card" style="margin-top:12px">
   <h2>Comparativo de estratégias</h2>
@@ -507,7 +524,42 @@ async function loadReal(preferred) {
   $("cap-2").textContent = "R$ " + (data.capital * 0.01).toLocaleString("pt-BR");
   $("cap-3").textContent = "−R$ " + (data.capital * 0.03).toLocaleString("pt-BR");
 }
+/* ─── Teste de replicação entre instrumentos ─── */
+async function loadReplication() {
+  let data;
+  try {
+    const resp = await fetch("replication.json", { cache: "no-store" });
+    if (!resp.ok) throw new Error();
+    data = await resp.json();
+  } catch { return; }
+
+  const rows = Object.entries(data)
+    .filter(([, r]) => r.tested > 0)
+    .map(([name, r]) => {
+      const rate = r.positive / r.tested;
+      const pnls = r.rows.map(x => x.pnl).sort((a, b) => a - b);
+      const median = pnls.length ? pnls[Math.floor(pnls.length / 2)] : 0;
+      const total = pnls.reduce((a, b) => a + b, 0);
+      const verdict = rate >= 0.7 ? "replica" : (rate >= 0.5 ? "inconclusivo" : "não replica");
+      const color = rate >= 0.7 ? "var(--delta-good)" : (rate >= 0.5 ? "var(--muted)" : "var(--delta-bad)");
+      return { name, rate, median, total, verdict, color, positive: r.positive, tested: r.tested };
+    })
+    .sort((a, b) => b.rate - a.rate);
+
+  if (!rows.length) return;
+  $("replication-card").style.display = "";
+  $("replication").innerHTML = rows.map(r => `<tr>
+    <td>${r.name}</td>
+    <td>${r.positive} de ${r.tested}</td>
+    <td class="num" style="font-weight:700;color:${r.color}">${Math.round(r.rate * 100)}%</td>
+    <td class="num" style="color:${r.median >= 0 ? "var(--delta-good)" : "var(--delta-bad)"}">${fmtBRL(r.median)}</td>
+    <td class="num" style="color:${r.total >= 0 ? "var(--delta-good)" : "var(--delta-bad)"}">${fmtBRL(r.total)}</td>
+    <td class="verdict" style="color:${r.color}">${r.verdict}</td>
+  </tr>`).join("");
+}
+
 loadReal();
+loadReplication();
 
 /* Recarrega sozinho quando um backtest novo grava o results.json */
 setInterval(async () => {
@@ -517,6 +569,7 @@ setInterval(async () => {
     if (raw !== LAST_RAW) {
       const active = document.querySelector('#picker button[aria-pressed="true"]');
       loadReal(active ? active.textContent : undefined);
+      loadReplication();
     }
   } catch { /* servidor fora do ar — tenta de novo no próximo ciclo */ }
 }, 10_000);
