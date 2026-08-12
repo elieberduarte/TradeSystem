@@ -244,5 +244,146 @@
   ],
   "positive": 11,
   "tested": 13
+ },
+ "band_fade": {
+  "rows": [
+   {
+    "symbol": "WIN$N",
+    "pnl": 13387.45,
+    "trades": 33,
+    "win_rate": 0.545,
+    "calmar": 3.37,
+    "windows_positive": 5,
+    "windows": 5
+   },
+   {
+    "symbol": "IND$N",
+    "pnl": -2235.0,
+    "trades": 11,
+    "win_rate": 0.273,
+    "calmar": -0.4,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "WDO$N",
+    "pnl": 2573.5,
+    "trades": 31,
+    "win_rate": 0.452,
+    "calmar": 0.46,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "DOL$N",
+    "pnl": -2554.0,
+    "trades": 2,
+    "win_rate": 0.0,
+    "calmar": -2.17,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "BOVA11",
+    "pnl": -12571.39,
+    "trades": 37,
+    "win_rate": 0.324,
+    "calmar": -0.79,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "SMAL11",
+    "pnl": -27942.47,
+    "trades": 44,
+    "win_rate": 0.25,
+    "calmar": -1.06,
+    "windows_positive": 1,
+    "windows": 5
+   },
+   {
+    "symbol": "IVVB11",
+    "pnl": -11782.63,
+    "trades": 41,
+    "win_rate": 0.317,
+    "calmar": -0.61,
+    "windows_positive": 2,
+    "windows": 5
+   },
+   {
+    "symbol": "PETR4",
+    "pnl": 27959.22,
+    "trades": 37,
+    "win_rate": 0.514,
+    "calmar": 4.51,
+    "windows_positive": 4,
+    "windows": 5
+   },
+   {
+    "symbol": "VALE3",
+    "pnl": -19332.48,
+    "trades": 40,
+    "win_rate": 0.3,
+    "calmar": -0.81,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "ITUB4",
+    "pnl": -11479.76,
+    "trades": 29,
+    "win_rate": 0.31,
+    "calmar": -1.17,
+    "windows_positive": 1,
+    "windows": 5
+   },
+   {
+    "symbol": "BBDC4",
+    "pnl": -29849.69,
+    "trades": 28,
+    "win_rate": 0.214,
+    "calmar": -0.92,
+    "windows_positive": 0,
+    "windows": 5
+   },
+   {
+    "symbol": "ABEV3",
+    "pnl": 3354.02,
+    "trades": 31,
+    "win_rate": 0.452,
+    "calmar": 0.48,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "B3SA3",
+    "pnl": -7359.18,
+    "trades": 44,
+    "win_rate": 0.318,
+    "calmar": -0.41,
+    "windows_positive": 4,
+    "windows": 5
+   },
+   {
+    "symbol": "WEGE3",
+    "pnl": -2606.28,
+    "trades": 27,
+    "win_rate": 0.407,
+    "calmar": -0.19,
+    "windows_positive": 3,
+    "windows": 5
+   },
+   {
+    "symbol": "PRIO3",
+    "pnl": 4844.47,
+    "trades": 27,
+    "win_rate": 0.481,
+    "calmar": 0.79,
+    "windows_positive": 3,
+    "windows": 5
+   }
+  ],
+  "positive": 5,
+  "tested": 15
  }
 }
