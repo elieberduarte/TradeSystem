@@ -110,13 +110,31 @@ def main() -> None:
     total = len(RATIOS) * len(STOP_FACTORS)
     print(f"═══ Grade alvo/stop · {total} combinações × {len(UNIVERSE)} instrumentos ═══\n")
 
+    out = ROOT / "web" / "rr_grid.json"
     cells = []
+
+    def save() -> None:
+        """Grava a cada célula: a página fica utilizável antes do fim."""
+        out.write_text(
+            json.dumps(
+                {
+                    "base": BASE, "capital": CAPITAL, "universe": UNIVERSE,
+                    "ratios": RATIOS, "stop_factors": STOP_FACTORS,
+                    "cells": cells, "complete": len(cells) == total,
+                    "progress": {"done": len(cells), "total": total},
+                },
+                ensure_ascii=False, indent=1,
+            ),
+            encoding="utf-8",
+        )
+
     for i, stop_factor in enumerate(STOP_FACTORS):
         for j, ratio in enumerate(RATIOS):
             cell = evaluate(store, ratio, stop_factor)
             if not cell:
                 continue
             cells.append(cell)
+            save()
             done = i * len(RATIOS) + j + 1
             print(
                 f"[{done:>2}/{total}] stop {stop_factor:.2f}x · alvo {ratio:.2f}x → "
@@ -124,16 +142,6 @@ def main() -> None:
                 f"mediana {cell['median_pnl']:>8,.0f} · acerto {cell['win_rate']:.1%}"
             )
 
-    payload = {
-        "base": BASE,
-        "capital": CAPITAL,
-        "universe": UNIVERSE,
-        "ratios": RATIOS,
-        "stop_factors": STOP_FACTORS,
-        "cells": cells,
-    }
-    out = ROOT / "web" / "rr_grid.json"
-    out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\nExportado para {out} ({len(cells)} combinações)")
 
 

@@ -225,8 +225,15 @@ async function load() {
     if (!resp.ok) throw new Error();
     DATA = await resp.json();
   } catch {
-    $("app").innerHTML = `<div class="card">Rode <code>python scripts/build_rr_grid.py</code>
-      para gerar a grade.</div>`;
+    $("app").innerHTML = `<div class="card">
+      <h2>Grade ainda não gerada</h2>
+      <div class="sub">São 715 backtests (55 combinações × 13 instrumentos)</div>
+      <p style="color:var(--ink-2);font-size:13.5px">
+        Se o cálculo estiver rodando, esta página se atualiza sozinha assim que os
+        primeiros resultados forem gravados. Para gerar manualmente:
+        <code>python scripts/build_rr_grid.py</code>
+      </p></div>`;
+    setTimeout(load, 15_000);
     return;
   }
   $("app").innerHTML = "";
@@ -243,6 +250,13 @@ async function load() {
   $("sl-ratio").oninput = render;
   $("sl-stop").oninput = render;
   render();
+
+  // Enquanto o cálculo não termina, recarrega para preencher a grade
+  if (DATA.complete === false) {
+    const p = DATA.progress;
+    $("base-desc").textContent += ` · calculando ${p.done}/${p.total} combinações…`;
+    setTimeout(load, 20_000);
+  }
 }
 load();
 </script>
