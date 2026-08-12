@@ -13,11 +13,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from src.bot.analysis.regime import Regime
 from src.bot.backtest.walkforward import WalkForward
 from src.bot.data.history import HistoryStore
 from src.bot.risk.manager import RiskConfig, RiskManager
 from src.bot.strategies.ema_cross import EmaCrossStrategy
 from src.bot.strategies.opening_range import OpeningRangeStrategy
+from src.bot.strategies.regime_filter import RegimeFilteredStrategy
 
 ROOT = Path(__file__).resolve().parents[1]
 WIN_POINT_VALUE = 0.20
@@ -92,6 +94,7 @@ def main() -> None:
     args = sys.argv[1:]
     symbol = args[0] if args else "WINQ26"
     timeframe = args[1] if len(args) > 1 else "5m"
+    only = args[2] if len(args) > 2 else None
 
     store = HistoryStore()
     candles = store.load(symbol, timeframe)
@@ -104,17 +107,34 @@ def main() -> None:
     long_history = len(candles) > 20_000
     train_bars, test_bars = (6000, 3000) if long_history else (2500, 1250)
 
+    trend_only = {Regime.TREND_UP, Regime.TREND_DOWN}
     runs = [
         ("opening_range", lambda p: OpeningRangeStrategy(p), {"range_bars": [3, 6], "rr": [1.5, 2.0]}),
         ("ema_cross", lambda p: EmaCrossStrategy(p), {"fast": [9], "slow": [21], "trend": [0, 80], "rr": [1.5, 2.5]}),
+        (
+            # Só opera rompimento quando o dia já mostra direção (ADX > 25)
+            "opening_range_regime",
+            lambda p: RegimeFilteredStrategy(OpeningRangeStrategy(p), allowed=trend_only),
+            {"range_bars": [3, 6], "rr": [1.5, 2.0]},
+        ),
     ]
+    if only:
+        runs = [r for r in runs if r[0] == only]
 
+    out = ROOT / "web" / "results.json"
+    # Mescla com o que já existe: rodadas parciais não apagam as anteriores,
+    # e o painel acumula estratégias para comparação.
     payload = {
         "updated": str(candles.index.max()),
         "capital": CAPITAL,
         "costs": {"slippage_points": SLIPPAGE_POINTS, "cost_per_contract": COST_PER_CONTRACT},
         "strategies": {},
     }
+    if out.exists():
+        try:
+            payload["strategies"] = json.loads(out.read_text(encoding="utf-8")).get("strategies", {})
+        except (json.JSONDecodeError, OSError):
+            pass
 
     for name, factory, grid in runs:
         print(f"═══ {name} · {symbol} {timeframe} · capital R$ {CAPITAL:,.0f} ═══")
@@ -128,10 +148,12 @@ def main() -> None:
         )
         report = wf.run("WIN", candles, grid, train_bars=train_bars, test_bars=test_bars)
         print(report.summary())
-        payload["strategies"][name] = export(report, symbol, timeframe, name)
+        # Chave inclui símbolo/timeframe: rodadas em bases diferentes coexistem
+        payload["strategies"][f"{name} · {symbol} {timeframe}"] = export(
+            report, symbol, timeframe, name
+        )
         print()
 
-    out = ROOT / "web" / "results.json"
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Resultados exportados para {out}")
 

@@ -150,6 +150,14 @@
   .kv b { color: var(--ink); font-variant-numeric: tabular-nums; }
 
   footer { color: var(--muted); font-size: 12px; text-align: center; margin: 18px 0 6px; }
+
+  .picker { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .picker button {
+    flex: 0 0 auto; padding: 6px 14px; border-radius: 999px; font-size: 12.5px;
+    background: var(--surface); color: var(--ink-2); border: 1px solid var(--border);
+  }
+  .picker button[aria-pressed="true"] { background: var(--series-1); color: #fff; border-color: transparent; }
+  .verdict { font-weight: 700; }
 </style>
 </head>
 <body>
@@ -164,6 +172,8 @@
 <div class="banner" id="banner">
   <strong>Esboço com dados fictícios.</strong> Rode <code>scripts/run_backtest.py</code> para preencher com resultados reais.
 </div>
+
+<div class="picker" id="picker" role="group" aria-label="Escolher backtest"></div>
 
 <!-- ══════════ KPIs ══════════ -->
 <div class="tiles">
@@ -267,6 +277,20 @@
         <tr><th>Janela de teste</th><th>Parâmetros vencedores</th><th class="num">Treino (R$)</th><th class="num">Teste (R$)</th><th class="num">Trades</th><th>Veredito</th></tr>
       </thead>
       <tbody id="wf"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════ Comparativo ══════════ -->
+<div class="card" style="margin-top:12px">
+  <h2>Comparativo de estratégias</h2>
+  <div class="sub">Todos os backtests já rodados · resultado out-of-sample com custos</div>
+  <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>Backtest</th><th class="num">PnL OOS (R$)</th><th class="num">Trades</th><th class="num">Win rate</th><th class="num">Profit factor</th><th class="num">Janelas +</th><th>Veredito</th></tr>
+      </thead>
+      <tbody id="compare"></tbody>
     </table>
   </div>
 </div>
@@ -400,18 +424,52 @@ function renderMock() {
   $("k5").textContent = "R$ 20.000"; $("k6").textContent = "—";
 }
 
+/* ─── Comparativo de todas as estratégias já rodadas ─── */
+function renderCompare(data, selected) {
+  const rows = Object.entries(data.strategies).map(([key, s]) => {
+    const winsW = s.windows.filter(w => w.test_pnl >= 0).length;
+    const ok = s.oos_pnl >= 0;
+    return `<tr${key === selected ? ' style="background:var(--chip)"' : ""}>
+      <td>${key}</td>
+      <td class="num" style="font-weight:700;color:${ok ? "var(--delta-good)" : "var(--delta-bad)"}">${fmtBRL(s.oos_pnl)}</td>
+      <td class="num">${s.trades}</td>
+      <td class="num">${Math.round(s.win_rate * 100)}%</td>
+      <td class="num">${s.profit_factor === null ? "∞" : s.profit_factor.toLocaleString("pt-BR")}</td>
+      <td class="num">${winsW}/${s.windows.length}</td>
+      <td class="verdict" style="color:${ok ? "var(--delta-good)" : "var(--delta-bad)"}">${ok ? "aprovada" : "reprovada"}</td>
+    </tr>`;
+  }).join("");
+  $("compare").innerHTML = rows;
+}
+
 /* ─── Resultados reais do backtest ─── */
-async function loadReal() {
-  let data;
+let LAST_RAW = "";
+
+async function loadReal(preferred) {
+  let data, raw;
   try {
     const resp = await fetch("results.json", { cache: "no-store" });
     if (!resp.ok) throw new Error();
-    data = await resp.json();
+    raw = await resp.text();
+    data = JSON.parse(raw);
   } catch { renderMock(); return; }
 
-  const name = "opening_range";
+  const keys = Object.keys(data.strategies || {});
+  if (!keys.length) { renderMock(); return; }
+  LAST_RAW = raw;
+
+  // Preferência: o que o usuário escolheu; senão a variante com filtro de
+  // regime; senão a primeira
+  const name = (preferred && data.strategies[preferred])
+    ? preferred
+    : (keys.find(k => k.includes("regime")) || keys[0]);
   const s = data.strategies[name];
   if (!s || !s.equity.length) { renderMock(); return; }
+
+  $("picker").innerHTML = keys.map(k =>
+    `<button aria-pressed="${k === name}" onclick="loadReal(${JSON.stringify(k).replace(/"/g, "&quot;")})">${k}</button>`
+  ).join("");
+  renderCompare(data, name);
 
   $("banner").innerHTML = `<strong>Resultados reais de backtest (out-of-sample).</strong>
     ${s.symbol} ${s.timeframe} · execução simulada com slippage de ${data.costs.slippage_points} pts
@@ -422,18 +480,18 @@ async function loadReal() {
   const values = s.equity.map(p => p.value);
   const labels = s.equity.map(p => p.date);
   const cdi = labels.map((_, i) => data.capital * (Math.pow(1 + CDI_DAILY, i + 1) - 1));
-  $("equity-sub").textContent = `PnL acumulado out-of-sample (R$) · ${name}`;
-  $("legend-main").textContent = name;
+  $("equity-sub").textContent = `PnL acumulado out-of-sample (R$) · ${s.strategy}`;
+  $("legend-main").textContent = s.strategy;
   renderEquity(values, labels, cdi);
 
   const dd = s.daily_pnl.slice(-30);
   $("daily-sub").textContent = `PnL por dia out-of-sample (R$) · últimos ${dd.length} dias com trade`;
   renderDaily(dd.map(p => p.value), dd.map(p => p.date));
 
-  $("trades-sub").textContent = `Últimos ${s.last_trades.length} trades out-of-sample · ${name}`;
+  $("trades-sub").textContent = `Últimos ${s.last_trades.length} trades out-of-sample · ${s.strategy}`;
   renderTrades(s.last_trades.slice().reverse());
 
-  $("wf-title").textContent = `Walk-forward · ${name} (${s.symbol} ${s.timeframe})`;
+  $("wf-title").textContent = `Walk-forward · ${s.strategy} (${s.symbol} ${s.timeframe})`;
   renderWalkforward(s.windows);
 
   $("k1").textContent = fmtBRL(s.oos_pnl);
@@ -450,6 +508,18 @@ async function loadReal() {
   $("cap-3").textContent = "−R$ " + (data.capital * 0.03).toLocaleString("pt-BR");
 }
 loadReal();
+
+/* Recarrega sozinho quando um backtest novo grava o results.json */
+setInterval(async () => {
+  try {
+    const resp = await fetch("results.json", { cache: "no-store" });
+    const raw = await resp.text();
+    if (raw !== LAST_RAW) {
+      const active = document.querySelector('#picker button[aria-pressed="true"]');
+      loadReal(active ? active.textContent : undefined);
+    }
+  } catch { /* servidor fora do ar — tenta de novo no próximo ciclo */ }
+}, 10_000);
 
 /* ─── Fila de aprovação (mock de interface) ─── */
 let secs = 12 * 60 + 40;
