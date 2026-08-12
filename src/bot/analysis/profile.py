@@ -202,6 +202,45 @@ def breakout_by_early_regime(
     return out
 
 
+def swing_regime_persistence(
+    candles: pd.DataFrame, horizons: tuple[int, ...] = (1, 5, 10, 20), threshold: float = 25.0
+) -> pd.DataFrame:
+    """O regime persiste no horizonte de swing?
+
+    Para candles diários: classifica cada barra pelo ADX e mede se o
+    regime de hoje continua o mesmo daqui a N barras. É o teste direto
+    da premissa "identificar o ciclo antes de escolher o setup" — que
+    falhou no intradiário porque o regime da manhã não previa o do dia.
+    """
+    indicators = adx(candles, 14)
+    regime = pd.Series(Regime.RANGE.value, index=candles.index, dtype=object)
+    trending = indicators["adx"] >= threshold
+    regime[trending & (indicators["plus_di"] >= indicators["minus_di"])] = Regime.TREND_UP.value
+    regime[trending & (indicators["plus_di"] < indicators["minus_di"])] = Regime.TREND_DOWN.value
+    regime = regime[indicators["adx"].notna()]
+
+    rows = []
+    for horizon in horizons:
+        future = regime.shift(-horizon)
+        pairs = pd.concat([regime, future], axis=1).dropna()
+        pairs.columns = ["agora", "depois"]
+        if pairs.empty:
+            continue
+        same = (pairs["agora"] == pairs["depois"]).mean()
+        # Base de comparação: acertar por acaso, dada a frequência de cada regime
+        chance = (regime.value_counts(normalize=True) ** 2).sum()
+        rows.append(
+            {
+                "horizonte_barras": horizon,
+                "mesmo_regime": round(float(same), 3),
+                "acaso": round(float(chance), 3),
+                "ganho_sobre_acaso": round(float(same - chance), 3),
+                "amostras": len(pairs),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def autocorrelation_by_regime(
     candles: pd.DataFrame, lags: tuple[int, ...] = (1, 3, 6, 12)
 ) -> pd.DataFrame:
