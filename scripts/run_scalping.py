@@ -14,9 +14,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from src.bot.backtest.engine import BacktestEngine
 from src.bot.backtest.limit_engine import LimitOrderEngine
 from src.bot.data.history import HistoryStore
 from src.bot.risk.manager import RiskConfig, RiskManager
+from src.bot.strategies.adaptive_scalp import AdaptiveScalpStrategy
 from src.bot.strategies.scalp import MicroFadeStrategy, RangeScalpStrategy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -106,6 +108,49 @@ def main() -> None:
                 "longest_losing_streak": result.longest_losing_streak,
             }
         )
+
+    # ── Alvo e stop proporcionais à volatilidade, entrada a mercado ──
+    # A limitada foi descartada pela seleção adversa (ver
+    # scripts/adverse_selection.py): perde ~50 pontos percentuais de
+    # acerto para economizar 5 pontos de spread.
+    print()
+    print(f"{'ATR-adaptativo (entrada a mercado)':<34} {'':>10} {'trades':>7} {'acerto':>7} {'PnL':>11} {'R$/trade':>9}")
+    print("-" * 84)
+
+    for direction in ("fade", "follow"):
+        for min_friction in (2.0, 4.0, 8.0):
+            strategy = AdaptiveScalpStrategy(
+                {
+                    "direction": direction, "min_atr_friction": min_friction,
+                    "trigger_atr": 1.5, "target_atr": 1.0, "stop_atr": 1.0,
+                }
+            )
+            engine = BacktestEngine(
+                strategy, risk_factory(), point_value=POINT_VALUE, warmup=60,
+                lookback=120, slippage_points=STOP_SLIPPAGE,
+                cost_per_contract=COST_PER_CONTRACT, max_holding_bars=15,
+            )
+            result = engine.run(symbol, candles)
+            label = f"{direction:<6} piso {min_friction:.0f}x fricção"
+            if not result.trades:
+                print(f"{label:<34} {'':>10} {'sem trades':>7}")
+                continue
+            wins = sum(1 for t in result.trades if t.pnl > 0)
+            print(
+                f"{label:<34} {'':>10} {len(result.trades):>7} "
+                f"{wins / len(result.trades):>6.1%} {result.total_pnl:>11,.0f} "
+                f"{result.expectancy:>9.2f}"
+            )
+            report.append(
+                {
+                    "config": f"adaptive_{direction}_piso{min_friction:.0f}",
+                    "trades": len(result.trades),
+                    "win_rate": round(wins / len(result.trades), 4),
+                    "pnl": round(result.total_pnl, 2),
+                    "expectancy": round(result.expectancy, 2),
+                    "max_drawdown": round(result.max_drawdown, 2),
+                }
+            )
 
     print("-" * 84)
     if report:
