@@ -14,7 +14,13 @@ Este script mede o acerto REAL para vários payoffs e compara com a
 probabilidade teórica do passeio aleatório. A diferença entre as duas
 colunas é o edge que existe (ou não) no ativo.
 
-Uso: python scripts/payoff_curve.py [SIMBOLO] [timeframe]
+Uso: python scripts/payoff_curve.py [SIMBOLO] [timeframe] [payoffs]
+
+    python scripts/payoff_curve.py WIN$N 1m 0.25,0.33,0.5,1
+
+Payoff abaixo de 1 é a configuração "catar moedas na frente do
+trator": alvo curto e stop largo, taxa de acerto alta e perdas raras
+mas enormes. Vale medir justamente porque o acerto alto engana.
 """
 
 import sys
@@ -95,6 +101,11 @@ def measure(candles: pd.DataFrame, ratios, stop_atr: float, max_bars: int, step:
 def main() -> None:
     symbol = sys.argv[1] if len(sys.argv) > 1 else "WIN$N"
     timeframe = sys.argv[2] if len(sys.argv) > 2 else "1m"
+    ratios = (
+        tuple(float(v) for v in sys.argv[3].split(","))
+        if len(sys.argv) > 3
+        else (0.5, 1.0, 1.5, 2.0, 3.0, 4.0)
+    )
     candles = HistoryStore().load(symbol, timeframe)
     if candles is None:
         raise SystemExit(f"Sem acervo {timeframe} para {symbol}")
@@ -110,7 +121,7 @@ def main() -> None:
     print(f"Fricção {friction} pts · até {max_bars} barras para resolver\n")
 
     frame = measure(
-        candles, ratios=(0.5, 1.0, 1.5, 2.0, 3.0, 4.0),
+        candles, ratios=ratios,
         stop_atr=1.0, max_bars=max_bars, step=step,
         friction=friction, point_value=point_value,
     )
