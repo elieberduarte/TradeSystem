@@ -133,8 +133,16 @@ def main() -> None:
             print(f"PnL mediano: {median:,.0f} | PnL total: {sum(r['pnl'] for r in rows):,.0f}")
         report[name] = {"rows": rows, "positive": len(positive), "tested": len(rows)}
 
+    # Mescla: rodar uma estratégia isolada não apaga as anteriores
     out = ROOT / "web" / "replication.json"
-    out.write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
+    merged = {}
+    if out.exists():
+        try:
+            merged = json.loads(out.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+    merged.update(report)
+    out.write_text(json.dumps(merged, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\nExportado para {out}")
 
 
