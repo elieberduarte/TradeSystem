@@ -72,6 +72,54 @@
    "expectancy": -90.93,
    "max_drawdown": 59598.0,
    "longest_losing_streak": 9
+  },
+  {
+   "config": "adaptive_fade_piso2",
+   "trades": 4162,
+   "win_rate": 0.5038,
+   "pnl": -89893.41,
+   "expectancy": -21.6,
+   "max_drawdown": 90154.28
+  },
+  {
+   "config": "adaptive_fade_piso4",
+   "trades": 4109,
+   "win_rate": 0.5028,
+   "pnl": -88031.58,
+   "expectancy": -21.42,
+   "max_drawdown": 88292.44
+  },
+  {
+   "config": "adaptive_fade_piso8",
+   "trades": 3250,
+   "win_rate": 0.4963,
+   "pnl": -62802.75,
+   "expectancy": -19.32,
+   "max_drawdown": 63577.51
+  },
+  {
+   "config": "adaptive_follow_piso2",
+   "trades": 4228,
+   "win_rate": 0.4853,
+   "pnl": -113210.68,
+   "expectancy": -26.78,
+   "max_drawdown": 113210.68
+  },
+  {
+   "config": "adaptive_follow_piso4",
+   "trades": 4188,
+   "win_rate": 0.4859,
+   "pnl": -109283.41,
+   "expectancy": -26.09,
+   "max_drawdown": 109283.41
+  },
+  {
+   "config": "adaptive_follow_piso8",
+   "trades": 3459,
+   "win_rate": 0.4877,
+   "pnl": -72837.8,
+   "expectancy": -21.06,
+   "max_drawdown": 75713.97
   }
  ]
 }
