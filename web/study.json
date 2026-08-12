@@ -1,0 +1,101 @@
+{
+ "symbol": "WIN$N",
+ "timeframe": "5m",
+ "periodo": [
+  "2023-01-09 11:10:00",
+  "2026-08-12 10:05:00"
+ ],
+ "summary": {
+  "pregoes": 896,
+  "regimes_pct": {
+   "lateral": 0.622,
+   "tendencia_alta": 0.205,
+   "tendencia_baixa": 0.173
+  },
+  "amplitude_media_dia": 2033.2,
+  "hora_mais_volatil": 10,
+  "hora_menos_volatil": 17,
+  "gap_corr_dia": -0.084,
+  "rompimentos": 869,
+  "mfe_medio": 436.7,
+  "mae_medio": 449.1,
+  "razao_mfe_mae": 0.97
+ },
+ "by_hour": [
+  {
+   "hora": 9,
+   "candles": 10668.0,
+   "amplitude_media": 236.3,
+   "retorno_medio": -0.8,
+   "volatilidade": 174.6
+  },
+  {
+   "hora": 10,
+   "candles": 10677.0,
+   "amplitude_media": 278.8,
+   "retorno_medio": -0.3,
+   "volatilidade": 186.3
+  },
+  {
+   "hora": 11,
+   "candles": 10690.0,
+   "amplitude_media": 227.1,
+   "retorno_medio": -0.8,
+   "volatilidade": 152.4
+  },
+  {
+   "hora": 12,
+   "candles": 10698.0,
+   "amplitude_media": 172.5,
+   "retorno_medio": 1.2,
+   "volatilidade": 114.7
+  },
+  {
+   "hora": 13,
+   "candles": 10752.0,
+   "amplitude_media": 140.6,
+   "retorno_medio": -0.1,
+   "volatilidade": 93.8
+  },
+  {
+   "hora": 14,
+   "candles": 10752.0,
+   "amplitude_media": 141.6,
+   "retorno_medio": 0.2,
+   "volatilidade": 97.5
+  },
+  {
+   "hora": 15,
+   "candles": 10752.0,
+   "amplitude_media": 139.0,
+   "retorno_medio": -1.2,
+   "volatilidade": 94.4
+  },
+  {
+   "hora": 16,
+   "candles": 10752.0,
+   "amplitude_media": 130.4,
+   "retorno_medio": 0.8,
+   "volatilidade": 90.6
+  },
+  {
+   "hora": 17,
+   "candles": 10590.0,
+   "amplitude_media": 116.1,
+   "retorno_medio": 0.9,
+   "volatilidade": 84.6
+  },
+  {
+   "hora": 18,
+   "candles": 3668.0,
+   "amplitude_media": 124.2,
+   "retorno_medio": -0.5,
+   "volatilidade": 85.9
+  }
+ ],
+ "regimes": {
+  "lateral": 557,
+  "tendencia_alta": 184,
+  "tendencia_baixa": 155
+ }
+}
