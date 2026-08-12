@@ -34,6 +34,11 @@ class Trade:
     pnl: float = 0.0
     # Barras decorridas desde a entrada (para a saída por tempo)
     bars_held: int = 0
+    # Distância original do stop, base dos gatilhos de gestão
+    initial_risk: float = 0.0
+    # Resultado já realizado numa saída parcial
+    realized_pnl: float = 0.0
+    partial_done: bool = False
 
 
 @dataclass
@@ -127,6 +132,15 @@ class BacktestEngine:
         # Evidência recorrente: sinais que seguram 12–15 barras superam a
         # fricção; os que saem em 1–6 barras não.
         max_holding_bars: int = 0,
+        # Stop móvel: após o preço andar N vezes o risco a favor, o stop
+        # passa a seguir a máxima/mínima a essa distância (0 = desativado).
+        trailing_atr: float = 0.0,
+        # Move o stop para o preço de entrada quando o lucro atinge N
+        # vezes o risco (0 = desativado). Elimina a perda, ao custo de
+        # ser estopado no zero em movimentos que voltariam.
+        breakeven_at: float = 0.0,
+        # Realiza metade da posição a N vezes o risco (0 = desativado).
+        partial_at: float = 0.0,
     ):
         self.strategy = strategy
         self.risk = risk
@@ -136,6 +150,9 @@ class BacktestEngine:
         self.slippage_points = slippage_points
         self.cost_per_contract = cost_per_contract
         self.max_holding_bars = max_holding_bars
+        self.trailing_atr = trailing_atr
+        self.breakeven_at = breakeven_at
+        self.partial_at = partial_at
 
     def run(self, symbol: str, candles: pd.DataFrame) -> BacktestResult:
         result = BacktestResult()
@@ -164,6 +181,13 @@ class BacktestEngine:
             if open_trade is not None:
                 open_trade.bars_held += 1
                 open_trade, equity = self._check_exit(open_trade, candle, ts, result, equity)
+
+            # A gestão vem DEPOIS das saídas: ela lê o fechamento do
+            # candle, então só pode valer a partir do próximo. Aplicá-la
+            # antes deixaria o stop móvel ser comparado com a abertura da
+            # mesma barra, que aconteceu antes do fechamento que o moveu.
+            if open_trade is not None:
+                equity = self._manage(open_trade, candle, equity)
 
             # Saída por tempo: a posição já teve as barras que o setup previa
             if (
@@ -224,7 +248,47 @@ class BacktestEngine:
             quantity=quantity,
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
+            initial_risk=abs(entry - signal.stop_loss),
         )
+
+    def _manage(self, trade: Trade, candle, equity: float) -> float:
+        """Aplica saída parcial, breakeven e stop móvel.
+
+        Todos usam o fechamento do candle como referência — nunca a
+        máxima/mínima, porque dentro da barra não se sabe a ordem dos
+        preços e usar o extremo seria olhar o futuro.
+        """
+        if trade.initial_risk <= 0:
+            return equity
+        direction = 1 if trade.side == "buy" else -1
+        close = float(candle["close"])
+        progress = direction * (close - trade.entry_price) / trade.initial_risk
+
+        # Realização parcial: metade da posição sai, o resto segue
+        if self.partial_at and not trade.partial_done and progress >= self.partial_at:
+            half = trade.quantity // 2
+            if half >= 1:
+                price = close - direction * self.slippage_points
+                gross = direction * (price - trade.entry_price) * half * self.point_value
+                realized = gross - self.cost_per_contract * half
+                trade.realized_pnl += realized
+                trade.quantity -= half
+                self.risk.register_trade_result(realized)
+                equity += realized
+            trade.partial_done = True
+
+        # Breakeven: elimina a perda depois de um avanço mínimo
+        if self.breakeven_at and progress >= self.breakeven_at:
+            if direction * (trade.entry_price - trade.stop_loss) > 0:
+                trade.stop_loss = trade.entry_price
+
+        # Stop móvel: acompanha o preço a uma distância fixa
+        if self.trailing_atr and progress >= self.trailing_atr:
+            trail = close - direction * self.trailing_atr * trade.initial_risk
+            if direction * (trail - trade.stop_loss) > 0:
+                trade.stop_loss = trail
+
+        return equity
 
     def _check_exit(self, trade: Trade, candle, ts, result, equity):
         """Stop/alvo contra o candle. Gap de abertura que pula o nível sai
@@ -262,7 +326,8 @@ class BacktestEngine:
         trade.exit_price = price
         trade.exit_reason = reason
         gross = direction * (price - trade.entry_price) * trade.quantity * self.point_value
-        trade.pnl = gross - self.cost_per_contract * trade.quantity
+        # O resultado do trade inclui o que já saiu na parcial
+        trade.pnl = gross - self.cost_per_contract * trade.quantity + trade.realized_pnl
         result.trades.append(trade)
         self.risk.register_trade_result(trade.pnl)
         self.risk.open_positions_count -= 1
