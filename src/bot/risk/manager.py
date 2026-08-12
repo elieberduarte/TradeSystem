@@ -32,6 +32,10 @@ class RiskConfig:
     # Perda máxima na semana em % do capital (0 = desativado) — pensada
     # para swing, onde a perda se acumula em dias, não em horas
     max_weekly_loss_pct: float = 0.0
+    # Quantos instrumentos/estratégias dividem o mesmo capital. O risco
+    # por trade é dividido por este número, senão operar 13 ativos ao
+    # mesmo tempo exporia 13% do capital por rodada em vez de 1%.
+    risk_slots: int = 1
 
 
 @dataclass
@@ -106,7 +110,12 @@ class RiskManager:
         max_risk_per_trade_pct do capital. `point_value` converte pontos
         do contrato em R$ (WIN: 0.20/pt; WDO: 10.00/pt).
         """
-        risk_amount = self.config.capital * self.config.max_risk_per_trade_pct / 100
+        risk_amount = (
+            self.config.capital
+            * self.config.max_risk_per_trade_pct
+            / 100
+            / max(self.config.risk_slots, 1)
+        )
         risk_per_unit = abs(entry_price - stop_loss) * point_value
         if risk_per_unit == 0:
             return 0.0

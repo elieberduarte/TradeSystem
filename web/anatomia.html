@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anatomia das operações</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --baseline: #c3c2b7;
+    --border: rgba(11,11,11,0.10); --chip: #f0efec;
+    --up: #1baf7a; --down: #e34948; --entry: #2a78d6;
+    --stop: #d03b3b; --target: #0ca30c; --channel: #eda100;
+    --good: #006300; --bad: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+      --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+      --chip: #383835; --up: #199e70; --down: #e66767; --entry: #3987e5;
+      --channel: #c98500; --good: #0ca30c;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+    --grid: #2c2c2a; --baseline: #383835; --border: rgba(255,255,255,0.10);
+    --chip: #383835; --up: #199e70; --down: #e66767; --entry: #3987e5;
+    --channel: #c98500; --good: #0ca30c;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page); color: var(--ink); padding: 16px;
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    max-width: 1080px; margin: 0 auto;
+  }
+  h1 { font-size: 21px; margin-bottom: 4px; }
+  .lead { color: var(--ink-2); margin-bottom: 16px; font-size: 13.5px; }
+  a { color: var(--entry); }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; margin-bottom: 14px;
+  }
+  .card h2 { font-size: 15px; margin-bottom: 3px; }
+  .card .sub { color: var(--muted); font-size: 12.5px; margin-bottom: 12px; }
+
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+  .rule { border-left: 3px solid var(--entry); padding-left: 11px; }
+  .rule.stop { border-color: var(--stop); }
+  .rule.target { border-color: var(--target); }
+  .rule.size { border-color: var(--channel); }
+  .rule b { display: block; font-size: 13px; margin-bottom: 2px; }
+  .rule span { color: var(--ink-2); font-size: 12.5px; }
+  code {
+    background: var(--chip); padding: 1px 6px; border-radius: 5px;
+    font-size: 12px; font-family: ui-monospace, monospace;
+  }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 11px; padding: 11px 13px; }
+  .tile .k { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+  .tile .v { font-size: 21px; font-weight: 700; margin-top: 2px; }
+
+  .trade-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+  .tag { font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background: var(--chip); color: var(--ink-2); }
+  .tag.buy { background: var(--up); color: #fff; }
+  .tag.sell { background: var(--down); color: #fff; }
+  .pnl { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .pnl.win { color: var(--good); }
+  .pnl.loss { color: var(--bad); }
+
+  .levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; margin: 10px 0; }
+  .level { background: var(--chip); border-radius: 9px; padding: 7px 10px; }
+  .level .k { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .level .v { font-weight: 700; font-variant-numeric: tabular-nums; font-size: 14px; }
+
+  svg { display: block; width: 100%; height: auto; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--ink-2); margin-top: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 14px; height: 3px; border-radius: 2px; }
+  .loading { color: var(--muted); padding: 20px 0; }
+</style>
+</head>
+<body>
+
+<h1>Anatomia das operações</h1>
+<p class="lead">
+  Como o bot decide: gatilho de entrada, onde fica o stop, onde fica o alvo e por que
+  a posição foi encerrada — operação por operação, com dados reais do backtest.
+  <a href="index.html">← voltar ao painel</a>
+</p>
+
+<div class="card">
+  <h2>As regras, em uma tela</h2>
+  <div class="sub" id="rules-sub">—</div>
+  <div class="rules">
+    <div class="rule">
+      <b>Gatilho de entrada</b>
+      <span>O preço <b>fecha</b> acima da máxima dos últimos 20 pregões (compra) ou abaixo da mínima
+      (venda). Espera-se o fechamento de propósito: pavio que fura o canal e volta não conta.</span>
+    </div>
+    <div class="rule stop">
+      <b>Stop</b>
+      <span>Entrada ∓ <code>2 × ATR(14)</code>. Como o ATR mede a oscilação típica recente, o stop se
+      adapta: fica largo quando o ativo está volátil, curto quando está calmo.</span>
+    </div>
+    <div class="rule target">
+      <b>Alvo</b>
+      <span><code>3 ×</code> a distância do stop. Com esse formato, acertar ~35% das vezes já é lucrativo:
+      as perdas são pequenas e frequentes, os ganhos grandes e raros.</span>
+    </div>
+    <div class="rule size">
+      <b>Tamanho da posição</b>
+      <span><code>(1% do capital) ÷ (distância do stop × valor do ponto)</code>. O risco em reais é sempre
+      o mesmo; o que varia é a quantidade. <b>Não existe preço médio</b> — ver abaixo.</span>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Por que não usamos preço médio</h2>
+  <div class="sub">A pergunta aparece sempre, e a resposta tem consequência prática</div>
+  <p style="color:var(--ink-2); font-size:13.5px">
+    Preço médio (comprar mais quando a posição está perdendo) melhora a taxa de acerto e piora tudo
+    o mais: transforma perdas pequenas e controladas em uma perda enorme e ocasional, e faz a
+    exposição crescer justamente quando a tese está sendo contrariada pelo mercado. É o mecanismo
+    por trás da maioria das contas zeradas — e aparece embutido, sem aviso, em vários robôs
+    comerciais. Aqui, cada operação tem risco fixo e definido <b>antes</b> da entrada; se o stop for
+    atingido, a posição morre e o sistema segue. A única variação de tamanho acontece
+    <b>entre</b> operações, nunca dentro de uma que está perdendo.
+  </p>
+</div>
+
+<div id="summary" class="tiles"></div>
+<div id="trades"><div class="loading">Carregando operações…</div></div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+
+function money(v, casas = 2) {
+  return v.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
+}
+
+function chart(trade) {
+  const W = 900, H = 320, m = { t: 14, r: 96, b: 22, l: 8 };
+  const candles = trade.candles;
+  const levels = [trade.entry_price, trade.stop_loss, trade.take_profit, trade.exit_price];
+  const lo = Math.min(...candles.map(c => c.l), ...levels);
+  const hi = Math.max(...candles.map(c => c.h), ...levels);
+  const pad = (hi - lo) * 0.06;
+  const yMin = lo - pad, yMax = hi + pad;
+
+  const bw = (W - m.l - m.r) / candles.length;
+  const x = i => m.l + i * bw + bw / 2;
+  const y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (H - m.t - m.b);
+
+  const entryIdx = candles.findIndex(c => c.date === trade.entry_time);
+  const exitIdx = candles.findIndex(c => c.date === trade.exit_time);
+
+  let el = "";
+
+  // Zona da operação
+  if (entryIdx >= 0 && exitIdx >= 0) {
+    el += `<rect x="${x(entryIdx)}" y="${m.t}" width="${x(exitIdx) - x(entryIdx)}"
+      height="${H - m.t - m.b}" fill="var(--entry)" opacity="0.06"/>`;
+  }
+
+  // Canal de Donchian (o gatilho)
+  const line = (key, color) => {
+    const pts = candles
+      .map((c, i) => (c[key] === null ? null : `${x(i).toFixed(1)} ${y(c[key]).toFixed(1)}`))
+      .filter(Boolean);
+    return pts.length
+      ? `<polyline points="${pts.join(" ")}" fill="none" stroke="${color}" stroke-width="1.5"
+         stroke-dasharray="4 3" opacity="0.85"/>`
+      : "";
+  };
+  el += line("up", "var(--channel)") + line("lo", "var(--channel)");
+
+  // Candles
+  candles.forEach((c, i) => {
+    const color = c.c >= c.o ? "var(--up)" : "var(--down)";
+    const top = Math.min(y(c.o), y(c.c));
+    const h = Math.max(1.5, Math.abs(y(c.c) - y(c.o)));
+    el += `<line x1="${x(i)}" y1="${y(c.h)}" x2="${x(i)}" y2="${y(c.l)}" stroke="${color}" stroke-width="1"/>`;
+    el += `<rect x="${x(i) - Math.max(1.5, bw * 0.3)}" y="${top}"
+      width="${Math.max(3, bw * 0.6)}" height="${h}" fill="${color}"/>`;
+  });
+
+  // Níveis da operação
+  const level = (value, color, label, dash) => {
+    const yy = y(value);
+    return `<line x1="${m.l}" y1="${yy}" x2="${W - m.r}" y2="${yy}" stroke="${color}"
+      stroke-width="1.5" ${dash ? 'stroke-dasharray="6 4"' : ""}/>
+      <text x="${W - m.r + 6}" y="${yy + 4}" font-size="11" font-weight="700" fill="${color}">${label}</text>`;
+  };
+  el += level(trade.take_profit, "var(--target)", `alvo ${money(trade.take_profit)}`, true);
+  el += level(trade.entry_price, "var(--entry)", `entrada ${money(trade.entry_price)}`, false);
+  el += level(trade.stop_loss, "var(--stop)", `stop ${money(trade.stop_loss)}`, true);
+
+  // Marcadores de entrada e saída
+  if (entryIdx >= 0) {
+    const yy = y(trade.entry_price);
+    const up = trade.side === "buy";
+    el += `<path d="M${x(entryIdx)} ${yy} l-6 ${up ? 11 : -11} h12 z" fill="var(--entry)"/>`;
+  }
+  if (exitIdx >= 0) {
+    const yy = y(trade.exit_price);
+    el += `<circle cx="${x(exitIdx)}" cy="${yy}" r="5.5" fill="var(--surface)"
+      stroke="${trade.pnl >= 0 ? "var(--target)" : "var(--stop)"}" stroke-width="2.5"/>`;
+  }
+
+  // Datas nas pontas
+  el += `<text x="${m.l}" y="${H - 6}" font-size="10" fill="var(--muted)">${candles[0].date}</text>`;
+  el += `<text x="${W - m.r}" y="${H - 6}" font-size="10" fill="var(--muted)" text-anchor="end">${candles.at(-1).date}</text>`;
+
+  return `<svg viewBox="0 0 ${W} ${H}" role="img"
+    aria-label="Operação de ${trade.side === "buy" ? "compra" : "venda"} em ${trade.entry_time}">${el}</svg>`;
+}
+
+function reasonText(reason) {
+  return {
+    "alvo": "alvo atingido",
+    "alvo (gap)": "alvo superado no gap de abertura",
+    "stop": "stop atingido",
+    "stop (gap)": "gap de abertura pulou o stop — saída pior que o planejado",
+    "sinal contrário": "sinal contrário: o canal rompeu para o outro lado",
+    "fim do histórico": "posição ainda aberta no fim dos dados",
+    "tempo": "limite de tempo na posição",
+    "zeragem diária": "zeragem de fim de pregão",
+  }[reason] || reason;
+}
+
+async function load() {
+  let data;
+  try {
+    const resp = await fetch("anatomy.json", { cache: "no-store" });
+    if (!resp.ok) throw new Error();
+    data = await resp.json();
+  } catch {
+    $("trades").innerHTML = `<div class="card">Rode <code>python scripts/export_trade_anatomy.py</code>
+      para gerar os dados.</div>`;
+    return;
+  }
+
+  const p = data.params;
+  $("rules-sub").textContent =
+    `${data.strategy} · canal ${p.channel} pregões · stop ${p.stop_atr}×ATR · alvo ${p.rr}× o risco · ${data.symbol}`;
+
+  const s = data.summary;
+  $("summary").innerHTML = `
+    <div class="tile"><div class="k">Operações</div><div class="v">${s.trades}</div></div>
+    <div class="tile"><div class="k">Acerto</div><div class="v">${Math.round(s.win_rate * 100)}%</div></div>
+    <div class="tile"><div class="k">Resultado</div><div class="v" style="color:${s.total_pnl >= 0 ? "var(--good)" : "var(--bad)"}">R$ ${money(s.total_pnl, 0)}</div></div>
+    <div class="tile"><div class="k">Média/operação</div><div class="v">R$ ${money(s.expectancy, 0)}</div></div>
+    <div class="tile"><div class="k">Pior mergulho</div><div class="v">R$ ${money(s.max_drawdown, 0)}</div></div>
+    <div class="tile"><div class="k">Perdas seguidas</div><div class="v">${s.longest_losing_streak}</div></div>`;
+
+  $("trades").innerHTML = data.trades_sample.map(t => {
+    const risco = Math.abs(t.entry_price - t.stop_loss);
+    const alvo = Math.abs(t.take_profit - t.entry_price);
+    return `<div class="card">
+      <div class="trade-head">
+        <span class="tag ${t.side}">${t.side === "buy" ? "COMPRA" : "VENDA"}</span>
+        <b>${t.symbol}</b>
+        <span style="color:var(--muted)">${t.entry_time} → ${t.exit_time} · ${t.bars_held} dias · ${t.quantity} ${data.point_value === 1 ? "ações" : "contratos"}</span>
+        <span class="pnl ${t.pnl >= 0 ? "win" : "loss"}">${t.pnl >= 0 ? "+" : "−"}R$ ${money(Math.abs(t.pnl), 2)}</span>
+      </div>
+      <div class="levels">
+        <div class="level"><div class="k">Entrada</div><div class="v">${money(t.entry_price)}</div></div>
+        <div class="level"><div class="k">Stop</div><div class="v">${money(t.stop_loss)}</div></div>
+        <div class="level"><div class="k">Alvo</div><div class="v">${money(t.take_profit)}</div></div>
+        <div class="level"><div class="k">Saída</div><div class="v">${money(t.exit_price)}</div></div>
+        <div class="level"><div class="k">Risco</div><div class="v">${money(risco)}</div></div>
+        <div class="level"><div class="k">Alvo/risco</div><div class="v">${(alvo / risco).toFixed(1)}×</div></div>
+      </div>
+      ${chart(t)}
+      <div class="legend">
+        <span><span class="sw" style="background:var(--channel)"></span>canal de ${p.channel} pregões (o gatilho)</span>
+        <span><span class="sw" style="background:var(--entry)"></span>entrada</span>
+        <span><span class="sw" style="background:var(--stop)"></span>stop</span>
+        <span><span class="sw" style="background:var(--target)"></span>alvo</span>
+        <span>○ saída: <b>${reasonText(t.exit_reason)}</b></span>
+      </div>
+    </div>`;
+  }).join("");
+}
+load();
+</script>
+</body>
+</html>
