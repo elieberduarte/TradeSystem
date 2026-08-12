@@ -1,0 +1,77 @@
+{
+ "symbol": "WIN$N",
+ "results": [
+  {
+   "config": "micro_fade  20/20 · offset 10",
+   "offset": 10.0,
+   "orders_placed": 641,
+   "fill_rate": 0.9563,
+   "trades": 613,
+   "win_rate": 0.2692,
+   "pnl": -124975.0,
+   "expectancy": -203.87,
+   "max_drawdown": 125250.0,
+   "longest_losing_streak": 17
+  },
+  {
+   "config": "micro_fade  20/20 · offset 20",
+   "offset": 20.0,
+   "orders_placed": 695,
+   "fill_rate": 0.9137,
+   "trades": 635,
+   "win_rate": 0.2819,
+   "pnl": -125825.0,
+   "expectancy": -198.15,
+   "max_drawdown": 126600.0,
+   "longest_losing_streak": 15
+  },
+  {
+   "config": "micro_fade  30/30 · offset 15",
+   "offset": 15.0,
+   "orders_placed": 1086,
+   "fill_rate": 0.9144,
+   "trades": 993,
+   "win_rate": 0.3374,
+   "pnl": -134821.5,
+   "expectancy": -135.77,
+   "max_drawdown": 136900.5,
+   "longest_losing_streak": 15
+  },
+  {
+   "config": "range_scalp 20/20 · offset 10",
+   "offset": 10.0,
+   "orders_placed": 657,
+   "fill_rate": 0.8082,
+   "trades": 531,
+   "win_rate": 0.4105,
+   "pnl": -74475.0,
+   "expectancy": -140.25,
+   "max_drawdown": 74750.0,
+   "longest_losing_streak": 11
+  },
+  {
+   "config": "range_scalp 20/20 · offset 20",
+   "offset": 20.0,
+   "orders_placed": 654,
+   "fill_rate": 0.6636,
+   "trades": 434,
+   "win_rate": 0.3618,
+   "pnl": -70400.0,
+   "expectancy": -162.21,
+   "max_drawdown": 70400.0,
+   "longest_losing_streak": 11
+  },
+  {
+   "config": "range_scalp 30/30 · offset 15",
+   "offset": 15.0,
+   "orders_placed": 897,
+   "fill_rate": 0.7291,
+   "trades": 654,
+   "win_rate": 0.4419,
+   "pnl": -59466.0,
+   "expectancy": -90.93,
+   "max_drawdown": 59598.0,
+   "longest_losing_streak": 9
+  }
+ ]
+}
