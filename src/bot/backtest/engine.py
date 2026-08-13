@@ -141,6 +141,10 @@ class BacktestEngine:
         breakeven_at: float = 0.0,
         # Realiza metade da posição a N vezes o risco (0 = desativado).
         partial_at: float = 0.0,
+        # Custo em caixa de UMA unidade. None = preço de entrada (ações e
+        # ETFs, pagos integralmente). Nos futuros, a margem por contrato.
+        # Só tem efeito com RiskConfig.enforce_cash ligado.
+        unit_cost: float | None = None,
     ):
         self.strategy = strategy
         self.risk = risk
@@ -153,6 +157,7 @@ class BacktestEngine:
         self.trailing_atr = trailing_atr
         self.breakeven_at = breakeven_at
         self.partial_at = partial_at
+        self.unit_cost = unit_cost
 
     def run(self, symbol: str, candles: pd.DataFrame) -> BacktestResult:
         result = BacktestResult()
@@ -228,7 +233,7 @@ class BacktestEngine:
         if not allowed:
             return None
         quantity = self.risk.position_size(
-            signal.entry_price, signal.stop_loss, self.point_value
+            signal.entry_price, signal.stop_loss, self.point_value, self.unit_cost
         )
         # Contratos são negociados em quantidades inteiras
         quantity = int(quantity)

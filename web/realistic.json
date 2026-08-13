@@ -1,0 +1,80 @@
+[
+ {
+  "capital": 20000.0,
+  "slots": 5,
+  "instruments": 20,
+  "positive": 16,
+  "trades": 408,
+  "total_pnl": 6083.0,
+  "return_pct": 30.4,
+  "annual_pct": 6.7,
+  "max_drawdown": 968.0,
+  "drawdown_pct": 4.8,
+  "years": 4.1
+ },
+ {
+  "capital": 20000.0,
+  "slots": 10,
+  "instruments": 20,
+  "positive": 16,
+  "trades": 408,
+  "total_pnl": 2951.0,
+  "return_pct": 14.8,
+  "annual_pct": 3.4,
+  "max_drawdown": 469.0,
+  "drawdown_pct": 2.3,
+  "years": 4.1
+ },
+ {
+  "capital": 50000.0,
+  "slots": 10,
+  "instruments": 20,
+  "positive": 16,
+  "trades": 408,
+  "total_pnl": 7688.0,
+  "return_pct": 15.4,
+  "annual_pct": 3.5,
+  "max_drawdown": 1203.0,
+  "drawdown_pct": 2.4,
+  "years": 4.1
+ },
+ {
+  "capital": 100000.0,
+  "slots": 10,
+  "instruments": 20,
+  "positive": 16,
+  "trades": 408,
+  "total_pnl": 15458.0,
+  "return_pct": 15.5,
+  "annual_pct": 3.5,
+  "max_drawdown": 2465.0,
+  "drawdown_pct": 2.5,
+  "years": 4.1
+ },
+ {
+  "capital": 200000.0,
+  "slots": 15,
+  "instruments": 21,
+  "positive": 16,
+  "trades": 409,
+  "total_pnl": 20458.0,
+  "return_pct": 10.2,
+  "annual_pct": 2.4,
+  "max_drawdown": 3159.0,
+  "drawdown_pct": 1.6,
+  "years": 4.1
+ },
+ {
+  "capital": 500000.0,
+  "slots": 20,
+  "instruments": 23,
+  "positive": 19,
+  "trades": 431,
+  "total_pnl": 41998.0,
+  "return_pct": 8.4,
+  "annual_pct": 2.0,
+  "max_drawdown": 6201.0,
+  "drawdown_pct": 1.2,
+  "years": 4.1
+ }
+]

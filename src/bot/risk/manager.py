@@ -36,6 +36,11 @@ class RiskConfig:
     # por trade é dividido por este número, senão operar 13 ativos ao
     # mesmo tempo exporia 13% do capital por rodada em vez de 1%.
     risk_slots: int = 1
+    # Respeitar o caixa disponível, não só o risco. No mercado à vista
+    # não há alavancagem para swing: a posição é paga integralmente. Um
+    # stop de 2×ATR fica a ~5% do preço, então arriscar 1% do capital
+    # exigiria comprar 20% dele — dinheiro que pode não existir.
+    enforce_cash: bool = False
 
 
 @dataclass
@@ -102,24 +107,44 @@ class RiskManager:
         return now.time() >= self.config.flat_time
 
     def position_size(
-        self, entry_price: float, stop_loss: float, point_value: float = 1.0
+        self,
+        entry_price: float,
+        stop_loss: float,
+        point_value: float = 1.0,
+        unit_cost: float | None = None,
     ) -> float:
-        """Calcula a quantidade com base no risco máximo por trade.
+        """Quantidade que respeita o risco E o caixa disponível.
 
-        Quantidade tal que, se o stop for atingido, a perda não passa de
-        max_risk_per_trade_pct do capital. `point_value` converte pontos
-        do contrato em R$ (WIN: 0.20/pt; WDO: 10.00/pt).
+        Duas restrições, e vale a menor:
+
+        1. RISCO — se o stop for atingido, a perda não passa de
+           max_risk_per_trade_pct do capital (dividido pelas vagas).
+           `point_value` converte pontos do contrato em R$ (WIN: 0,20/pt;
+           WDO: 10,00/pt).
+        2. CAIXA — o dinheiro que a posição imobiliza precisa caber na
+           fatia de capital reservada à vaga. `unit_cost` é o custo de
+           uma unidade: o preço da ação no mercado à vista, ou a margem
+           exigida por contrato nos futuros.
+
+        Ignorar a segunda foi o que fez nosso backtest operar com
+        alavancagem que não existe: um stop de 2×ATR fica a ~5% do
+        preço, então arriscar 1% do capital exige comprar 20% dele.
         """
-        risk_amount = (
-            self.config.capital
-            * self.config.max_risk_per_trade_pct
-            / 100
-            / max(self.config.risk_slots, 1)
-        )
+        slots = max(self.config.risk_slots, 1)
+        risk_amount = self.config.capital * self.config.max_risk_per_trade_pct / 100 / slots
         risk_per_unit = abs(entry_price - stop_loss) * point_value
         if risk_per_unit == 0:
             return 0.0
-        return risk_amount / risk_per_unit
+        by_risk = risk_amount / risk_per_unit
+
+        if not self.config.enforce_cash:
+            return by_risk
+
+        cost = entry_price if unit_cost is None else unit_cost
+        if cost <= 0:
+            return by_risk
+        by_cash = (self.config.capital / slots) / cost
+        return min(by_risk, by_cash)
 
     def register_trade_result(self, pnl: float) -> None:
         self.daily_pnl += pnl
