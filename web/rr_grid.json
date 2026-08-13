@@ -1,0 +1,5051 @@
+{
+ "base": {
+  "channel": 20,
+  "stop_atr": 2.0,
+  "rr": 3.0,
+  "long_only": true
+ },
+ "capital": 150000.0,
+ "universe": [
+  "WIN$N",
+  "WDO$N",
+  "BOVA11",
+  "SMAL11",
+  "IVVB11",
+  "PETR4",
+  "VALE3",
+  "ITUB4",
+  "BBDC4",
+  "ABEV3",
+  "B3SA3",
+  "WEGE3",
+  "PRIO3"
+ ],
+ "ratios": [
+  0.33,
+  0.5,
+  0.75,
+  1.0,
+  1.5,
+  2.0,
+  2.5,
+  3.0,
+  4.0,
+  5.0,
+  7.0
+ ],
+ "stop_factors": [
+  0.5,
+  0.75,
+  1.0,
+  1.5,
+  2.0
+ ],
+ "cells": [
+  {
+   "ratio": 0.33,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 7,
+   "rate": 0.538,
+   "median_pnl": 1310.0,
+   "total_pnl": 18629.0,
+   "trades": 1073,
+   "win_rate": 0.761,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 5757.0,
+     "trades": 95,
+     "win_rate": 0.768,
+     "max_drawdown": 4678.0
+    },
+    "WDO$N": {
+     "pnl": -13741.0,
+     "trades": 53,
+     "win_rate": 0.604,
+     "max_drawdown": 15597.0
+    },
+    "BOVA11": {
+     "pnl": 1310.0,
+     "trades": 99,
+     "win_rate": 0.758,
+     "max_drawdown": 6348.0
+    },
+    "SMAL11": {
+     "pnl": -1086.0,
+     "trades": 73,
+     "win_rate": 0.74,
+     "max_drawdown": 6668.0
+    },
+    "IVVB11": {
+     "pnl": -13517.0,
+     "trades": 114,
+     "win_rate": 0.675,
+     "max_drawdown": 17463.0
+    },
+    "PETR4": {
+     "pnl": 17523.0,
+     "trades": 102,
+     "win_rate": 0.814,
+     "max_drawdown": 4335.0
+    },
+    "VALE3": {
+     "pnl": 12406.0,
+     "trades": 74,
+     "win_rate": 0.811,
+     "max_drawdown": 5009.0
+    },
+    "ITUB4": {
+     "pnl": -846.0,
+     "trades": 99,
+     "win_rate": 0.768,
+     "max_drawdown": 12541.0
+    },
+    "BBDC4": {
+     "pnl": -2430.0,
+     "trades": 72,
+     "win_rate": 0.792,
+     "max_drawdown": 10539.0
+    },
+    "ABEV3": {
+     "pnl": -1883.0,
+     "trades": 67,
+     "win_rate": 0.806,
+     "max_drawdown": 12117.0
+    },
+    "B3SA3": {
+     "pnl": 5265.0,
+     "trades": 61,
+     "win_rate": 0.82,
+     "max_drawdown": 3319.0
+    },
+    "WEGE3": {
+     "pnl": 4913.0,
+     "trades": 82,
+     "win_rate": 0.78,
+     "max_drawdown": 6932.0
+    },
+    "PRIO3": {
+     "pnl": 4958.0,
+     "trades": 82,
+     "win_rate": 0.756,
+     "max_drawdown": 7696.0
+    }
+   }
+  },
+  {
+   "ratio": 0.5,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 3877.0,
+   "total_pnl": 70863.0,
+   "trades": 1023,
+   "win_rate": 0.708,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 8211.0,
+     "trades": 84,
+     "win_rate": 0.702,
+     "max_drawdown": 5870.0
+    },
+    "WDO$N": {
+     "pnl": -8886.0,
+     "trades": 52,
+     "win_rate": 0.577,
+     "max_drawdown": 11004.0
+    },
+    "BOVA11": {
+     "pnl": 15161.0,
+     "trades": 91,
+     "win_rate": 0.736,
+     "max_drawdown": 6111.0
+    },
+    "SMAL11": {
+     "pnl": 3877.0,
+     "trades": 67,
+     "win_rate": 0.687,
+     "max_drawdown": 9107.0
+    },
+    "IVVB11": {
+     "pnl": -9952.0,
+     "trades": 108,
+     "win_rate": 0.62,
+     "max_drawdown": 17418.0
+    },
+    "PETR4": {
+     "pnl": 26379.0,
+     "trades": 101,
+     "win_rate": 0.782,
+     "max_drawdown": 4828.0
+    },
+    "VALE3": {
+     "pnl": 17161.0,
+     "trades": 73,
+     "win_rate": 0.767,
+     "max_drawdown": 4498.0
+    },
+    "ITUB4": {
+     "pnl": 3242.0,
+     "trades": 95,
+     "win_rate": 0.705,
+     "max_drawdown": 11401.0
+    },
+    "BBDC4": {
+     "pnl": 1716.0,
+     "trades": 72,
+     "win_rate": 0.736,
+     "max_drawdown": 10775.0
+    },
+    "ABEV3": {
+     "pnl": -4101.0,
+     "trades": 63,
+     "win_rate": 0.714,
+     "max_drawdown": 16479.0
+    },
+    "B3SA3": {
+     "pnl": 3958.0,
+     "trades": 55,
+     "win_rate": 0.727,
+     "max_drawdown": 4429.0
+    },
+    "WEGE3": {
+     "pnl": 3092.0,
+     "trades": 80,
+     "win_rate": 0.7,
+     "max_drawdown": 13174.0
+    },
+    "PRIO3": {
+     "pnl": 11003.0,
+     "trades": 82,
+     "win_rate": 0.72,
+     "max_drawdown": 7442.0
+    }
+   }
+  },
+  {
+   "ratio": 0.75,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 11874.0,
+   "total_pnl": 135044.0,
+   "trades": 924,
+   "win_rate": 0.642,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 9792.0,
+     "trades": 76,
+     "win_rate": 0.618,
+     "max_drawdown": 6214.0
+    },
+    "WDO$N": {
+     "pnl": -4303.0,
+     "trades": 49,
+     "win_rate": 0.531,
+     "max_drawdown": 9001.0
+    },
+    "BOVA11": {
+     "pnl": 20697.0,
+     "trades": 80,
+     "win_rate": 0.675,
+     "max_drawdown": 9240.0
+    },
+    "SMAL11": {
+     "pnl": 7914.0,
+     "trades": 62,
+     "win_rate": 0.629,
+     "max_drawdown": 6138.0
+    },
+    "IVVB11": {
+     "pnl": 5551.0,
+     "trades": 100,
+     "win_rate": 0.59,
+     "max_drawdown": 17321.0
+    },
+    "PETR4": {
+     "pnl": 31439.0,
+     "trades": 92,
+     "win_rate": 0.717,
+     "max_drawdown": 6782.0
+    },
+    "VALE3": {
+     "pnl": 11874.0,
+     "trades": 64,
+     "win_rate": 0.641,
+     "max_drawdown": 5729.0
+    },
+    "ITUB4": {
+     "pnl": 14665.0,
+     "trades": 82,
+     "win_rate": 0.659,
+     "max_drawdown": 10972.0
+    },
+    "BBDC4": {
+     "pnl": 14129.0,
+     "trades": 66,
+     "win_rate": 0.712,
+     "max_drawdown": 10487.0
+    },
+    "ABEV3": {
+     "pnl": -2282.0,
+     "trades": 57,
+     "win_rate": 0.632,
+     "max_drawdown": 17203.0
+    },
+    "B3SA3": {
+     "pnl": -2591.0,
+     "trades": 52,
+     "win_rate": 0.577,
+     "max_drawdown": 9398.0
+    },
+    "WEGE3": {
+     "pnl": 12167.0,
+     "trades": 71,
+     "win_rate": 0.648,
+     "max_drawdown": 10456.0
+    },
+    "PRIO3": {
+     "pnl": 15991.0,
+     "trades": 73,
+     "win_rate": 0.658,
+     "max_drawdown": 6793.0
+    }
+   }
+  },
+  {
+   "ratio": 1.0,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 10545.0,
+   "total_pnl": 119146.0,
+   "trades": 810,
+   "win_rate": 0.564,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 11796.0,
+     "trades": 66,
+     "win_rate": 0.561,
+     "max_drawdown": 6995.0
+    },
+    "WDO$N": {
+     "pnl": -8004.0,
+     "trades": 45,
+     "win_rate": 0.422,
+     "max_drawdown": 12001.0
+    },
+    "BOVA11": {
+     "pnl": 17304.0,
+     "trades": 69,
+     "win_rate": 0.594,
+     "max_drawdown": 11469.0
+    },
+    "SMAL11": {
+     "pnl": 10908.0,
+     "trades": 52,
+     "win_rate": 0.577,
+     "max_drawdown": 7870.0
+    },
+    "IVVB11": {
+     "pnl": 11599.0,
+     "trades": 90,
+     "win_rate": 0.544,
+     "max_drawdown": 16999.0
+    },
+    "PETR4": {
+     "pnl": 36788.0,
+     "trades": 78,
+     "win_rate": 0.667,
+     "max_drawdown": 5789.0
+    },
+    "VALE3": {
+     "pnl": 10538.0,
+     "trades": 57,
+     "win_rate": 0.561,
+     "max_drawdown": 8950.0
+    },
+    "ITUB4": {
+     "pnl": 10545.0,
+     "trades": 67,
+     "win_rate": 0.567,
+     "max_drawdown": 10604.0
+    },
+    "BBDC4": {
+     "pnl": -5974.0,
+     "trades": 59,
+     "win_rate": 0.525,
+     "max_drawdown": 14977.0
+    },
+    "ABEV3": {
+     "pnl": 1433.0,
+     "trades": 51,
+     "win_rate": 0.588,
+     "max_drawdown": 9891.0
+    },
+    "B3SA3": {
+     "pnl": -2327.0,
+     "trades": 49,
+     "win_rate": 0.51,
+     "max_drawdown": 7861.0
+    },
+    "WEGE3": {
+     "pnl": 8728.0,
+     "trades": 61,
+     "win_rate": 0.557,
+     "max_drawdown": 12355.0
+    },
+    "PRIO3": {
+     "pnl": 15812.0,
+     "trades": 66,
+     "win_rate": 0.591,
+     "max_drawdown": 9300.0
+    }
+   }
+  },
+  {
+   "ratio": 1.5,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 9876.0,
+   "total_pnl": 132945.0,
+   "trades": 675,
+   "win_rate": 0.471,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 9717.0,
+     "trades": 54,
+     "win_rate": 0.463,
+     "max_drawdown": 6048.0
+    },
+    "WDO$N": {
+     "pnl": -7599.0,
+     "trades": 37,
+     "win_rate": 0.324,
+     "max_drawdown": 14147.0
+    },
+    "BOVA11": {
+     "pnl": 22454.0,
+     "trades": 55,
+     "win_rate": 0.527,
+     "max_drawdown": 13294.0
+    },
+    "SMAL11": {
+     "pnl": 14518.0,
+     "trades": 42,
+     "win_rate": 0.5,
+     "max_drawdown": 11063.0
+    },
+    "IVVB11": {
+     "pnl": -5825.0,
+     "trades": 70,
+     "win_rate": 0.386,
+     "max_drawdown": 20610.0
+    },
+    "PETR4": {
+     "pnl": 42684.0,
+     "trades": 69,
+     "win_rate": 0.58,
+     "max_drawdown": 9543.0
+    },
+    "VALE3": {
+     "pnl": 13082.0,
+     "trades": 52,
+     "win_rate": 0.481,
+     "max_drawdown": 11212.0
+    },
+    "ITUB4": {
+     "pnl": 16021.0,
+     "trades": 55,
+     "win_rate": 0.491,
+     "max_drawdown": 12482.0
+    },
+    "BBDC4": {
+     "pnl": 9876.0,
+     "trades": 45,
+     "win_rate": 0.511,
+     "max_drawdown": 10487.0
+    },
+    "ABEV3": {
+     "pnl": 7521.0,
+     "trades": 43,
+     "win_rate": 0.512,
+     "max_drawdown": 10321.0
+    },
+    "B3SA3": {
+     "pnl": -3377.0,
+     "trades": 42,
+     "win_rate": 0.405,
+     "max_drawdown": 9146.0
+    },
+    "WEGE3": {
+     "pnl": 713.0,
+     "trades": 57,
+     "win_rate": 0.421,
+     "max_drawdown": 11472.0
+    },
+    "PRIO3": {
+     "pnl": 13161.0,
+     "trades": 54,
+     "win_rate": 0.481,
+     "max_drawdown": 18119.0
+    }
+   }
+  },
+  {
+   "ratio": 2.0,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 6400.0,
+   "total_pnl": 142138.0,
+   "trades": 586,
+   "win_rate": 0.403,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 4616.0,
+     "trades": 48,
+     "win_rate": 0.375,
+     "max_drawdown": 10260.0
+    },
+    "WDO$N": {
+     "pnl": -7574.0,
+     "trades": 34,
+     "win_rate": 0.265,
+     "max_drawdown": 13056.0
+    },
+    "BOVA11": {
+     "pnl": 24358.0,
+     "trades": 50,
+     "win_rate": 0.46,
+     "max_drawdown": 10955.0
+    },
+    "SMAL11": {
+     "pnl": 16469.0,
+     "trades": 36,
+     "win_rate": 0.444,
+     "max_drawdown": 10313.0
+    },
+    "IVVB11": {
+     "pnl": 3723.0,
+     "trades": 61,
+     "win_rate": 0.361,
+     "max_drawdown": 14312.0
+    },
+    "PETR4": {
+     "pnl": 49978.0,
+     "trades": 56,
+     "win_rate": 0.536,
+     "max_drawdown": 8465.0
+    },
+    "VALE3": {
+     "pnl": 6400.0,
+     "trades": 42,
+     "win_rate": 0.381,
+     "max_drawdown": 17222.0
+    },
+    "ITUB4": {
+     "pnl": 12200.0,
+     "trades": 50,
+     "win_rate": 0.4,
+     "max_drawdown": 12460.0
+    },
+    "BBDC4": {
+     "pnl": 18682.0,
+     "trades": 40,
+     "win_rate": 0.475,
+     "max_drawdown": 11652.0
+    },
+    "ABEV3": {
+     "pnl": 7782.0,
+     "trades": 37,
+     "win_rate": 0.432,
+     "max_drawdown": 9443.0
+    },
+    "B3SA3": {
+     "pnl": 2344.0,
+     "trades": 35,
+     "win_rate": 0.371,
+     "max_drawdown": 8633.0
+    },
+    "WEGE3": {
+     "pnl": 5910.0,
+     "trades": 49,
+     "win_rate": 0.367,
+     "max_drawdown": 10766.0
+    },
+    "PRIO3": {
+     "pnl": -2749.0,
+     "trades": 48,
+     "win_rate": 0.333,
+     "max_drawdown": 18349.0
+    }
+   }
+  },
+  {
+   "ratio": 2.5,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 5328.0,
+   "total_pnl": 143411.0,
+   "trades": 530,
+   "win_rate": 0.355,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 5328.0,
+     "trades": 40,
+     "win_rate": 0.35,
+     "max_drawdown": 10606.0
+    },
+    "WDO$N": {
+     "pnl": -13846.0,
+     "trades": 34,
+     "win_rate": 0.176,
+     "max_drawdown": 16394.0
+    },
+    "BOVA11": {
+     "pnl": 28697.0,
+     "trades": 45,
+     "win_rate": 0.422,
+     "max_drawdown": 11433.0
+    },
+    "SMAL11": {
+     "pnl": 20869.0,
+     "trades": 34,
+     "win_rate": 0.412,
+     "max_drawdown": 7830.0
+    },
+    "IVVB11": {
+     "pnl": 21385.0,
+     "trades": 54,
+     "win_rate": 0.37,
+     "max_drawdown": 16546.0
+    },
+    "PETR4": {
+     "pnl": 47476.0,
+     "trades": 50,
+     "win_rate": 0.48,
+     "max_drawdown": 12117.0
+    },
+    "VALE3": {
+     "pnl": 5211.0,
+     "trades": 40,
+     "win_rate": 0.325,
+     "max_drawdown": 13959.0
+    },
+    "ITUB4": {
+     "pnl": 17793.0,
+     "trades": 42,
+     "win_rate": 0.381,
+     "max_drawdown": 14727.0
+    },
+    "BBDC4": {
+     "pnl": 2175.0,
+     "trades": 33,
+     "win_rate": 0.333,
+     "max_drawdown": 13404.0
+    },
+    "ABEV3": {
+     "pnl": 344.0,
+     "trades": 38,
+     "win_rate": 0.342,
+     "max_drawdown": 17058.0
+    },
+    "B3SA3": {
+     "pnl": -2427.0,
+     "trades": 31,
+     "win_rate": 0.29,
+     "max_drawdown": 8560.0
+    },
+    "WEGE3": {
+     "pnl": 5353.0,
+     "trades": 46,
+     "win_rate": 0.326,
+     "max_drawdown": 18456.0
+    },
+    "PRIO3": {
+     "pnl": 5052.0,
+     "trades": 43,
+     "win_rate": 0.326,
+     "max_drawdown": 16068.0
+    }
+   }
+  },
+  {
+   "ratio": 3.0,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 10605.0,
+   "total_pnl": 209298.0,
+   "trades": 483,
+   "win_rate": 0.34,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 9892.0,
+     "trades": 35,
+     "win_rate": 0.343,
+     "max_drawdown": 8255.0
+    },
+    "WDO$N": {
+     "pnl": -9074.0,
+     "trades": 33,
+     "win_rate": 0.182,
+     "max_drawdown": 11712.0
+    },
+    "BOVA11": {
+     "pnl": 27324.0,
+     "trades": 40,
+     "win_rate": 0.375,
+     "max_drawdown": 12950.0
+    },
+    "SMAL11": {
+     "pnl": 19842.0,
+     "trades": 30,
+     "win_rate": 0.367,
+     "max_drawdown": 8354.0
+    },
+    "IVVB11": {
+     "pnl": 25887.0,
+     "trades": 48,
+     "win_rate": 0.354,
+     "max_drawdown": 15418.0
+    },
+    "PETR4": {
+     "pnl": 58459.0,
+     "trades": 46,
+     "win_rate": 0.478,
+     "max_drawdown": 12908.0
+    },
+    "VALE3": {
+     "pnl": 21216.0,
+     "trades": 36,
+     "win_rate": 0.361,
+     "max_drawdown": 11709.0
+    },
+    "ITUB4": {
+     "pnl": 23360.0,
+     "trades": 38,
+     "win_rate": 0.368,
+     "max_drawdown": 14825.0
+    },
+    "BBDC4": {
+     "pnl": 4241.0,
+     "trades": 33,
+     "win_rate": 0.303,
+     "max_drawdown": 13404.0
+    },
+    "ABEV3": {
+     "pnl": 7488.0,
+     "trades": 33,
+     "win_rate": 0.333,
+     "max_drawdown": 15558.0
+    },
+    "B3SA3": {
+     "pnl": -113.0,
+     "trades": 30,
+     "win_rate": 0.267,
+     "max_drawdown": 10052.0
+    },
+    "WEGE3": {
+     "pnl": 10605.0,
+     "trades": 42,
+     "win_rate": 0.31,
+     "max_drawdown": 18456.0
+    },
+    "PRIO3": {
+     "pnl": 10173.0,
+     "trades": 39,
+     "win_rate": 0.308,
+     "max_drawdown": 16648.0
+    }
+   }
+  },
+  {
+   "ratio": 4.0,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 16795.0,
+   "total_pnl": 194176.0,
+   "trades": 418,
+   "win_rate": 0.278,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": -1363.0,
+     "trades": 33,
+     "win_rate": 0.212,
+     "max_drawdown": 10541.0
+    },
+    "WDO$N": {
+     "pnl": -16974.0,
+     "trades": 27,
+     "win_rate": 0.074,
+     "max_drawdown": 19968.0
+    },
+    "BOVA11": {
+     "pnl": 14023.0,
+     "trades": 34,
+     "win_rate": 0.265,
+     "max_drawdown": 13274.0
+    },
+    "SMAL11": {
+     "pnl": 18057.0,
+     "trades": 22,
+     "win_rate": 0.318,
+     "max_drawdown": 12703.0
+    },
+    "IVVB11": {
+     "pnl": 39291.0,
+     "trades": 40,
+     "win_rate": 0.35,
+     "max_drawdown": 15810.0
+    },
+    "PETR4": {
+     "pnl": 51323.0,
+     "trades": 38,
+     "win_rate": 0.421,
+     "max_drawdown": 17172.0
+    },
+    "VALE3": {
+     "pnl": 16795.0,
+     "trades": 32,
+     "win_rate": 0.281,
+     "max_drawdown": 10260.0
+    },
+    "ITUB4": {
+     "pnl": 12212.0,
+     "trades": 35,
+     "win_rate": 0.257,
+     "max_drawdown": 13254.0
+    },
+    "BBDC4": {
+     "pnl": 16951.0,
+     "trades": 29,
+     "win_rate": 0.31,
+     "max_drawdown": 16109.0
+    },
+    "ABEV3": {
+     "pnl": 3612.0,
+     "trades": 31,
+     "win_rate": 0.258,
+     "max_drawdown": 10996.0
+    },
+    "B3SA3": {
+     "pnl": 15.0,
+     "trades": 28,
+     "win_rate": 0.214,
+     "max_drawdown": 13777.0
+    },
+    "WEGE3": {
+     "pnl": 20310.0,
+     "trades": 34,
+     "win_rate": 0.294,
+     "max_drawdown": 18456.0
+    },
+    "PRIO3": {
+     "pnl": 19923.0,
+     "trades": 35,
+     "win_rate": 0.286,
+     "max_drawdown": 13962.0
+    }
+   }
+  },
+  {
+   "ratio": 5.0,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 11951.0,
+   "total_pnl": 179356.0,
+   "trades": 378,
+   "win_rate": 0.233,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": -3459.0,
+     "trades": 29,
+     "win_rate": 0.172,
+     "max_drawdown": 14211.0
+    },
+    "WDO$N": {
+     "pnl": -13326.0,
+     "trades": 26,
+     "win_rate": 0.077,
+     "max_drawdown": 19067.0
+    },
+    "BOVA11": {
+     "pnl": 11951.0,
+     "trades": 32,
+     "win_rate": 0.219,
+     "max_drawdown": 21620.0
+    },
+    "SMAL11": {
+     "pnl": 18440.0,
+     "trades": 17,
+     "win_rate": 0.294,
+     "max_drawdown": 15427.0
+    },
+    "IVVB11": {
+     "pnl": 27473.0,
+     "trades": 38,
+     "win_rate": 0.263,
+     "max_drawdown": 17254.0
+    },
+    "PETR4": {
+     "pnl": 61208.0,
+     "trades": 32,
+     "win_rate": 0.406,
+     "max_drawdown": 10331.0
+    },
+    "VALE3": {
+     "pnl": 7954.0,
+     "trades": 29,
+     "win_rate": 0.207,
+     "max_drawdown": 19929.0
+    },
+    "ITUB4": {
+     "pnl": 19196.0,
+     "trades": 33,
+     "win_rate": 0.242,
+     "max_drawdown": 13254.0
+    },
+    "BBDC4": {
+     "pnl": 19823.0,
+     "trades": 24,
+     "win_rate": 0.292,
+     "max_drawdown": 16109.0
+    },
+    "ABEV3": {
+     "pnl": 5695.0,
+     "trades": 27,
+     "win_rate": 0.222,
+     "max_drawdown": 15488.0
+    },
+    "B3SA3": {
+     "pnl": 4912.0,
+     "trades": 25,
+     "win_rate": 0.2,
+     "max_drawdown": 17238.0
+    },
+    "WEGE3": {
+     "pnl": 21873.0,
+     "trades": 31,
+     "win_rate": 0.258,
+     "max_drawdown": 18456.0
+    },
+    "PRIO3": {
+     "pnl": -2384.0,
+     "trades": 35,
+     "win_rate": 0.171,
+     "max_drawdown": 18040.0
+    }
+   }
+  },
+  {
+   "ratio": 7.0,
+   "stop_factor": 0.5,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 23338.0,
+   "total_pnl": 309445.0,
+   "trades": 320,
+   "win_rate": 0.219,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 13244.0,
+     "trades": 25,
+     "win_rate": 0.2,
+     "max_drawdown": 13097.0
+    },
+    "WDO$N": {
+     "pnl": -8124.0,
+     "trades": 26,
+     "win_rate": 0.077,
+     "max_drawdown": 19067.0
+    },
+    "BOVA11": {
+     "pnl": 32838.0,
+     "trades": 25,
+     "win_rate": 0.24,
+     "max_drawdown": 19907.0
+    },
+    "SMAL11": {
+     "pnl": 13668.0,
+     "trades": 15,
+     "win_rate": 0.2,
+     "max_drawdown": 12832.0
+    },
+    "IVVB11": {
+     "pnl": 38932.0,
+     "trades": 31,
+     "win_rate": 0.258,
+     "max_drawdown": 17254.0
+    },
+    "PETR4": {
+     "pnl": 58602.0,
+     "trades": 26,
+     "win_rate": 0.346,
+     "max_drawdown": 21351.0
+    },
+    "VALE3": {
+     "pnl": 24909.0,
+     "trades": 22,
+     "win_rate": 0.227,
+     "max_drawdown": 15274.0
+    },
+    "ITUB4": {
+     "pnl": 39754.0,
+     "trades": 28,
+     "win_rate": 0.25,
+     "max_drawdown": 11057.0
+    },
+    "BBDC4": {
+     "pnl": 23338.0,
+     "trades": 20,
+     "win_rate": 0.25,
+     "max_drawdown": 13371.0
+    },
+    "ABEV3": {
+     "pnl": 4586.0,
+     "trades": 24,
+     "win_rate": 0.167,
+     "max_drawdown": 20998.0
+    },
+    "B3SA3": {
+     "pnl": 14204.0,
+     "trades": 21,
+     "win_rate": 0.19,
+     "max_drawdown": 16904.0
+    },
+    "WEGE3": {
+     "pnl": 40284.0,
+     "trades": 28,
+     "win_rate": 0.25,
+     "max_drawdown": 13741.0
+    },
+    "PRIO3": {
+     "pnl": 13208.0,
+     "trades": 29,
+     "win_rate": 0.172,
+     "max_drawdown": 21650.0
+    }
+   }
+  },
+  {
+   "ratio": 0.33,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 9,
+   "rate": 0.692,
+   "median_pnl": 2848.0,
+   "total_pnl": 59004.0,
+   "trades": 1024,
+   "win_rate": 0.785,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 1598.0,
+     "trades": 86,
+     "win_rate": 0.756,
+     "max_drawdown": 4545.0
+    },
+    "WDO$N": {
+     "pnl": -2410.0,
+     "trades": 52,
+     "win_rate": 0.712,
+     "max_drawdown": 6278.0
+    },
+    "BOVA11": {
+     "pnl": 4887.0,
+     "trades": 92,
+     "win_rate": 0.772,
+     "max_drawdown": 6766.0
+    },
+    "SMAL11": {
+     "pnl": 7874.0,
+     "trades": 67,
+     "win_rate": 0.806,
+     "max_drawdown": 4467.0
+    },
+    "IVVB11": {
+     "pnl": 1896.0,
+     "trades": 105,
+     "win_rate": 0.752,
+     "max_drawdown": 11534.0
+    },
+    "PETR4": {
+     "pnl": 18145.0,
+     "trades": 101,
+     "win_rate": 0.842,
+     "max_drawdown": 4387.0
+    },
+    "VALE3": {
+     "pnl": 14835.0,
+     "trades": 73,
+     "win_rate": 0.849,
+     "max_drawdown": 3193.0
+    },
+    "ITUB4": {
+     "pnl": -392.0,
+     "trades": 95,
+     "win_rate": 0.768,
+     "max_drawdown": 7897.0
+    },
+    "BBDC4": {
+     "pnl": 6606.0,
+     "trades": 72,
+     "win_rate": 0.833,
+     "max_drawdown": 4891.0
+    },
+    "ABEV3": {
+     "pnl": -314.0,
+     "trades": 63,
+     "win_rate": 0.794,
+     "max_drawdown": 8015.0
+    },
+    "B3SA3": {
+     "pnl": -4613.0,
+     "trades": 56,
+     "win_rate": 0.732,
+     "max_drawdown": 6128.0
+    },
+    "WEGE3": {
+     "pnl": 2848.0,
+     "trades": 80,
+     "win_rate": 0.775,
+     "max_drawdown": 9511.0
+    },
+    "PRIO3": {
+     "pnl": 8045.0,
+     "trades": 82,
+     "win_rate": 0.793,
+     "max_drawdown": 4577.0
+    }
+   }
+  },
+  {
+   "ratio": 0.5,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 7514.0,
+   "total_pnl": 80144.0,
+   "trades": 910,
+   "win_rate": 0.713,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 2495.0,
+     "trades": 76,
+     "win_rate": 0.684,
+     "max_drawdown": 6113.0
+    },
+    "WDO$N": {
+     "pnl": -2575.0,
+     "trades": 46,
+     "win_rate": 0.609,
+     "max_drawdown": 8686.0
+    },
+    "BOVA11": {
+     "pnl": 7540.0,
+     "trades": 79,
+     "win_rate": 0.709,
+     "max_drawdown": 7060.0
+    },
+    "SMAL11": {
+     "pnl": 10679.0,
+     "trades": 60,
+     "win_rate": 0.75,
+     "max_drawdown": 3656.0
+    },
+    "IVVB11": {
+     "pnl": 8574.0,
+     "trades": 94,
+     "win_rate": 0.702,
+     "max_drawdown": 13056.0
+    },
+    "PETR4": {
+     "pnl": 21851.0,
+     "trades": 92,
+     "win_rate": 0.783,
+     "max_drawdown": 4869.0
+    },
+    "VALE3": {
+     "pnl": 12516.0,
+     "trades": 64,
+     "win_rate": 0.75,
+     "max_drawdown": 4464.0
+    },
+    "ITUB4": {
+     "pnl": 6903.0,
+     "trades": 82,
+     "win_rate": 0.72,
+     "max_drawdown": 7557.0
+    },
+    "BBDC4": {
+     "pnl": 10050.0,
+     "trades": 66,
+     "win_rate": 0.773,
+     "max_drawdown": 6572.0
+    },
+    "ABEV3": {
+     "pnl": -4152.0,
+     "trades": 56,
+     "win_rate": 0.679,
+     "max_drawdown": 12833.0
+    },
+    "B3SA3": {
+     "pnl": -8176.0,
+     "trades": 52,
+     "win_rate": 0.615,
+     "max_drawdown": 11647.0
+    },
+    "WEGE3": {
+     "pnl": 6926.0,
+     "trades": 70,
+     "win_rate": 0.714,
+     "max_drawdown": 8212.0
+    },
+    "PRIO3": {
+     "pnl": 7514.0,
+     "trades": 73,
+     "win_rate": 0.712,
+     "max_drawdown": 6023.0
+    }
+   }
+  },
+  {
+   "ratio": 0.75,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 5493.0,
+   "total_pnl": 104157.0,
+   "trades": 742,
+   "win_rate": 0.633,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": -766.0,
+     "trades": 57,
+     "win_rate": 0.561,
+     "max_drawdown": 8590.0
+    },
+    "WDO$N": {
+     "pnl": -3065.0,
+     "trades": 41,
+     "win_rate": 0.512,
+     "max_drawdown": 11742.0
+    },
+    "BOVA11": {
+     "pnl": 11217.0,
+     "trades": 66,
+     "win_rate": 0.636,
+     "max_drawdown": 10309.0
+    },
+    "SMAL11": {
+     "pnl": 17528.0,
+     "trades": 44,
+     "win_rate": 0.727,
+     "max_drawdown": 4152.0
+    },
+    "IVVB11": {
+     "pnl": 19960.0,
+     "trades": 73,
+     "win_rate": 0.671,
+     "max_drawdown": 9515.0
+    },
+    "PETR4": {
+     "pnl": 26855.0,
+     "trades": 73,
+     "win_rate": 0.726,
+     "max_drawdown": 7187.0
+    },
+    "VALE3": {
+     "pnl": 15588.0,
+     "trades": 54,
+     "win_rate": 0.685,
+     "max_drawdown": 11267.0
+    },
+    "ITUB4": {
+     "pnl": 4879.0,
+     "trades": 65,
+     "win_rate": 0.615,
+     "max_drawdown": 7367.0
+    },
+    "BBDC4": {
+     "pnl": 4419.0,
+     "trades": 56,
+     "win_rate": 0.643,
+     "max_drawdown": 8455.0
+    },
+    "ABEV3": {
+     "pnl": 5493.0,
+     "trades": 47,
+     "win_rate": 0.66,
+     "max_drawdown": 9051.0
+    },
+    "B3SA3": {
+     "pnl": -9084.0,
+     "trades": 48,
+     "win_rate": 0.521,
+     "max_drawdown": 11413.0
+    },
+    "WEGE3": {
+     "pnl": 8406.0,
+     "trades": 57,
+     "win_rate": 0.632,
+     "max_drawdown": 7449.0
+    },
+    "PRIO3": {
+     "pnl": 2728.0,
+     "trades": 61,
+     "win_rate": 0.59,
+     "max_drawdown": 10065.0
+    }
+   }
+  },
+  {
+   "ratio": 1.0,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 8574.0,
+   "total_pnl": 113920.0,
+   "trades": 648,
+   "win_rate": 0.569,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": -829.0,
+     "trades": 52,
+     "win_rate": 0.5,
+     "max_drawdown": 7029.0
+    },
+    "WDO$N": {
+     "pnl": 490.0,
+     "trades": 35,
+     "win_rate": 0.486,
+     "max_drawdown": 11335.0
+    },
+    "BOVA11": {
+     "pnl": 11434.0,
+     "trades": 54,
+     "win_rate": 0.574,
+     "max_drawdown": 10309.0
+    },
+    "SMAL11": {
+     "pnl": 11220.0,
+     "trades": 38,
+     "win_rate": 0.605,
+     "max_drawdown": 8230.0
+    },
+    "IVVB11": {
+     "pnl": 16311.0,
+     "trades": 61,
+     "win_rate": 0.59,
+     "max_drawdown": 15274.0
+    },
+    "PETR4": {
+     "pnl": 33322.0,
+     "trades": 69,
+     "win_rate": 0.667,
+     "max_drawdown": 6182.0
+    },
+    "VALE3": {
+     "pnl": 18002.0,
+     "trades": 49,
+     "win_rate": 0.633,
+     "max_drawdown": 10892.0
+    },
+    "ITUB4": {
+     "pnl": 11658.0,
+     "trades": 55,
+     "win_rate": 0.582,
+     "max_drawdown": 7873.0
+    },
+    "BBDC4": {
+     "pnl": 8574.0,
+     "trades": 45,
+     "win_rate": 0.6,
+     "max_drawdown": 6498.0
+    },
+    "ABEV3": {
+     "pnl": 4378.0,
+     "trades": 42,
+     "win_rate": 0.571,
+     "max_drawdown": 9092.0
+    },
+    "B3SA3": {
+     "pnl": -11739.0,
+     "trades": 42,
+     "win_rate": 0.429,
+     "max_drawdown": 14616.0
+    },
+    "WEGE3": {
+     "pnl": 5639.0,
+     "trades": 53,
+     "win_rate": 0.547,
+     "max_drawdown": 7110.0
+    },
+    "PRIO3": {
+     "pnl": 5461.0,
+     "trades": 53,
+     "win_rate": 0.547,
+     "max_drawdown": 16354.0
+    }
+   }
+  },
+  {
+   "ratio": 1.5,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 6675.0,
+   "total_pnl": 111932.0,
+   "trades": 514,
+   "win_rate": 0.469,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 4777.0,
+     "trades": 43,
+     "win_rate": 0.442,
+     "max_drawdown": 7036.0
+    },
+    "WDO$N": {
+     "pnl": -7536.0,
+     "trades": 32,
+     "win_rate": 0.312,
+     "max_drawdown": 12111.0
+    },
+    "BOVA11": {
+     "pnl": 17776.0,
+     "trades": 43,
+     "win_rate": 0.512,
+     "max_drawdown": 10309.0
+    },
+    "SMAL11": {
+     "pnl": 9590.0,
+     "trades": 31,
+     "win_rate": 0.484,
+     "max_drawdown": 6169.0
+    },
+    "IVVB11": {
+     "pnl": 20741.0,
+     "trades": 52,
+     "win_rate": 0.519,
+     "max_drawdown": 13849.0
+    },
+    "PETR4": {
+     "pnl": 32275.0,
+     "trades": 49,
+     "win_rate": 0.592,
+     "max_drawdown": 12592.0
+    },
+    "VALE3": {
+     "pnl": 6675.0,
+     "trades": 37,
+     "win_rate": 0.459,
+     "max_drawdown": 16476.0
+    },
+    "ITUB4": {
+     "pnl": 12422.0,
+     "trades": 45,
+     "win_rate": 0.489,
+     "max_drawdown": 10019.0
+    },
+    "BBDC4": {
+     "pnl": 11235.0,
+     "trades": 33,
+     "win_rate": 0.515,
+     "max_drawdown": 9637.0
+    },
+    "ABEV3": {
+     "pnl": -1587.0,
+     "trades": 33,
+     "win_rate": 0.424,
+     "max_drawdown": 10436.0
+    },
+    "B3SA3": {
+     "pnl": -1198.0,
+     "trades": 32,
+     "win_rate": 0.406,
+     "max_drawdown": 10734.0
+    },
+    "WEGE3": {
+     "pnl": 4963.0,
+     "trades": 41,
+     "win_rate": 0.439,
+     "max_drawdown": 9111.0
+    },
+    "PRIO3": {
+     "pnl": 1799.0,
+     "trades": 43,
+     "win_rate": 0.419,
+     "max_drawdown": 19498.0
+    }
+   }
+  },
+  {
+   "ratio": 2.0,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 12005.0,
+   "total_pnl": 182716.0,
+   "trades": 430,
+   "win_rate": 0.442,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 8863.0,
+     "trades": 33,
+     "win_rate": 0.424,
+     "max_drawdown": 5996.0
+    },
+    "WDO$N": {
+     "pnl": -2289.0,
+     "trades": 27,
+     "win_rate": 0.296,
+     "max_drawdown": 10544.0
+    },
+    "BOVA11": {
+     "pnl": 17910.0,
+     "trades": 36,
+     "win_rate": 0.444,
+     "max_drawdown": 9555.0
+    },
+    "SMAL11": {
+     "pnl": 14301.0,
+     "trades": 26,
+     "win_rate": 0.462,
+     "max_drawdown": 5784.0
+    },
+    "IVVB11": {
+     "pnl": 28398.0,
+     "trades": 39,
+     "win_rate": 0.513,
+     "max_drawdown": 8701.0
+    },
+    "PETR4": {
+     "pnl": 32554.0,
+     "trades": 42,
+     "win_rate": 0.524,
+     "max_drawdown": 12360.0
+    },
+    "VALE3": {
+     "pnl": 12005.0,
+     "trades": 33,
+     "win_rate": 0.424,
+     "max_drawdown": 16068.0
+    },
+    "ITUB4": {
+     "pnl": 32340.0,
+     "trades": 34,
+     "win_rate": 0.559,
+     "max_drawdown": 5624.0
+    },
+    "BBDC4": {
+     "pnl": 5910.0,
+     "trades": 30,
+     "win_rate": 0.4,
+     "max_drawdown": 10409.0
+    },
+    "ABEV3": {
+     "pnl": 9503.0,
+     "trades": 30,
+     "win_rate": 0.433,
+     "max_drawdown": 8936.0
+    },
+    "B3SA3": {
+     "pnl": -5677.0,
+     "trades": 29,
+     "win_rate": 0.31,
+     "max_drawdown": 12799.0
+    },
+    "WEGE3": {
+     "pnl": 17871.0,
+     "trades": 35,
+     "win_rate": 0.457,
+     "max_drawdown": 7589.0
+    },
+    "PRIO3": {
+     "pnl": 11027.0,
+     "trades": 36,
+     "win_rate": 0.417,
+     "max_drawdown": 17522.0
+    }
+   }
+  },
+  {
+   "ratio": 2.5,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 14915.0,
+   "total_pnl": 198123.0,
+   "trades": 364,
+   "win_rate": 0.404,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 2857.0,
+     "trades": 28,
+     "win_rate": 0.321,
+     "max_drawdown": 8320.0
+    },
+    "WDO$N": {
+     "pnl": -1416.0,
+     "trades": 24,
+     "win_rate": 0.292,
+     "max_drawdown": 13276.0
+    },
+    "BOVA11": {
+     "pnl": 21790.0,
+     "trades": 31,
+     "win_rate": 0.419,
+     "max_drawdown": 11811.0
+    },
+    "SMAL11": {
+     "pnl": 12860.0,
+     "trades": 19,
+     "win_rate": 0.421,
+     "max_drawdown": 9692.0
+    },
+    "IVVB11": {
+     "pnl": 35124.0,
+     "trades": 30,
+     "win_rate": 0.533,
+     "max_drawdown": 11817.0
+    },
+    "PETR4": {
+     "pnl": 32065.0,
+     "trades": 34,
+     "win_rate": 0.5,
+     "max_drawdown": 11853.0
+    },
+    "VALE3": {
+     "pnl": 16629.0,
+     "trades": 27,
+     "win_rate": 0.407,
+     "max_drawdown": 7651.0
+    },
+    "ITUB4": {
+     "pnl": 21496.0,
+     "trades": 31,
+     "win_rate": 0.419,
+     "max_drawdown": 6958.0
+    },
+    "BBDC4": {
+     "pnl": 12224.0,
+     "trades": 28,
+     "win_rate": 0.393,
+     "max_drawdown": 6924.0
+    },
+    "ABEV3": {
+     "pnl": 13251.0,
+     "trades": 27,
+     "win_rate": 0.407,
+     "max_drawdown": 6548.0
+    },
+    "B3SA3": {
+     "pnl": -10412.0,
+     "trades": 26,
+     "win_rate": 0.231,
+     "max_drawdown": 17183.0
+    },
+    "WEGE3": {
+     "pnl": 26742.0,
+     "trades": 27,
+     "win_rate": 0.481,
+     "max_drawdown": 5770.0
+    },
+    "PRIO3": {
+     "pnl": 14915.0,
+     "trades": 32,
+     "win_rate": 0.375,
+     "max_drawdown": 11510.0
+    }
+   }
+  },
+  {
+   "ratio": 3.0,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 14929.0,
+   "total_pnl": 189927.0,
+   "trades": 343,
+   "win_rate": 0.356,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 6468.0,
+     "trades": 29,
+     "win_rate": 0.31,
+     "max_drawdown": 7480.0
+    },
+    "WDO$N": {
+     "pnl": -13900.0,
+     "trades": 23,
+     "win_rate": 0.13,
+     "max_drawdown": 18978.0
+    },
+    "BOVA11": {
+     "pnl": 10145.0,
+     "trades": 29,
+     "win_rate": 0.31,
+     "max_drawdown": 11519.0
+    },
+    "SMAL11": {
+     "pnl": 13003.0,
+     "trades": 19,
+     "win_rate": 0.368,
+     "max_drawdown": 9692.0
+    },
+    "IVVB11": {
+     "pnl": 22320.0,
+     "trades": 34,
+     "win_rate": 0.382,
+     "max_drawdown": 13279.0
+    },
+    "PETR4": {
+     "pnl": 34320.0,
+     "trades": 31,
+     "win_rate": 0.484,
+     "max_drawdown": 12336.0
+    },
+    "VALE3": {
+     "pnl": 14929.0,
+     "trades": 26,
+     "win_rate": 0.346,
+     "max_drawdown": 14598.0
+    },
+    "ITUB4": {
+     "pnl": 34635.0,
+     "trades": 28,
+     "win_rate": 0.464,
+     "max_drawdown": 4989.0
+    },
+    "BBDC4": {
+     "pnl": 17496.0,
+     "trades": 23,
+     "win_rate": 0.391,
+     "max_drawdown": 9294.0
+    },
+    "ABEV3": {
+     "pnl": 18887.0,
+     "trades": 25,
+     "win_rate": 0.4,
+     "max_drawdown": 6548.0
+    },
+    "B3SA3": {
+     "pnl": -2171.0,
+     "trades": 24,
+     "win_rate": 0.25,
+     "max_drawdown": 11580.0
+    },
+    "WEGE3": {
+     "pnl": 29695.0,
+     "trades": 23,
+     "win_rate": 0.478,
+     "max_drawdown": 10079.0
+    },
+    "PRIO3": {
+     "pnl": 4100.0,
+     "trades": 29,
+     "win_rate": 0.276,
+     "max_drawdown": 16364.0
+    }
+   }
+  },
+  {
+   "ratio": 4.0,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 13996.0,
+   "total_pnl": 202180.0,
+   "trades": 293,
+   "win_rate": 0.307,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 13996.0,
+     "trades": 22,
+     "win_rate": 0.318,
+     "max_drawdown": 7737.0
+    },
+    "WDO$N": {
+     "pnl": -10168.0,
+     "trades": 22,
+     "win_rate": 0.136,
+     "max_drawdown": 17283.0
+    },
+    "BOVA11": {
+     "pnl": 12902.0,
+     "trades": 26,
+     "win_rate": 0.269,
+     "max_drawdown": 14279.0
+    },
+    "SMAL11": {
+     "pnl": 14547.0,
+     "trades": 15,
+     "win_rate": 0.333,
+     "max_drawdown": 10846.0
+    },
+    "IVVB11": {
+     "pnl": 31173.0,
+     "trades": 25,
+     "win_rate": 0.4,
+     "max_drawdown": 13279.0
+    },
+    "PETR4": {
+     "pnl": 42391.0,
+     "trades": 27,
+     "win_rate": 0.444,
+     "max_drawdown": 10952.0
+    },
+    "VALE3": {
+     "pnl": 8419.0,
+     "trades": 24,
+     "win_rate": 0.25,
+     "max_drawdown": 18456.0
+    },
+    "ITUB4": {
+     "pnl": 45084.0,
+     "trades": 24,
+     "win_rate": 0.458,
+     "max_drawdown": 5556.0
+    },
+    "BBDC4": {
+     "pnl": 15622.0,
+     "trades": 22,
+     "win_rate": 0.318,
+     "max_drawdown": 10409.0
+    },
+    "ABEV3": {
+     "pnl": 1871.0,
+     "trades": 17,
+     "win_rate": 0.235,
+     "max_drawdown": 12590.0
+    },
+    "B3SA3": {
+     "pnl": 4101.0,
+     "trades": 21,
+     "win_rate": 0.238,
+     "max_drawdown": 14334.0
+    },
+    "WEGE3": {
+     "pnl": 17418.0,
+     "trades": 22,
+     "win_rate": 0.318,
+     "max_drawdown": 10079.0
+    },
+    "PRIO3": {
+     "pnl": 4825.0,
+     "trades": 26,
+     "win_rate": 0.231,
+     "max_drawdown": 20949.0
+    }
+   }
+  },
+  {
+   "ratio": 5.0,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 14500.0,
+   "total_pnl": 214581.0,
+   "trades": 257,
+   "win_rate": 0.276,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 12166.0,
+     "trades": 16,
+     "win_rate": 0.312,
+     "max_drawdown": 9294.0
+    },
+    "WDO$N": {
+     "pnl": -6261.0,
+     "trades": 21,
+     "win_rate": 0.143,
+     "max_drawdown": 17283.0
+    },
+    "BOVA11": {
+     "pnl": 22371.0,
+     "trades": 21,
+     "win_rate": 0.286,
+     "max_drawdown": 12555.0
+    },
+    "SMAL11": {
+     "pnl": 7073.0,
+     "trades": 13,
+     "win_rate": 0.231,
+     "max_drawdown": 9770.0
+    },
+    "IVVB11": {
+     "pnl": 31903.0,
+     "trades": 22,
+     "win_rate": 0.364,
+     "max_drawdown": 13279.0
+    },
+    "PETR4": {
+     "pnl": 39716.0,
+     "trades": 22,
+     "win_rate": 0.409,
+     "max_drawdown": 16628.0
+    },
+    "VALE3": {
+     "pnl": 14500.0,
+     "trades": 20,
+     "win_rate": 0.25,
+     "max_drawdown": 13908.0
+    },
+    "ITUB4": {
+     "pnl": 38908.0,
+     "trades": 21,
+     "win_rate": 0.381,
+     "max_drawdown": 7592.0
+    },
+    "BBDC4": {
+     "pnl": 12961.0,
+     "trades": 19,
+     "win_rate": 0.263,
+     "max_drawdown": 10502.0
+    },
+    "ABEV3": {
+     "pnl": 7099.0,
+     "trades": 18,
+     "win_rate": 0.222,
+     "max_drawdown": 12590.0
+    },
+    "B3SA3": {
+     "pnl": -3597.0,
+     "trades": 19,
+     "win_rate": 0.158,
+     "max_drawdown": 21595.0
+    },
+    "WEGE3": {
+     "pnl": 21075.0,
+     "trades": 21,
+     "win_rate": 0.286,
+     "max_drawdown": 9843.0
+    },
+    "PRIO3": {
+     "pnl": 16667.0,
+     "trades": 24,
+     "win_rate": 0.25,
+     "max_drawdown": 18909.0
+    }
+   }
+  },
+  {
+   "ratio": 7.0,
+   "stop_factor": 0.75,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 11293.0,
+   "total_pnl": 186559.0,
+   "trades": 196,
+   "win_rate": 0.224,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 11293.0,
+     "trades": 14,
+     "win_rate": 0.214,
+     "max_drawdown": 10586.0
+    },
+    "WDO$N": {
+     "pnl": -7518.0,
+     "trades": 19,
+     "win_rate": 0.105,
+     "max_drawdown": 17283.0
+    },
+    "BOVA11": {
+     "pnl": 8706.0,
+     "trades": 18,
+     "win_rate": 0.167,
+     "max_drawdown": 15418.0
+    },
+    "SMAL11": {
+     "pnl": 3097.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 14219.0
+    },
+    "IVVB11": {
+     "pnl": 37492.0,
+     "trades": 16,
+     "win_rate": 0.375,
+     "max_drawdown": 13279.0
+    },
+    "PETR4": {
+     "pnl": 31581.0,
+     "trades": 19,
+     "win_rate": 0.316,
+     "max_drawdown": 21598.0
+    },
+    "VALE3": {
+     "pnl": 7017.0,
+     "trades": 19,
+     "win_rate": 0.158,
+     "max_drawdown": 22907.0
+    },
+    "ITUB4": {
+     "pnl": 52454.0,
+     "trades": 13,
+     "win_rate": 0.462,
+     "max_drawdown": 9008.0
+    },
+    "BBDC4": {
+     "pnl": -38.0,
+     "trades": 15,
+     "win_rate": 0.133,
+     "max_drawdown": 23013.0
+    },
+    "ABEV3": {
+     "pnl": 17425.0,
+     "trades": 13,
+     "win_rate": 0.308,
+     "max_drawdown": 12590.0
+    },
+    "B3SA3": {
+     "pnl": -12422.0,
+     "trades": 15,
+     "win_rate": 0.067,
+     "max_drawdown": 27340.0
+    },
+    "WEGE3": {
+     "pnl": 23530.0,
+     "trades": 15,
+     "win_rate": 0.267,
+     "max_drawdown": 13519.0
+    },
+    "PRIO3": {
+     "pnl": 13943.0,
+     "trades": 14,
+     "win_rate": 0.214,
+     "max_drawdown": 16116.0
+    }
+   }
+  },
+  {
+   "ratio": 0.33,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 6314.0,
+   "total_pnl": 76443.0,
+   "trades": 922,
+   "win_rate": 0.797,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 4901.0,
+     "trades": 73,
+     "win_rate": 0.781,
+     "max_drawdown": 3199.0
+    },
+    "WDO$N": {
+     "pnl": -5400.0,
+     "trades": 34,
+     "win_rate": 0.647,
+     "max_drawdown": 5696.0
+    },
+    "BOVA11": {
+     "pnl": 6314.0,
+     "trades": 84,
+     "win_rate": 0.786,
+     "max_drawdown": 4776.0
+    },
+    "SMAL11": {
+     "pnl": 6127.0,
+     "trades": 60,
+     "win_rate": 0.8,
+     "max_drawdown": 3942.0
+    },
+    "IVVB11": {
+     "pnl": 13061.0,
+     "trades": 97,
+     "win_rate": 0.814,
+     "max_drawdown": 6778.0
+    },
+    "PETR4": {
+     "pnl": 8225.0,
+     "trades": 94,
+     "win_rate": 0.809,
+     "max_drawdown": 8790.0
+    },
+    "VALE3": {
+     "pnl": 13570.0,
+     "trades": 68,
+     "win_rate": 0.853,
+     "max_drawdown": 3171.0
+    },
+    "ITUB4": {
+     "pnl": 8751.0,
+     "trades": 86,
+     "win_rate": 0.814,
+     "max_drawdown": 7156.0
+    },
+    "BBDC4": {
+     "pnl": 5477.0,
+     "trades": 66,
+     "win_rate": 0.818,
+     "max_drawdown": 4517.0
+    },
+    "ABEV3": {
+     "pnl": 1350.0,
+     "trades": 58,
+     "win_rate": 0.793,
+     "max_drawdown": 7654.0
+    },
+    "B3SA3": {
+     "pnl": -391.0,
+     "trades": 51,
+     "win_rate": 0.765,
+     "max_drawdown": 5492.0
+    },
+    "WEGE3": {
+     "pnl": 6554.0,
+     "trades": 72,
+     "win_rate": 0.792,
+     "max_drawdown": 6103.0
+    },
+    "PRIO3": {
+     "pnl": 7904.0,
+     "trades": 79,
+     "win_rate": 0.797,
+     "max_drawdown": 5046.0
+    }
+   }
+  },
+  {
+   "ratio": 0.5,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 4862.0,
+   "total_pnl": 69488.0,
+   "trades": 759,
+   "win_rate": 0.715,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 3908.0,
+     "trades": 60,
+     "win_rate": 0.7,
+     "max_drawdown": 4098.0
+    },
+    "WDO$N": {
+     "pnl": -3030.0,
+     "trades": 30,
+     "win_rate": 0.633,
+     "max_drawdown": 4746.0
+    },
+    "BOVA11": {
+     "pnl": 9249.0,
+     "trades": 66,
+     "win_rate": 0.727,
+     "max_drawdown": 6222.0
+    },
+    "SMAL11": {
+     "pnl": 8664.0,
+     "trades": 47,
+     "win_rate": 0.745,
+     "max_drawdown": 3860.0
+    },
+    "IVVB11": {
+     "pnl": 13085.0,
+     "trades": 78,
+     "win_rate": 0.744,
+     "max_drawdown": 7931.0
+    },
+    "PETR4": {
+     "pnl": 14829.0,
+     "trades": 78,
+     "win_rate": 0.769,
+     "max_drawdown": 6785.0
+    },
+    "VALE3": {
+     "pnl": 8616.0,
+     "trades": 56,
+     "win_rate": 0.732,
+     "max_drawdown": 9048.0
+    },
+    "ITUB4": {
+     "pnl": 4862.0,
+     "trades": 65,
+     "win_rate": 0.708,
+     "max_drawdown": 5469.0
+    },
+    "BBDC4": {
+     "pnl": -504.0,
+     "trades": 58,
+     "win_rate": 0.69,
+     "max_drawdown": 5555.0
+    },
+    "ABEV3": {
+     "pnl": 4624.0,
+     "trades": 50,
+     "win_rate": 0.74,
+     "max_drawdown": 5438.0
+    },
+    "B3SA3": {
+     "pnl": -6892.0,
+     "trades": 47,
+     "win_rate": 0.617,
+     "max_drawdown": 11242.0
+    },
+    "WEGE3": {
+     "pnl": 10447.0,
+     "trades": 58,
+     "win_rate": 0.741,
+     "max_drawdown": 5355.0
+    },
+    "PRIO3": {
+     "pnl": 1628.0,
+     "trades": 66,
+     "win_rate": 0.682,
+     "max_drawdown": 8080.0
+    }
+   }
+  },
+  {
+   "ratio": 0.75,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 4829.0,
+   "total_pnl": 74921.0,
+   "trades": 619,
+   "win_rate": 0.632,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 329.0,
+     "trades": 47,
+     "win_rate": 0.596,
+     "max_drawdown": 5190.0
+    },
+    "WDO$N": {
+     "pnl": -1954.0,
+     "trades": 26,
+     "win_rate": 0.577,
+     "max_drawdown": 4986.0
+    },
+    "BOVA11": {
+     "pnl": 4572.0,
+     "trades": 52,
+     "win_rate": 0.615,
+     "max_drawdown": 10482.0
+    },
+    "SMAL11": {
+     "pnl": 4829.0,
+     "trades": 37,
+     "win_rate": 0.622,
+     "max_drawdown": 6371.0
+    },
+    "IVVB11": {
+     "pnl": 15370.0,
+     "trades": 58,
+     "win_rate": 0.672,
+     "max_drawdown": 9862.0
+    },
+    "PETR4": {
+     "pnl": 19085.0,
+     "trades": 69,
+     "win_rate": 0.696,
+     "max_drawdown": 8737.0
+    },
+    "VALE3": {
+     "pnl": 11805.0,
+     "trades": 47,
+     "win_rate": 0.681,
+     "max_drawdown": 11847.0
+    },
+    "ITUB4": {
+     "pnl": 8483.0,
+     "trades": 53,
+     "win_rate": 0.642,
+     "max_drawdown": 7192.0
+    },
+    "BBDC4": {
+     "pnl": 2506.0,
+     "trades": 45,
+     "win_rate": 0.622,
+     "max_drawdown": 5249.0
+    },
+    "ABEV3": {
+     "pnl": 4676.0,
+     "trades": 42,
+     "win_rate": 0.643,
+     "max_drawdown": 6584.0
+    },
+    "B3SA3": {
+     "pnl": -7888.0,
+     "trades": 39,
+     "win_rate": 0.513,
+     "max_drawdown": 10046.0
+    },
+    "WEGE3": {
+     "pnl": 5587.0,
+     "trades": 52,
+     "win_rate": 0.615,
+     "max_drawdown": 4915.0
+    },
+    "PRIO3": {
+     "pnl": 7520.0,
+     "trades": 52,
+     "win_rate": 0.635,
+     "max_drawdown": 8939.0
+    }
+   }
+  },
+  {
+   "ratio": 1.0,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 5949.0,
+   "total_pnl": 93607.0,
+   "trades": 524,
+   "win_rate": 0.573,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 3413.0,
+     "trades": 41,
+     "win_rate": 0.561,
+     "max_drawdown": 3582.0
+    },
+    "WDO$N": {
+     "pnl": -4133.0,
+     "trades": 23,
+     "win_rate": 0.478,
+     "max_drawdown": 6312.0
+    },
+    "BOVA11": {
+     "pnl": 5127.0,
+     "trades": 46,
+     "win_rate": 0.543,
+     "max_drawdown": 8277.0
+    },
+    "SMAL11": {
+     "pnl": 2697.0,
+     "trades": 32,
+     "win_rate": 0.531,
+     "max_drawdown": 5864.0
+    },
+    "IVVB11": {
+     "pnl": 22671.0,
+     "trades": 52,
+     "win_rate": 0.654,
+     "max_drawdown": 8071.0
+    },
+    "PETR4": {
+     "pnl": 24572.0,
+     "trades": 54,
+     "win_rate": 0.667,
+     "max_drawdown": 8142.0
+    },
+    "VALE3": {
+     "pnl": 8855.0,
+     "trades": 37,
+     "win_rate": 0.595,
+     "max_drawdown": 13923.0
+    },
+    "ITUB4": {
+     "pnl": 10847.0,
+     "trades": 46,
+     "win_rate": 0.587,
+     "max_drawdown": 7066.0
+    },
+    "BBDC4": {
+     "pnl": 13153.0,
+     "trades": 40,
+     "win_rate": 0.625,
+     "max_drawdown": 4328.0
+    },
+    "ABEV3": {
+     "pnl": 9102.0,
+     "trades": 36,
+     "win_rate": 0.611,
+     "max_drawdown": 6219.0
+    },
+    "B3SA3": {
+     "pnl": -4374.0,
+     "trades": 32,
+     "win_rate": 0.469,
+     "max_drawdown": 6474.0
+    },
+    "WEGE3": {
+     "pnl": -4271.0,
+     "trades": 41,
+     "win_rate": 0.463,
+     "max_drawdown": 7072.0
+    },
+    "PRIO3": {
+     "pnl": 5949.0,
+     "trades": 44,
+     "win_rate": 0.545,
+     "max_drawdown": 6732.0
+    }
+   }
+  },
+  {
+   "ratio": 1.5,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 12080.0,
+   "total_pnl": 147175.0,
+   "trades": 395,
+   "win_rate": 0.519,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 10331.0,
+     "trades": 29,
+     "win_rate": 0.586,
+     "max_drawdown": 5110.0
+    },
+    "WDO$N": {
+     "pnl": -924.0,
+     "trades": 18,
+     "win_rate": 0.444,
+     "max_drawdown": 6926.0
+    },
+    "BOVA11": {
+     "pnl": 14069.0,
+     "trades": 33,
+     "win_rate": 0.515,
+     "max_drawdown": 6551.0
+    },
+    "SMAL11": {
+     "pnl": 12647.0,
+     "trades": 24,
+     "win_rate": 0.542,
+     "max_drawdown": 4262.0
+    },
+    "IVVB11": {
+     "pnl": 21119.0,
+     "trades": 35,
+     "win_rate": 0.571,
+     "max_drawdown": 7433.0
+    },
+    "PETR4": {
+     "pnl": 22637.0,
+     "trades": 41,
+     "win_rate": 0.561,
+     "max_drawdown": 10620.0
+    },
+    "VALE3": {
+     "pnl": 10980.0,
+     "trades": 29,
+     "win_rate": 0.517,
+     "max_drawdown": 14975.0
+    },
+    "ITUB4": {
+     "pnl": 24231.0,
+     "trades": 33,
+     "win_rate": 0.606,
+     "max_drawdown": 5341.0
+    },
+    "BBDC4": {
+     "pnl": -434.0,
+     "trades": 31,
+     "win_rate": 0.419,
+     "max_drawdown": 9472.0
+    },
+    "ABEV3": {
+     "pnl": 12080.0,
+     "trades": 28,
+     "win_rate": 0.536,
+     "max_drawdown": 6856.0
+    },
+    "B3SA3": {
+     "pnl": -1103.0,
+     "trades": 27,
+     "win_rate": 0.407,
+     "max_drawdown": 9166.0
+    },
+    "WEGE3": {
+     "pnl": 7236.0,
+     "trades": 35,
+     "win_rate": 0.457,
+     "max_drawdown": 7023.0
+    },
+    "PRIO3": {
+     "pnl": 14307.0,
+     "trades": 32,
+     "win_rate": 0.531,
+     "max_drawdown": 12771.0
+    }
+   }
+  },
+  {
+   "ratio": 2.0,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 10325.0,
+   "total_pnl": 130769.0,
+   "trades": 326,
+   "win_rate": 0.442,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 8545.0,
+     "trades": 25,
+     "win_rate": 0.48,
+     "max_drawdown": 4383.0
+    },
+    "WDO$N": {
+     "pnl": -3957.0,
+     "trades": 14,
+     "win_rate": 0.286,
+     "max_drawdown": 6020.0
+    },
+    "BOVA11": {
+     "pnl": 8642.0,
+     "trades": 27,
+     "win_rate": 0.407,
+     "max_drawdown": 8120.0
+    },
+    "SMAL11": {
+     "pnl": 16506.0,
+     "trades": 19,
+     "win_rate": 0.526,
+     "max_drawdown": 4579.0
+    },
+    "IVVB11": {
+     "pnl": 18359.0,
+     "trades": 31,
+     "win_rate": 0.484,
+     "max_drawdown": 9782.0
+    },
+    "PETR4": {
+     "pnl": 18105.0,
+     "trades": 31,
+     "win_rate": 0.516,
+     "max_drawdown": 13385.0
+    },
+    "VALE3": {
+     "pnl": 7754.0,
+     "trades": 24,
+     "win_rate": 0.417,
+     "max_drawdown": 10826.0
+    },
+    "ITUB4": {
+     "pnl": 17280.0,
+     "trades": 27,
+     "win_rate": 0.481,
+     "max_drawdown": 5341.0
+    },
+    "BBDC4": {
+     "pnl": 6900.0,
+     "trades": 24,
+     "win_rate": 0.417,
+     "max_drawdown": 7614.0
+    },
+    "ABEV3": {
+     "pnl": 11104.0,
+     "trades": 27,
+     "win_rate": 0.444,
+     "max_drawdown": 6110.0
+    },
+    "B3SA3": {
+     "pnl": -5999.0,
+     "trades": 24,
+     "win_rate": 0.292,
+     "max_drawdown": 14055.0
+    },
+    "WEGE3": {
+     "pnl": 10325.0,
+     "trades": 26,
+     "win_rate": 0.423,
+     "max_drawdown": 8142.0
+    },
+    "PRIO3": {
+     "pnl": 17205.0,
+     "trades": 27,
+     "win_rate": 0.481,
+     "max_drawdown": 7679.0
+    }
+   }
+  },
+  {
+   "ratio": 2.5,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 8895.0,
+   "total_pnl": 134919.0,
+   "trades": 281,
+   "win_rate": 0.399,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 7883.0,
+     "trades": 20,
+     "win_rate": 0.45,
+     "max_drawdown": 5110.0
+    },
+    "WDO$N": {
+     "pnl": -2348.0,
+     "trades": 14,
+     "win_rate": 0.286,
+     "max_drawdown": 5655.0
+    },
+    "BOVA11": {
+     "pnl": 8372.0,
+     "trades": 22,
+     "win_rate": 0.364,
+     "max_drawdown": 8776.0
+    },
+    "SMAL11": {
+     "pnl": 8806.0,
+     "trades": 15,
+     "win_rate": 0.4,
+     "max_drawdown": 8779.0
+    },
+    "IVVB11": {
+     "pnl": 18146.0,
+     "trades": 28,
+     "win_rate": 0.429,
+     "max_drawdown": 10312.0
+    },
+    "PETR4": {
+     "pnl": 24213.0,
+     "trades": 28,
+     "win_rate": 0.5,
+     "max_drawdown": 10746.0
+    },
+    "VALE3": {
+     "pnl": 8895.0,
+     "trades": 21,
+     "win_rate": 0.381,
+     "max_drawdown": 16136.0
+    },
+    "ITUB4": {
+     "pnl": 22991.0,
+     "trades": 26,
+     "win_rate": 0.462,
+     "max_drawdown": 7876.0
+    },
+    "BBDC4": {
+     "pnl": 7220.0,
+     "trades": 22,
+     "win_rate": 0.364,
+     "max_drawdown": 8861.0
+    },
+    "ABEV3": {
+     "pnl": 9924.0,
+     "trades": 20,
+     "win_rate": 0.4,
+     "max_drawdown": 8037.0
+    },
+    "B3SA3": {
+     "pnl": -6492.0,
+     "trades": 21,
+     "win_rate": 0.238,
+     "max_drawdown": 14171.0
+    },
+    "WEGE3": {
+     "pnl": 15500.0,
+     "trades": 21,
+     "win_rate": 0.429,
+     "max_drawdown": 6855.0
+    },
+    "PRIO3": {
+     "pnl": 11809.0,
+     "trades": 23,
+     "win_rate": 0.391,
+     "max_drawdown": 10169.0
+    }
+   }
+  },
+  {
+   "ratio": 3.0,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 11405.0,
+   "total_pnl": 160092.0,
+   "trades": 255,
+   "win_rate": 0.376,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 15430.0,
+     "trades": 19,
+     "win_rate": 0.474,
+     "max_drawdown": 5110.0
+    },
+    "WDO$N": {
+     "pnl": -733.0,
+     "trades": 14,
+     "win_rate": 0.286,
+     "max_drawdown": 5655.0
+    },
+    "BOVA11": {
+     "pnl": 11405.0,
+     "trades": 24,
+     "win_rate": 0.333,
+     "max_drawdown": 10485.0
+    },
+    "SMAL11": {
+     "pnl": 11655.0,
+     "trades": 12,
+     "win_rate": 0.417,
+     "max_drawdown": 7901.0
+    },
+    "IVVB11": {
+     "pnl": 30479.0,
+     "trades": 21,
+     "win_rate": 0.524,
+     "max_drawdown": 10312.0
+    },
+    "PETR4": {
+     "pnl": 31524.0,
+     "trades": 23,
+     "win_rate": 0.522,
+     "max_drawdown": 6604.0
+    },
+    "VALE3": {
+     "pnl": 2770.0,
+     "trades": 21,
+     "win_rate": 0.286,
+     "max_drawdown": 17045.0
+    },
+    "ITUB4": {
+     "pnl": 29166.0,
+     "trades": 24,
+     "win_rate": 0.458,
+     "max_drawdown": 5320.0
+    },
+    "BBDC4": {
+     "pnl": 6383.0,
+     "trades": 22,
+     "win_rate": 0.318,
+     "max_drawdown": 9430.0
+    },
+    "ABEV3": {
+     "pnl": 4574.0,
+     "trades": 16,
+     "win_rate": 0.312,
+     "max_drawdown": 8994.0
+    },
+    "B3SA3": {
+     "pnl": -975.0,
+     "trades": 20,
+     "win_rate": 0.25,
+     "max_drawdown": 13238.0
+    },
+    "WEGE3": {
+     "pnl": 11654.0,
+     "trades": 20,
+     "win_rate": 0.35,
+     "max_drawdown": 8142.0
+    },
+    "PRIO3": {
+     "pnl": 6758.0,
+     "trades": 19,
+     "win_rate": 0.316,
+     "max_drawdown": 15728.0
+    }
+   }
+  },
+  {
+   "ratio": 4.0,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 13374.0,
+   "total_pnl": 193175.0,
+   "trades": 215,
+   "win_rate": 0.344,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 16376.0,
+     "trades": 15,
+     "win_rate": 0.467,
+     "max_drawdown": 3695.0
+    },
+    "WDO$N": {
+     "pnl": 7286.0,
+     "trades": 11,
+     "win_rate": 0.364,
+     "max_drawdown": 5655.0
+    },
+    "BOVA11": {
+     "pnl": 18907.0,
+     "trades": 18,
+     "win_rate": 0.333,
+     "max_drawdown": 9930.0
+    },
+    "SMAL11": {
+     "pnl": 10652.0,
+     "trades": 13,
+     "win_rate": 0.308,
+     "max_drawdown": 7135.0
+    },
+    "IVVB11": {
+     "pnl": 25916.0,
+     "trades": 19,
+     "win_rate": 0.421,
+     "max_drawdown": 10312.0
+    },
+    "PETR4": {
+     "pnl": 36224.0,
+     "trades": 16,
+     "win_rate": 0.562,
+     "max_drawdown": 13061.0
+    },
+    "VALE3": {
+     "pnl": 8949.0,
+     "trades": 18,
+     "win_rate": 0.278,
+     "max_drawdown": 12370.0
+    },
+    "ITUB4": {
+     "pnl": 30696.0,
+     "trades": 19,
+     "win_rate": 0.421,
+     "max_drawdown": 6864.0
+    },
+    "BBDC4": {
+     "pnl": 6778.0,
+     "trades": 15,
+     "win_rate": 0.267,
+     "max_drawdown": 8680.0
+    },
+    "ABEV3": {
+     "pnl": 5094.0,
+     "trades": 15,
+     "win_rate": 0.267,
+     "max_drawdown": 12107.0
+    },
+    "B3SA3": {
+     "pnl": -2558.0,
+     "trades": 16,
+     "win_rate": 0.188,
+     "max_drawdown": 19195.0
+    },
+    "WEGE3": {
+     "pnl": 13374.0,
+     "trades": 21,
+     "win_rate": 0.286,
+     "max_drawdown": 7880.0
+    },
+    "PRIO3": {
+     "pnl": 15483.0,
+     "trades": 19,
+     "win_rate": 0.316,
+     "max_drawdown": 16121.0
+    }
+   }
+  },
+  {
+   "ratio": 5.0,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 9368.0,
+   "total_pnl": 148519.0,
+   "trades": 177,
+   "win_rate": 0.288,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 9368.0,
+     "trades": 10,
+     "win_rate": 0.4,
+     "max_drawdown": 6927.0
+    },
+    "WDO$N": {
+     "pnl": -6223.0,
+     "trades": 12,
+     "win_rate": 0.167,
+     "max_drawdown": 11358.0
+    },
+    "BOVA11": {
+     "pnl": 13572.0,
+     "trades": 15,
+     "win_rate": 0.267,
+     "max_drawdown": 10744.0
+    },
+    "SMAL11": {
+     "pnl": 6070.0,
+     "trades": 8,
+     "win_rate": 0.25,
+     "max_drawdown": 11763.0
+    },
+    "IVVB11": {
+     "pnl": 33366.0,
+     "trades": 15,
+     "win_rate": 0.467,
+     "max_drawdown": 10312.0
+    },
+    "PETR4": {
+     "pnl": 32458.0,
+     "trades": 15,
+     "win_rate": 0.467,
+     "max_drawdown": 10354.0
+    },
+    "VALE3": {
+     "pnl": -41.0,
+     "trades": 17,
+     "win_rate": 0.176,
+     "max_drawdown": 19871.0
+    },
+    "ITUB4": {
+     "pnl": 32443.0,
+     "trades": 14,
+     "win_rate": 0.429,
+     "max_drawdown": 9225.0
+    },
+    "BBDC4": {
+     "pnl": 6561.0,
+     "trades": 13,
+     "win_rate": 0.231,
+     "max_drawdown": 12428.0
+    },
+    "ABEV3": {
+     "pnl": 9360.0,
+     "trades": 13,
+     "win_rate": 0.308,
+     "max_drawdown": 12107.0
+    },
+    "B3SA3": {
+     "pnl": -11483.0,
+     "trades": 13,
+     "win_rate": 0.077,
+     "max_drawdown": 22715.0
+    },
+    "WEGE3": {
+     "pnl": 11822.0,
+     "trades": 16,
+     "win_rate": 0.25,
+     "max_drawdown": 10719.0
+    },
+    "PRIO3": {
+     "pnl": 11247.0,
+     "trades": 16,
+     "win_rate": 0.25,
+     "max_drawdown": 13532.0
+    }
+   }
+  },
+  {
+   "ratio": 7.0,
+   "stop_factor": 1.0,
+   "tested": 13,
+   "positive": 9,
+   "rate": 0.692,
+   "median_pnl": 16446.0,
+   "total_pnl": 157688.0,
+   "trades": 150,
+   "win_rate": 0.233,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 17279.0,
+     "trades": 7,
+     "win_rate": 0.429,
+     "max_drawdown": 7195.0
+    },
+    "WDO$N": {
+     "pnl": -4388.0,
+     "trades": 12,
+     "win_rate": 0.167,
+     "max_drawdown": 11358.0
+    },
+    "BOVA11": {
+     "pnl": 19348.0,
+     "trades": 11,
+     "win_rate": 0.273,
+     "max_drawdown": 10744.0
+    },
+    "SMAL11": {
+     "pnl": 3015.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 11763.0
+    },
+    "IVVB11": {
+     "pnl": 29933.0,
+     "trades": 11,
+     "win_rate": 0.364,
+     "max_drawdown": 10312.0
+    },
+    "PETR4": {
+     "pnl": 37729.0,
+     "trades": 15,
+     "win_rate": 0.4,
+     "max_drawdown": 10354.0
+    },
+    "VALE3": {
+     "pnl": -2255.0,
+     "trades": 16,
+     "win_rate": 0.125,
+     "max_drawdown": 19871.0
+    },
+    "ITUB4": {
+     "pnl": 17572.0,
+     "trades": 12,
+     "win_rate": 0.25,
+     "max_drawdown": 13027.0
+    },
+    "BBDC4": {
+     "pnl": -2908.0,
+     "trades": 10,
+     "win_rate": 0.1,
+     "max_drawdown": 17372.0
+    },
+    "ABEV3": {
+     "pnl": 16446.0,
+     "trades": 12,
+     "win_rate": 0.25,
+     "max_drawdown": 12107.0
+    },
+    "B3SA3": {
+     "pnl": -10007.0,
+     "trades": 14,
+     "win_rate": 0.071,
+     "max_drawdown": 22715.0
+    },
+    "WEGE3": {
+     "pnl": 19578.0,
+     "trades": 19,
+     "win_rate": 0.211,
+     "max_drawdown": 8142.0
+    },
+    "PRIO3": {
+     "pnl": 16346.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 11393.0
+    }
+   }
+  },
+  {
+   "ratio": 0.33,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 5105.0,
+   "total_pnl": 83690.0,
+   "trades": 713,
+   "win_rate": 0.813,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 1241.0,
+     "trades": 49,
+     "win_rate": 0.755,
+     "max_drawdown": 4554.0
+    },
+    "WDO$N": {
+     "pnl": 3662.0,
+     "trades": 8,
+     "win_rate": 1.0,
+     "max_drawdown": 780.0
+    },
+    "BOVA11": {
+     "pnl": 6132.0,
+     "trades": 66,
+     "win_rate": 0.803,
+     "max_drawdown": 6494.0
+    },
+    "SMAL11": {
+     "pnl": 5105.0,
+     "trades": 46,
+     "win_rate": 0.804,
+     "max_drawdown": 4013.0
+    },
+    "IVVB11": {
+     "pnl": 22064.0,
+     "trades": 73,
+     "win_rate": 0.904,
+     "max_drawdown": 6687.0
+    },
+    "PETR4": {
+     "pnl": 12841.0,
+     "trades": 79,
+     "win_rate": 0.835,
+     "max_drawdown": 4925.0
+    },
+    "VALE3": {
+     "pnl": 5417.0,
+     "trades": 54,
+     "win_rate": 0.796,
+     "max_drawdown": 6569.0
+    },
+    "ITUB4": {
+     "pnl": 8841.0,
+     "trades": 64,
+     "win_rate": 0.828,
+     "max_drawdown": 4345.0
+    },
+    "BBDC4": {
+     "pnl": 5045.0,
+     "trades": 58,
+     "win_rate": 0.81,
+     "max_drawdown": 5885.0
+    },
+    "ABEV3": {
+     "pnl": 2405.0,
+     "trades": 49,
+     "win_rate": 0.796,
+     "max_drawdown": 5120.0
+    },
+    "B3SA3": {
+     "pnl": -1764.0,
+     "trades": 47,
+     "win_rate": 0.745,
+     "max_drawdown": 5908.0
+    },
+    "WEGE3": {
+     "pnl": 3139.0,
+     "trades": 57,
+     "win_rate": 0.772,
+     "max_drawdown": 6044.0
+    },
+    "PRIO3": {
+     "pnl": 9561.0,
+     "trades": 63,
+     "win_rate": 0.825,
+     "max_drawdown": 5288.0
+    }
+   }
+  },
+  {
+   "ratio": 0.5,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 8650.0,
+   "total_pnl": 77553.0,
+   "trades": 563,
+   "win_rate": 0.734,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 598.0,
+     "trades": 36,
+     "win_rate": 0.667,
+     "max_drawdown": 5560.0
+    },
+    "WDO$N": {
+     "pnl": 4463.0,
+     "trades": 7,
+     "win_rate": 1.0,
+     "max_drawdown": 780.0
+    },
+    "BOVA11": {
+     "pnl": -271.0,
+     "trades": 49,
+     "win_rate": 0.673,
+     "max_drawdown": 9966.0
+    },
+    "SMAL11": {
+     "pnl": 1391.0,
+     "trades": 35,
+     "win_rate": 0.686,
+     "max_drawdown": 6535.0
+    },
+    "IVVB11": {
+     "pnl": 19069.0,
+     "trades": 47,
+     "win_rate": 0.851,
+     "max_drawdown": 5805.0
+    },
+    "PETR4": {
+     "pnl": 11601.0,
+     "trades": 68,
+     "win_rate": 0.75,
+     "max_drawdown": 9771.0
+    },
+    "VALE3": {
+     "pnl": 9256.0,
+     "trades": 46,
+     "win_rate": 0.761,
+     "max_drawdown": 6053.0
+    },
+    "ITUB4": {
+     "pnl": 11666.0,
+     "trades": 53,
+     "win_rate": 0.774,
+     "max_drawdown": 3755.0
+    },
+    "BBDC4": {
+     "pnl": 8948.0,
+     "trades": 44,
+     "win_rate": 0.773,
+     "max_drawdown": 5497.0
+    },
+    "ABEV3": {
+     "pnl": -406.0,
+     "trades": 41,
+     "win_rate": 0.683,
+     "max_drawdown": 6534.0
+    },
+    "B3SA3": {
+     "pnl": -6195.0,
+     "trades": 38,
+     "win_rate": 0.605,
+     "max_drawdown": 8313.0
+    },
+    "WEGE3": {
+     "pnl": 8650.0,
+     "trades": 50,
+     "win_rate": 0.74,
+     "max_drawdown": 5244.0
+    },
+    "PRIO3": {
+     "pnl": 8784.0,
+     "trades": 49,
+     "win_rate": 0.735,
+     "max_drawdown": 7683.0
+    }
+   }
+  },
+  {
+   "ratio": 0.75,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 4731.0,
+   "total_pnl": 80222.0,
+   "trades": 423,
+   "win_rate": 0.652,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": -885.0,
+     "trades": 30,
+     "win_rate": 0.567,
+     "max_drawdown": 6731.0
+    },
+    "WDO$N": {
+     "pnl": 4731.0,
+     "trades": 5,
+     "win_rate": 1.0,
+     "max_drawdown": 780.0
+    },
+    "BOVA11": {
+     "pnl": 2615.0,
+     "trades": 38,
+     "win_rate": 0.605,
+     "max_drawdown": 8707.0
+    },
+    "SMAL11": {
+     "pnl": 1695.0,
+     "trades": 27,
+     "win_rate": 0.593,
+     "max_drawdown": 4514.0
+    },
+    "IVVB11": {
+     "pnl": 22362.0,
+     "trades": 37,
+     "win_rate": 0.811,
+     "max_drawdown": 4881.0
+    },
+    "PETR4": {
+     "pnl": 11414.0,
+     "trades": 45,
+     "win_rate": 0.689,
+     "max_drawdown": 9567.0
+    },
+    "VALE3": {
+     "pnl": 3508.0,
+     "trades": 34,
+     "win_rate": 0.618,
+     "max_drawdown": 10677.0
+    },
+    "ITUB4": {
+     "pnl": 11296.0,
+     "trades": 39,
+     "win_rate": 0.692,
+     "max_drawdown": 6534.0
+    },
+    "BBDC4": {
+     "pnl": 7700.0,
+     "trades": 34,
+     "win_rate": 0.676,
+     "max_drawdown": 7571.0
+    },
+    "ABEV3": {
+     "pnl": -2369.0,
+     "trades": 32,
+     "win_rate": 0.562,
+     "max_drawdown": 6879.0
+    },
+    "B3SA3": {
+     "pnl": 1735.0,
+     "trades": 28,
+     "win_rate": 0.607,
+     "max_drawdown": 5831.0
+    },
+    "WEGE3": {
+     "pnl": 6372.0,
+     "trades": 38,
+     "win_rate": 0.632,
+     "max_drawdown": 5491.0
+    },
+    "PRIO3": {
+     "pnl": 10047.0,
+     "trades": 36,
+     "win_rate": 0.667,
+     "max_drawdown": 7814.0
+    }
+   }
+  },
+  {
+   "ratio": 1.0,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 6005.0,
+   "total_pnl": 113228.0,
+   "trades": 336,
+   "win_rate": 0.625,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 5542.0,
+     "trades": 23,
+     "win_rate": 0.609,
+     "max_drawdown": 4322.0
+    },
+    "WDO$N": {
+     "pnl": 6033.0,
+     "trades": 5,
+     "win_rate": 1.0,
+     "max_drawdown": 780.0
+    },
+    "BOVA11": {
+     "pnl": 3446.0,
+     "trades": 31,
+     "win_rate": 0.548,
+     "max_drawdown": 7300.0
+    },
+    "SMAL11": {
+     "pnl": 6005.0,
+     "trades": 22,
+     "win_rate": 0.591,
+     "max_drawdown": 4396.0
+    },
+    "IVVB11": {
+     "pnl": 22315.0,
+     "trades": 25,
+     "win_rate": 0.8,
+     "max_drawdown": 4500.0
+    },
+    "PETR4": {
+     "pnl": 10807.0,
+     "trades": 37,
+     "win_rate": 0.622,
+     "max_drawdown": 10481.0
+    },
+    "VALE3": {
+     "pnl": 5347.0,
+     "trades": 26,
+     "win_rate": 0.577,
+     "max_drawdown": 11706.0
+    },
+    "ITUB4": {
+     "pnl": 16748.0,
+     "trades": 30,
+     "win_rate": 0.7,
+     "max_drawdown": 4615.0
+    },
+    "BBDC4": {
+     "pnl": 5790.0,
+     "trades": 29,
+     "win_rate": 0.586,
+     "max_drawdown": 7168.0
+    },
+    "ABEV3": {
+     "pnl": 3263.0,
+     "trades": 27,
+     "win_rate": 0.556,
+     "max_drawdown": 5860.0
+    },
+    "B3SA3": {
+     "pnl": 686.0,
+     "trades": 25,
+     "win_rate": 0.52,
+     "max_drawdown": 5831.0
+    },
+    "WEGE3": {
+     "pnl": 12796.0,
+     "trades": 29,
+     "win_rate": 0.655,
+     "max_drawdown": 5446.0
+    },
+    "PRIO3": {
+     "pnl": 14450.0,
+     "trades": 27,
+     "win_rate": 0.667,
+     "max_drawdown": 8573.0
+    }
+   }
+  },
+  {
+   "ratio": 1.5,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 9684.0,
+   "total_pnl": 120330.0,
+   "trades": 252,
+   "win_rate": 0.544,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 4878.0,
+     "trades": 18,
+     "win_rate": 0.5,
+     "max_drawdown": 5521.0
+    },
+    "WDO$N": {
+     "pnl": 3212.0,
+     "trades": 4,
+     "win_rate": 0.75,
+     "max_drawdown": 3326.0
+    },
+    "BOVA11": {
+     "pnl": 4759.0,
+     "trades": 24,
+     "win_rate": 0.458,
+     "max_drawdown": 6031.0
+    },
+    "SMAL11": {
+     "pnl": 9684.0,
+     "trades": 16,
+     "win_rate": 0.562,
+     "max_drawdown": 4475.0
+    },
+    "IVVB11": {
+     "pnl": 19984.0,
+     "trades": 20,
+     "win_rate": 0.7,
+     "max_drawdown": 6117.0
+    },
+    "PETR4": {
+     "pnl": 15474.0,
+     "trades": 27,
+     "win_rate": 0.593,
+     "max_drawdown": 7974.0
+    },
+    "VALE3": {
+     "pnl": 5722.0,
+     "trades": 21,
+     "win_rate": 0.476,
+     "max_drawdown": 10770.0
+    },
+    "ITUB4": {
+     "pnl": 17389.0,
+     "trades": 23,
+     "win_rate": 0.609,
+     "max_drawdown": 4615.0
+    },
+    "BBDC4": {
+     "pnl": 10279.0,
+     "trades": 20,
+     "win_rate": 0.55,
+     "max_drawdown": 6161.0
+    },
+    "ABEV3": {
+     "pnl": -557.0,
+     "trades": 24,
+     "win_rate": 0.417,
+     "max_drawdown": 5717.0
+    },
+    "B3SA3": {
+     "pnl": 3350.0,
+     "trades": 20,
+     "win_rate": 0.45,
+     "max_drawdown": 5001.0
+    },
+    "WEGE3": {
+     "pnl": 12632.0,
+     "trades": 18,
+     "win_rate": 0.611,
+     "max_drawdown": 7081.0
+    },
+    "PRIO3": {
+     "pnl": 13525.0,
+     "trades": 17,
+     "win_rate": 0.588,
+     "max_drawdown": 5816.0
+    }
+   }
+  },
+  {
+   "ratio": 2.0,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 10222.0,
+   "total_pnl": 136596.0,
+   "trades": 204,
+   "win_rate": 0.5,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 8201.0,
+     "trades": 17,
+     "win_rate": 0.471,
+     "max_drawdown": 4972.0
+    },
+    "WDO$N": {
+     "pnl": 4634.0,
+     "trades": 4,
+     "win_rate": 0.75,
+     "max_drawdown": 3326.0
+    },
+    "BOVA11": {
+     "pnl": 13406.0,
+     "trades": 18,
+     "win_rate": 0.5,
+     "max_drawdown": 5680.0
+    },
+    "SMAL11": {
+     "pnl": 4415.0,
+     "trades": 12,
+     "win_rate": 0.417,
+     "max_drawdown": 6765.0
+    },
+    "IVVB11": {
+     "pnl": 25894.0,
+     "trades": 14,
+     "win_rate": 0.786,
+     "max_drawdown": 6117.0
+    },
+    "PETR4": {
+     "pnl": 20820.0,
+     "trades": 19,
+     "win_rate": 0.632,
+     "max_drawdown": 5230.0
+    },
+    "VALE3": {
+     "pnl": 3988.0,
+     "trades": 18,
+     "win_rate": 0.389,
+     "max_drawdown": 12342.0
+    },
+    "ITUB4": {
+     "pnl": 19044.0,
+     "trades": 20,
+     "win_rate": 0.55,
+     "max_drawdown": 6170.0
+    },
+    "BBDC4": {
+     "pnl": 7207.0,
+     "trades": 19,
+     "win_rate": 0.421,
+     "max_drawdown": 7176.0
+    },
+    "ABEV3": {
+     "pnl": -2251.0,
+     "trades": 16,
+     "win_rate": 0.312,
+     "max_drawdown": 7496.0
+    },
+    "B3SA3": {
+     "pnl": 10222.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 4979.0
+    },
+    "WEGE3": {
+     "pnl": 10368.0,
+     "trades": 18,
+     "win_rate": 0.5,
+     "max_drawdown": 6044.0
+    },
+    "PRIO3": {
+     "pnl": 10648.0,
+     "trades": 15,
+     "win_rate": 0.467,
+     "max_drawdown": 8360.0
+    }
+   }
+  },
+  {
+   "ratio": 2.5,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 10965.0,
+   "total_pnl": 153578.0,
+   "trades": 168,
+   "win_rate": 0.482,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 11876.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 4322.0
+    },
+    "WDO$N": {
+     "pnl": 2464.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 3326.0
+    },
+    "BOVA11": {
+     "pnl": 21050.0,
+     "trades": 17,
+     "win_rate": 0.529,
+     "max_drawdown": 5557.0
+    },
+    "SMAL11": {
+     "pnl": 5592.0,
+     "trades": 10,
+     "win_rate": 0.4,
+     "max_drawdown": 6019.0
+    },
+    "IVVB11": {
+     "pnl": 22248.0,
+     "trades": 12,
+     "win_rate": 0.667,
+     "max_drawdown": 6117.0
+    },
+    "PETR4": {
+     "pnl": 27657.0,
+     "trades": 14,
+     "win_rate": 0.714,
+     "max_drawdown": 4437.0
+    },
+    "VALE3": {
+     "pnl": 7011.0,
+     "trades": 16,
+     "win_rate": 0.375,
+     "max_drawdown": 9690.0
+    },
+    "ITUB4": {
+     "pnl": 17393.0,
+     "trades": 16,
+     "win_rate": 0.5,
+     "max_drawdown": 5555.0
+    },
+    "BBDC4": {
+     "pnl": 7718.0,
+     "trades": 12,
+     "win_rate": 0.417,
+     "max_drawdown": 6456.0
+    },
+    "ABEV3": {
+     "pnl": -969.0,
+     "trades": 14,
+     "win_rate": 0.286,
+     "max_drawdown": 8515.0
+    },
+    "B3SA3": {
+     "pnl": 10965.0,
+     "trades": 10,
+     "win_rate": 0.5,
+     "max_drawdown": 6024.0
+    },
+    "WEGE3": {
+     "pnl": 12677.0,
+     "trades": 17,
+     "win_rate": 0.471,
+     "max_drawdown": 5976.0
+    },
+    "PRIO3": {
+     "pnl": 7897.0,
+     "trades": 13,
+     "win_rate": 0.385,
+     "max_drawdown": 10440.0
+    }
+   }
+  },
+  {
+   "ratio": 3.0,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 8920.0,
+   "total_pnl": 136444.0,
+   "trades": 145,
+   "win_rate": 0.434,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 13067.0,
+     "trades": 9,
+     "win_rate": 0.556,
+     "max_drawdown": 4158.0
+    },
+    "WDO$N": {
+     "pnl": 3205.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 3326.0
+    },
+    "BOVA11": {
+     "pnl": 20863.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 4441.0
+    },
+    "SMAL11": {
+     "pnl": 8920.0,
+     "trades": 10,
+     "win_rate": 0.4,
+     "max_drawdown": 5433.0
+    },
+    "IVVB11": {
+     "pnl": 16815.0,
+     "trades": 10,
+     "win_rate": 0.6,
+     "max_drawdown": 6117.0
+    },
+    "PETR4": {
+     "pnl": 18956.0,
+     "trades": 12,
+     "win_rate": 0.583,
+     "max_drawdown": 6076.0
+    },
+    "VALE3": {
+     "pnl": 3610.0,
+     "trades": 13,
+     "win_rate": 0.308,
+     "max_drawdown": 12006.0
+    },
+    "ITUB4": {
+     "pnl": 23197.0,
+     "trades": 16,
+     "win_rate": 0.5,
+     "max_drawdown": 5230.0
+    },
+    "BBDC4": {
+     "pnl": 834.0,
+     "trades": 11,
+     "win_rate": 0.273,
+     "max_drawdown": 9868.0
+    },
+    "ABEV3": {
+     "pnl": 4622.0,
+     "trades": 12,
+     "win_rate": 0.333,
+     "max_drawdown": 8515.0
+    },
+    "B3SA3": {
+     "pnl": 4213.0,
+     "trades": 9,
+     "win_rate": 0.333,
+     "max_drawdown": 7041.0
+    },
+    "WEGE3": {
+     "pnl": 13844.0,
+     "trades": 12,
+     "win_rate": 0.5,
+     "max_drawdown": 6943.0
+    },
+    "PRIO3": {
+     "pnl": 4298.0,
+     "trades": 14,
+     "win_rate": 0.286,
+     "max_drawdown": 11238.0
+    }
+   }
+  },
+  {
+   "ratio": 4.0,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 10,
+   "rate": 0.769,
+   "median_pnl": 9033.0,
+   "total_pnl": 133535.0,
+   "trades": 118,
+   "win_rate": 0.381,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 9033.0,
+     "trades": 8,
+     "win_rate": 0.375,
+     "max_drawdown": 5697.0
+    },
+    "WDO$N": {
+     "pnl": 4674.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 3326.0
+    },
+    "BOVA11": {
+     "pnl": 11706.0,
+     "trades": 12,
+     "win_rate": 0.333,
+     "max_drawdown": 8109.0
+    },
+    "SMAL11": {
+     "pnl": -1572.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 9319.0
+    },
+    "IVVB11": {
+     "pnl": 18934.0,
+     "trades": 7,
+     "win_rate": 0.571,
+     "max_drawdown": 6117.0
+    },
+    "PETR4": {
+     "pnl": 25458.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 5230.0
+    },
+    "VALE3": {
+     "pnl": -802.0,
+     "trades": 10,
+     "win_rate": 0.2,
+     "max_drawdown": 16394.0
+    },
+    "ITUB4": {
+     "pnl": 20663.0,
+     "trades": 11,
+     "win_rate": 0.455,
+     "max_drawdown": 8325.0
+    },
+    "BBDC4": {
+     "pnl": 6871.0,
+     "trades": 10,
+     "win_rate": 0.3,
+     "max_drawdown": 9868.0
+    },
+    "ABEV3": {
+     "pnl": 8885.0,
+     "trades": 10,
+     "win_rate": 0.4,
+     "max_drawdown": 8515.0
+    },
+    "B3SA3": {
+     "pnl": -422.0,
+     "trades": 10,
+     "win_rate": 0.2,
+     "max_drawdown": 9772.0
+    },
+    "WEGE3": {
+     "pnl": 18480.0,
+     "trades": 9,
+     "win_rate": 0.556,
+     "max_drawdown": 6094.0
+    },
+    "PRIO3": {
+     "pnl": 11627.0,
+     "trades": 8,
+     "win_rate": 0.375,
+     "max_drawdown": 5948.0
+    }
+   }
+  },
+  {
+   "ratio": 5.0,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 11233.0,
+   "total_pnl": 142351.0,
+   "trades": 104,
+   "win_rate": 0.356,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 10298.0,
+     "trades": 4,
+     "win_rate": 0.5,
+     "max_drawdown": 5697.0
+    },
+    "WDO$N": {
+     "pnl": 6147.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 3326.0
+    },
+    "BOVA11": {
+     "pnl": 16455.0,
+     "trades": 7,
+     "win_rate": 0.429,
+     "max_drawdown": 7579.0
+    },
+    "SMAL11": {
+     "pnl": -73.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 9319.0
+    },
+    "IVVB11": {
+     "pnl": 15423.0,
+     "trades": 6,
+     "win_rate": 0.5,
+     "max_drawdown": 6117.0
+    },
+    "PETR4": {
+     "pnl": 17104.0,
+     "trades": 13,
+     "win_rate": 0.385,
+     "max_drawdown": 10110.0
+    },
+    "VALE3": {
+     "pnl": 677.0,
+     "trades": 11,
+     "win_rate": 0.182,
+     "max_drawdown": 16394.0
+    },
+    "ITUB4": {
+     "pnl": 22301.0,
+     "trades": 9,
+     "win_rate": 0.444,
+     "max_drawdown": 7645.0
+    },
+    "BBDC4": {
+     "pnl": 10218.0,
+     "trades": 11,
+     "win_rate": 0.273,
+     "max_drawdown": 9868.0
+    },
+    "ABEV3": {
+     "pnl": 11233.0,
+     "trades": 6,
+     "win_rate": 0.5,
+     "max_drawdown": 8515.0
+    },
+    "B3SA3": {
+     "pnl": 2580.0,
+     "trades": 10,
+     "win_rate": 0.2,
+     "max_drawdown": 9772.0
+    },
+    "WEGE3": {
+     "pnl": 18310.0,
+     "trades": 13,
+     "win_rate": 0.385,
+     "max_drawdown": 6044.0
+    },
+    "PRIO3": {
+     "pnl": 11678.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 7099.0
+    }
+   }
+  },
+  {
+   "ratio": 7.0,
+   "stop_factor": 1.5,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 11431.0,
+   "total_pnl": 146908.0,
+   "trades": 76,
+   "win_rate": 0.355,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 15677.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 5697.0
+    },
+    "WDO$N": {
+     "pnl": 9094.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 3560.0
+    },
+    "BOVA11": {
+     "pnl": 16449.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 7512.0
+    },
+    "SMAL11": {
+     "pnl": -1944.0,
+     "trades": 4,
+     "win_rate": 0.25,
+     "max_drawdown": 9319.0
+    },
+    "IVVB11": {
+     "pnl": 11431.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 6848.0
+    },
+    "PETR4": {
+     "pnl": 28701.0,
+     "trades": 6,
+     "win_rate": 0.667,
+     "max_drawdown": 8910.0
+    },
+    "VALE3": {
+     "pnl": -131.0,
+     "trades": 9,
+     "win_rate": 0.222,
+     "max_drawdown": 16394.0
+    },
+    "ITUB4": {
+     "pnl": 20632.0,
+     "trades": 10,
+     "win_rate": 0.3,
+     "max_drawdown": 6721.0
+    },
+    "BBDC4": {
+     "pnl": 3785.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 11649.0
+    },
+    "ABEV3": {
+     "pnl": 13098.0,
+     "trades": 7,
+     "win_rate": 0.286,
+     "max_drawdown": 9036.0
+    },
+    "B3SA3": {
+     "pnl": 2773.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 9772.0
+    },
+    "WEGE3": {
+     "pnl": 18411.0,
+     "trades": 5,
+     "win_rate": 0.6,
+     "max_drawdown": 10068.0
+    },
+    "PRIO3": {
+     "pnl": 8932.0,
+     "trades": 7,
+     "win_rate": 0.286,
+     "max_drawdown": 9949.0
+    }
+   }
+  },
+  {
+   "ratio": 0.33,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 5716.0,
+   "total_pnl": 68677.0,
+   "trades": 559,
+   "win_rate": 0.816,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": -1579.0,
+     "trades": 16,
+     "win_rate": 0.688,
+     "max_drawdown": 3749.0
+    },
+    "WDO$N": {
+     "pnl": 475.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 630.0
+    },
+    "BOVA11": {
+     "pnl": 4354.0,
+     "trades": 49,
+     "win_rate": 0.796,
+     "max_drawdown": 4835.0
+    },
+    "SMAL11": {
+     "pnl": 5139.0,
+     "trades": 39,
+     "win_rate": 0.821,
+     "max_drawdown": 3422.0
+    },
+    "IVVB11": {
+     "pnl": 16147.0,
+     "trades": 53,
+     "win_rate": 0.906,
+     "max_drawdown": 2486.0
+    },
+    "PETR4": {
+     "pnl": 7680.0,
+     "trades": 66,
+     "win_rate": 0.818,
+     "max_drawdown": 7734.0
+    },
+    "VALE3": {
+     "pnl": 5716.0,
+     "trades": 48,
+     "win_rate": 0.812,
+     "max_drawdown": 5391.0
+    },
+    "ITUB4": {
+     "pnl": 10050.0,
+     "trades": 54,
+     "win_rate": 0.852,
+     "max_drawdown": 3885.0
+    },
+    "BBDC4": {
+     "pnl": 6956.0,
+     "trades": 48,
+     "win_rate": 0.833,
+     "max_drawdown": 4041.0
+    },
+    "ABEV3": {
+     "pnl": 89.0,
+     "trades": 43,
+     "win_rate": 0.767,
+     "max_drawdown": 5609.0
+    },
+    "B3SA3": {
+     "pnl": -2780.0,
+     "trades": 40,
+     "win_rate": 0.725,
+     "max_drawdown": 6943.0
+    },
+    "WEGE3": {
+     "pnl": 8027.0,
+     "trades": 50,
+     "win_rate": 0.82,
+     "max_drawdown": 5801.0
+    },
+    "PRIO3": {
+     "pnl": 8401.0,
+     "trades": 52,
+     "win_rate": 0.827,
+     "max_drawdown": 6918.0
+    }
+   }
+  },
+  {
+   "ratio": 0.5,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 11,
+   "rate": 0.846,
+   "median_pnl": 4509.0,
+   "total_pnl": 77688.0,
+   "trades": 417,
+   "win_rate": 0.751,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 1329.0,
+     "trades": 13,
+     "win_rate": 0.692,
+     "max_drawdown": 3188.0
+    },
+    "WDO$N": {
+     "pnl": 878.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 645.0
+    },
+    "BOVA11": {
+     "pnl": 5313.0,
+     "trades": 40,
+     "win_rate": 0.725,
+     "max_drawdown": 5361.0
+    },
+    "SMAL11": {
+     "pnl": -1634.0,
+     "trades": 28,
+     "win_rate": 0.643,
+     "max_drawdown": 4858.0
+    },
+    "IVVB11": {
+     "pnl": 18892.0,
+     "trades": 41,
+     "win_rate": 0.878,
+     "max_drawdown": 2911.0
+    },
+    "PETR4": {
+     "pnl": 4509.0,
+     "trades": 52,
+     "win_rate": 0.712,
+     "max_drawdown": 7740.0
+    },
+    "VALE3": {
+     "pnl": 4465.0,
+     "trades": 33,
+     "win_rate": 0.727,
+     "max_drawdown": 8894.0
+    },
+    "ITUB4": {
+     "pnl": 17981.0,
+     "trades": 39,
+     "win_rate": 0.872,
+     "max_drawdown": 3376.0
+    },
+    "BBDC4": {
+     "pnl": 13084.0,
+     "trades": 36,
+     "win_rate": 0.833,
+     "max_drawdown": 3040.0
+    },
+    "ABEV3": {
+     "pnl": 1885.0,
+     "trades": 34,
+     "win_rate": 0.706,
+     "max_drawdown": 5304.0
+    },
+    "B3SA3": {
+     "pnl": -1044.0,
+     "trades": 29,
+     "win_rate": 0.655,
+     "max_drawdown": 3997.0
+    },
+    "WEGE3": {
+     "pnl": 5393.0,
+     "trades": 33,
+     "win_rate": 0.727,
+     "max_drawdown": 4759.0
+    },
+    "PRIO3": {
+     "pnl": 6637.0,
+     "trades": 38,
+     "win_rate": 0.737,
+     "max_drawdown": 7172.0
+    }
+   }
+  },
+  {
+   "ratio": 0.75,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 4636.0,
+   "total_pnl": 88756.0,
+   "trades": 295,
+   "win_rate": 0.692,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 1960.0,
+     "trades": 9,
+     "win_rate": 0.667,
+     "max_drawdown": 2186.0
+    },
+    "WDO$N": {
+     "pnl": 1089.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 645.0
+    },
+    "BOVA11": {
+     "pnl": 2498.0,
+     "trades": 28,
+     "win_rate": 0.607,
+     "max_drawdown": 5361.0
+    },
+    "SMAL11": {
+     "pnl": 1059.0,
+     "trades": 22,
+     "win_rate": 0.591,
+     "max_drawdown": 4835.0
+    },
+    "IVVB11": {
+     "pnl": 21559.0,
+     "trades": 24,
+     "win_rate": 0.917,
+     "max_drawdown": 2658.0
+    },
+    "PETR4": {
+     "pnl": 7056.0,
+     "trades": 35,
+     "win_rate": 0.657,
+     "max_drawdown": 9333.0
+    },
+    "VALE3": {
+     "pnl": 1592.0,
+     "trades": 25,
+     "win_rate": 0.6,
+     "max_drawdown": 10355.0
+    },
+    "ITUB4": {
+     "pnl": 17376.0,
+     "trades": 25,
+     "win_rate": 0.84,
+     "max_drawdown": 3547.0
+    },
+    "BBDC4": {
+     "pnl": 5887.0,
+     "trades": 27,
+     "win_rate": 0.667,
+     "max_drawdown": 4821.0
+    },
+    "ABEV3": {
+     "pnl": 2635.0,
+     "trades": 24,
+     "win_rate": 0.625,
+     "max_drawdown": 4636.0
+    },
+    "B3SA3": {
+     "pnl": 4636.0,
+     "trades": 23,
+     "win_rate": 0.652,
+     "max_drawdown": 4108.0
+    },
+    "WEGE3": {
+     "pnl": 13275.0,
+     "trades": 26,
+     "win_rate": 0.769,
+     "max_drawdown": 4738.0
+    },
+    "PRIO3": {
+     "pnl": 8133.0,
+     "trades": 26,
+     "win_rate": 0.692,
+     "max_drawdown": 8783.0
+    }
+   }
+  },
+  {
+   "ratio": 1.0,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 5510.0,
+   "total_pnl": 92679.0,
+   "trades": 242,
+   "win_rate": 0.636,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 4253.0,
+     "trades": 7,
+     "win_rate": 0.714,
+     "max_drawdown": 2365.0
+    },
+    "WDO$N": {
+     "pnl": 1454.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 645.0
+    },
+    "BOVA11": {
+     "pnl": 10935.0,
+     "trades": 23,
+     "win_rate": 0.652,
+     "max_drawdown": 3903.0
+    },
+    "SMAL11": {
+     "pnl": 3036.0,
+     "trades": 16,
+     "win_rate": 0.562,
+     "max_drawdown": 3742.0
+    },
+    "IVVB11": {
+     "pnl": 21766.0,
+     "trades": 21,
+     "win_rate": 0.857,
+     "max_drawdown": 2486.0
+    },
+    "PETR4": {
+     "pnl": 8908.0,
+     "trades": 26,
+     "win_rate": 0.654,
+     "max_drawdown": 8590.0
+    },
+    "VALE3": {
+     "pnl": -246.0,
+     "trades": 22,
+     "win_rate": 0.5,
+     "max_drawdown": 10123.0
+    },
+    "ITUB4": {
+     "pnl": 11842.0,
+     "trades": 20,
+     "win_rate": 0.7,
+     "max_drawdown": 5685.0
+    },
+    "BBDC4": {
+     "pnl": 5510.0,
+     "trades": 22,
+     "win_rate": 0.591,
+     "max_drawdown": 5368.0
+    },
+    "ABEV3": {
+     "pnl": 460.0,
+     "trades": 23,
+     "win_rate": 0.522,
+     "max_drawdown": 5846.0
+    },
+    "B3SA3": {
+     "pnl": 2836.0,
+     "trades": 20,
+     "win_rate": 0.55,
+     "max_drawdown": 5107.0
+    },
+    "WEGE3": {
+     "pnl": 10592.0,
+     "trades": 18,
+     "win_rate": 0.722,
+     "max_drawdown": 4338.0
+    },
+    "PRIO3": {
+     "pnl": 11334.0,
+     "trades": 23,
+     "win_rate": 0.652,
+     "max_drawdown": 7215.0
+    }
+   }
+  },
+  {
+   "ratio": 1.5,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 5369.0,
+   "total_pnl": 93305.0,
+   "trades": 173,
+   "win_rate": 0.555,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 2069.0,
+     "trades": 6,
+     "win_rate": 0.5,
+     "max_drawdown": 2187.0
+    },
+    "WDO$N": {
+     "pnl": 2185.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 645.0
+    },
+    "BOVA11": {
+     "pnl": 8156.0,
+     "trades": 17,
+     "win_rate": 0.529,
+     "max_drawdown": 5413.0
+    },
+    "SMAL11": {
+     "pnl": 2196.0,
+     "trades": 11,
+     "win_rate": 0.455,
+     "max_drawdown": 6434.0
+    },
+    "IVVB11": {
+     "pnl": 22019.0,
+     "trades": 14,
+     "win_rate": 0.857,
+     "max_drawdown": 3860.0
+    },
+    "PETR4": {
+     "pnl": 10988.0,
+     "trades": 18,
+     "win_rate": 0.611,
+     "max_drawdown": 4486.0
+    },
+    "VALE3": {
+     "pnl": 593.0,
+     "trades": 17,
+     "win_rate": 0.412,
+     "max_drawdown": 12157.0
+    },
+    "ITUB4": {
+     "pnl": 14819.0,
+     "trades": 15,
+     "win_rate": 0.667,
+     "max_drawdown": 5685.0
+    },
+    "BBDC4": {
+     "pnl": 4634.0,
+     "trades": 17,
+     "win_rate": 0.471,
+     "max_drawdown": 5047.0
+    },
+    "ABEV3": {
+     "pnl": 2626.0,
+     "trades": 13,
+     "win_rate": 0.462,
+     "max_drawdown": 6745.0
+    },
+    "B3SA3": {
+     "pnl": 5369.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 4145.0
+    },
+    "WEGE3": {
+     "pnl": 11554.0,
+     "trades": 16,
+     "win_rate": 0.625,
+     "max_drawdown": 6250.0
+    },
+    "PRIO3": {
+     "pnl": 6099.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 8171.0
+    }
+   }
+  },
+  {
+   "ratio": 2.0,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 4377.0,
+   "total_pnl": 103306.0,
+   "trades": 136,
+   "win_rate": 0.515,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 4520.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 3093.0
+    },
+    "WDO$N": {
+     "pnl": 2916.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 2095.0
+    },
+    "BOVA11": {
+     "pnl": 12035.0,
+     "trades": 16,
+     "win_rate": 0.5,
+     "max_drawdown": 4751.0
+    },
+    "SMAL11": {
+     "pnl": 3194.0,
+     "trades": 10,
+     "win_rate": 0.4,
+     "max_drawdown": 5477.0
+    },
+    "IVVB11": {
+     "pnl": 21038.0,
+     "trades": 12,
+     "win_rate": 0.75,
+     "max_drawdown": 3860.0
+    },
+    "PETR4": {
+     "pnl": 17870.0,
+     "trades": 10,
+     "win_rate": 0.8,
+     "max_drawdown": 4400.0
+    },
+    "VALE3": {
+     "pnl": 4377.0,
+     "trades": 15,
+     "win_rate": 0.4,
+     "max_drawdown": 9744.0
+    },
+    "ITUB4": {
+     "pnl": 11884.0,
+     "trades": 13,
+     "win_rate": 0.538,
+     "max_drawdown": 4765.0
+    },
+    "BBDC4": {
+     "pnl": 4197.0,
+     "trades": 9,
+     "win_rate": 0.444,
+     "max_drawdown": 5912.0
+    },
+    "ABEV3": {
+     "pnl": 1107.0,
+     "trades": 11,
+     "win_rate": 0.364,
+     "max_drawdown": 4636.0
+    },
+    "B3SA3": {
+     "pnl": 2960.0,
+     "trades": 10,
+     "win_rate": 0.4,
+     "max_drawdown": 6854.0
+    },
+    "WEGE3": {
+     "pnl": 13828.0,
+     "trades": 13,
+     "win_rate": 0.615,
+     "max_drawdown": 4675.0
+    },
+    "PRIO3": {
+     "pnl": 3380.0,
+     "trades": 13,
+     "win_rate": 0.385,
+     "max_drawdown": 10110.0
+    }
+   }
+  },
+  {
+   "ratio": 2.5,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 5572.0,
+   "total_pnl": 103889.0,
+   "trades": 104,
+   "win_rate": 0.5,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 7390.0,
+     "trades": 2,
+     "win_rate": 1.0,
+     "max_drawdown": 3933.0
+    },
+    "WDO$N": {
+     "pnl": 3647.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 2095.0
+    },
+    "BOVA11": {
+     "pnl": 14336.0,
+     "trades": 8,
+     "win_rate": 0.625,
+     "max_drawdown": 4760.0
+    },
+    "SMAL11": {
+     "pnl": 3236.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 6608.0
+    },
+    "IVVB11": {
+     "pnl": 20174.0,
+     "trades": 9,
+     "win_rate": 0.778,
+     "max_drawdown": 3860.0
+    },
+    "PETR4": {
+     "pnl": 11920.0,
+     "trades": 14,
+     "win_rate": 0.5,
+     "max_drawdown": 8967.0
+    },
+    "VALE3": {
+     "pnl": 2875.0,
+     "trades": 12,
+     "win_rate": 0.333,
+     "max_drawdown": 10936.0
+    },
+    "ITUB4": {
+     "pnl": 16417.0,
+     "trades": 10,
+     "win_rate": 0.6,
+     "max_drawdown": 5804.0
+    },
+    "BBDC4": {
+     "pnl": 1259.0,
+     "trades": 6,
+     "win_rate": 0.333,
+     "max_drawdown": 8855.0
+    },
+    "ABEV3": {
+     "pnl": 5572.0,
+     "trades": 8,
+     "win_rate": 0.5,
+     "max_drawdown": 4405.0
+    },
+    "B3SA3": {
+     "pnl": 3207.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 5381.0
+    },
+    "WEGE3": {
+     "pnl": 11937.0,
+     "trades": 11,
+     "win_rate": 0.545,
+     "max_drawdown": 5957.0
+    },
+    "PRIO3": {
+     "pnl": 1919.0,
+     "trades": 13,
+     "win_rate": 0.308,
+     "max_drawdown": 9327.0
+    }
+   }
+  },
+  {
+   "ratio": 3.0,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 8869.0,
+   "total_pnl": 114924.0,
+   "trades": 87,
+   "win_rate": 0.494,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 8869.0,
+     "trades": 2,
+     "win_rate": 1.0,
+     "max_drawdown": 3933.0
+    },
+    "WDO$N": {
+     "pnl": 4377.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 2095.0
+    },
+    "BOVA11": {
+     "pnl": 13446.0,
+     "trades": 7,
+     "win_rate": 0.571,
+     "max_drawdown": 4751.0
+    },
+    "SMAL11": {
+     "pnl": -25.0,
+     "trades": 4,
+     "win_rate": 0.25,
+     "max_drawdown": 6608.0
+    },
+    "IVVB11": {
+     "pnl": 20630.0,
+     "trades": 6,
+     "win_rate": 0.833,
+     "max_drawdown": 3860.0
+    },
+    "PETR4": {
+     "pnl": 14118.0,
+     "trades": 11,
+     "win_rate": 0.545,
+     "max_drawdown": 4486.0
+    },
+    "VALE3": {
+     "pnl": 4041.0,
+     "trades": 10,
+     "win_rate": 0.3,
+     "max_drawdown": 10230.0
+    },
+    "ITUB4": {
+     "pnl": 16554.0,
+     "trades": 9,
+     "win_rate": 0.556,
+     "max_drawdown": 6089.0
+    },
+    "BBDC4": {
+     "pnl": 1118.0,
+     "trades": 7,
+     "win_rate": 0.286,
+     "max_drawdown": 8855.0
+    },
+    "ABEV3": {
+     "pnl": 9068.0,
+     "trades": 7,
+     "win_rate": 0.571,
+     "max_drawdown": 4405.0
+    },
+    "B3SA3": {
+     "pnl": 1638.0,
+     "trades": 7,
+     "win_rate": 0.286,
+     "max_drawdown": 5381.0
+    },
+    "WEGE3": {
+     "pnl": 12363.0,
+     "trades": 9,
+     "win_rate": 0.556,
+     "max_drawdown": 4946.0
+    },
+    "PRIO3": {
+     "pnl": 8726.0,
+     "trades": 7,
+     "win_rate": 0.429,
+     "max_drawdown": 4457.0
+    }
+   }
+  },
+  {
+   "ratio": 4.0,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 10357.0,
+   "total_pnl": 120726.0,
+   "trades": 71,
+   "win_rate": 0.451,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 11828.0,
+     "trades": 2,
+     "win_rate": 1.0,
+     "max_drawdown": 3933.0
+    },
+    "WDO$N": {
+     "pnl": 5839.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 2095.0
+    },
+    "BOVA11": {
+     "pnl": 11943.0,
+     "trades": 7,
+     "win_rate": 0.429,
+     "max_drawdown": 5760.0
+    },
+    "SMAL11": {
+     "pnl": 1260.0,
+     "trades": 4,
+     "win_rate": 0.25,
+     "max_drawdown": 6608.0
+    },
+    "IVVB11": {
+     "pnl": 12752.0,
+     "trades": 5,
+     "win_rate": 0.6,
+     "max_drawdown": 6747.0
+    },
+    "PETR4": {
+     "pnl": 14735.0,
+     "trades": 11,
+     "win_rate": 0.455,
+     "max_drawdown": 8703.0
+    },
+    "VALE3": {
+     "pnl": 5944.0,
+     "trades": 6,
+     "win_rate": 0.333,
+     "max_drawdown": 8700.0
+    },
+    "ITUB4": {
+     "pnl": 16493.0,
+     "trades": 4,
+     "win_rate": 0.75,
+     "max_drawdown": 5366.0
+    },
+    "BBDC4": {
+     "pnl": 2597.0,
+     "trades": 8,
+     "win_rate": 0.25,
+     "max_drawdown": 8855.0
+    },
+    "ABEV3": {
+     "pnl": 7900.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 6113.0
+    },
+    "B3SA3": {
+     "pnl": 2220.0,
+     "trades": 4,
+     "win_rate": 0.25,
+     "max_drawdown": 5381.0
+    },
+    "WEGE3": {
+     "pnl": 16859.0,
+     "trades": 10,
+     "win_rate": 0.5,
+     "max_drawdown": 4738.0
+    },
+    "PRIO3": {
+     "pnl": 10357.0,
+     "trades": 4,
+     "win_rate": 0.5,
+     "max_drawdown": 4457.0
+    }
+   }
+  },
+  {
+   "ratio": 5.0,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 13,
+   "rate": 1.0,
+   "median_pnl": 7300.0,
+   "total_pnl": 126766.0,
+   "trades": 61,
+   "win_rate": 0.459,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 14759.0,
+     "trades": 2,
+     "win_rate": 1.0,
+     "max_drawdown": 3933.0
+    },
+    "WDO$N": {
+     "pnl": 7300.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 2640.0
+    },
+    "BOVA11": {
+     "pnl": 13592.0,
+     "trades": 3,
+     "win_rate": 0.667,
+     "max_drawdown": 4760.0
+    },
+    "SMAL11": {
+     "pnl": 4514.0,
+     "trades": 3,
+     "win_rate": 0.333,
+     "max_drawdown": 6608.0
+    },
+    "IVVB11": {
+     "pnl": 16175.0,
+     "trades": 5,
+     "win_rate": 0.6,
+     "max_drawdown": 3860.0
+    },
+    "PETR4": {
+     "pnl": 18510.0,
+     "trades": 6,
+     "win_rate": 0.667,
+     "max_drawdown": 6682.0
+    },
+    "VALE3": {
+     "pnl": 4949.0,
+     "trades": 4,
+     "win_rate": 0.5,
+     "max_drawdown": 8700.0
+    },
+    "ITUB4": {
+     "pnl": 18002.0,
+     "trades": 6,
+     "win_rate": 0.5,
+     "max_drawdown": 5039.0
+    },
+    "BBDC4": {
+     "pnl": 2772.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 8855.0
+    },
+    "ABEV3": {
+     "pnl": 7256.0,
+     "trades": 7,
+     "win_rate": 0.286,
+     "max_drawdown": 6113.0
+    },
+    "B3SA3": {
+     "pnl": 4636.0,
+     "trades": 3,
+     "win_rate": 0.333,
+     "max_drawdown": 5381.0
+    },
+    "WEGE3": {
+     "pnl": 10901.0,
+     "trades": 6,
+     "win_rate": 0.5,
+     "max_drawdown": 8189.0
+    },
+    "PRIO3": {
+     "pnl": 3398.0,
+     "trades": 10,
+     "win_rate": 0.2,
+     "max_drawdown": 10480.0
+    }
+   }
+  },
+  {
+   "ratio": 7.0,
+   "stop_factor": 2.0,
+   "tested": 13,
+   "positive": 12,
+   "rate": 0.923,
+   "median_pnl": 10380.0,
+   "total_pnl": 127370.0,
+   "trades": 44,
+   "win_rate": 0.455,
+   "per_symbol": {
+    "WIN$N": {
+     "pnl": 10380.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 3933.0
+    },
+    "WDO$N": {
+     "pnl": 10223.0,
+     "trades": 1,
+     "win_rate": 1.0,
+     "max_drawdown": 3560.0
+    },
+    "BOVA11": {
+     "pnl": 13599.0,
+     "trades": 2,
+     "win_rate": 1.0,
+     "max_drawdown": 7186.0
+    },
+    "SMAL11": {
+     "pnl": -1086.0,
+     "trades": 3,
+     "win_rate": 0.333,
+     "max_drawdown": 6608.0
+    },
+    "IVVB11": {
+     "pnl": 11589.0,
+     "trades": 4,
+     "win_rate": 0.5,
+     "max_drawdown": 6194.0
+    },
+    "PETR4": {
+     "pnl": 21954.0,
+     "trades": 3,
+     "win_rate": 1.0,
+     "max_drawdown": 6682.0
+    },
+    "VALE3": {
+     "pnl": 4348.0,
+     "trades": 5,
+     "win_rate": 0.2,
+     "max_drawdown": 8700.0
+    },
+    "ITUB4": {
+     "pnl": 17983.0,
+     "trades": 4,
+     "win_rate": 0.5,
+     "max_drawdown": 5366.0
+    },
+    "BBDC4": {
+     "pnl": 2636.0,
+     "trades": 6,
+     "win_rate": 0.167,
+     "max_drawdown": 8855.0
+    },
+    "ABEV3": {
+     "pnl": 8814.0,
+     "trades": 3,
+     "win_rate": 0.333,
+     "max_drawdown": 6113.0
+    },
+    "B3SA3": {
+     "pnl": 4641.0,
+     "trades": 5,
+     "win_rate": 0.2,
+     "max_drawdown": 5381.0
+    },
+    "WEGE3": {
+     "pnl": 10860.0,
+     "trades": 5,
+     "win_rate": 0.4,
+     "max_drawdown": 5398.0
+    },
+    "PRIO3": {
+     "pnl": 11428.0,
+     "trades": 2,
+     "win_rate": 1.0,
+     "max_drawdown": 6110.0
+    }
+   }
+  }
+ ]
+}
