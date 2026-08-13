@@ -32,10 +32,14 @@ class RiskConfig:
     # Perda máxima na semana em % do capital (0 = desativado) — pensada
     # para swing, onde a perda se acumula em dias, não em horas
     max_weekly_loss_pct: float = 0.0
-    # Quantos instrumentos/estratégias dividem o mesmo capital. O risco
-    # por trade é dividido por este número, senão operar 13 ativos ao
-    # mesmo tempo exporia 13% do capital por rodada em vez de 1%.
+    # Divide o RISCO por trade. Use quando quiser que o risco somado de
+    # todas as posições abertas fique limitado a max_risk_per_trade_pct.
     risk_slots: int = 1
+    # Divide o CAIXA entre posições simultâneas. Separado do risco de
+    # propósito: em futuros, dividir o risco por muitas vagas deixa cada
+    # trade pequeno demais para comprar um único contrato, enquanto o
+    # caixa precisa mesmo ser repartido. 0 = usa risk_slots.
+    cash_slots: int = 0
     # Respeitar o caixa disponível, não só o risco. No mercado à vista
     # não há alavancagem para swing: a posição é paga integralmente. Um
     # stop de 2×ATR fica a ~5% do preço, então arriscar 1% do capital
@@ -143,7 +147,8 @@ class RiskManager:
         cost = entry_price if unit_cost is None else unit_cost
         if cost <= 0:
             return by_risk
-        by_cash = (self.config.capital / slots) / cost
+        cash_slots = self.config.cash_slots or slots
+        by_cash = (self.config.capital / max(cash_slots, 1)) / cost
         return min(by_risk, by_cash)
 
     def register_trade_result(self, pnl: float) -> None:

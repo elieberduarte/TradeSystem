@@ -39,6 +39,33 @@ def test_vagas_dividem_o_caixa():
     assert quantity == 500.0
 
 
+def test_caixa_e_risco_podem_ter_divisores_diferentes():
+    # Risco cheio (1% = R$ 1.000) mas caixa dividido em 10 vagas.
+    # É o caso dos futuros: dividir o risco por 10 deixaria cada trade
+    # pequeno demais para comprar um contrato.
+    m = RiskManager(
+        RiskConfig(
+            capital=100_000.0, max_risk_per_trade_pct=1.0,
+            max_daily_loss_pct=50.0, max_open_positions=1,
+            risk_slots=1, cash_slots=10, enforce_cash=True,
+        )
+    )
+    # Risco permite 1.000 unidades; o caixa da vaga (R$ 10.000) permite 500
+    assert m.position_size(20.0, 19.0) == 500.0
+
+
+def test_cash_slots_zero_usa_risk_slots():
+    m = RiskManager(
+        RiskConfig(
+            capital=100_000.0, max_risk_per_trade_pct=1.0,
+            max_daily_loss_pct=50.0, max_open_positions=1,
+            risk_slots=4, cash_slots=0, enforce_cash=True,
+        )
+    )
+    # Caixa por vaga: 100.000/4 = 25.000 → 1.250 ações de R$ 20
+    assert m.position_size(20.0, 19.95) == 1250.0
+
+
 def test_futuro_usa_margem_e_nao_preco():
     # WIN a 140.000 pontos: pagar o "preço" seria absurdo. Com margem de
     # R$ 2.000 por contrato e caixa de R$ 100.000, cabem 50 contratos.

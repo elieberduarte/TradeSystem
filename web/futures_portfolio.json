@@ -1,0 +1,626 @@
+[
+ {
+  "capital": 20000.0,
+  "slots": 6,
+  "long_only": true,
+  "instruments": 6,
+  "positive": 4,
+  "trades": 30,
+  "total_pnl": 1463.0,
+  "return_pct": 7.3,
+  "annual_pct": 1.8,
+  "drawdown_pct": 2.8,
+  "calmar": 2.59,
+  "years": 4.0,
+  "per_symbol": [
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": -205.14259520035876,
+    "trades": 1,
+    "win_rate": 0.0,
+    "positivo": false
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 60.49439318935936,
+    "trades": 4,
+    "win_rate": 0.25,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 1165.9179911936146,
+    "trades": 2,
+    "win_rate": 1.0,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 592.9310416385583,
+    "trades": 1,
+    "win_rate": 1.0,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 362.63758751966753,
+    "trades": 2,
+    "win_rate": 0.5,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -513.818369895588,
+    "trades": 20,
+    "win_rate": 0.15,
+    "positivo": false
+   }
+  ]
+ },
+ {
+  "capital": 50000.0,
+  "slots": 8,
+  "long_only": true,
+  "instruments": 6,
+  "positive": 5,
+  "trades": 109,
+  "total_pnl": 17142.0,
+  "return_pct": 34.3,
+  "annual_pct": 7.5,
+  "drawdown_pct": 8.8,
+  "calmar": 3.9,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": 5962.182110026613,
+    "trades": 17,
+    "win_rate": 0.47058823529411764,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 2745.7364047646997,
+    "trades": 19,
+    "win_rate": 0.3684210526315789,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 1119.3822892423264,
+    "trades": 20,
+    "win_rate": 0.35,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 4686.174810553,
+    "trades": 17,
+    "win_rate": 0.47058823529411764,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 3656.4990791489763,
+    "trades": 16,
+    "win_rate": 0.4375,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -1027.636739791176,
+    "trades": 20,
+    "win_rate": 0.15,
+    "positivo": false
+   }
+  ]
+ },
+ {
+  "capital": 100000.0,
+  "slots": 10,
+  "long_only": true,
+  "instruments": 9,
+  "positive": 8,
+  "trades": 150,
+  "total_pnl": 52851.0,
+  "return_pct": 52.9,
+  "annual_pct": 10.9,
+  "drawdown_pct": 12.9,
+  "calmar": 4.09,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WIN$N",
+    "bloco": "índice BR",
+    "pnl": 9671.42259507539,
+    "trades": 19,
+    "win_rate": 0.42105263157894735,
+    "positivo": true
+   },
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": 11089.404204721357,
+    "trades": 18,
+    "win_rate": 0.5,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 7361.193311933047,
+    "trades": 20,
+    "win_rate": 0.35,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 2790.6557642356624,
+    "trades": 22,
+    "win_rate": 0.3181818181818182,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 10132.731292154906,
+    "trades": 18,
+    "win_rate": 0.4444444444444444,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 6049.424552755661,
+    "trades": 18,
+    "win_rate": 0.3888888888888889,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -1541.4551096867642,
+    "trades": 20,
+    "win_rate": 0.15,
+    "positivo": false
+   },
+   {
+    "symbol": "WDO$N",
+    "bloco": "câmbio",
+    "pnl": 5131.401482239364,
+    "trades": 4,
+    "win_rate": 0.75,
+    "positivo": true
+   },
+   {
+    "symbol": "CCM$N",
+    "bloco": "commodities",
+    "pnl": 2166.1659793809404,
+    "trades": 11,
+    "win_rate": 0.45454545454545453,
+    "positivo": true
+   }
+  ]
+ },
+ {
+  "capital": 200000.0,
+  "slots": 13,
+  "long_only": true,
+  "instruments": 10,
+  "positive": 7,
+  "trades": 183,
+  "total_pnl": 96116.0,
+  "return_pct": 48.1,
+  "annual_pct": 10.1,
+  "drawdown_pct": 17.6,
+  "calmar": 2.73,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WIN$N",
+    "bloco": "índice BR",
+    "pnl": 25756.66729965924,
+    "trades": 20,
+    "win_rate": 0.45,
+    "positivo": true
+   },
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": 21202.40756768424,
+    "trades": 18,
+    "win_rate": 0.5,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 14288.341753393768,
+    "trades": 20,
+    "win_rate": 0.35,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 5322.882450414572,
+    "trades": 22,
+    "win_rate": 0.3181818181818182,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 20623.53791354701,
+    "trades": 18,
+    "win_rate": 0.4444444444444444,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 10141.68786950307,
+    "trades": 18,
+    "win_rate": 0.3888888888888889,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -2569.0918494779403,
+    "trades": 20,
+    "win_rate": 0.15,
+    "positivo": false
+   },
+   {
+    "symbol": "WDO$N",
+    "bloco": "câmbio",
+    "pnl": -5614.607898043627,
+    "trades": 20,
+    "win_rate": 0.2,
+    "positivo": false
+   },
+   {
+    "symbol": "CCM$N",
+    "bloco": "commodities",
+    "pnl": -7743.2702563608045,
+    "trades": 21,
+    "win_rate": 0.3333333333333333,
+    "positivo": false
+   },
+   {
+    "symbol": "BGI$N",
+    "bloco": "commodities",
+    "pnl": 14707.857599763958,
+    "trades": 6,
+    "win_rate": 0.6666666666666666,
+    "positivo": true
+   }
+  ]
+ },
+ {
+  "capital": 20000.0,
+  "slots": 6,
+  "long_only": false,
+  "instruments": 6,
+  "positive": 4,
+  "trades": 66,
+  "total_pnl": 204.0,
+  "return_pct": 1.0,
+  "annual_pct": 0.2,
+  "drawdown_pct": 9.5,
+  "calmar": 0.11,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": -135.75,
+    "trades": 1,
+    "win_rate": 0.0,
+    "positivo": false
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 409.88839906937966,
+    "trades": 9,
+    "win_rate": 0.4444444444444444,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 565.0899014439032,
+    "trades": 5,
+    "win_rate": 0.4,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 183.542611958957,
+    "trades": 3,
+    "win_rate": 0.3333333333333333,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 156.4953946190672,
+    "trades": 3,
+    "win_rate": 0.3333333333333333,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -975.4761855856394,
+    "trades": 45,
+    "win_rate": 0.15555555555555556,
+    "positivo": false
+   }
+  ]
+ },
+ {
+  "capital": 50000.0,
+  "slots": 8,
+  "long_only": false,
+  "instruments": 6,
+  "positive": 5,
+  "trades": 208,
+  "total_pnl": 16271.0,
+  "return_pct": 32.5,
+  "annual_pct": 7.1,
+  "drawdown_pct": 21.3,
+  "calmar": 1.53,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": 2238.578494180934,
+    "trades": 35,
+    "win_rate": 0.37142857142857144,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 5649.63096300026,
+    "trades": 33,
+    "win_rate": 0.42424242424242425,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 581.7860589367327,
+    "trades": 36,
+    "win_rate": 0.3055555555555556,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 6290.059132207623,
+    "trades": 28,
+    "win_rate": 0.4642857142857143,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 3461.91569809781,
+    "trades": 31,
+    "win_rate": 0.3870967741935484,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -1950.9523711712789,
+    "trades": 45,
+    "win_rate": 0.15555555555555556,
+    "positivo": false
+   }
+  ]
+ },
+ {
+  "capital": 100000.0,
+  "slots": 10,
+  "long_only": false,
+  "instruments": 9,
+  "positive": 7,
+  "trades": 284,
+  "total_pnl": 26647.0,
+  "return_pct": 26.6,
+  "annual_pct": 5.9,
+  "drawdown_pct": 35.2,
+  "calmar": 0.76,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WIN$N",
+    "bloco": "índice BR",
+    "pnl": 4174.726477535459,
+    "trades": 31,
+    "win_rate": 0.2903225806451613,
+    "positivo": true
+   },
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": 1152.0457583580583,
+    "trades": 39,
+    "win_rate": 0.3333333333333333,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 12894.35915032974,
+    "trades": 35,
+    "win_rate": 0.4,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 781.8386977464479,
+    "trades": 39,
+    "win_rate": 0.28205128205128205,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 12408.209727587318,
+    "trades": 31,
+    "win_rate": 0.41935483870967744,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 4554.918090071696,
+    "trades": 35,
+    "win_rate": 0.34285714285714286,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -2926.428556756918,
+    "trades": 45,
+    "win_rate": 0.15555555555555556,
+    "positivo": false
+   },
+   {
+    "symbol": "WDO$N",
+    "bloco": "câmbio",
+    "pnl": 1335.1061751312263,
+    "trades": 8,
+    "win_rate": 0.375,
+    "positivo": true
+   },
+   {
+    "symbol": "CCM$N",
+    "bloco": "commodities",
+    "pnl": -7727.536466383727,
+    "trades": 21,
+    "win_rate": 0.3333333333333333,
+    "positivo": false
+   }
+  ]
+ },
+ {
+  "capital": 200000.0,
+  "slots": 13,
+  "long_only": false,
+  "instruments": 10,
+  "positive": 7,
+  "trades": 348,
+  "total_pnl": 48650.0,
+  "return_pct": 24.3,
+  "annual_pct": 5.4,
+  "drawdown_pct": 29.4,
+  "calmar": 0.83,
+  "years": 4.1,
+  "per_symbol": [
+   {
+    "symbol": "WIN$N",
+    "bloco": "índice BR",
+    "pnl": 13540.153809399677,
+    "trades": 37,
+    "win_rate": 0.2972972972972973,
+    "positivo": true
+   },
+   {
+    "symbol": "WSP$N",
+    "bloco": "exterior",
+    "pnl": 2952.4143422495135,
+    "trades": 39,
+    "win_rate": 0.3333333333333333,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F27",
+    "bloco": "juros BR",
+    "pnl": 25699.109004157624,
+    "trades": 35,
+    "win_rate": 0.4,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F29",
+    "bloco": "juros BR",
+    "pnl": 2407.952454344012,
+    "trades": 39,
+    "win_rate": 0.28205128205128205,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F31",
+    "bloco": "juros BR",
+    "pnl": 24134.457174134175,
+    "trades": 31,
+    "win_rate": 0.41935483870967744,
+    "positivo": true
+   },
+   {
+    "symbol": "DI1F33",
+    "bloco": "juros BR",
+    "pnl": 6596.758624397004,
+    "trades": 35,
+    "win_rate": 0.34285714285714286,
+    "positivo": true
+   },
+   {
+    "symbol": "T10$N",
+    "bloco": "juros US",
+    "pnl": -4877.380927928197,
+    "trades": 45,
+    "win_rate": 0.15555555555555556,
+    "positivo": false
+   },
+   {
+    "symbol": "WDO$N",
+    "bloco": "câmbio",
+    "pnl": -15765.501684230847,
+    "trades": 34,
+    "win_rate": 0.2647058823529412,
+    "positivo": false
+   },
+   {
+    "symbol": "CCM$N",
+    "bloco": "commodities",
+    "pnl": -6203.983780703807,
+    "trades": 41,
+    "win_rate": 0.34146341463414637,
+    "positivo": false
+   },
+   {
+    "symbol": "BGI$N",
+    "bloco": "commodities",
+    "pnl": 166.25849448092413,
+    "trades": 12,
+    "win_rate": 0.3333333333333333,
+    "positivo": true
+   }
+  ]
+ }
+]

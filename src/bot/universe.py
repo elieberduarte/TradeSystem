@@ -81,6 +81,56 @@ def unit_cost_of(symbol: str) -> float | None:
     return MARGIN.get(symbol)
 
 
+# ─────────────────────── Carteira de futuros ───────────────────────
+#
+# Futuros exigem apenas margem, não o valor cheio — é a alavancagem
+# legítima e barata que torna o trend following eficiente em capital.
+# Não é coincidência que fundos de managed futures operem futuros e não
+# ações à vista.
+#
+# ⚠️ Os valores de ponto e margem abaixo são ESTIMATIVAS de ordem de
+# grandeza para o teste. Antes de operar, confirmar cada um com a
+# especificação da B3 e a margem que a corretora efetivamente exige.
+
+FUTUROS_BLOCKS = {
+    "índice BR": ["WIN$N", "IND$N"],
+    "exterior": ["WSP$N"],                       # Micro S&P 500
+    "juros BR": ["DI1F27", "DI1F29", "DI1F31", "DI1F33"],
+    "juros US": ["T10$N"],                       # T-Note 10 anos
+    "câmbio": ["WDO$N", "DOL$N"],
+    "commodities": ["CCM$N", "BGI$N", "ICF$N"],
+}
+FUTUROS = [s for symbols in FUTUROS_BLOCKS.values() for s in symbols]
+
+FUT_POINT_VALUE = {
+    "WIN$N": 0.20, "IND$N": 1.00,        # índice: mini e cheio
+    "WDO$N": 10.00, "DOL$N": 50.00,      # dólar: mini e cheio
+    "WSP$N": 2.50,                       # micro S&P, estimativa
+    "T10$N": 10.00,                      # T-Note, estimativa
+    "DI1F27": 800.0, "DI1F29": 800.0,    # por ponto percentual de taxa
+    "DI1F31": 900.0, "DI1F33": 950.0,    # duration maior, valor maior
+    "CCM$N": 450.0,                      # 450 sacas
+    "BGI$N": 330.0,                      # 330 arrobas
+    "ICF$N": 540.0,                      # 100 sacas em USD convertidas
+}
+
+FUT_MARGIN = {
+    "WIN$N": 2_000.0, "IND$N": 12_000.0,
+    "WDO$N": 5_000.0, "DOL$N": 25_000.0,
+    "WSP$N": 3_000.0, "T10$N": 3_000.0,
+    "DI1F27": 800.0, "DI1F29": 1_200.0,
+    "DI1F31": 1_800.0, "DI1F33": 2_500.0,
+    "CCM$N": 2_500.0, "BGI$N": 3_500.0, "ICF$N": 6_000.0,
+}
+
+
+def fut_block_of(symbol: str) -> str:
+    for name, symbols in FUTUROS_BLOCKS.items():
+        if symbol in symbols:
+            return name
+    return "outro"
+
+
 def block_of(symbol: str) -> str:
     for name, symbols in BLOCKS.items():
         if symbol in symbols:
