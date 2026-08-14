@@ -1,0 +1,28 @@
+{
+ "atualizado": "2026-08-14T20:17:32",
+ "executado": false,
+ "saldo": 1000000.0,
+ "posicoes": [],
+ "decisoes": [
+  {
+   "action": "vetar",
+   "symbol": "DOL$N",
+   "reason": "sinal válido, mas risco/caixa não compram 1 contrato",
+   "side": "buy",
+   "quantity": 0,
+   "entry_ref": 5215.0,
+   "stop_distance": 95.32426179929917,
+   "target_distance": 285.9727853978975
+  },
+  {
+   "action": "abrir",
+   "symbol": "WDO$N",
+   "reason": "rompimento do canal de 20 dias",
+   "side": "buy",
+   "quantity": 1,
+   "entry_ref": 5214.0,
+   "stop_distance": 95.29502596991279,
+   "target_distance": 285.88507790973836
+  }
+ ]
+}

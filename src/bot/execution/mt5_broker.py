@@ -4,6 +4,9 @@ Requer o terminal MetaTrader 5 instalado e logado numa conta de corretora
 que ofereça B3 (XP, Clear, Rico, etc.), e o pacote `MetaTrader5` do pip.
 """
 
+import re
+from datetime import datetime, timedelta, timezone
+
 import pandas as pd
 
 try:
@@ -148,6 +151,8 @@ class MT5Broker(BrokerInterface):
                 quantity=p.volume,
                 entry_price=p.price_open,
                 unrealized_pnl=p.profit,
+                stop_loss=p.sl,
+                take_profit=p.tp,
             )
             for p in positions
         ]
@@ -157,6 +162,63 @@ class MT5Broker(BrokerInterface):
         if info is None:
             raise ConnectionError(f"Sem informação de conta: {mt5.last_error()}")
         return info.balance
+
+    def is_demo(self) -> bool:
+        info = mt5.account_info()
+        if info is None:
+            raise ConnectionError(f"Sem informação de conta: {mt5.last_error()}")
+        return info.trade_mode == mt5.ACCOUNT_TRADE_MODE_DEMO
+
+    def last_price(self, symbol: str) -> float:
+        self._ensure_symbol(symbol)
+        tick = mt5.symbol_info_tick(symbol)
+        price = (tick.last or tick.bid or tick.ask) if tick else 0.0
+        if not price:
+            # Mercado fechado (agro encerra ~16h): sem preço não há como
+            # ancorar stop/alvo — quem trata é a repesca da manhã
+            raise RuntimeError(f"Sem cotação para {symbol} (mercado fechado?)")
+        return price
+
+    def front_contract(self, root: str, min_days: int = 3) -> str:
+        """Contrato vigente pelo vencimento real informado pelo terminal.
+
+        Vale para qualquer futuro da B3 (WIN, WDO, CCM, T10...), sem
+        regra de calendário por produto: filtra os símbolos RAIZ+MÊS+ANO
+        e escolhe o de vencimento mais próximo que ainda tenha pelo
+        menos `min_days` dias de vida — perto do vencimento a liquidez
+        já migrou, e uma posição nova nasceria precisando rolar.
+        """
+        pattern = re.compile(rf"^{re.escape(root)}[FGHJKMNQUVXZ]\d\d$")
+        horizon = datetime.now(timezone.utc) + timedelta(days=min_days)
+        candidates = []
+        for info in mt5.symbols_get(f"{root}*") or []:
+            if not pattern.match(info.name) or not info.expiration_time:
+                continue
+            try:
+                expiry = datetime.fromtimestamp(info.expiration_time, tz=timezone.utc)
+            except (OSError, OverflowError, ValueError):
+                continue        # símbolo com vencimento corrompido no terminal
+            if expiry > horizon:
+                candidates.append((expiry, info.name))
+        if not candidates:
+            raise ValueError(f"Nenhum contrato vigente encontrado para {root}")
+        return min(candidates)[1]
+
+    def contract_expiry(self, symbol: str) -> datetime | None:
+        info = mt5.symbol_info(symbol)
+        if info is None or not info.expiration_time:
+            return None
+        return datetime.fromtimestamp(info.expiration_time, tz=timezone.utc)
+
+    def realized_pnl(self, since_days: int) -> float:
+        """Resultado realizado pelas ordens deste bot (filtro por magic)."""
+        start = datetime.now() - timedelta(days=since_days)
+        deals = mt5.history_deals_get(start, datetime.now()) or []
+        return sum(
+            d.profit + d.swap + d.commission + d.fee
+            for d in deals
+            if d.magic == self.magic
+        )
 
     # ---------------------------------------------------------------- internos
 
