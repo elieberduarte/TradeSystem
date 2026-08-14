@@ -39,6 +39,9 @@ class Trade:
     # Resultado já realizado numa saída parcial
     realized_pnl: float = 0.0
     partial_done: bool = False
+    # Melhor fechamento a favor desde a entrada (base da saída por
+    # retração de Fibonacci)
+    peak_close: float = 0.0
 
 
 @dataclass
@@ -141,6 +144,10 @@ class BacktestEngine:
         breakeven_at: float = 0.0,
         # Realiza metade da posição a N vezes o risco (0 = desativado).
         partial_at: float = 0.0,
+        # Saída por falha de Fibonacci (Eykyn): fechamento que devolve
+        # esta fração do swing entrada→melhor fechamento encerra a
+        # posição (0 = desativado; o livro usa 0.618).
+        fib_exit: float = 0.0,
         # Custo em caixa de UMA unidade. None = preço de entrada (ações e
         # ETFs, pagos integralmente). Nos futuros, a margem por contrato.
         # Só tem efeito com RiskConfig.enforce_cash ligado.
@@ -157,6 +164,7 @@ class BacktestEngine:
         self.trailing_atr = trailing_atr
         self.breakeven_at = breakeven_at
         self.partial_at = partial_at
+        self.fib_exit = fib_exit
         self.unit_cost = unit_cost
 
     def run(self, symbol: str, candles: pd.DataFrame) -> BacktestResult:
@@ -192,7 +200,7 @@ class BacktestEngine:
             # antes deixaria o stop móvel ser comparado com a abertura da
             # mesma barra, que aconteceu antes do fechamento que o moveu.
             if open_trade is not None:
-                equity = self._manage(open_trade, candle, equity)
+                open_trade, equity = self._manage(open_trade, candle, ts, result, equity)
 
             # Saída por tempo: a posição já teve as barras que o setup previa
             if (
@@ -256,15 +264,15 @@ class BacktestEngine:
             initial_risk=abs(entry - signal.stop_loss),
         )
 
-    def _manage(self, trade: Trade, candle, equity: float) -> float:
-        """Aplica saída parcial, breakeven e stop móvel.
+    def _manage(self, trade: Trade, candle, ts, result, equity: float):
+        """Aplica saída parcial, breakeven, stop móvel e saída de Fibonacci.
 
         Todos usam o fechamento do candle como referência — nunca a
         máxima/mínima, porque dentro da barra não se sabe a ordem dos
         preços e usar o extremo seria olhar o futuro.
         """
         if trade.initial_risk <= 0:
-            return equity
+            return trade, equity
         direction = 1 if trade.side == "buy" else -1
         close = float(candle["close"])
         progress = direction * (close - trade.entry_price) / trade.initial_risk
@@ -293,7 +301,19 @@ class BacktestEngine:
             if direction * (trail - trade.stop_loss) > 0:
                 trade.stop_loss = trail
 
-        return equity
+        # Falha de Fibonacci: devolver mais que a fração do swing a
+        # favor (entrada → melhor fechamento) encerra no fechamento
+        if self.fib_exit:
+            if trade.peak_close == 0.0:
+                trade.peak_close = trade.entry_price
+            if direction * (close - trade.peak_close) > 0:
+                trade.peak_close = close
+            swing = direction * (trade.peak_close - trade.entry_price)
+            retraced = direction * (trade.peak_close - close)
+            if swing > 0 and retraced >= self.fib_exit * swing:
+                return self._close(trade, close, ts, "fib", result, equity)
+
+        return trade, equity
 
     def _check_exit(self, trade: Trade, candle, ts, result, equity):
         """Stop/alvo contra o candle. Gap de abertura que pula o nível sai

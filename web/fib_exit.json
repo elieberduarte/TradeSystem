@@ -1,0 +1,67 @@
+[
+ {
+  "label": "Donchian · alvo 3R (base)",
+  "tested": 25,
+  "positive": 21,
+  "rate": 0.84,
+  "trades": 502,
+  "win_rate": 0.361,
+  "median_pnl": 3079.0,
+  "return_pct": 89.2,
+  "calmar": 4.72,
+  "barras_medias": 24.7,
+  "saidas_fib_pct": 0.0
+ },
+ {
+  "label": "Donchian · sem alvo, só stop",
+  "tested": 11,
+  "positive": 7,
+  "rate": 0.636,
+  "trades": 84,
+  "win_rate": 0.119,
+  "median_pnl": 1528.0,
+  "return_pct": 30.8,
+  "calmar": 0.63,
+  "barras_medias": 103.4,
+  "saidas_fib_pct": 0.0
+ },
+ {
+  "label": "Donchian · saída Fib 0,618",
+  "tested": 26,
+  "positive": 19,
+  "rate": 0.731,
+  "trades": 489,
+  "win_rate": 0.417,
+  "median_pnl": 1486.0,
+  "return_pct": 60.6,
+  "calmar": 2.33,
+  "barras_medias": 23.9,
+  "saidas_fib_pct": 0.777
+ },
+ {
+  "label": "Donchian · saída Fib 0,500",
+  "tested": 26,
+  "positive": 15,
+  "rate": 0.577,
+  "trades": 596,
+  "win_rate": 0.428,
+  "median_pnl": 1575.0,
+  "return_pct": 41.2,
+  "calmar": 2.07,
+  "barras_medias": 14.9,
+  "saidas_fib_pct": 0.765
+ },
+ {
+  "label": "Donchian · saída Fib 0,786",
+  "tested": 25,
+  "positive": 15,
+  "rate": 0.6,
+  "trades": 375,
+  "win_rate": 0.333,
+  "median_pnl": 1833.0,
+  "return_pct": 74.8,
+  "calmar": 1.67,
+  "barras_medias": 36.8,
+  "saidas_fib_pct": 0.752
+ }
+]
