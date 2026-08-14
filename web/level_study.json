@@ -1,0 +1,129 @@
+{
+ "por_nivel": [
+  {
+   "nivel": "DBYH",
+   "toques": 1331,
+   "repique": 0.5785,
+   "diff": 0.003,
+   "z": 0.21,
+   "p": 0.835
+  },
+  {
+   "nivel": "DBYL",
+   "toques": 1473,
+   "repique": 0.6246,
+   "diff": 0.0491,
+   "z": 3.53,
+   "p": 0.0004
+  },
+  {
+   "nivel": "PP",
+   "toques": 2106,
+   "repique": 0.6106,
+   "diff": 0.0352,
+   "z": 2.93,
+   "p": 0.0033
+  },
+  {
+   "nivel": "R1",
+   "toques": 1911,
+   "repique": 0.596,
+   "diff": 0.0205,
+   "z": 1.65,
+   "p": 0.0997
+  },
+  {
+   "nivel": "R2",
+   "toques": 1063,
+   "repique": 0.587,
+   "diff": 0.0115,
+   "z": 0.72,
+   "p": 0.4724
+  },
+  {
+   "nivel": "RND",
+   "toques": 14037,
+   "repique": 0.6008,
+   "diff": 0.0254,
+   "z": 3.78,
+   "p": 0.0002
+  },
+  {
+   "nivel": "S1",
+   "toques": 1839,
+   "repique": 0.5525,
+   "diff": -0.023,
+   "z": -1.81,
+   "p": 0.0702
+  },
+  {
+   "nivel": "S2",
+   "toques": 1030,
+   "repique": 0.5961,
+   "diff": 0.0206,
+   "z": 1.27,
+   "p": 0.2049
+  },
+  {
+   "nivel": "YC",
+   "toques": 2098,
+   "repique": 0.5891,
+   "diff": 0.0137,
+   "z": 1.14,
+   "p": 0.2559
+  },
+  {
+   "nivel": "YH",
+   "toques": 1734,
+   "repique": 0.5761,
+   "diff": 0.0006,
+   "z": 0.05,
+   "p": 0.9606
+  },
+  {
+   "nivel": "YL",
+   "toques": 1750,
+   "repique": 0.5634,
+   "diff": -0.0121,
+   "z": -0.93,
+   "p": 0.3524
+  }
+ ],
+ "madang": [
+  {
+   "toque": "1º",
+   "reais": 22042,
+   "p_rompe_real": 0.404,
+   "placebos": 5965,
+   "p_rompe_placebo": 0.4251
+  },
+  {
+   "toque": "2º",
+   "reais": 6295,
+   "p_rompe_real": 0.4098,
+   "placebos": 1926,
+   "p_rompe_placebo": 0.4237
+  },
+  {
+   "toque": "3º",
+   "reais": 1582,
+   "p_rompe_real": 0.4172,
+   "placebos": 572,
+   "p_rompe_placebo": 0.4091
+  },
+  {
+   "toque": "4º",
+   "reais": 365,
+   "p_rompe_real": 0.4384,
+   "placebos": 156,
+   "p_rompe_placebo": 0.4808
+  },
+  {
+   "toque": "5º+",
+   "reais": 88,
+   "p_rompe_real": 0.4773,
+   "placebos": 52,
+   "p_rompe_placebo": 0.3846
+  }
+ ]
+}
