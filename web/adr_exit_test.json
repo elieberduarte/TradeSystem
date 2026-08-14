@@ -1,0 +1,50 @@
+[
+ {
+  "label": "A · donchian + saída ATR (base)",
+  "tested": 9,
+  "positive": 8,
+  "trades": 150,
+  "win_rate": 0.38,
+  "total_pnl": 52851.0,
+  "return_pct": 52.9,
+  "annual_pct": 10.9,
+  "drawdown_pct": 12.9,
+  "calmar": 4.09
+ },
+ {
+  "label": "B · donchian + saída ADR",
+  "tested": 11,
+  "positive": 0,
+  "trades": 703,
+  "win_rate": 0.259,
+  "total_pnl": -267387.0,
+  "return_pct": -267.4,
+  "annual_pct": null,
+  "drawdown_pct": 267.1,
+  "calmar": -1.0
+ },
+ {
+  "label": "C · aleatório + saída ADR",
+  "tested": 11,
+  "positive": 4,
+  "trades": 200,
+  "win_rate": 0.32,
+  "total_pnl": -58297.0,
+  "return_pct": -58.3,
+  "annual_pct": -19.0,
+  "drawdown_pct": 58.6,
+  "calmar": -0.99
+ },
+ {
+  "label": "D · aleatório + saída ATR",
+  "tested": 8,
+  "positive": 5,
+  "trades": 111,
+  "win_rate": 0.405,
+  "total_pnl": 5795.0,
+  "return_pct": 5.8,
+  "annual_pct": 1.4,
+  "drawdown_pct": 16.0,
+  "calmar": 0.36
+ }
+]
