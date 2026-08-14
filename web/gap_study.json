@@ -1,0 +1,49 @@
+{
+ "amostras": 39497,
+ "instrumentos": 34,
+ "correlacao_tamanho_fechamento": -0.402,
+ "por_faixa": [
+  {
+   "faixa": "<0,10",
+   "amostras": "11225",
+   "fechou_%": "90.4",
+   "continuou_%": "49.0"
+  },
+  {
+   "faixa": "0,10-0,25",
+   "amostras": "13841",
+   "fechou_%": "76.1",
+   "continuou_%": "49.3"
+  },
+  {
+   "faixa": "0,25-0,50",
+   "amostras": "9951",
+   "fechou_%": "54.5",
+   "continuou_%": "49.0"
+  },
+  {
+   "faixa": "0,50-0,75",
+   "amostras": "2834",
+   "fechou_%": "32.6",
+   "continuou_%": "48.9"
+  },
+  {
+   "faixa": "0,75-1,00",
+   "amostras": "921",
+   "fechou_%": "20.6",
+   "continuou_%": "49.5"
+  },
+  {
+   "faixa": "1,00-1,50",
+   "amostras": "524",
+   "fechou_%": "13.7",
+   "continuou_%": "45.8"
+  },
+  {
+   "faixa": ">1,50",
+   "amostras": "201",
+   "fechou_%": "6.5",
+   "continuou_%": "43.8"
+  }
+ ]
+}
