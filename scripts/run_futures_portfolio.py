@@ -135,7 +135,8 @@ def main() -> None:
 
     print("═══ Carteira de FUTUROS · donchian canal 20 · diário ═══")
     print(f"{len(FUTUROS)} contratos em {len(set(fut_block_of(s) for s in FUTUROS))} blocos")
-    print("⚠️ Valores de ponto e margem são estimativas — confirmar antes de operar\n")
+    print("Valores de ponto e margem auditados na XP em 14/08/2026 "
+          "(scripts/verify_contracts.py)\n")
     print(f"{'capital':>10} {'vagas':>6} {'lados':>10} {'ativos':>7} {'positivos':>10} "
           f"{'trades':>7} {'retorno':>9} {'a.a.':>7} {'drawdown':>9} {'Calmar':>7}")
     print("-" * 92)

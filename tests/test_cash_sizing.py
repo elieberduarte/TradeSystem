@@ -89,7 +89,8 @@ def test_margem_limita_quando_o_risco_permitiria_mais():
 
 
 def test_universo_conhece_a_margem_dos_futuros():
-    assert unit_cost_of("WIN$N") == 2_000.0
-    assert unit_cost_of("DI1F27") == 1_500.0
+    # Valores auditados na XP em 14/08/2026 (scripts/verify_contracts.py)
+    assert unit_cost_of("WIN$N") == 7_400.0
+    assert unit_cost_of("DI1F27") == 750.0
     # Ações não têm margem: paga-se o preço
     assert unit_cost_of("PETR4") is None

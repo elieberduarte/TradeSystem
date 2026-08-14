@@ -41,38 +41,45 @@ ORIGINAL = ["WIN$N", "WDO$N", "BOVA11", "SMAL11", "IVVB11",
 
 # Valor financeiro de 1 unidade de variação do preço cotado.
 #
+# AUDITADO em 14/08/2026 contra a especificação dos contratos no MT5
+# da XP (scripts/verify_contracts.py): valor do ponto = tick_value /
+# tick_size. WIN, WDO, CCM e BGI confirmados.
+#
 # Ações e ETFs: cotados em R$ por papel, então 1,0.
 # WIN: 1 ponto de índice = R$ 0,20 · WDO: 1 ponto = R$ 10,00.
 # CCM (milho): contrato de 450 sacas, cotado em R$/saca.
 # BGI (boi gordo): 330 arrobas, cotado em R$/arroba.
-# ICF (café): 100 sacas, cotado em USD/saca — convertido por ~R$ 5,40.
-# DI1: cotado em TAXA (%). O valor de 1 ponto percentual depende da
-#   duration do vencimento; aqui usamos aproximações por contrato
-#   (~R$ 800 por ponto percentual em papéis de 1 a 3 anos). É estimativa,
-#   não valor exato — DI exige cálculo de PU para precisão.
+# ICF (café): 100 sacas em USD/saca; MT5 confirma USD 100/ponto, aqui
+#   convertido a ~R$ 5,40 (a exposição cambial embutida não é modelada).
+# DI1: cotado em TAXA (%). O valor de 1 p.p. NÃO é constante — segue a
+#   duration: dPU/dr = 1000·n/(1+r)^(n+1), e no F27 foi de R$ 2.986 a
+#   R$ 325 ao longo do histórico. Os valores abaixo são a MÉDIA do
+#   período de cada contrato (calculada sobre os candles reais).
+#   Aproximação declarada: o exato exigiria backtest em espaço de PU.
 POINT_VALUE = {
     "WIN$N": 0.20,
     "WDO$N": 10.00,
     "CCM$N": 450.0,
     "BGI$N": 330.0,
     "ICF$N": 540.0,
-    "DI1F27": 800.0,
-    "DI1F28": 800.0,
-    "DI1F29": 800.0,
+    "DI1F27": 1_751.0,
+    "DI1F28": 2_140.0,
+    "DI1F29": 2_415.0,
 }
 
 # Custo em caixa de UMA unidade da posição. Ações e ETFs são pagos
 # integralmente (usa o preço, informado em tempo de execução). Futuros
-# exigem só a margem — valores aproximados de swing (margem cheia).
+# exigem só a margem — AUDITADA em 14/08/2026 via order_calc_margin na
+# XP demo (margem de carrego; a intraday é menor).
 MARGIN = {
-    "WIN$N": 2_000.0,
-    "WDO$N": 5_000.0,
-    "CCM$N": 3_000.0,
-    "BGI$N": 4_000.0,
-    "ICF$N": 6_000.0,
-    "DI1F27": 1_500.0,
-    "DI1F28": 2_000.0,
-    "DI1F29": 2_500.0,
+    "WIN$N": 7_400.0,
+    "WDO$N": 7_000.0,
+    "CCM$N": 1_600.0,
+    "BGI$N": 4_600.0,
+    "ICF$N": 11_200.0,
+    "DI1F27": 750.0,
+    "DI1F28": 1_900.0,
+    "DI1F29": 3_100.0,
 }
 
 
@@ -88,9 +95,12 @@ def unit_cost_of(symbol: str) -> float | None:
 # Não é coincidência que fundos de managed futures operem futuros e não
 # ações à vista.
 #
-# ⚠️ Os valores de ponto e margem abaixo são ESTIMATIVAS de ordem de
-# grandeza para o teste. Antes de operar, confirmar cada um com a
-# especificação da B3 e a margem que a corretora efetivamente exige.
+# AUDITORIA de 14/08/2026 (scripts/verify_contracts.py, XP demo):
+# valores de ponto confirmados pelo MT5, exceto DI1 (média da duration,
+# ver POINT_VALUE acima) e ICF (USD, convertido). Margens medidas via
+# order_calc_margin — margem de CARREGO, e a XP cobra bem mais que as
+# estimativas antigas (WIN: 7.377 contra os 2.000 estimados).
+# WSP$N: o cálculo de margem não retornou na demo; estimativa mantida.
 
 FUTUROS_BLOCKS = {
     "índice BR": ["WIN$N", "IND$N"],
@@ -103,24 +113,25 @@ FUTUROS_BLOCKS = {
 FUTUROS = [s for symbols in FUTUROS_BLOCKS.values() for s in symbols]
 
 FUT_POINT_VALUE = {
-    "WIN$N": 0.20, "IND$N": 1.00,        # índice: mini e cheio
-    "WDO$N": 10.00, "DOL$N": 50.00,      # dólar: mini e cheio
-    "WSP$N": 2.50,                       # micro S&P, estimativa
-    "T10$N": 10.00,                      # T-Note, estimativa
-    "DI1F27": 800.0, "DI1F29": 800.0,    # por ponto percentual de taxa
-    "DI1F31": 900.0, "DI1F33": 950.0,    # duration maior, valor maior
-    "CCM$N": 450.0,                      # 450 sacas
-    "BGI$N": 330.0,                      # 330 arrobas
-    "ICF$N": 540.0,                      # 100 sacas em USD convertidas
+    "WIN$N": 0.20, "IND$N": 1.00,        # índice: mini e cheio (MT5 ✓)
+    "WDO$N": 10.00, "DOL$N": 50.00,      # dólar: mini e cheio (MT5 ✓)
+    "WSP$N": 2.50,                       # micro S&P (MT5 ✓)
+    "T10$N": 1_000.0,                    # T-Note (MT5 ✓ — era 10, erro de 100x)
+    "DI1F27": 1_751.0, "DI1F29": 2_415.0,  # média da duration no período
+    "DI1F31": 2_707.0, "DI1F33": 2_765.0,  # (dPU/dr sobre os candles reais)
+    "CCM$N": 450.0,                      # 450 sacas (MT5 ✓)
+    "BGI$N": 330.0,                      # 330 arrobas (MT5 ✓)
+    "ICF$N": 540.0,                      # USD 100/ponto × ~R$ 5,40
 }
 
 FUT_MARGIN = {
-    "WIN$N": 2_000.0, "IND$N": 12_000.0,
-    "WDO$N": 5_000.0, "DOL$N": 25_000.0,
-    "WSP$N": 3_000.0, "T10$N": 3_000.0,
-    "DI1F27": 800.0, "DI1F29": 1_200.0,
-    "DI1F31": 1_800.0, "DI1F33": 2_500.0,
-    "CCM$N": 2_500.0, "BGI$N": 3_500.0, "ICF$N": 6_000.0,
+    "WIN$N": 7_400.0, "IND$N": 36_900.0,
+    "WDO$N": 7_000.0, "DOL$N": 35_200.0,
+    "WSP$N": 3_000.0,                    # não retornou na demo; estimativa
+    "T10$N": 31_600.0,
+    "DI1F27": 750.0, "DI1F29": 3_100.0,
+    "DI1F31": 4_100.0, "DI1F33": 4_400.0,
+    "CCM$N": 1_600.0, "BGI$N": 4_600.0, "ICF$N": 11_200.0,
 }
 
 
