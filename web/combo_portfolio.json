@@ -1,0 +1,41 @@
+{
+ "correlacao": 0.085,
+ "carteiras": [
+  {
+   "label": "donchian isolada",
+   "pnl": 52851.0,
+   "return_pct": 52.9,
+   "annual_pct": 10.9,
+   "drawdown_pct": 12.9,
+   "calmar": 4.09,
+   "daily_std": 2308.0
+  },
+  {
+   "label": "inside_day isolada",
+   "pnl": -77777.0,
+   "return_pct": -77.8,
+   "annual_pct": -30.5,
+   "drawdown_pct": 99.2,
+   "calmar": -0.78,
+   "daily_std": 1867.0
+  },
+  {
+   "label": "combinada 50/50",
+   "pnl": -12463.0,
+   "return_pct": -12.5,
+   "annual_pct": -3.2,
+   "drawdown_pct": 22.9,
+   "calmar": -0.54,
+   "daily_std": 1069.0
+  },
+  {
+   "label": "risco equalizado (0.89/1.11)",
+   "pnl": -19386.0,
+   "return_pct": -19.4,
+   "annual_pct": -5.1,
+   "drawdown_pct": 30.8,
+   "calmar": -0.63,
+   "daily_std": 1127.0
+  }
+ ]
+}
