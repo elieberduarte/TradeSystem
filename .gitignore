@@ -34,3 +34,7 @@ backtest_results/
 .idea/
 Thumbs.db
 desktop.ini
+
+# Livros e material de referencia (direitos autorais)
+Livros/
+*.pdf
