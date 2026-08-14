@@ -1,0 +1,182 @@
+[
+ {
+  "vagas": 4,
+  "regra": "alfabetica",
+  "pnl": 37880.0,
+  "dd": 8416.0,
+  "calmar": 4.5,
+  "pulados": 18,
+  "disputas": 17
+ },
+ {
+  "vagas": 4,
+  "regra": "bloco",
+  "pnl": 37880.0,
+  "dd": 8416.0,
+  "calmar": 4.5,
+  "pulados": 18,
+  "disputas": 17
+ },
+ {
+  "vagas": 4,
+  "regra": "margem",
+  "pnl": 37880.0,
+  "dd": 8416.0,
+  "calmar": 4.5,
+  "pulados": 18,
+  "disputas": 17
+ },
+ {
+  "vagas": 4,
+  "regra": "aleatória·med",
+  "pnl": 36365.0,
+  "dd": 8451.0,
+  "calmar": 4.32,
+  "pulados": 18,
+  "disputas": 17
+ },
+ {
+  "vagas": 4,
+  "regra": "sem teto",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 6,
+  "regra": "alfabetica",
+  "pnl": 52806.0,
+  "dd": 8831.0,
+  "calmar": 5.98,
+  "pulados": 2,
+  "disputas": 2
+ },
+ {
+  "vagas": 6,
+  "regra": "bloco",
+  "pnl": 52806.0,
+  "dd": 8831.0,
+  "calmar": 5.98,
+  "pulados": 2,
+  "disputas": 2
+ },
+ {
+  "vagas": 6,
+  "regra": "margem",
+  "pnl": 52806.0,
+  "dd": 8831.0,
+  "calmar": 5.98,
+  "pulados": 2,
+  "disputas": 2
+ },
+ {
+  "vagas": 6,
+  "regra": "aleatória·med",
+  "pnl": 52806.0,
+  "dd": 8831.0,
+  "calmar": 5.98,
+  "pulados": 2,
+  "disputas": 2
+ },
+ {
+  "vagas": 6,
+  "regra": "sem teto",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 8,
+  "regra": "alfabetica",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 8,
+  "regra": "bloco",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 8,
+  "regra": "margem",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 8,
+  "regra": "aleatória·med",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 8,
+  "regra": "sem teto",
+  "pnl": 53837.0,
+  "dd": 6880.0,
+  "calmar": 7.82,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 10,
+  "regra": "alfabetica",
+  "pnl": 53047.0,
+  "dd": 6644.0,
+  "calmar": 7.98,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 10,
+  "regra": "bloco",
+  "pnl": 53047.0,
+  "dd": 6644.0,
+  "calmar": 7.98,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 10,
+  "regra": "margem",
+  "pnl": 53047.0,
+  "dd": 6644.0,
+  "calmar": 7.98,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 10,
+  "regra": "aleatória·med",
+  "pnl": 53047.0,
+  "dd": 6644.0,
+  "calmar": 7.98,
+  "pulados": 0,
+  "disputas": 0
+ },
+ {
+  "vagas": 10,
+  "regra": "sem teto",
+  "pnl": 53047.0,
+  "dd": 6644.0,
+  "calmar": 7.98,
+  "pulados": 0,
+  "disputas": 0
+ }
+]
