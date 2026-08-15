@@ -70,6 +70,8 @@ class BandFadeStrategy(BaseStrategy):
         entry = float(close_now)
         center = float(mid.iloc[-1])
 
+        kind = "Keltner (ATR)" if p["band"] == "keltner" else "Bollinger (desvio-padrão)"
+
         # Compra: fechou abaixo da banda inferior e voltou para dentro
         if close_prev < lower.iloc[-2] and close_now > lower.iloc[-1]:
             stop = entry - stop_distance
@@ -79,6 +81,9 @@ class BandFadeStrategy(BaseStrategy):
             return Signal(
                 symbol=symbol, type=SignalType.BUY,
                 entry_price=entry, stop_loss=stop, take_profit=target,
+                reason=(f"fechou FORA da banda inferior de {kind} {p['period']}/{p['mult']}× "
+                        f"ontem ({close_prev:,.2f} < {float(lower.iloc[-2]):,.2f}) e DENTRO hoje "
+                        f"— exagero rejeitado, aposta na volta à média ({center:,.2f})"),
             )
 
         # Venda: fechou acima da banda superior e voltou para dentro
@@ -90,6 +95,9 @@ class BandFadeStrategy(BaseStrategy):
             return Signal(
                 symbol=symbol, type=SignalType.SELL,
                 entry_price=entry, stop_loss=stop, take_profit=target,
+                reason=(f"fechou FORA da banda superior de {kind} {p['period']}/{p['mult']}× "
+                        f"ontem ({close_prev:,.2f} > {float(upper.iloc[-2]):,.2f}) e DENTRO hoje "
+                        f"— exagero rejeitado, aposta na volta à média ({center:,.2f})"),
             )
 
         return hold

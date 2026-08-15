@@ -116,6 +116,7 @@ def export(report, symbol: str, strategy: str, candles) -> dict:
                 "reason": t.exit_reason, "pnl": round(t.pnl, 2),
                 "entry_date": str(t.entry_time.date()),
                 "exit_date": str(t.exit_time.date()),
+                "trigger": t.entry_reason,
                 "stop": round(t.stop_loss, 2),
                 "target": round(t.take_profit, 2),
                 "qty": t.quantity,

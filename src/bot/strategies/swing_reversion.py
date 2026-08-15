@@ -74,9 +74,15 @@ class SwingReversionStrategy(BaseStrategy):
                 symbol=symbol, type=SignalType.BUY, entry_price=entry,
                 stop_loss=entry - stop_distance,
                 take_profit=entry + p["rr"] * stop_distance,
+                reason=(f"queda de {abs(past):.1%} em {p['lookback']} pregões, além de "
+                        f"{p['threshold_std']}σ da própria série — movimento longo demais, "
+                        f"aposta contrária (reversão de médio prazo)"),
             )
         return Signal(
             symbol=symbol, type=SignalType.SELL, entry_price=entry,
             stop_loss=entry + stop_distance,
             take_profit=entry - p["rr"] * stop_distance,
+            reason=(f"alta de {past:.1%} em {p['lookback']} pregões, além de "
+                    f"{p['threshold_std']}σ da própria série — movimento longo demais, "
+                    f"aposta contrária (reversão de médio prazo)"),
         )

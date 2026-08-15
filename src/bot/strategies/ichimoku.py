@@ -82,12 +82,18 @@ class IchimokuCrossStrategy(BaseStrategy):
             entry, stop, target = _exit_levels(candles, p, 1)
             if stop < entry:
                 return Signal(symbol=symbol, type=SignalType.BUY, entry_price=entry,
-                              stop_loss=stop, take_profit=target)
+                              stop_loss=stop, take_profit=target,
+                              reason=(f"Tenkan({p['tenkan']}) cruzou para CIMA do "
+                                      f"Kijun({p['kijun']}): {now['tenkan']:,.2f} × "
+                                      f"{now['kijun']:,.2f} — pontos médios de Donchian, só preço"))
         if crossed_down and not p["long_only"]:
             entry, stop, target = _exit_levels(candles, p, -1)
             if stop > entry:
                 return Signal(symbol=symbol, type=SignalType.SELL, entry_price=entry,
-                              stop_loss=stop, take_profit=target)
+                              stop_loss=stop, take_profit=target,
+                              reason=(f"Tenkan({p['tenkan']}) cruzou para BAIXO do "
+                                      f"Kijun({p['kijun']}): {now['tenkan']:,.2f} × "
+                                      f"{now['kijun']:,.2f} — pontos médios de Donchian, só preço"))
         return hold
 
 
@@ -118,12 +124,17 @@ class CloudCrossStrategy(BaseStrategy):
             entry, stop, target = _exit_levels(candles, p, 1)
             if stop < entry:
                 return Signal(symbol=symbol, type=SignalType.BUY, entry_price=entry,
-                              stop_loss=stop, take_profit=target)
+                              stop_loss=stop, take_profit=target,
+                              reason=(f"fechamento cruzou para CIMA da nuvem "
+                                      f"({now['cloud_top']:,.2f}) — saiu do território "
+                                      f"neutro/baixista do Ichimoku"))
         if broke_down and not p["long_only"]:
             entry, stop, target = _exit_levels(candles, p, -1)
             if stop > entry:
                 return Signal(symbol=symbol, type=SignalType.SELL, entry_price=entry,
-                              stop_loss=stop, take_profit=target)
+                              stop_loss=stop, take_profit=target,
+                              reason=(f"fechamento cruzou para BAIXO da nuvem "
+                                      f"({now['cloud_bottom']:,.2f})"))
         return hold
 
 

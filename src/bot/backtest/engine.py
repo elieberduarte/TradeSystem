@@ -42,6 +42,8 @@ class Trade:
     # Melhor fechamento a favor desde a entrada (base da saída por
     # retração de Fibonacci)
     peak_close: float = 0.0
+    # O gatilho da entrada, escrito pela estratégia no momento do sinal
+    entry_reason: str = ""
 
 
 @dataclass
@@ -262,6 +264,7 @@ class BacktestEngine:
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
             initial_risk=abs(entry - signal.stop_loss),
+            entry_reason=signal.reason,
         )
 
     def _manage(self, trade: Trade, candle, ts, result, equity: float):

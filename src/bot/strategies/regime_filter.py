@@ -29,4 +29,8 @@ class RegimeFilteredStrategy(BaseStrategy):
         regime = classify(candles, self.adx_period, self.trend_threshold)
         if regime not in self.allowed:
             return Signal(symbol=symbol, type=SignalType.HOLD)
-        return self.inner.generate_signal(symbol, candles)
+        signal = self.inner.generate_signal(symbol, candles)
+        if signal.type != SignalType.HOLD and signal.reason:
+            signal.reason += (f" · filtro de regime aprovou: {regime.value} "
+                              f"(ADX ≥ {self.trend_threshold:.0f})")
+        return signal

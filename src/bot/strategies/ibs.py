@@ -59,16 +59,24 @@ class IbsStrategy(BaseStrategy):
                 return hold
             above_trend, below_trend = entry > trend, entry < trend
 
+        trend_note = (f", com preço acima da média de {p['trend_filter']} pregões "
+                      f"(filtro de tendência)") if p["trend_filter"] else ""
         if value <= p["entry_low"] and above_trend:
             return Signal(
                 symbol=symbol, type=SignalType.BUY, entry_price=entry,
                 stop_loss=entry - p["stop_atr"] * volatility,
                 take_profit=entry + p["target_atr"] * volatility,
+                reason=(f"IBS {value:.2f}: fechou colado na MÍNIMA do próprio candle "
+                        f"(limiar {p['entry_low']}) — pressão vendedora exaurida, aposta "
+                        f"em reversão de curtíssimo prazo{trend_note}; só preço, sem volume"),
             )
         if value >= p["entry_high"] and below_trend:
             return Signal(
                 symbol=symbol, type=SignalType.SELL, entry_price=entry,
                 stop_loss=entry + p["stop_atr"] * volatility,
                 take_profit=entry - p["target_atr"] * volatility,
+                reason=(f"IBS {value:.2f}: fechou colado na MÁXIMA do próprio candle "
+                        f"(limiar {p['entry_high']}) — pressão compradora exaurida, aposta "
+                        f"em reversão de curtíssimo prazo{trend_note}; só preço, sem volume"),
             )
         return hold

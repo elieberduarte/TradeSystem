@@ -52,11 +52,17 @@ class DonchianStrategy(BaseStrategy):
                 symbol=symbol, type=SignalType.BUY, entry_price=close_now,
                 stop_loss=close_now - stop_distance,
                 take_profit=close_now + p["rr"] * stop_distance,
+                reason=(f"fechou em {close_now:,.2f}, ACIMA da máxima dos últimos "
+                        f"{p['channel']} pregões ({upper:,.2f}) — rompimento de canal, "
+                        f"puro preço, sem volume nem outro indicador"),
             )
         if close_now < lower and not p["long_only"]:
             return Signal(
                 symbol=symbol, type=SignalType.SELL, entry_price=close_now,
                 stop_loss=close_now + stop_distance,
                 take_profit=close_now - p["rr"] * stop_distance,
+                reason=(f"fechou em {close_now:,.2f}, ABAIXO da mínima dos últimos "
+                        f"{p['channel']} pregões ({lower:,.2f}) — rompimento de canal, "
+                        f"puro preço, sem volume nem outro indicador"),
             )
         return hold

@@ -49,6 +49,7 @@ class EmaCrossStrategy(BaseStrategy):
 
         entry = float(close.iloc[-1])
         recent = candles.iloc[-p["stop_lookback"] :]
+        trend_note = f", com preço acima da EMA {p['trend']} (tendência)" if p["trend"] else ""
         if crossed_up:
             stop = float(recent["low"].min())
             if stop >= entry:
@@ -60,6 +61,8 @@ class EmaCrossStrategy(BaseStrategy):
                 entry_price=entry,
                 stop_loss=stop,
                 take_profit=target,
+                reason=(f"EMA {p['fast']} cruzou para CIMA da EMA {p['slow']}{trend_note}; "
+                        f"stop na mínima dos últimos {p['stop_lookback']} candles"),
             )
 
         stop = float(recent["high"].max())
@@ -72,4 +75,7 @@ class EmaCrossStrategy(BaseStrategy):
             entry_price=entry,
             stop_loss=stop,
             take_profit=target,
+            reason=(f"EMA {p['fast']} cruzou para BAIXO da EMA {p['slow']}"
+                    + (f", com preço abaixo da EMA {p['trend']} (tendência)" if p["trend"] else "")
+                    + f"; stop na máxima dos últimos {p['stop_lookback']} candles"),
         )

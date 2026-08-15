@@ -81,12 +81,20 @@ class SqueezeBreakoutStrategy(BaseStrategy):
                 symbol=symbol, type=SignalType.BUY, entry_price=close_now,
                 stop_loss=close_now - stop_distance,
                 take_profit=close_now + p["rr"] * stop_distance,
+                reason=(f"largura de banda de ontem no percentil {rank:.0%} dos últimos "
+                        f"{p['lookback']} pregões (mercado comprimido) e fechamento ACIMA "
+                        f"da banda superior ({float(bands['upper'].iloc[-1]):,.2f}) — "
+                        f"a compressão explodiu para cima"),
             )
         if close_now < float(bands["lower"].iloc[-1]) and not p["long_only"]:
             return Signal(
                 symbol=symbol, type=SignalType.SELL, entry_price=close_now,
                 stop_loss=close_now + stop_distance,
                 take_profit=close_now - p["rr"] * stop_distance,
+                reason=(f"largura de banda de ontem no percentil {rank:.0%} dos últimos "
+                        f"{p['lookback']} pregões (mercado comprimido) e fechamento ABAIXO "
+                        f"da banda inferior ({float(bands['lower'].iloc[-1]):,.2f}) — "
+                        f"a compressão explodiu para baixo"),
             )
         return hold
 

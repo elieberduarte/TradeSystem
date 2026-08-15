@@ -25,6 +25,11 @@ class Signal:
     take_profit: float | None = None
     # Confiança do sinal entre 0 e 1, usada pelo risk manager no sizing
     confidence: float = 1.0
+    # O gatilho por extenso, escrito pela estratégia NO MOMENTO do sinal,
+    # com os valores reais ("fechou em X, acima da máxima de 20 pregões
+    # em Y"). Viaja com o trade até o painel — nenhuma entrada sem
+    # explicação auditável.
+    reason: str = ""
 
 
 class BaseStrategy(ABC):
