@@ -1,0 +1,180 @@
+{
+ "WIN$N": [
+  {
+   "janela": 15,
+   "estados": {
+    "micro-alta": {
+     "n": 10151,
+     "persistencia": 0.373,
+     "p_favor": 0.513,
+     "raio_medio": 174.6,
+     "ev_bruto_pts": 4.4,
+     "alternancia": 0.492
+    },
+    "micro-baixa": {
+     "n": 10261,
+     "persistencia": 0.373,
+     "p_favor": 0.506,
+     "raio_medio": 176.4,
+     "ev_bruto_pts": 2.1,
+     "alternancia": 0.493
+    },
+    "serrote": {
+     "n": 1133,
+     "persistencia": 0.049,
+     "p_favor": 0.503,
+     "raio_medio": 169.4,
+     "ev_bruto_pts": 0.9,
+     "alternancia": 0.506
+    }
+   }
+  },
+  {
+   "janela": 10,
+   "estados": {
+    "micro-alta": {
+     "n": 11646,
+     "persistencia": 0.393,
+     "p_favor": 0.511,
+     "raio_medio": 175.4,
+     "ev_bruto_pts": 3.7,
+     "alternancia": 0.489
+    },
+    "micro-baixa": {
+     "n": 11650,
+     "persistencia": 0.394,
+     "p_favor": 0.505,
+     "raio_medio": 177.9,
+     "ev_bruto_pts": 1.8,
+     "alternancia": 0.481
+    },
+    "serrote": {
+     "n": 1810,
+     "persistencia": 0.056,
+     "p_favor": 0.508,
+     "raio_medio": 175.4,
+     "ev_bruto_pts": 2.9,
+     "alternancia": 0.499
+    }
+   }
+  },
+  {
+   "janela": 20,
+   "estados": {
+    "micro-alta": {
+     "n": 9834,
+     "persistencia": 0.381,
+     "p_favor": 0.512,
+     "raio_medio": 171.6,
+     "ev_bruto_pts": 4.1,
+     "alternancia": 0.485
+    },
+    "micro-baixa": {
+     "n": 9884,
+     "persistencia": 0.386,
+     "p_favor": 0.505,
+     "raio_medio": 174.2,
+     "ev_bruto_pts": 1.9,
+     "alternancia": 0.485
+    },
+    "serrote": {
+     "n": 894,
+     "persistencia": 0.038,
+     "p_favor": 0.486,
+     "raio_medio": 168.9,
+     "ev_bruto_pts": -4.6,
+     "alternancia": 0.491
+    }
+   }
+  }
+ ],
+ "WDO$N": [
+  {
+   "janela": 15,
+   "estados": {
+    "micro-alta": {
+     "n": 10450,
+     "persistencia": 0.367,
+     "p_favor": 0.505,
+     "raio_medio": 5.1,
+     "ev_bruto_pts": 0.0,
+     "alternancia": 0.44
+    },
+    "micro-baixa": {
+     "n": 10466,
+     "persistencia": 0.361,
+     "p_favor": 0.497,
+     "raio_medio": 5.2,
+     "ev_bruto_pts": -0.0,
+     "alternancia": 0.439
+    },
+    "serrote": {
+     "n": 1332,
+     "persistencia": 0.064,
+     "p_favor": 0.509,
+     "raio_medio": 4.6,
+     "ev_bruto_pts": 0.1,
+     "alternancia": 0.457
+    }
+   }
+  },
+  {
+   "janela": 10,
+   "estados": {
+    "micro-alta": {
+     "n": 11786,
+     "persistencia": 0.384,
+     "p_favor": 0.509,
+     "raio_medio": 5.2,
+     "ev_bruto_pts": 0.1,
+     "alternancia": 0.436
+    },
+    "micro-baixa": {
+     "n": 11720,
+     "persistencia": 0.381,
+     "p_favor": 0.5,
+     "raio_medio": 5.2,
+     "ev_bruto_pts": 0.0,
+     "alternancia": 0.435
+    },
+    "serrote": {
+     "n": 1678,
+     "persistencia": 0.053,
+     "p_favor": 0.502,
+     "raio_medio": 4.9,
+     "ev_bruto_pts": 0.0,
+     "alternancia": 0.438
+    }
+   }
+  },
+  {
+   "janela": 20,
+   "estados": {
+    "micro-alta": {
+     "n": 10488,
+     "persistencia": 0.374,
+     "p_favor": 0.501,
+     "raio_medio": 5.0,
+     "ev_bruto_pts": 0.0,
+     "alternancia": 0.435
+    },
+    "micro-baixa": {
+     "n": 10539,
+     "persistencia": 0.371,
+     "p_favor": 0.492,
+     "raio_medio": 5.0,
+     "ev_bruto_pts": -0.1,
+     "alternancia": 0.444
+    },
+    "serrote": {
+     "n": 1012,
+     "persistencia": 0.048,
+     "p_favor": 0.495,
+     "raio_medio": 4.5,
+     "ev_bruto_pts": -0.0,
+     "alternancia": 0.44
+    }
+   }
+  }
+ ]
+}
