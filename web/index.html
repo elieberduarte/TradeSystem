@@ -267,6 +267,7 @@
       <tbody id="trades"></tbody>
     </table>
   </div>
+  <div id="reason-glossary"></div>
 </div>
 
 <!-- ══════════ Walk-forward ══════════ -->
@@ -423,16 +424,39 @@ function renderDaily(values, labels) {
 
 let TRADE_ROWS = [];
 
+/* Cada motivo de saída, explicado — o backtest não toma decisão sem nome */
+const REASON_INFO = {
+  "alvo": "O preço alcançou o alvo planejado na entrada. Saída por ordem limitada, sem slippage.",
+  "alvo (gap)": "O pregão ABRIU além do alvo (gap a favor). A saída acontece na abertura, MELHOR que o alvo planejado.",
+  "stop": "O preço alcançou o stop planejado na entrada. A perda é a orçada no dimensionamento (1% do capital).",
+  "stop (gap)": "O pregão ABRIU além do stop (gap contra). A saída acontece na abertura, PIOR que o stop planejado — o risco real do swing que o backtest modela de propósito.",
+  "sinal contrário": "A estratégia gerou sinal na direção oposta; a posição é encerrada no fechamento do candle.",
+  "fim do histórico": "ARTEFATO DE MEDIÇÃO, não decisão da estratégia: a janela de teste do walk-forward terminou com a posição ainda aberta, e o backtest a fecha à força no último candle para contabilizar. Ao vivo, a posição continuaria aberta normalmente.",
+  "tempo": "A posição atingiu o limite de barras definido para o setup e foi encerrada no fechamento.",
+  "zeragem diária": "Modo day trade: posições são zeradas antes do fim do pregão (17h45), abertas nunca dormem.",
+  "fib": "O preço devolveu mais de 61,8% do movimento a favor; a regra de falha de Fibonacci encerrou a posição.",
+};
+
 function renderTrades(rows) {
   TRADE_ROWS = rows;
   $("trades").innerHTML = rows.map((t, i) => {
     const cls = t.pnl > 0 ? "up" : (t.pnl < 0 ? "down" : "");
     const clickable = Array.isArray(t.candles) && t.candles.length;
+    const info = REASON_INFO[t.reason];
     return `<tr ${clickable ? `onclick="toggleTradeChart(${i}, this)" style="cursor:pointer" title="Clique para ver o gráfico"` : ""}>
       <td>${clickable ? "📈 " : ""}${t.date}</td><td>${t.side === "buy" ? "Compra" : "Venda"}</td>
       <td class="num">${t.entry.toLocaleString("pt-BR")}</td><td class="num">${t.exit.toLocaleString("pt-BR")}</td>
-      <td>${t.reason}</td><td class="num ${cls}" style="font-weight:700">${fmtBRL(t.pnl)}</td></tr>`;
+      <td ${info ? `title="${info.replace(/"/g, "&quot;")}"` : ""}>${t.reason}${info ? ' <span style="color:var(--muted);cursor:help">ⓘ</span>' : ""}</td>
+      <td class="num ${cls}" style="font-weight:700">${fmtBRL(t.pnl)}</td></tr>`;
   }).join("");
+
+  // Glossário dos motivos presentes na tabela
+  const present = [...new Set(rows.map(t => t.reason))].filter(r => REASON_INFO[r]);
+  $("reason-glossary").innerHTML = present.length ? `
+    <div style="font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;margin:12px 0 6px">
+      O que significa cada motivo de saída</div>
+    ${present.map(r => `<div style="font-size:12px;color:var(--ink-2);padding:3px 0">
+      <b style="color:var(--ink)">${r}</b> — ${REASON_INFO[r]}</div>`).join("")}` : "";
 }
 
 /* ─── Gráfico da operação, aberto no clique da linha ─── */
@@ -480,10 +504,13 @@ function toggleTradeChart(i, row) {
   const t = TRADE_ROWS[i];
   const detail = document.createElement("tr");
   detail.className = "trade-chart-row";
+  const info = REASON_INFO[t.reason];
   detail.innerHTML = `<td colspan="6" style="padding:10px 4px">
     <div style="font-size:12px;color:var(--muted);margin-bottom:6px">
       ${t.side === "buy" ? "COMPRA" : "VENDA"} em ${t.entry_date} → saída em ${t.exit_date}
       (${t.reason}) · ${t.qty ?? "?"} contrato(s) · cada candle = 1 pregão</div>
+    ${info ? `<div style="font-size:12px;color:var(--ink-2);background:var(--chip);border-radius:8px;
+      padding:7px 11px;margin-bottom:8px"><b>Por que saiu:</b> ${info}</div>` : ""}
     ${tradeChartSVG(t)}</td>`;
   row.after(detail);
 }
