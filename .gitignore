@@ -20,7 +20,7 @@ config/config.yaml
 *.secret
 
 # Dados de mercado e resultados
-data/
+/data/
 *.csv
 *.parquet
 *.db
@@ -38,3 +38,4 @@ desktop.ini
 # Livros e material de referencia (direitos autorais)
 Livros/
 *.pdf
+/data/cvm/*.zip
