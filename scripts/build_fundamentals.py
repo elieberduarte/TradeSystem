@@ -32,7 +32,9 @@ from src.bot.data.cvm import load_dfp, ticker_map
 
 ROOT = Path(__file__).resolve().parents[1]
 MIN_VOLUME = 5e6
-YEARS = (2026, 2025)          # zips da DFP; o mais novo prevalece
+BLUE_CHIP_VOLUME = 50e6       # corte de liquidez para o ranking blue chip
+YEARS = (2026, 2025)          # zips da DFP; o mais novo prevalece (foto atual)
+YEARS_HISTORY = (2022, 2023, 2024, 2025, 2026)   # série para consistência
 
 
 def scale(frame: pd.DataFrame) -> pd.Series:
@@ -109,6 +111,88 @@ def dividends_paid(cnpj_col: str) -> pd.Series:
     best_year = merged.groupby(cnpj_col)["ano"].max()
     merged = merged.merge(best_year.rename("melhor"), on=cnpj_col)
     return merged[merged["ano"] == merged["melhor"]].groupby(cnpj_col)["valor"].sum()
+
+
+def yearly_history(cnpj_col_hint: str | None = None) -> pd.DataFrame:
+    """Receita, lucro e PL por empresa e ANO FISCAL, 2022-2026.
+
+    A base da medição de consistência: crescimento composto e anos
+    lucrativos só fazem sentido com série, não com foto.
+    """
+    rows = []
+    for year in YEARS_HISTORY:
+        try:
+            dre = load_dfp(year, "DRE_con")
+            bpp = load_dfp(year, "BPP_con")
+        except Exception:  # noqa: BLE001
+            continue
+        cnpj_col = [c for c in dre.columns if "CNPJ" in c.upper()][0]
+        fiscal = dre["DT_FIM_EXERC"].astype(str).str[:4].astype(int)
+        dre = dre.assign(_ano=fiscal)
+        for ano, dre_y in dre.groupby("_ano"):
+            profit = account(dre_y, cnpj_col, "3.11")
+            revenue = account(dre_y, cnpj_col, "3.01")
+            equity = equity_series(bpp, cnpj_col)
+            for cnpj in profit.index:
+                rows.append({
+                    "cnpj": cnpj, "ano": int(ano),
+                    "lucro": float(profit[cnpj]),
+                    "receita": float(revenue.get(cnpj, float("nan"))),
+                    "pl": float(equity.get(cnpj, float("nan"))),
+                })
+    history = pd.DataFrame(rows)
+    return history.drop_duplicates(subset=["cnpj", "ano"], keep="last")
+
+
+def consistency_metrics(history: pd.DataFrame) -> pd.DataFrame:
+    """CAGR de receita, anos lucrativos e ROE médio por empresa."""
+    out = []
+    for cnpj, group in history.groupby("cnpj"):
+        group = group.sort_values("ano")
+        if len(group) < 3:
+            continue
+        revenue = group["receita"].dropna()
+        cagr = None
+        if len(revenue) >= 3 and revenue.iloc[0] > 0 and revenue.iloc[-1] > 0:
+            span = group["ano"].iloc[-1] - group["ano"].iloc[0]
+            if span > 0:
+                cagr = (revenue.iloc[-1] / revenue.iloc[0]) ** (1 / span) - 1
+        profitable = int((group["lucro"] > 0).sum())
+        roe_values = (group["lucro"] / group["pl"]).replace(
+            [float("inf"), float("-inf")], float("nan")
+        ).dropna()
+        out.append({
+            "cnpj": cnpj,
+            "cagr_receita": round(cagr, 4) if cagr is not None else None,
+            "anos_lucrativos": profitable,
+            "anos_observados": len(group),
+            "roe_medio": round(float(roe_values.mean()), 4) if len(roe_values) else None,
+        })
+    return pd.DataFrame(out).set_index("cnpj")
+
+
+def blue_chip_ranking(frame: pd.DataFrame) -> pd.Series:
+    """Ranking composto de QUALIDADE entre os papéis mais líquidos.
+
+    Não é previsão de crescimento — crescimento passado não persiste
+    (Chan/Karceski/Lakonishok). O que persiste é qualidade: ROE médio,
+    histórico de lucro, endividamento, payout. Média de postos com
+    igual peso; ausência de dado vale o pior posto (conservador).
+    """
+    eligible = frame[frame["volume_mediano_mi"] >= BLUE_CHIP_VOLUME / 1e6].copy()
+    if eligible.empty:
+        return pd.Series(dtype=float)
+    ranks = pd.DataFrame(index=eligible.index)
+    ranks["roe"] = eligible["roe_medio"].rank(ascending=False)
+    ranks["lucrativo"] = (
+        eligible["anos_lucrativos"] / eligible["anos_observados"]
+    ).rank(ascending=False)
+    ranks["divida"] = eligible["divida_pl"].rank(ascending=True)
+    ranks["dy"] = eligible["dy"].rank(ascending=False)
+    ranks["cagr"] = eligible["cagr_receita"].rank(ascending=False)
+    worst = len(eligible)
+    score = ranks.fillna(worst).mean(axis=1)
+    return score.rank(method="first").astype(int)
 
 
 def main() -> None:
@@ -199,6 +283,18 @@ def main() -> None:
     mt5.shutdown()
 
     frame = pd.DataFrame(rows)
+
+    # Série histórica 2022-2026: consistência é o que persiste
+    print("Construindo histórico de 5 anos (DFP 2022-2026)…")
+    history = consistency_metrics(yearly_history())
+    frame = frame.merge(
+        history, left_on=frame["ticker"].map(
+            mapping.set_index("ticker")["cnpj"]
+        ).rename("cnpj"), right_index=True, how="left",
+    )
+    frame["blue_chip_rank"] = blue_chip_ranking(frame)
+    frame["blue_chip_rank"] = frame["blue_chip_rank"].astype("Int64")
+
     # Cruzamento barato × qualidade × solidez (medianas do próprio universo)
     valid = frame.dropna(subset=["pl", "roe", "divida_pl"])
     positive = valid[valid["pl"] > 0]
@@ -224,6 +320,20 @@ def main() -> None:
     picks = frame[frame["barato_qualidade"]].sort_values("pl")
     print(f"\n{len(frame)} ações com balanço + preço · "
           f"medianas: P/L {med_pl:.1f} · ROE {med_roe:.1%} · dív/PL {med_debt:.2f}")
+
+    blues = frame.dropna(subset=["blue_chip_rank"]).sort_values("blue_chip_rank")
+    print(f"\n── Carteira blue chip candidata (qualidade composta, "
+          f"liquidez ≥ R$ {BLUE_CHIP_VOLUME / 1e6:.0f} mi/dia) ──")
+    print(f"{'#':>3} {'ticker':<8} {'ROE méd':>8} {'lucro':>7} {'CAGR rec':>9} "
+          f"{'DY':>6} {'dív/PL':>7} {'P/L':>6}")
+    for _, r in blues.head(15).iterrows():
+        cagr = f"{r['cagr_receita']:.1%}" if pd.notna(r["cagr_receita"]) else "—"
+        dy = f"{r['dy']:.1%}" if pd.notna(r["dy"]) else "—"
+        roe_m = f"{r['roe_medio']:.1%}" if pd.notna(r["roe_medio"]) else "—"
+        pl_txt = f"{r['pl']:.1f}" if pd.notna(r["pl"]) else "—"
+        print(f"{int(r['blue_chip_rank']):>3} {r['ticker']:<8} {roe_m:>8} "
+              f"{int(r['anos_lucrativos'])}/{int(r['anos_observados']):<5} {cagr:>9} "
+              f"{dy:>6} {r['divida_pl'] if pd.notna(r['divida_pl']) else '—':>7} {pl_txt:>6}")
     print(f"\n── Barato × qualidade × solidez ({len(picks)} papéis) ──")
     print(f"{'ticker':<8} {'P/L':>6} {'P/VP':>6} {'ROE':>7} {'DY':>6} {'dív/PL':>7}")
     for _, r in picks.head(20).iterrows():

@@ -102,6 +102,9 @@
   <button id="only-bq" aria-pressed="false"
     onclick="ONLY_BQ = !ONLY_BQ; this.setAttribute('aria-pressed', ONLY_BQ); render()">
     💎 só barato × qualidade</button>
+  <button id="only-blue" aria-pressed="false"
+    onclick="ONLY_BLUE = !ONLY_BLUE; this.setAttribute('aria-pressed', ONLY_BLUE); if (ONLY_BLUE) { SORT = 'blue_chip_rank'; ASC = true; } render()">
+    🏛️ carteira blue chip (qualidade composta)</button>
   <span id="count" style="color:var(--muted); font-size:12px"></span>
 </div>
 
@@ -124,10 +127,10 @@
 const COLUMNS = [
   ["ticker", "Ticker"], ["empresa", "Empresa"], ["preco", "Preço"],
   ["pl", "P/L"], ["pvp", "P/VP"], ["dy", "DY"], ["roe", "ROE"],
-  ["margem", "Margem"], ["divida_pl", "Dív/PL"], ["cresc_receita", "Receita a/a"],
-  ["volume_mediano_mi", "Liquidez (mi/dia)"],
+  ["roe_medio", "ROE 5a"], ["lucro_5a", "Lucros 5a"], ["cagr_receita", "CAGR rec."],
+  ["divida_pl", "Dív/PL"], ["volume_mediano_mi", "Liq. (mi/dia)"],
 ];
-let DATA = null, SORT = "pl", ASC = true, ONLY_BQ = false;
+let DATA = null, SORT = "pl", ASC = true, ONLY_BQ = false, ONLY_BLUE = false;
 
 const pct = v => v === null || v === undefined ? "—"
   : `<span class="${v >= 0 ? "pos" : "neg"}">${(v * 100).toFixed(1)}%</span>`;
@@ -138,7 +141,8 @@ function render() {
   const query = document.getElementById("search").value.toUpperCase();
   let rows = DATA.papeis.filter(r =>
     (!query || r.ticker.includes(query) || r.empresa.toUpperCase().includes(query))
-    && (!ONLY_BQ || r.barato_qualidade));
+    && (!ONLY_BQ || r.barato_qualidade)
+    && (!ONLY_BLUE || r.blue_chip_rank !== null && r.blue_chip_rank !== undefined));
   rows.sort((a, b) => {
     const va = a[SORT], vb = b[SORT];
     if (va === null || va === undefined) return 1;
@@ -152,19 +156,26 @@ function render() {
     `<th onclick="sortBy('${key}')" ${key === SORT ? "data-active" : ""}>
       ${label}${key === SORT ? (ASC ? " ↑" : " ↓") : ""}</th>`).join("");
 
-  document.getElementById("body").innerHTML = rows.map(r => `<tr>
-    <td><b>${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}</td>
+  document.getElementById("body").innerHTML = rows.map(r => {
+    const blue = r.blue_chip_rank !== null && r.blue_chip_rank !== undefined && r.blue_chip_rank <= 15
+      ? `<span class="tag" style="background:var(--accent)">🏛️ ${r.blue_chip_rank}º</span>` : "";
+    const lucros = r.anos_lucrativos !== null && r.anos_lucrativos !== undefined
+      ? `${r.anos_lucrativos}/${r.anos_observados}` : "—";
+    return `<tr>
+    <td><b>${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}${blue}</td>
     <td style="color:var(--ink-2)">${r.empresa}</td>
     <td>${num(r.preco)}</td>
     <td>${num(r.pl)}</td>
     <td>${num(r.pvp)}</td>
     <td>${pct(r.dy)}</td>
     <td>${pct(r.roe)}</td>
-    <td>${pct(r.margem)}</td>
+    <td>${pct(r.roe_medio)}</td>
+    <td>${lucros}</td>
+    <td>${pct(r.cagr_receita)}</td>
     <td>${num(r.divida_pl)}</td>
-    <td>${pct(r.cresc_receita)}</td>
     <td>${num(r.volume_mediano_mi)}</td>
-  </tr>`).join("");
+  </tr>`;
+  }).join("");
 
   document.getElementById("count").textContent =
     `${rows.length} papéis · selo B×Q em ${DATA.papeis.filter(r => r.barato_qualidade).length}`;
