@@ -1,0 +1,84 @@
+[
+ {
+  "label": "Donchian (base aprovada)",
+  "tested": 25,
+  "positive": 21,
+  "rate": 0.84,
+  "trades": 489,
+  "win_rate": 0.364,
+  "median_pnl": 3079.0,
+  "return_pct": 88.6,
+  "calmar": 5.22
+ },
+ {
+  "label": "Donchian + filtro de nuvem",
+  "tested": 26,
+  "positive": 20,
+  "rate": 0.769,
+  "trades": 411,
+  "win_rate": 0.365,
+  "median_pnl": 2318.0,
+  "return_pct": 65.6,
+  "calmar": 3.81,
+  "corr_donchian": 0.561
+ },
+ {
+  "label": "Tenkan × Kijun (só compra)",
+  "tested": 26,
+  "positive": 24,
+  "rate": 0.923,
+  "trades": 403,
+  "win_rate": 0.362,
+  "median_pnl": 2792.0,
+  "return_pct": 78.1,
+  "calmar": 4.33,
+  "corr_donchian": 0.409
+ },
+ {
+  "label": "Cruzamento da nuvem (só compra)",
+  "tested": 25,
+  "positive": 19,
+  "rate": 0.76,
+  "trades": 298,
+  "win_rate": 0.349,
+  "median_pnl": 2249.0,
+  "return_pct": 44.8,
+  "calmar": 3.35,
+  "corr_donchian": 0.322
+ },
+ {
+  "label": "Squeeze → rompimento (só compra)",
+  "tested": 24,
+  "positive": 19,
+  "rate": 0.792,
+  "trades": 244,
+  "win_rate": 0.393,
+  "median_pnl": 2872.0,
+  "return_pct": 71.9,
+  "calmar": 6.83,
+  "corr_donchian": 0.527
+ },
+ {
+  "label": "Squeeze → rompimento (ambos)",
+  "tested": 26,
+  "positive": 16,
+  "rate": 0.615,
+  "trades": 464,
+  "win_rate": 0.338,
+  "median_pnl": 235.0,
+  "return_pct": 45.5,
+  "calmar": 3.63
+ },
+ {
+  "label": "Donchian + filtro de squeeze",
+  "tested": 24,
+  "positive": 18,
+  "rate": 0.75,
+  "trades": 224,
+  "win_rate": 0.393,
+  "median_pnl": 2421.0,
+  "return_pct": 64.6,
+  "calmar": 9.51,
+  "corr_donchian": 0.635
+ }
+]
