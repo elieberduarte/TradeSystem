@@ -167,7 +167,12 @@ def main() -> None:
         lpa_value = None
         if cnpj in lpa.index:
             row = lpa.loc[cnpj]
-            lpa_value = row.get(klass) or row.get("ON") or row.get("PN")
+            # NaN é "verdadeiro" no Python e vaza por qualquer `or` — o
+            # filtro precisa ser explícito
+            options = [row.get(klass), row.get("ON"), row.get("PN")]
+            lpa_value = next(
+                (float(v) for v in options if v is not None and pd.notna(v)), None
+            )
 
         ll, pl = float(profit[cnpj]), float(equity[cnpj])
         shares = ll / lpa_value if lpa_value else None
@@ -206,12 +211,15 @@ def main() -> None:
     )
 
     out = ROOT / "web" / "fundamentals.json"
+    # to_json converte NaN em null (JSON válido); json.dumps escreveria
+    # o token NaN e o navegador rejeitaria o arquivo inteiro
+    records = json.loads(frame.to_json(orient="records", force_ascii=False))
     out.write_text(json.dumps({
         "atualizado": pd.Timestamp.now().isoformat(timespec="seconds"),
         "medianas": {"pl": round(med_pl, 1), "roe": round(med_roe, 3),
                      "divida_pl": round(med_debt, 2)},
-        "papeis": frame.to_dict("records"),
-    }, ensure_ascii=False, indent=1), encoding="utf-8")
+        "papeis": records,
+    }, ensure_ascii=False, indent=1, allow_nan=False), encoding="utf-8")
 
     picks = frame[frame["barato_qualidade"]].sort_values("pl")
     print(f"\n{len(frame)} ações com balanço + preço · "
