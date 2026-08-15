@@ -1,0 +1,198 @@
+{
+ "WIN$N": [
+  {
+   "variante": "todos os sinais",
+   "rr": 1.0,
+   "n": 8326,
+   "acerto": 0.4539,
+   "rw": 0.5,
+   "ev_liq": -27.42
+  },
+  {
+   "variante": "perna forte (eff≥0,5)",
+   "rr": 1.0,
+   "n": 2047,
+   "acerto": 0.4704,
+   "rw": 0.5,
+   "ev_liq": -23.48
+  },
+  {
+   "variante": "· manhã",
+   "rr": 1.0,
+   "n": 830,
+   "acerto": 0.4976,
+   "rw": 0.5,
+   "ev_liq": -13.46
+  },
+  {
+   "variante": "· tarde",
+   "rr": 1.0,
+   "n": 1217,
+   "acerto": 0.4519,
+   "rw": 0.5,
+   "ev_liq": -30.31
+  },
+  {
+   "variante": "todos os sinais",
+   "rr": 2.0,
+   "n": 7767,
+   "acerto": 0.2896,
+   "rw": 0.3333,
+   "ev_liq": -39.91
+  },
+  {
+   "variante": "perna forte (eff≥0,5)",
+   "rr": 2.0,
+   "n": 1900,
+   "acerto": 0.3063,
+   "rw": 0.3333,
+   "ev_liq": -33.78
+  },
+  {
+   "variante": "· manhã",
+   "rr": 2.0,
+   "n": 799,
+   "acerto": 0.3279,
+   "rw": 0.3333,
+   "ev_liq": -22.68
+  },
+  {
+   "variante": "· tarde",
+   "rr": 2.0,
+   "n": 1101,
+   "acerto": 0.2906,
+   "rw": 0.3333,
+   "ev_liq": -41.84
+  },
+  {
+   "variante": "todos os sinais",
+   "rr": 3.0,
+   "n": 7233,
+   "acerto": 0.1884,
+   "rw": 0.25,
+   "ev_liq": -70.48
+  },
+  {
+   "variante": "perna forte (eff≥0,5)",
+   "rr": 3.0,
+   "n": 1761,
+   "acerto": 0.2101,
+   "rw": 0.25,
+   "ev_liq": -61.56
+  },
+  {
+   "variante": "· manhã",
+   "rr": 3.0,
+   "n": 750,
+   "acerto": 0.244,
+   "rw": 0.25,
+   "ev_liq": -42.69
+  },
+  {
+   "variante": "· tarde",
+   "rr": 3.0,
+   "n": 1011,
+   "acerto": 0.185,
+   "rw": 0.25,
+   "ev_liq": -75.55
+  }
+ ],
+ "WDO$N": [
+  {
+   "variante": "todos os sinais",
+   "rr": 1.0,
+   "n": 7482,
+   "acerto": 0.4074,
+   "rw": 0.5,
+   "ev_liq": -1.56
+  },
+  {
+   "variante": "perna forte (eff≥0,5)",
+   "rr": 1.0,
+   "n": 1777,
+   "acerto": 0.4243,
+   "rw": 0.5,
+   "ev_liq": -1.54
+  },
+  {
+   "variante": "· manhã",
+   "rr": 1.0,
+   "n": 690,
+   "acerto": 0.4594,
+   "rw": 0.5,
+   "ev_liq": -1.32
+  },
+  {
+   "variante": "· tarde",
+   "rr": 1.0,
+   "n": 1087,
+   "acerto": 0.402,
+   "rw": 0.5,
+   "ev_liq": -1.67
+  },
+  {
+   "variante": "todos os sinais",
+   "rr": 2.0,
+   "n": 6878,
+   "acerto": 0.2476,
+   "rw": 0.3333,
+   "ev_liq": -2.14
+  },
+  {
+   "variante": "perna forte (eff≥0,5)",
+   "rr": 2.0,
+   "n": 1601,
+   "acerto": 0.2605,
+   "rw": 0.3333,
+   "ev_liq": -2.11
+  },
+  {
+   "variante": "· manhã",
+   "rr": 2.0,
+   "n": 651,
+   "acerto": 0.2965,
+   "rw": 0.3333,
+   "ev_liq": -1.87
+  },
+  {
+   "variante": "· tarde",
+   "rr": 2.0,
+   "n": 950,
+   "acerto": 0.2358,
+   "rw": 0.3333,
+   "ev_liq": -2.27
+  },
+  {
+   "variante": "todos os sinais",
+   "rr": 3.0,
+   "n": 6382,
+   "acerto": 0.157,
+   "rw": 0.25,
+   "ev_liq": -3.09
+  },
+  {
+   "variante": "perna forte (eff≥0,5)",
+   "rr": 3.0,
+   "n": 1465,
+   "acerto": 0.1652,
+   "rw": 0.25,
+   "ev_liq": -3.16
+  },
+  {
+   "variante": "· manhã",
+   "rr": 3.0,
+   "n": 590,
+   "acerto": 0.1881,
+   "rw": 0.25,
+   "ev_liq": -3.31
+  },
+  {
+   "variante": "· tarde",
+   "rr": 3.0,
+   "n": 875,
+   "acerto": 0.1497,
+   "rw": 0.25,
+   "ev_liq": -3.05
+  }
+ ]
+}
