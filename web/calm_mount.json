@@ -1,0 +1,198 @@
+{
+ "WIN$N": [
+  {
+   "recorte": "a favor",
+   "variante": "sem_stop",
+   "n": 3015,
+   "positiva": 0.5141,
+   "ev_liq": 40.8,
+   "total": 123008.0
+  },
+  {
+   "recorte": "a favor",
+   "variante": "com_stop",
+   "n": 3015,
+   "positiva": 0.4624,
+   "ev_liq": 34.44,
+   "total": 103828.0
+  },
+  {
+   "recorte": "a favor + perna forte",
+   "variante": "sem_stop",
+   "n": 799,
+   "positiva": 0.5219,
+   "ev_liq": 84.88,
+   "total": 67822.0
+  },
+  {
+   "recorte": "a favor + perna forte",
+   "variante": "com_stop",
+   "n": 799,
+   "positiva": 0.4781,
+   "ev_liq": 75.5,
+   "total": 60328.0
+  },
+  {
+   "recorte": "· manhã",
+   "variante": "sem_stop",
+   "n": 329,
+   "positiva": 0.5532,
+   "ev_liq": 167.3,
+   "total": 55042.0
+  },
+  {
+   "recorte": "· manhã",
+   "variante": "com_stop",
+   "n": 329,
+   "positiva": 0.5198,
+   "ev_liq": 171.19,
+   "total": 56322.0
+  },
+  {
+   "recorte": "· tarde",
+   "variante": "sem_stop",
+   "n": 470,
+   "positiva": 0.5,
+   "ev_liq": 27.19,
+   "total": 12780.0
+  },
+  {
+   "recorte": "· tarde",
+   "variante": "com_stop",
+   "n": 470,
+   "positiva": 0.4489,
+   "ev_liq": 8.52,
+   "total": 4005.0
+  },
+  {
+   "recorte": "contra + perna forte",
+   "variante": "sem_stop",
+   "n": 668,
+   "positiva": 0.4476,
+   "ev_liq": -44.8,
+   "total": -29925.0
+  },
+  {
+   "recorte": "contra + perna forte",
+   "variante": "com_stop",
+   "n": 668,
+   "positiva": 0.4296,
+   "ev_liq": -21.3,
+   "total": -14230.0
+  },
+  {
+   "recorte": "neutro + perna forte",
+   "variante": "sem_stop",
+   "n": 963,
+   "positiva": 0.4881,
+   "ev_liq": 16.03,
+   "total": 15432.0
+  },
+  {
+   "recorte": "neutro + perna forte",
+   "variante": "com_stop",
+   "n": 963,
+   "positiva": 0.4434,
+   "ev_liq": -2.25,
+   "total": -2162.0
+  }
+ ],
+ "WDO$N": [
+  {
+   "recorte": "a favor",
+   "variante": "sem_stop",
+   "n": 2531,
+   "positiva": 0.4615,
+   "ev_liq": -1.33,
+   "total": -3358.0
+  },
+  {
+   "recorte": "a favor",
+   "variante": "com_stop",
+   "n": 2531,
+   "positiva": 0.4129,
+   "ev_liq": -1.19,
+   "total": -3006.0
+  },
+  {
+   "recorte": "a favor + perna forte",
+   "variante": "sem_stop",
+   "n": 637,
+   "positiva": 0.4631,
+   "ev_liq": -0.42,
+   "total": -264.0
+  },
+  {
+   "recorte": "a favor + perna forte",
+   "variante": "com_stop",
+   "n": 637,
+   "positiva": 0.4254,
+   "ev_liq": -0.19,
+   "total": -118.0
+  },
+  {
+   "recorte": "· manhã",
+   "variante": "sem_stop",
+   "n": 262,
+   "positiva": 0.4924,
+   "ev_liq": 0.14,
+   "total": 37.0
+  },
+  {
+   "recorte": "· manhã",
+   "variante": "com_stop",
+   "n": 262,
+   "positiva": 0.4427,
+   "ev_liq": 0.49,
+   "total": 129.0
+  },
+  {
+   "recorte": "· tarde",
+   "variante": "sem_stop",
+   "n": 375,
+   "positiva": 0.4427,
+   "ev_liq": -0.8,
+   "total": -302.0
+  },
+  {
+   "recorte": "· tarde",
+   "variante": "com_stop",
+   "n": 375,
+   "positiva": 0.4133,
+   "ev_liq": -0.66,
+   "total": -247.0
+  },
+  {
+   "recorte": "contra + perna forte",
+   "variante": "sem_stop",
+   "n": 659,
+   "positiva": 0.4461,
+   "ev_liq": 0.9,
+   "total": 594.0
+  },
+  {
+   "recorte": "contra + perna forte",
+   "variante": "com_stop",
+   "n": 659,
+   "positiva": 0.4082,
+   "ev_liq": 0.07,
+   "total": 49.0
+  },
+  {
+   "recorte": "neutro + perna forte",
+   "variante": "sem_stop",
+   "n": 961,
+   "positiva": 0.4547,
+   "ev_liq": -0.97,
+   "total": -932.0
+  },
+  {
+   "recorte": "neutro + perna forte",
+   "variante": "com_stop",
+   "n": 961,
+   "positiva": 0.4225,
+   "ev_liq": -0.73,
+   "total": -702.0
+  }
+ ]
+}
