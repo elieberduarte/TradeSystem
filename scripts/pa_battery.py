@@ -45,8 +45,8 @@ def cell_stats(values: np.ndarray) -> dict | None:
             "media_atr": round(mean, 3), "p_media": round(p_norm(t), 4)}
 
 
-def run_symbol(symbol: str, store: HistoryStore) -> dict:
-    df = store.load(symbol, "1d")
+def collect_cells(df: pd.DataFrame) -> dict[str, list[float]]:
+    """Coleta os eventos brutos das hipóteses H1-H10 num DataFrame diário."""
     o = df["open"].to_numpy(float)
     h = df["high"].to_numpy(float)
     l = df["low"].to_numpy(float)
@@ -141,6 +141,11 @@ def run_symbol(symbol: str, store: HistoryStore) -> dict:
             if 3 <= age <= 7 and abs(l[t] - min10[t]) <= 0.15 * v[t] and c[t] > min10[t]:
                 add("H10 fundo duplo → repica?", next_r(t, +1))
 
+    return cells
+
+
+def run_symbol(symbol: str, store: HistoryStore) -> dict:
+    cells = collect_cells(store.load(symbol, "1d"))
     return {name: cell_stats(np.array(values)) for name, values in cells.items()}
 
 

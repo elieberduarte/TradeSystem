@@ -1,0 +1,130 @@
+{
+ "H1 martelo (cai 1 ATR, fecha em cima)": {
+  "n": 239,
+  "favor": 0.494,
+  "p_favor": 0.8461,
+  "media_atr": -0.01,
+  "p_media": 0.834,
+  "replica": "4/9"
+ },
+ "H1 capitulação (cai e fecha embaixo)": {
+  "n": 1158,
+  "favor": 0.491,
+  "p_favor": 0.518,
+  "media_atr": -0.023,
+  "p_media": 0.2503,
+  "replica": "6/13"
+ },
+ "H2 fecha no decil superior": {
+  "n": 1337,
+  "favor": 0.482,
+  "p_favor": 0.1987,
+  "media_atr": 0.004,
+  "p_media": 0.8318,
+  "replica": "7/13"
+ },
+ "H2 fecha no decil inferior": {
+  "n": 1765,
+  "favor": 0.464,
+  "p_favor": 0.0025,
+  "media_atr": -0.06,
+  "p_media": 0.0004,
+  "replica": "3/13"
+ },
+ "H3 range gigante continua": {
+  "n": 323,
+  "favor": 0.495,
+  "p_favor": 0.8674,
+  "media_atr": 0.034,
+  "p_media": 0.5054,
+  "replica": "8/13"
+ },
+ "H3 range anão: expansão amanhã": {
+  "n": 881,
+  "favor": 0.333,
+  "p_favor": 0.0,
+  "media_atr": -0.076,
+  "p_media": 0.0,
+  "replica": "2/13"
+ },
+ "H4 gap and go (3 dias)": {
+  "n": 990,
+  "favor": 0.498,
+  "p_favor": 0.8988,
+  "media_atr": -0.009,
+  "p_media": 0.8331,
+  "replica": "6/13"
+ },
+ "H5 bandeira de 2 candles (D+1)": {
+  "n": 336,
+  "favor": 0.485,
+  "p_favor": 0.5854,
+  "media_atr": -0.007,
+  "p_media": 0.8387,
+  "replica": "5/13"
+ },
+ "H5 bandeira de 2 candles (3 dias)": {
+  "n": 336,
+  "favor": 0.497,
+  "p_favor": 0.9131,
+  "media_atr": -0.001,
+  "p_media": 0.9833,
+  "replica": "6/13"
+ },
+ "H6 três fechamentos compradores": {
+  "n": 908,
+  "favor": 0.485,
+  "p_favor": 0.3528,
+  "media_atr": 0.013,
+  "p_media": 0.6236,
+  "replica": "9/13"
+ },
+ "H6 três fechamentos vendedores": {
+  "n": 1230,
+  "favor": 0.504,
+  "p_favor": 0.7755,
+  "media_atr": -0.014,
+  "p_media": 0.4425,
+  "replica": "4/13"
+ },
+ "H7 falso rompimento p/ cima → cai?": {
+  "n": 1053,
+  "favor": 0.47,
+  "p_favor": 0.0522,
+  "media_atr": -0.031,
+  "p_media": 0.1809,
+  "replica": "4/13"
+ },
+ "H7 falso rompimento p/ baixo → sobe?": {
+  "n": 910,
+  "favor": 0.463,
+  "p_favor": 0.0242,
+  "media_atr": -0.012,
+  "p_media": 0.5594,
+  "replica": "7/13"
+ },
+ "H8 queda forte no FUNDO do canal": {
+  "n": 477,
+  "favor": 0.495,
+  "p_favor": 0.8189,
+  "media_atr": 0.009,
+  "p_media": 0.7582,
+  "replica": "6/13"
+ },
+ "H8 queda forte no MEIO do canal": {
+  "n": 330,
+  "favor": 0.485,
+  "p_favor": 0.582,
+  "media_atr": -0.051,
+  "p_media": 0.1489,
+  "replica": "3/13"
+ },
+ "H10 fundo duplo → repica?": {
+  "n": 277,
+  "favor": 0.498,
+  "p_favor": 0.9521,
+  "media_atr": 0.008,
+  "p_media": 0.8506,
+  "replica": "6/11"
+ }
+}
