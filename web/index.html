@@ -300,14 +300,32 @@
   </div>
 </div>
 
-<!-- ══════════ Comparativo ══════════ -->
-<div class="card" style="margin-top:12px">
-  <h2>Comparativo de estratégias</h2>
-  <div class="sub">Todos os backtests já rodados · resultado out-of-sample com custos</div>
+<!-- ══════════ Ranking geral (critério de replicação) ══════════ -->
+<div class="card" id="ranking-card" style="display:none; margin-top:12px">
+  <h2>🏆 Ranking das técnicas · critério de replicação</h2>
+  <div class="sub">Diário · 28 instrumentos · saídas idênticas (stop 2×ATR, alvo 3R) — o critério que decide quem entra na carteira</div>
   <div class="scroll-x">
     <table>
       <thead>
-        <tr><th>Backtest</th><th class="num">PnL OOS (R$)</th><th class="num">Trades</th><th class="num">Win rate</th><th class="num">Profit factor</th><th class="num">Janelas +</th><th>Veredito</th></tr>
+        <tr><th>#</th><th>Técnica</th><th class="num">Replica em</th><th class="num">Trades</th><th class="num">Acerto</th><th class="num">Retorno</th><th class="num">Calmar</th><th>Veredito</th></tr>
+      </thead>
+      <tbody id="ranking"></tbody>
+    </table>
+  </div>
+  <div class="sub" style="margin-top:10px">
+    Replicação ≥ 70% = indício de vantagem estrutural · abaixo de 50% = pior que moeda.
+    Calmar = lucro ÷ pior mergulho (retorno por unidade de dor).
+  </div>
+</div>
+
+<!-- ══════════ Comparativo ══════════ -->
+<div class="card" style="margin-top:12px">
+  <h2>Ranking dos backtests walk-forward</h2>
+  <div class="sub">Todos os backtests individuais já rodados · out-of-sample com custos · ordenado do melhor para o pior</div>
+  <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Backtest</th><th class="num">PnL OOS (R$)</th><th class="num">Trades</th><th class="num">Win rate</th><th class="num">Profit factor</th><th class="num">Janelas +</th><th>Veredito</th></tr>
       </thead>
       <tbody id="compare"></tbody>
     </table>
@@ -443,22 +461,61 @@ function renderMock() {
   $("k5").textContent = "R$ 20.000"; $("k6").textContent = "—";
 }
 
-/* ─── Comparativo de todas as estratégias já rodadas ─── */
+/* ─── Ranking dos backtests walk-forward (ordenado por PnL OOS) ─── */
 function renderCompare(data, selected) {
-  const rows = Object.entries(data.strategies).map(([key, s]) => {
-    const winsW = s.windows.filter(w => w.test_pnl >= 0).length;
-    const ok = s.oos_pnl >= 0;
-    return `<tr${key === selected ? ' style="background:var(--chip)"' : ""}>
-      <td>${key}</td>
-      <td class="num" style="font-weight:700;color:${ok ? "var(--delta-good)" : "var(--delta-bad)"}">${fmtBRL(s.oos_pnl)}</td>
-      <td class="num">${s.trades}</td>
-      <td class="num">${Math.round(s.win_rate * 100)}%</td>
-      <td class="num">${s.profit_factor === null ? "∞" : s.profit_factor.toLocaleString("pt-BR")}</td>
-      <td class="num">${winsW}/${s.windows.length}</td>
-      <td class="verdict" style="color:${ok ? "var(--delta-good)" : "var(--delta-bad)"}">${ok ? "aprovada" : "reprovada"}</td>
+  const rows = Object.entries(data.strategies)
+    .sort(([, a], [, b]) => b.oos_pnl - a.oos_pnl)
+    .map(([key, s], i) => {
+      const winsW = s.windows.filter(w => w.test_pnl >= 0).length;
+      const ok = s.oos_pnl >= 0;
+      return `<tr${key === selected ? ' style="background:var(--chip)"' : ""}>
+        <td style="color:var(--muted)">${i + 1}º</td>
+        <td>${key}</td>
+        <td class="num" style="font-weight:700;color:${ok ? "var(--delta-good)" : "var(--delta-bad)"}">${fmtBRL(s.oos_pnl)}</td>
+        <td class="num">${s.trades}</td>
+        <td class="num">${Math.round(s.win_rate * 100)}%</td>
+        <td class="num">${s.profit_factor === null ? "∞" : s.profit_factor.toLocaleString("pt-BR")}</td>
+        <td class="num">${winsW}/${s.windows.length}</td>
+        <td class="verdict" style="color:${ok ? "var(--delta-good)" : "var(--delta-bad)"}">${ok ? "lucrativa" : "reprovada"}</td>
+      </tr>`;
+    }).join("");
+  $("compare").innerHTML = rows;
+}
+
+/* ─── Ranking geral: replicação nos 28 instrumentos ─── */
+async function loadRanking() {
+  const rows = [];
+  for (const file of ["indicators.json", "book_setups.json"]) {
+    try {
+      const resp = await fetch(file, { cache: "no-store" });
+      if (!resp.ok) continue;
+      for (const r of await resp.json()) {
+        if (!r.tested) continue;
+        // O Donchian aparece nos dois estudos como referência: mantém um só
+        if (file === "book_setups.json" && r.label.startsWith("Donchian")) continue;
+        rows.push(r);
+      }
+    } catch { /* estudo ainda não rodado */ }
+  }
+  if (!rows.length) return;
+
+  rows.sort((a, b) => (b.rate - a.rate) || ((b.calmar ?? -99) - (a.calmar ?? -99)));
+  $("ranking-card").style.display = "";
+  $("ranking").innerHTML = rows.map((r, i) => {
+    const verdict = r.rate >= 0.7 ? "replica" : (r.rate >= 0.5 ? "inconclusivo" : "não replica");
+    const color = r.rate >= 0.7 ? "var(--delta-good)" : (r.rate >= 0.5 ? "var(--muted)" : "var(--delta-bad)");
+    const medal = i === 0 ? "🥇" : (i === 1 ? "🥈" : (i === 2 ? "🥉" : `${i + 1}º`));
+    return `<tr>
+      <td>${medal}</td>
+      <td>${r.label}${r.corr_donchian !== undefined ? ` <span class="tag">corr ${r.corr_donchian}</span>` : ""}</td>
+      <td class="num" style="font-weight:700;color:${color}">${r.positive}/${r.tested} (${Math.round(r.rate * 100)}%)</td>
+      <td class="num">${r.trades ?? "—"}</td>
+      <td class="num">${r.win_rate !== undefined ? Math.round(r.win_rate * 100) + "%" : "—"}</td>
+      <td class="num" style="color:${r.return_pct >= 0 ? "var(--delta-good)" : "var(--delta-bad)"}">${r.return_pct?.toLocaleString("pt-BR")}%</td>
+      <td class="num" style="font-weight:700">${r.calmar ?? "—"}</td>
+      <td class="verdict" style="color:${color}">${verdict}</td>
     </tr>`;
   }).join("");
-  $("compare").innerHTML = rows;
 }
 
 /* ─── Resultados reais do backtest ─── */
@@ -473,7 +530,9 @@ async function loadReal(preferred) {
     data = JSON.parse(raw);
   } catch { renderMock(); return; }
 
-  const keys = Object.keys(data.strategies || {});
+  // Chips ordenados do melhor para o pior resultado out-of-sample
+  const keys = Object.keys(data.strategies || {})
+    .sort((a, b) => data.strategies[b].oos_pnl - data.strategies[a].oos_pnl);
   if (!keys.length) { renderMock(); return; }
   LAST_RAW = raw;
 
@@ -562,6 +621,7 @@ async function loadReplication() {
 
 loadReal();
 loadReplication();
+loadRanking();
 
 /* Recarrega sozinho quando um backtest novo grava o results.json */
 setInterval(async () => {

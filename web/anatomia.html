@@ -89,6 +89,17 @@
   }
   .tf-banner b { color: var(--ink); }
   .bar-note { font-size: 11.5px; color: var(--muted); margin-top: 6px; }
+  .picker button {
+    flex: 0 0 auto; padding: 6px 14px; border-radius: 999px; font-size: 12.5px;
+    background: var(--surface); color: var(--ink-2); border: 1px solid var(--border);
+    font-weight: 600; cursor: pointer; font-family: inherit;
+  }
+  .picker button[aria-pressed="true"] { background: var(--entry); color: #fff; border-color: transparent; }
+  .trigger-box {
+    background: var(--chip); border-left: 3px solid var(--entry); border-radius: 8px;
+    padding: 8px 12px; margin: 10px 0 4px; font-size: 12.5px; color: var(--ink-2);
+  }
+  .trigger-box b { color: var(--ink); }
 </style>
 </head>
 <body>
@@ -108,31 +119,13 @@
   frequência. O mesmo padrão de reversão que lucrou no diário perdeu R$ 22.686 no intradiário.
 </div>
 
+<div class="picker" id="strategy-picker" role="group" aria-label="Escolher técnica"
+     style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px"></div>
+
 <div class="card">
   <h2>As regras, em uma tela</h2>
   <div class="sub" id="rules-sub">—</div>
-  <div class="rules">
-    <div class="rule">
-      <b>Gatilho de entrada</b>
-      <span>O preço <b>fecha</b> acima da máxima dos últimos 20 pregões (compra) ou abaixo da mínima
-      (venda). Espera-se o fechamento de propósito: pavio que fura o canal e volta não conta.</span>
-    </div>
-    <div class="rule stop">
-      <b>Stop</b>
-      <span>Entrada ∓ <code>2 × ATR(14)</code>. Como o ATR mede a oscilação típica recente, o stop se
-      adapta: fica largo quando o ativo está volátil, curto quando está calmo.</span>
-    </div>
-    <div class="rule target">
-      <b>Alvo</b>
-      <span><code>3 ×</code> a distância do stop. Com esse formato, acertar ~35% das vezes já é lucrativo:
-      as perdas são pequenas e frequentes, os ganhos grandes e raros.</span>
-    </div>
-    <div class="rule size">
-      <b>Tamanho da posição</b>
-      <span><code>(1% do capital) ÷ (distância do stop × valor do ponto)</code>. O risco em reais é sempre
-      o mesmo; o que varia é a quantidade. <b>Não existe preço médio</b> — ver abaixo.</span>
-    </div>
-  </div>
+  <div class="rules" id="rules"></div>
 </div>
 
 <div class="card">
@@ -243,29 +236,44 @@ function reasonText(reason) {
     "alvo (gap)": "alvo superado no gap de abertura",
     "stop": "stop atingido",
     "stop (gap)": "gap de abertura pulou o stop — saída pior que o planejado",
-    "sinal contrário": "sinal contrário: o canal rompeu para o outro lado",
+    "sinal contrário": "sinal contrário: o gatilho disparou para o outro lado",
     "fim do histórico": "posição ainda aberta no fim dos dados",
     "tempo": "limite de tempo na posição",
     "zeragem diária": "zeragem de fim de pregão",
+    "fib": "devolveu mais de 61,8% do swing a favor",
   }[reason] || reason;
 }
 
+let ALL = null;
+
 async function load() {
-  let data;
   try {
     const resp = await fetch("anatomy.json", { cache: "no-store" });
     if (!resp.ok) throw new Error();
-    data = await resp.json();
+    ALL = await resp.json();
   } catch {
     $("trades").innerHTML = `<div class="card">Rode <code>python scripts/export_trade_anatomy.py</code>
       para gerar os dados.</div>`;
     return;
   }
+  const keys = Object.keys(ALL.strategies || {});
+  if (!keys.length) return;
+  show(keys[0]);
+}
 
-  const p = data.params;
+function show(key) {
+  const data = ALL.strategies[key];
+  const keys = Object.keys(ALL.strategies);
+
+  $("strategy-picker").innerHTML = keys.map(k =>
+    `<button aria-pressed="${k === key}" onclick="show('${k}')">${ALL.strategies[k].label}</button>`
+  ).join("");
+
   $("rules-sub").textContent =
-    `${data.strategy} · ${data.symbol} · GRÁFICO DIÁRIO · canal ${p.channel} pregões · ` +
-    `stop ${p.stop_atr}×ATR(14) · alvo ${p.rr}× o risco`;
+    `${data.label} · ${data.symbol} · GRÁFICO DIÁRIO · ${data.params_text}`;
+  $("rules").innerHTML = data.rules.map(r =>
+    `<div class="rule ${r.cls}"><b>${r.k}</b><span>${r.v}</span></div>`
+  ).join("");
 
   const s = data.summary;
   $("summary").innerHTML = `
@@ -286,6 +294,7 @@ async function load() {
         <span style="color:var(--muted)">${t.entry_time} → ${t.exit_time} · <b>${t.bars_held} dias na posição</b> · ${t.quantity} ${data.point_value === 1 ? "ações" : "contratos"}</span>
         <span class="pnl ${t.pnl >= 0 ? "win" : "loss"}">${t.pnl >= 0 ? "+" : "−"}R$ ${money(Math.abs(t.pnl), 2)}</span>
       </div>
+      <div class="trigger-box">⚡ <b>Gatilho:</b> ${t.trigger}</div>
       <div class="levels">
         <div class="level"><div class="k">Entrada</div><div class="v">${money(t.entry_price)}</div></div>
         <div class="level"><div class="k">Stop</div><div class="v">${money(t.stop_loss)}</div></div>
@@ -296,7 +305,7 @@ async function load() {
       </div>
       ${chart(t)}
       <div class="legend">
-        <span><span class="sw" style="background:var(--channel)"></span>canal de ${p.channel} pregões (o gatilho)</span>
+        <span><span class="sw" style="background:var(--channel)"></span>${data.overlay_label}</span>
         <span><span class="sw" style="background:var(--entry)"></span>entrada</span>
         <span><span class="sw" style="background:var(--stop)"></span>stop</span>
         <span><span class="sw" style="background:var(--target)"></span>alvo</span>
