@@ -167,6 +167,59 @@ def walk_level(
     return events
 
 
+def walk_zone(
+    bars: pd.DataFrame,
+    level: float,
+    band: float,
+    race: float,
+    start: int,
+    side: str,
+) -> list[tuple[int, bool]]:
+    """Toques em uma zona nascida DURANTE a sessão (nível dinâmico).
+
+    Igual a `walk_level`, com três diferenças: começa em `start` (a
+    barra em que a zona ficou conhecível — antes disso ela não
+    existia para ninguém), testa um único lado (`side`: "above" =
+    suporte tocado por cima, "below" = resistência por baixo) e
+    termina no primeiro rompimento.
+
+    Retorna [(barra_do_toque, rompeu), ...].
+    """
+    highs = bars["high"].to_numpy(dtype=float)
+    lows = bars["low"].to_numpy(dtype=float)
+    closes = bars["close"].to_numpy(dtype=float)
+    n = len(highs)
+
+    events: list[tuple[int, bool]] = []
+    armed = False
+    i = start
+    while i < n:
+        if not armed:
+            far_enough = (
+                lows[i] >= level + race if side == "above" else highs[i] <= level - race
+            )
+            if far_enough:
+                armed = True
+            i += 1
+            continue
+
+        touched = (
+            lows[i] <= level + band if side == "above" else highs[i] >= level - band
+        )
+        if not touched:
+            i += 1
+            continue
+
+        broke, resolved_at = _race(highs, lows, closes, i, level, race, side)
+        if broke is None:                     # a sessão acabou no meio da corrida
+            break
+        events.append((i, broke))
+        if broke:
+            break
+        i = resolved_at + 1                   # repicou: já está a R da zona (rearmado)
+    return events
+
+
 def study_levels(
     intraday: pd.DataFrame,
     round_step: float = 0.0,

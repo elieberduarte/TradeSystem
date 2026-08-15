@@ -150,3 +150,43 @@ def test_two_proportion_z():
     z_null, p_null = two_proportion_z(50, 100, 50, 100)
     assert z_null == 0.0
     assert p_null == 1.0
+
+
+# ───────────────────────── Zonas dinâmicas ─────────────────────────
+
+from src.bot.analysis.levels import walk_zone
+
+
+def test_zona_so_vale_depois_de_nascer():
+    # A zona 100 nasce na barra 3; o toque da barra 1 não conta
+    data = bars([
+        (99, 100.5, 98, 99),     # tocaria, mas a zona ainda não existe
+        (99, 106, 99, 106),
+        (106, 107, 105, 106),    # armado (low >= 105)
+        (106, 107, 100.5, 101),  # toque por cima (low <= 101)
+        (101, 106, 101, 105.5),  # sobe a 105: repique
+    ])
+    events = walk_zone(data, 100.0, band=1.0, race=5.0, start=1, side="above")
+    assert events == [(3, False)]
+
+
+def test_zona_rompida_encerra_o_rastreamento():
+    data = bars([
+        (106, 107, 105, 106),    # armado
+        (106, 106, 100.5, 101),  # toque
+        (101, 101, 94, 94.5),    # cai a 95: rompeu (low <= 95)
+        (94, 107, 94, 106),      # nova aproximação NÃO conta mais
+        (106, 106, 100.5, 101),
+    ])
+    events = walk_zone(data, 100.0, band=1.0, race=5.0, start=0, side="above")
+    assert events == [(1, True)]
+
+
+def test_zona_como_resistencia_por_baixo():
+    data = bars([
+        (94, 95, 93, 94),        # armado (high <= 95)
+        (94, 99.5, 94, 99),      # toque por baixo
+        (99, 100, 94, 94.5),     # cai a 95: repique
+    ])
+    events = walk_zone(data, 100.0, band=1.0, race=5.0, start=0, side="below")
+    assert events == [(1, False)]

@@ -1,0 +1,240 @@
+{
+ "WIN$N": {
+  "0.15": {
+   "random_walk": 0.667,
+   "geral": {
+    "label": "todas as zonas",
+    "reais": 4288,
+    "repique_real": 0.682,
+    "placebos": 1144,
+    "repique_placebo": 0.409,
+    "z": 16.96,
+    "p": 0.0
+   },
+   "fundos": {
+    "label": "fundos (suporte)",
+    "reais": 2115,
+    "repique_real": 0.687,
+    "placebos": 571,
+    "repique_placebo": 0.412,
+    "z": 12.11,
+    "p": 0.0
+   },
+   "topos": {
+    "label": "topos (resist.)",
+    "reais": 2173,
+    "repique_real": 0.677,
+    "placebos": 573,
+    "repique_placebo": 0.407,
+    "z": 11.88,
+    "p": 0.0
+   },
+   "primeiro_reteste": {
+    "label": "1º reteste",
+    "reais": 2510,
+    "repique_real": 0.673,
+    "placebos": 865,
+    "repique_placebo": 0.434,
+    "z": 12.46,
+    "p": 0.0
+   }
+  },
+  "0.10": {
+   "random_walk": 0.75,
+   "geral": {
+    "label": "todas as zonas",
+    "reais": 11780,
+    "repique_real": 0.742,
+    "placebos": 1092,
+    "repique_placebo": 0.489,
+    "z": 17.86,
+    "p": 0.0
+   },
+   "fundos": {
+    "label": "fundos (suporte)",
+    "reais": 5826,
+    "repique_real": 0.748,
+    "placebos": 524,
+    "repique_placebo": 0.49,
+    "z": 12.64,
+    "p": 0.0
+   },
+   "topos": {
+    "label": "topos (resist.)",
+    "reais": 5954,
+    "repique_real": 0.737,
+    "placebos": 568,
+    "repique_placebo": 0.488,
+    "z": 12.61,
+    "p": 0.0
+   },
+   "primeiro_reteste": {
+    "label": "1º reteste",
+    "reais": 5165,
+    "repique_real": 0.75,
+    "placebos": 709,
+    "repique_placebo": 0.547,
+    "z": 11.33,
+    "p": 0.0
+   }
+  },
+  "0.25": {
+   "random_walk": 0.6,
+   "geral": {
+    "label": "todas as zonas",
+    "reais": 939,
+    "repique_real": 0.608,
+    "placebos": 859,
+    "repique_placebo": 0.4,
+    "z": 8.8,
+    "p": 0.0
+   },
+   "fundos": {
+    "label": "fundos (suporte)",
+    "reais": 458,
+    "repique_real": 0.605,
+    "placebos": 422,
+    "repique_placebo": 0.431,
+    "z": 5.15,
+    "p": 0.0
+   },
+   "topos": {
+    "label": "topos (resist.)",
+    "reais": 481,
+    "repique_real": 0.611,
+    "placebos": 437,
+    "repique_placebo": 0.371,
+    "z": 7.28,
+    "p": 0.0
+   },
+   "primeiro_reteste": {
+    "label": "1º reteste",
+    "reais": 765,
+    "repique_real": 0.604,
+    "placebos": 728,
+    "repique_placebo": 0.409,
+    "z": 7.52,
+    "p": 0.0
+   }
+  }
+ },
+ "WDO$N": {
+  "0.15": {
+   "random_walk": 0.667,
+   "geral": {
+    "label": "todas as zonas",
+    "reais": 4148,
+    "repique_real": 0.669,
+    "placebos": 1163,
+    "repique_placebo": 0.433,
+    "z": 14.7,
+    "p": 0.0
+   },
+   "fundos": {
+    "label": "fundos (suporte)",
+    "reais": 2060,
+    "repique_real": 0.675,
+    "placebos": 575,
+    "repique_placebo": 0.414,
+    "z": 11.4,
+    "p": 0.0
+   },
+   "topos": {
+    "label": "topos (resist.)",
+    "reais": 2088,
+    "repique_real": 0.664,
+    "placebos": 588,
+    "repique_placebo": 0.451,
+    "z": 9.39,
+    "p": 0.0
+   },
+   "primeiro_reteste": {
+    "label": "1º reteste",
+    "reais": 2474,
+    "repique_real": 0.669,
+    "placebos": 868,
+    "repique_placebo": 0.456,
+    "z": 11.08,
+    "p": 0.0
+   }
+  },
+  "0.10": {
+   "random_walk": 0.75,
+   "geral": {
+    "label": "todas as zonas",
+    "reais": 11711,
+    "repique_real": 0.735,
+    "placebos": 1010,
+    "repique_placebo": 0.5,
+    "z": 15.89,
+    "p": 0.0
+   },
+   "fundos": {
+    "label": "fundos (suporte)",
+    "reais": 5868,
+    "repique_real": 0.738,
+    "placebos": 479,
+    "repique_placebo": 0.491,
+    "z": 11.56,
+    "p": 0.0
+   },
+   "topos": {
+    "label": "topos (resist.)",
+    "reais": 5843,
+    "repique_real": 0.732,
+    "placebos": 531,
+    "repique_placebo": 0.508,
+    "z": 10.93,
+    "p": 0.0
+   },
+   "primeiro_reteste": {
+    "label": "1º reteste",
+    "reais": 5220,
+    "repique_real": 0.746,
+    "placebos": 688,
+    "repique_placebo": 0.555,
+    "z": 10.53,
+    "p": 0.0
+   }
+  },
+  "0.25": {
+   "random_walk": 0.6,
+   "geral": {
+    "label": "todas as zonas",
+    "reais": 920,
+    "repique_real": 0.607,
+    "placebos": 876,
+    "repique_placebo": 0.42,
+    "z": 7.9,
+    "p": 0.0
+   },
+   "fundos": {
+    "label": "fundos (suporte)",
+    "reais": 431,
+    "repique_real": 0.587,
+    "placebos": 428,
+    "repique_placebo": 0.421,
+    "z": 4.88,
+    "p": 0.0
+   },
+   "topos": {
+    "label": "topos (resist.)",
+    "reais": 489,
+    "repique_real": 0.624,
+    "placebos": 448,
+    "repique_placebo": 0.42,
+    "z": 6.25,
+    "p": 0.0
+   },
+   "primeiro_reteste": {
+    "label": "1º reteste",
+    "reais": 729,
+    "repique_real": 0.604,
+    "placebos": 753,
+    "repique_placebo": 0.426,
+    "z": 6.83,
+    "p": 0.0
+   }
+  }
+ }
+}
