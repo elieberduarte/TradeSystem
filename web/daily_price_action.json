@@ -1,0 +1,150 @@
+{
+ "WIN$N": [
+  {
+   "condicao": "incondicional",
+   "n": 1246,
+   "p_sobe": 0.505,
+   "p_valor": 1.0,
+   "media_atr": 0.02,
+   "recupera": null
+  },
+  {
+   "condicao": "queda forte (r ≤ −1)",
+   "n": 87,
+   "p_sobe": 0.575,
+   "p_valor": 0.1922,
+   "media_atr": 0.061,
+   "recupera": 0.011
+  },
+  {
+   "condicao": "queda fraca (−1 < r < 0)",
+   "n": 528,
+   "p_sobe": 0.515,
+   "p_valor": 0.6348,
+   "media_atr": 0.066,
+   "recupera": 0.314
+  },
+  {
+   "condicao": "alta fraca (0 < r < 1)",
+   "n": 531,
+   "p_sobe": 0.492,
+   "p_valor": 0.5402,
+   "media_atr": -0.02,
+   "recupera": null
+  },
+  {
+   "condicao": "alta forte (r ≥ 1)",
+   "n": 98,
+   "p_sobe": 0.449,
+   "p_valor": 0.2689,
+   "media_atr": -0.062,
+   "recupera": null
+  },
+  {
+   "condicao": "2 altas seguidas",
+   "n": 305,
+   "p_sobe": 0.459,
+   "p_valor": 0.1097,
+   "media_atr": -0.044,
+   "recupera": null
+  },
+  {
+   "condicao": "2 altas FORTES (≥0,5 cada)",
+   "n": 57,
+   "p_sobe": 0.439,
+   "p_valor": 0.3173,
+   "media_atr": -0.087,
+   "recupera": null
+  },
+  {
+   "condicao": "2 quedas seguidas",
+   "n": 291,
+   "p_sobe": 0.536,
+   "p_valor": 0.2861,
+   "media_atr": 0.071,
+   "recupera": 0.268
+  },
+  {
+   "condicao": "2 quedas FORTES (≤−0,5 cada)",
+   "n": 51,
+   "p_sobe": 0.51,
+   "p_valor": 0.9432,
+   "media_atr": 0.014,
+   "recupera": 0.059
+  }
+ ],
+ "WDO$N": [
+  {
+   "condicao": "incondicional",
+   "n": 1246,
+   "p_sobe": 0.481,
+   "p_valor": 1.0,
+   "media_atr": 0.009,
+   "recupera": null
+  },
+  {
+   "condicao": "queda forte (r ≤ −1)",
+   "n": 72,
+   "p_sobe": 0.542,
+   "p_valor": 0.3008,
+   "media_atr": 0.047,
+   "recupera": 0.056
+  },
+  {
+   "condicao": "queda fraca (−1 < r < 0)",
+   "n": 569,
+   "p_sobe": 0.503,
+   "p_valor": 0.2958,
+   "media_atr": 0.041,
+   "recupera": 0.285
+  },
+  {
+   "condicao": "alta fraca (0 < r < 1)",
+   "n": 510,
+   "p_sobe": 0.465,
+   "p_valor": 0.4687,
+   "media_atr": 0.003,
+   "recupera": null
+  },
+  {
+   "condicao": "alta forte (r ≥ 1)",
+   "n": 88,
+   "p_sobe": 0.386,
+   "p_valor": 0.0764,
+   "media_atr": -0.179,
+   "recupera": null
+  },
+  {
+   "condicao": "2 altas seguidas",
+   "n": 270,
+   "p_sobe": 0.404,
+   "p_valor": 0.0113,
+   "media_atr": -0.099,
+   "recupera": null
+  },
+  {
+   "condicao": "2 altas FORTES (≥0,5 cada)",
+   "n": 56,
+   "p_sobe": 0.446,
+   "p_valor": 0.6073,
+   "media_atr": -0.053,
+   "recupera": null
+  },
+  {
+   "condicao": "2 quedas seguidas",
+   "n": 314,
+   "p_sobe": 0.503,
+   "p_valor": 0.426,
+   "media_atr": 0.048,
+   "recupera": 0.261
+  },
+  {
+   "condicao": "2 quedas FORTES (≤−0,5 cada)",
+   "n": 52,
+   "p_sobe": 0.519,
+   "p_valor": 0.5785,
+   "media_atr": 0.104,
+   "recupera": 0.154
+  }
+ ]
+}
