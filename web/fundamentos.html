@@ -167,8 +167,8 @@ function render() {
       ? `<span class="tag" style="background:var(--good)">🚀 ${r.small_growth_rank}º</span>` : "";
     const lucros = r.anos_lucrativos !== null && r.anos_lucrativos !== undefined
       ? `${r.anos_lucrativos}/${r.anos_observados}` : "—";
-    return `<tr>
-    <td><b>${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}${blue}${small}</td>
+    return `<tr onclick="toggleChart('${r.ticker}', this)" style="cursor:pointer" title="Clique para ver o gráfico">
+    <td><b>📈 ${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}${blue}${small}</td>
     <td style="color:var(--ink-2)">${r.empresa}</td>
     <td>${num(r.preco)}</td>
     <td>${num(r.pl)}</td>
@@ -190,6 +190,110 @@ function render() {
 function sortBy(key) {
   if (SORT === key) { ASC = !ASC; } else { SORT = key; ASC = true; }
   render();
+}
+
+/* ─── Gráfico por papel: diário, semanal e mensal do mesmo arquivo ─── */
+const CANDLE_CACHE = {};
+let CHART_TF = "D";
+
+function resample(candles, tf) {
+  if (tf === "D") return candles;
+  const buckets = new Map();
+  for (const c of candles) {
+    const date = new Date(c.d + "T12:00:00");
+    let key;
+    if (tf === "S") {                       // semana ISO: segunda-feira âncora
+      const monday = new Date(date);
+      monday.setDate(date.getDate() - ((date.getDay() + 6) % 7));
+      key = monday.toISOString().slice(0, 10);
+    } else {                                // mês
+      key = c.d.slice(0, 7);
+    }
+    const b = buckets.get(key);
+    if (!b) buckets.set(key, { d: c.d, o: c.o, h: c.h, l: c.l, c: c.c });
+    else { b.h = Math.max(b.h, c.h); b.l = Math.min(b.l, c.l); b.c = c.c; b.d = c.d; }
+  }
+  return [...buckets.values()];
+}
+
+function candleSVG(candles, ticker, tf) {
+  const shown = candles.slice(-160);
+  const W = 1160, H = 340, m = { t: 14, r: 60, b: 22, l: 8 };
+  const lo = Math.min(...shown.map(c => c.l));
+  const hi = Math.max(...shown.map(c => c.h));
+  const pad = (hi - lo) * 0.05, yMin = lo - pad, yMax = hi + pad;
+  const bw = (W - m.l - m.r) / shown.length;
+  const x = i => m.l + i * bw + bw / 2;
+  const y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (H - m.t - m.b);
+  let el = "";
+  for (let s = 0; s <= 4; s++) {
+    const v = yMin + (s / 4) * (yMax - yMin);
+    el += `<line x1="${m.l}" y1="${y(v)}" x2="${W - m.r}" y2="${y(v)}" stroke="var(--grid)"/>`;
+    el += `<text x="${W - m.r + 6}" y="${y(v) + 4}" font-size="10" fill="var(--muted)">${v.toFixed(2)}</text>`;
+  }
+  shown.forEach((c, i) => {
+    const color = c.c >= c.o ? "var(--good)" : "var(--bad)";
+    el += `<line x1="${x(i)}" y1="${y(c.h)}" x2="${x(i)}" y2="${y(c.l)}" stroke="${color}" stroke-width="1"/>`;
+    el += `<rect x="${x(i) - Math.max(1, bw * 0.32)}" y="${Math.min(y(c.o), y(c.c))}"
+      width="${Math.max(2, bw * 0.64)}" height="${Math.max(1.5, Math.abs(y(c.c) - y(c.o)))}" fill="${color}"/>`;
+  });
+  el += `<text x="${m.l}" y="${H - 5}" font-size="10" fill="var(--muted)">${shown[0].d}</text>`;
+  el += `<text x="${W - m.r}" y="${H - 5}" font-size="10" fill="var(--muted)" text-anchor="end">${shown[shown.length - 1].d}</text>`;
+  const last = shown[shown.length - 1].c;
+  el += `<line x1="${m.l}" y1="${y(last)}" x2="${W - m.r}" y2="${y(last)}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 4"/>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico de ${ticker}">${el}</svg>`;
+}
+
+async function toggleChart(ticker, row) {
+  const open = row.nextElementSibling;
+  if (open && open.classList.contains("chart-row")) {
+    if (open.dataset.ticker === ticker) { open.remove(); return; }
+    open.remove();
+  }
+  document.querySelectorAll(".chart-row").forEach(r => r.remove());
+
+  if (!CANDLE_CACHE[ticker]) {
+    try {
+      const resp = await fetch(`candles/${ticker}.json`, { cache: "no-store" });
+      if (!resp.ok) throw new Error();
+      CANDLE_CACHE[ticker] = await resp.json();
+    } catch {
+      CANDLE_CACHE[ticker] = null;
+    }
+  }
+  const detail = document.createElement("tr");
+  detail.className = "chart-row";
+  detail.dataset.ticker = ticker;
+  detail.innerHTML = `<td colspan="12" style="padding:10px 4px" id="chart-cell-${ticker}"></td>`;
+  row.after(detail);
+  drawChart(ticker);
+}
+
+function drawChart(ticker) {
+  const cell = document.getElementById(`chart-cell-${ticker}`);
+  if (!cell) return;
+  const candles = CANDLE_CACHE[ticker];
+  if (!candles) {
+    cell.innerHTML = `<div style="color:var(--muted);font-size:12.5px">
+      Sem histórico exportado — rode <code>python scripts/export_candles.py</code>.</div>`;
+    return;
+  }
+  const series = resample(candles, CHART_TF);
+  const label = { D: "diário", S: "semanal", M: "mensal" }[CHART_TF];
+  const btn = tf => `<button style="padding:4px 12px;border-radius:999px;border:1px solid var(--border);
+    font:inherit;font-size:12px;font-weight:600;cursor:pointer;
+    background:${CHART_TF === tf ? "var(--accent)" : "var(--surface)"};
+    color:${CHART_TF === tf ? "#fff" : "var(--ink-2)"}"
+    onclick="event.stopPropagation(); CHART_TF='${tf}'; drawChart('${ticker}')">
+    ${{ D: "Diário", S: "Semanal", M: "Mensal" }[tf]}</button>`;
+  cell.innerHTML = `
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px" onclick="event.stopPropagation()">
+      <b style="font-size:13px">${ticker}</b>
+      ${btn("D")}${btn("S")}${btn("M")}
+      <span style="color:var(--muted);font-size:11.5px">${label} · últimos ${Math.min(series.length, 160)}
+      de ${series.length} candles · histórico desde ${candles[0].d}</span>
+    </div>
+    <div onclick="event.stopPropagation()">${candleSVG(series, ticker, CHART_TF)}</div>`;
 }
 
 async function load() {
