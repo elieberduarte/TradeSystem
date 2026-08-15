@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fundamentos — TradeSystem</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --border: rgba(11,11,11,0.10);
+    --chip: #f0efec; --good: #006300; --bad: #d03b3b; --accent: #2a78d6;
+    --gold: #9a6a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --border: rgba(255,255,255,0.10);
+      --chip: #383835; --good: #0ca30c; --bad: #e66767; --accent: #3987e5;
+      --gold: #eda100;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --border: rgba(255,255,255,0.10);
+    --chip: #383835; --good: #0ca30c; --bad: #e66767; --accent: #3987e5;
+    --gold: #eda100;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page); color: var(--ink); padding: 16px;
+    font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    max-width: 1240px; margin: 0 auto;
+  }
+  h1 { font-size: 21px; margin-bottom: 4px; }
+  .lead { color: var(--ink-2); margin-bottom: 14px; font-size: 13.5px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px; margin-bottom: 12px;
+  }
+  .banner {
+    background: var(--chip); border: 1px dashed var(--grid); border-radius: 10px;
+    padding: 9px 14px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 14px;
+  }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; align-items: center; }
+  .controls input {
+    background: var(--surface); color: var(--ink); border: 1px solid var(--border);
+    border-radius: 8px; padding: 7px 12px; font: inherit; width: 180px;
+  }
+  .controls button {
+    background: var(--surface); color: var(--ink-2); border: 1px solid var(--border);
+    border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 12.5px;
+    font-weight: 600; cursor: pointer;
+  }
+  .controls button[aria-pressed="true"] { background: var(--gold); color: #fff; border-color: transparent; }
+  .scroll-x { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; white-space: nowrap; }
+  th {
+    text-align: right; color: var(--muted); font-size: 11px; text-transform: uppercase;
+    letter-spacing: .04em; padding: 6px 8px; border-bottom: 1px solid var(--grid);
+    cursor: pointer; user-select: none;
+  }
+  th:first-child, th:nth-child(2) { text-align: left; }
+  th[data-active] { color: var(--ink); }
+  td { padding: 6px 8px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; text-align: right; }
+  td:first-child, td:nth-child(2) { text-align: left; }
+  tr:last-child td { border-bottom: none; }
+  .tag {
+    font-size: 10.5px; font-weight: 700; padding: 1px 8px; border-radius: 999px;
+    background: var(--gold); color: #fff; margin-left: 6px;
+  }
+  .pos { color: var(--good); } .neg { color: var(--bad); }
+</style>
+</head>
+<body>
+
+<h1>💎 Fundamentos — as ações líquidas da B3</h1>
+<p class="lead">
+  Balanços oficiais (DFP consolidada, dados abertos da CVM) + preço do MT5.
+  Clique nas colunas para ordenar. <a href="index.html">← voltar ao painel</a>
+</p>
+
+<div class="banner" id="banner">Carregando…</div>
+
+<div class="card">
+  <b style="font-size:13px">O filtro contra o value trap</b>
+  <p style="color:var(--ink-2); font-size:12.5px; margin-top:4px">
+    Ação barata pode ser barata <i>porque merece</i> (o lucro está indo embora). O selo
+    <span class="tag">B×Q</span> marca papéis simultaneamente <b>baratos</b> (P/L positivo ≤ mediana),
+    <b>lucrativos</b> (ROE ≥ mediana) e <b>pouco endividados</b> (dív/PL ≤ mediana) — o cruzamento
+    clássico de valor com qualidade, calculado sobre o próprio universo líquido. É uma <b>lente</b>,
+    não uma recomendação: o teste histórico de fatores (point-in-time) ainda vai dizer se essa
+    lente teve prêmio na B3.
+  </p>
+</div>
+
+<div class="controls">
+  <input id="search" placeholder="filtrar ticker/empresa…" oninput="render()">
+  <button id="only-bq" aria-pressed="false"
+    onclick="ONLY_BQ = !ONLY_BQ; this.setAttribute('aria-pressed', ONLY_BQ); render()">
+    💎 só barato × qualidade</button>
+  <span id="count" style="color:var(--muted); font-size:12px"></span>
+</div>
+
+<div class="card scroll-x">
+  <table>
+    <thead><tr id="head"></tr></thead>
+    <tbody id="body"></tbody>
+  </table>
+</div>
+
+<div class="banner">
+  <b>Notas honestas:</b> P/L usa o LPA publicado na própria DRE. P/VP e DY usam quantidade de
+  ações <i>estimada</i> (lucro ÷ LPA) — aproximação razoável, não cadastral. DY = dividendos+JCP
+  pagos no último exercício (fluxo de caixa) ÷ valor de mercado — retrovisor, não promessa.
+  Balanços são o exercício mais recente entregue; empresas sem DFP consolidada ficam de fora.
+</div>
+
+<script>
+"use strict";
+const COLUMNS = [
+  ["ticker", "Ticker"], ["empresa", "Empresa"], ["preco", "Preço"],
+  ["pl", "P/L"], ["pvp", "P/VP"], ["dy", "DY"], ["roe", "ROE"],
+  ["margem", "Margem"], ["divida_pl", "Dív/PL"], ["cresc_receita", "Receita a/a"],
+  ["volume_mediano_mi", "Liquidez (mi/dia)"],
+];
+let DATA = null, SORT = "pl", ASC = true, ONLY_BQ = false;
+
+const pct = v => v === null || v === undefined ? "—"
+  : `<span class="${v >= 0 ? "pos" : "neg"}">${(v * 100).toFixed(1)}%</span>`;
+const num = v => v === null || v === undefined ? "—" : v.toLocaleString("pt-BR");
+
+function render() {
+  if (!DATA) return;
+  const query = document.getElementById("search").value.toUpperCase();
+  let rows = DATA.papeis.filter(r =>
+    (!query || r.ticker.includes(query) || r.empresa.toUpperCase().includes(query))
+    && (!ONLY_BQ || r.barato_qualidade));
+  rows.sort((a, b) => {
+    const va = a[SORT], vb = b[SORT];
+    if (va === null || va === undefined) return 1;
+    if (vb === null || vb === undefined) return -1;
+    return typeof va === "string"
+      ? (ASC ? va.localeCompare(vb) : vb.localeCompare(va))
+      : (ASC ? va - vb : vb - va);
+  });
+
+  document.getElementById("head").innerHTML = COLUMNS.map(([key, label]) =>
+    `<th onclick="sortBy('${key}')" ${key === SORT ? "data-active" : ""}>
+      ${label}${key === SORT ? (ASC ? " ↑" : " ↓") : ""}</th>`).join("");
+
+  document.getElementById("body").innerHTML = rows.map(r => `<tr>
+    <td><b>${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}</td>
+    <td style="color:var(--ink-2)">${r.empresa}</td>
+    <td>${num(r.preco)}</td>
+    <td>${num(r.pl)}</td>
+    <td>${num(r.pvp)}</td>
+    <td>${pct(r.dy)}</td>
+    <td>${pct(r.roe)}</td>
+    <td>${pct(r.margem)}</td>
+    <td>${num(r.divida_pl)}</td>
+    <td>${pct(r.cresc_receita)}</td>
+    <td>${num(r.volume_mediano_mi)}</td>
+  </tr>`).join("");
+
+  document.getElementById("count").textContent =
+    `${rows.length} papéis · selo B×Q em ${DATA.papeis.filter(r => r.barato_qualidade).length}`;
+}
+
+function sortBy(key) {
+  if (SORT === key) { ASC = !ASC; } else { SORT = key; ASC = true; }
+  render();
+}
+
+async function load() {
+  try {
+    const resp = await fetch("fundamentals.json", { cache: "no-store" });
+    if (!resp.ok) throw new Error();
+    DATA = await resp.json();
+  } catch {
+    document.getElementById("banner").textContent =
+      "Rode python scripts/build_fundamentals.py para gerar os dados.";
+    return;
+  }
+  const m = DATA.medianas;
+  document.getElementById("banner").innerHTML =
+    `<b>${DATA.papeis.length} ações líquidas</b> (mediana ≥ R$ 5 mi/dia) · balanços DFP/CVM + ` +
+    `preços MT5 · medianas do universo: P/L ${m.pl} · ROE ${(m.roe * 100).toFixed(1)}% · ` +
+    `dív/PL ${m.divida_pl} · atualizado ${DATA.atualizado.slice(0, 16).replace("T", " ")}`;
+  render();
+}
+load();
+</script>
+</body>
+</html>

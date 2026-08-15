@@ -117,6 +117,19 @@ def load_events(years: range, cache: Path = CACHE) -> pd.DataFrame:
     return events.dropna(subset=["data_entrega"]).reset_index(drop=True)
 
 
+def load_dfp(year: int, table: str = "DRE_con", cache: Path = CACHE) -> pd.DataFrame:
+    """Uma demonstração financeira padronizada do ano (consolidada).
+
+    Tabelas úteis: DRE_con (resultado), BPP_con (passivo + patrimônio),
+    BPA_con (ativo), DFC_MD_con / DFC_MI_con (fluxo de caixa, onde
+    vivem os dividendos pagos). Valores em ESCALA_MOEDA (MIL = ×1000).
+    """
+    path = _download(
+        f"{BASE}/DFP/DADOS/dfp_cia_aberta_{year}.zip", cache / f"dfp_{year}.zip"
+    )
+    return _read_zip_csv(path, f"{table}_{year}")
+
+
 def events_for_tickers(
     tickers: list[str], years: range, cache: Path = CACHE
 ) -> pd.DataFrame:
