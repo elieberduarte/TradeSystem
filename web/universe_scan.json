@@ -1,0 +1,8858 @@
+[
+ {
+  "symbol": "AAGR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 20872.0,
+  "descricao": "FIAGRO AAGR CI  ER"
+ },
+ {
+  "symbol": "AALL34",
+  "tipo": "BDR",
+  "volume_mediano": 50077.0,
+  "descricao": "AMERICAN AIRDRN"
+ },
+ {
+  "symbol": "AALR3",
+  "tipo": "ação",
+  "volume_mediano": 115522.0,
+  "descricao": "ALLIAR      ON      NM"
+ },
+ {
+  "symbol": "AAPL34",
+  "tipo": "BDR",
+  "volume_mediano": 21279439.0,
+  "descricao": "APPLE       DRN ED"
+ },
+ {
+  "symbol": "AAZQ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 329065.0,
+  "descricao": "FIAGRO AAZQ CI"
+ },
+ {
+  "symbol": "ABBV34",
+  "tipo": "BDR",
+  "volume_mediano": 25025.0,
+  "descricao": "ABBVIE      DRN"
+ },
+ {
+  "symbol": "ABCB4",
+  "tipo": "ação",
+  "volume_mediano": 11988432.0,
+  "descricao": "ABC BRASIL  PN      N2"
+ },
+ {
+  "symbol": "ABCP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 44600.0,
+  "descricao": "FII ABC IMOBCI"
+ },
+ {
+  "symbol": "ABEV3",
+  "tipo": "ação",
+  "volume_mediano": 384723330.0,
+  "descricao": "AMBEV S/A   ON"
+ },
+ {
+  "symbol": "ABGD39",
+  "tipo": "BDR",
+  "volume_mediano": 6113.0,
+  "descricao": "ABDEN GOLD  DRE"
+ },
+ {
+  "symbol": "ABTT34",
+  "tipo": "BDR",
+  "volume_mediano": 10252.0,
+  "descricao": "ABBOTT      DRN"
+ },
+ {
+  "symbol": "ABUD34",
+  "tipo": "BDR",
+  "volume_mediano": 1220.0,
+  "descricao": "AB INBEV    DRN"
+ },
+ {
+  "symbol": "ACNB34",
+  "tipo": "BDR",
+  "volume_mediano": 78683.0,
+  "descricao": "ACCENTURE   DRN"
+ },
+ {
+  "symbol": "ACWI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 912985.0,
+  "descricao": "XPETFACWI   CI"
+ },
+ {
+  "symbol": "ADBE34",
+  "tipo": "BDR",
+  "volume_mediano": 465177.0,
+  "descricao": "ADOBE INC   DRN"
+ },
+ {
+  "symbol": "ADPR34",
+  "tipo": "BDR",
+  "volume_mediano": 760.0,
+  "descricao": "AUTOMATIC DTDRN"
+ },
+ {
+  "symbol": "AERI3",
+  "tipo": "ação",
+  "volume_mediano": 59960.0,
+  "descricao": "AERIS       ON      NM"
+ },
+ {
+  "symbol": "AFHF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 44911.0,
+  "descricao": "FII AFHF    CI"
+ },
+ {
+  "symbol": "AFHI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 558886.0,
+  "descricao": "FII AFHI CRICI"
+ },
+ {
+  "symbol": "AFLT3",
+  "tipo": "ação",
+  "volume_mediano": 2916.0,
+  "descricao": "AFLUENTE T  ON"
+ },
+ {
+  "symbol": "AGRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5859.0,
+  "descricao": "BB ETF IAGROCI"
+ },
+ {
+  "symbol": "AGRO3",
+  "tipo": "ação",
+  "volume_mediano": 1876050.0,
+  "descricao": "BRASILAGRO  ON      NM"
+ },
+ {
+  "symbol": "AGRX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 178525.0,
+  "descricao": "FIAGRO AGRX CI  ER"
+ },
+ {
+  "symbol": "AGXY3",
+  "tipo": "ação",
+  "volume_mediano": 29105.0,
+  "descricao": "AGROGALAXY  ON      NM"
+ },
+ {
+  "symbol": "AHEB3",
+  "tipo": "ação",
+  "volume_mediano": 4729.0,
+  "descricao": "SPTURIS     ON"
+ },
+ {
+  "symbol": "AHEB5",
+  "tipo": "ação",
+  "volume_mediano": 4100.0,
+  "descricao": "SPTURIS     PNA"
+ },
+ {
+  "symbol": "AHEB6",
+  "tipo": "ação",
+  "volume_mediano": 4120.0,
+  "descricao": "SPTURIS     PNB"
+ },
+ {
+  "symbol": "AIEC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 212215.0,
+  "descricao": "FII AUTONOMYCI"
+ },
+ {
+  "symbol": "AIGB34",
+  "tipo": "BDR",
+  "volume_mediano": 2446.0,
+  "descricao": "AIG GROUP   DRN"
+ },
+ {
+  "symbol": "AIRB34",
+  "tipo": "BDR",
+  "volume_mediano": 228544.0,
+  "descricao": "AIRBNB      DRN"
+ },
+ {
+  "symbol": "AJFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 153697.0,
+  "descricao": "FII AJ MALLSCI"
+ },
+ {
+  "symbol": "ALLD3",
+  "tipo": "ação",
+  "volume_mediano": 1436695.0,
+  "descricao": "ALLIED      ON      NM"
+ },
+ {
+  "symbol": "ALMI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 7743.0,
+  "descricao": "FII TORRE ALCI"
+ },
+ {
+  "symbol": "ALOS3",
+  "tipo": "ação",
+  "volume_mediano": 123094896.0,
+  "descricao": "ALLOS       ON      NM"
+ },
+ {
+  "symbol": "ALPA3",
+  "tipo": "ação",
+  "volume_mediano": 58526.0,
+  "descricao": "ALPARGATAS  ON      N1"
+ },
+ {
+  "symbol": "ALPA4",
+  "tipo": "ação",
+  "volume_mediano": 14815498.0,
+  "descricao": "ALPARGATAS  PN      N1"
+ },
+ {
+  "symbol": "ALPK3",
+  "tipo": "ação",
+  "volume_mediano": 482935.0,
+  "descricao": "ESTAPAR     ON      NM"
+ },
+ {
+  "symbol": "ALUG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 260141.0,
+  "descricao": "INVESTO ALUGCI"
+ },
+ {
+  "symbol": "ALUP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 25878766.0,
+  "descricao": "ALUPAR      UNT ED  N2"
+ },
+ {
+  "symbol": "ALUP3",
+  "tipo": "ação",
+  "volume_mediano": 63303.0,
+  "descricao": "ALUPAR      ON  ED  N2"
+ },
+ {
+  "symbol": "ALUP4",
+  "tipo": "ação",
+  "volume_mediano": 112342.0,
+  "descricao": "ALUPAR      PN  ED  N2"
+ },
+ {
+  "symbol": "ALZC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 159171.0,
+  "descricao": "FII ALIANZACCI"
+ },
+ {
+  "symbol": "ALZR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2908053.0,
+  "descricao": "FII ALIANZA CI"
+ },
+ {
+  "symbol": "AMAR3",
+  "tipo": "ação",
+  "volume_mediano": 62543.0,
+  "descricao": "LOJAS MARISAON      NM"
+ },
+ {
+  "symbol": "AMBP3",
+  "tipo": "ação",
+  "volume_mediano": 539948.0,
+  "descricao": "AMBIPAR     ON      NM"
+ },
+ {
+  "symbol": "AMER11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1263.0,
+  "descricao": "AMERICANAS  BNS ORD NM"
+ },
+ {
+  "symbol": "AMER3",
+  "tipo": "ação",
+  "volume_mediano": 6130056.0,
+  "descricao": "AMERICANAS  ON      NM"
+ },
+ {
+  "symbol": "AMGN34",
+  "tipo": "BDR",
+  "volume_mediano": 5085.0,
+  "descricao": "AMGEN       DRN"
+ },
+ {
+  "symbol": "AMOB3",
+  "tipo": "ação",
+  "volume_mediano": 199124.0,
+  "descricao": "AUTOMOB     ON      NM"
+ },
+ {
+  "symbol": "AMZO34",
+  "tipo": "BDR",
+  "volume_mediano": 45472288.0,
+  "descricao": "AMAZON      DRN"
+ },
+ {
+  "symbol": "ANCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 870.0,
+  "descricao": "FII ANCAR ICCI"
+ },
+ {
+  "symbol": "ANGV39",
+  "tipo": "BDR",
+  "volume_mediano": 195.0,
+  "descricao": "VANECK ANGL DRE"
+ },
+ {
+  "symbol": "ANIM3",
+  "tipo": "ação",
+  "volume_mediano": 16121004.0,
+  "descricao": "ANIMA       ON      NM"
+ },
+ {
+  "symbol": "APTO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10578.0,
+  "descricao": "FII NAVI RSDCI"
+ },
+ {
+  "symbol": "APTV34",
+  "tipo": "BDR",
+  "volume_mediano": 1212.0,
+  "descricao": "APTIV PLC   DRN"
+ },
+ {
+  "symbol": "APXM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 19115.0,
+  "descricao": "FII APEX MS CI"
+ },
+ {
+  "symbol": "APXR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 100.0,
+  "descricao": "FII APXR    CI"
+ },
+ {
+  "symbol": "ARGT39",
+  "tipo": "BDR",
+  "volume_mediano": 97236.0,
+  "descricao": "GX ARGENTINADRE"
+ },
+ {
+  "symbol": "ARML3",
+  "tipo": "ação",
+  "volume_mediano": 2448953.0,
+  "descricao": "ARMAC       ON      NM"
+ },
+ {
+  "symbol": "ARMT34",
+  "tipo": "BDR",
+  "volume_mediano": 21384.0,
+  "descricao": "ARCELOR     DRN ED"
+ },
+ {
+  "symbol": "ARNC34",
+  "tipo": "BDR",
+  "volume_mediano": 43356.0,
+  "descricao": "HOWMET AERO DRN ED"
+ },
+ {
+  "symbol": "AROA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6048.0,
+  "descricao": "FII AROA    CI"
+ },
+ {
+  "symbol": "ARRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 142532.0,
+  "descricao": "FII ATRIO   CI"
+ },
+ {
+  "symbol": "ARXD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 40412.0,
+  "descricao": "FII ARXD R  CI"
+ },
+ {
+  "symbol": "ASAI3",
+  "tipo": "ação",
+  "volume_mediano": 80387330.0,
+  "descricao": "ASSAI       ON      NM"
+ },
+ {
+  "symbol": "ASML34",
+  "tipo": "BDR",
+  "volume_mediano": 4720208.0,
+  "descricao": "ASML HOLD   DRN"
+ },
+ {
+  "symbol": "ASRF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 92978.0,
+  "descricao": "FII ASA RET CI"
+ },
+ {
+  "symbol": "ATED3",
+  "tipo": "ação",
+  "volume_mediano": 3238.0,
+  "descricao": "ATOM EDUC   ON"
+ },
+ {
+  "symbol": "ATSA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 321.0,
+  "descricao": "FII HATRIUM CI"
+ },
+ {
+  "symbol": "ATTB34",
+  "tipo": "BDR",
+  "volume_mediano": 31230.0,
+  "descricao": "ATT INC     DRN"
+ },
+ {
+  "symbol": "AURA33",
+  "tipo": "BDR",
+  "volume_mediano": 86637570.0,
+  "descricao": "AURA 360    DR3"
+ },
+ {
+  "symbol": "AURB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 711.0,
+  "descricao": "FII ALI URB CI  ER"
+ },
+ {
+  "symbol": "AURE3",
+  "tipo": "ação",
+  "volume_mediano": 30947949.0,
+  "descricao": "AUREN       ON      NM"
+ },
+ {
+  "symbol": "AUVP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 883827.0,
+  "descricao": "BTGTEVA AUVPCI"
+ },
+ {
+  "symbol": "AVGO34",
+  "tipo": "BDR",
+  "volume_mediano": 5273740.0,
+  "descricao": "BROADCOM INCDRN"
+ },
+ {
+  "symbol": "AVLL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 300.0,
+  "descricao": "ALPHAVILLE  BNS ORD NM"
+ },
+ {
+  "symbol": "AVLL3",
+  "tipo": "ação",
+  "volume_mediano": 4950.0,
+  "descricao": "ALPHAVILLE  ON      NM"
+ },
+ {
+  "symbol": "AWII34",
+  "tipo": "BDR",
+  "volume_mediano": 69956.0,
+  "descricao": "ARMSTRONG   DRN"
+ },
+ {
+  "symbol": "AXPB34",
+  "tipo": "BDR",
+  "volume_mediano": 31592.0,
+  "descricao": "AMERICAN EXPDRN"
+ },
+ {
+  "symbol": "AZEV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 200.0,
+  "descricao": "AZEVEDO     BNS"
+ },
+ {
+  "symbol": "AZEV3",
+  "tipo": "ação",
+  "volume_mediano": 326552.0,
+  "descricao": "AZEVEDO     ON"
+ },
+ {
+  "symbol": "AZEV4",
+  "tipo": "ação",
+  "volume_mediano": 1734976.0,
+  "descricao": "AZEVEDO     PN"
+ },
+ {
+  "symbol": "AZIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 895831.0,
+  "descricao": "AZQ INFRA IICI"
+ },
+ {
+  "symbol": "AZOI34",
+  "tipo": "BDR",
+  "volume_mediano": 2149.0,
+  "descricao": "AUTOZONE INCDRN"
+ },
+ {
+  "symbol": "AZPL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 206639.0,
+  "descricao": "FII AZPL    CI"
+ },
+ {
+  "symbol": "AZTE3",
+  "tipo": "ação",
+  "volume_mediano": 601705.0,
+  "descricao": "AZT ENERGIA ON"
+ },
+ {
+  "symbol": "AZZA3",
+  "tipo": "ação",
+  "volume_mediano": 36087044.0,
+  "descricao": "AZZAS 2154  ON      NM"
+ },
+ {
+  "symbol": "BAAX39",
+  "tipo": "BDR",
+  "volume_mediano": 809782.0,
+  "descricao": "MSCI ASIA JPDRE"
+ },
+ {
+  "symbol": "BABA34",
+  "tipo": "BDR",
+  "volume_mediano": 3999717.0,
+  "descricao": "ALIBABAGR   DRN"
+ },
+ {
+  "symbol": "BACW39",
+  "tipo": "BDR",
+  "volume_mediano": 1087569.0,
+  "descricao": "MSCI ACWI   DRE"
+ },
+ {
+  "symbol": "BAER39",
+  "tipo": "BDR",
+  "volume_mediano": 44857.0,
+  "descricao": "US AEROSPACEDRE"
+ },
+ {
+  "symbol": "BAGG39",
+  "tipo": "BDR",
+  "volume_mediano": 14752.0,
+  "descricao": "BKR US AGGREDRE"
+ },
+ {
+  "symbol": "BAIQ39",
+  "tipo": "BDR",
+  "volume_mediano": 174964.0,
+  "descricao": "GX AI TECH  DRE"
+ },
+ {
+  "symbol": "BALM3",
+  "tipo": "ação",
+  "volume_mediano": 2600.0,
+  "descricao": "BAUMER      ON"
+ },
+ {
+  "symbol": "BALM4",
+  "tipo": "ação",
+  "volume_mediano": 7486.0,
+  "descricao": "BAUMER      PN"
+ },
+ {
+  "symbol": "BAOA39",
+  "tipo": "BDR",
+  "volume_mediano": 162.0,
+  "descricao": "BKR AGR ALOCDRE"
+ },
+ {
+  "symbol": "BAOK39",
+  "tipo": "BDR",
+  "volume_mediano": 157.0,
+  "descricao": "BKR CSV ALOCDRE"
+ },
+ {
+  "symbol": "BAOM39",
+  "tipo": "BDR",
+  "volume_mediano": 102.0,
+  "descricao": "BKR MOD ALOCDRE"
+ },
+ {
+  "symbol": "BAOR39",
+  "tipo": "BDR",
+  "volume_mediano": 562.0,
+  "descricao": "BKR BAL ALOCDRE"
+ },
+ {
+  "symbol": "BARY39",
+  "tipo": "BDR",
+  "volume_mediano": 5785.0,
+  "descricao": "BKR FUT AIT DRE"
+ },
+ {
+  "symbol": "BAUH4",
+  "tipo": "ação",
+  "volume_mediano": 37478.0,
+  "descricao": "EXCELSIOR   PN"
+ },
+ {
+  "symbol": "BAZA3",
+  "tipo": "ação",
+  "volume_mediano": 307792.0,
+  "descricao": "AMAZONIA    ON"
+ },
+ {
+  "symbol": "BBAS3",
+  "tipo": "ação",
+  "volume_mediano": 342900030.0,
+  "descricao": "BRASIL      ON      NM"
+ },
+ {
+  "symbol": "BBDC3",
+  "tipo": "ação",
+  "volume_mediano": 74383596.0,
+  "descricao": "BRADESCO    ON  ES  N1"
+ },
+ {
+  "symbol": "BBDC4",
+  "tipo": "ação",
+  "volume_mediano": 450605592.0,
+  "descricao": "BRADESCO    PN  ES  N1"
+ },
+ {
+  "symbol": "BBFO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 316196.0,
+  "descricao": "FII BB FOF  CI"
+ },
+ {
+  "symbol": "BBGO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 221536.0,
+  "descricao": "FIAGRO BBGO CI"
+ },
+ {
+  "symbol": "BBGR39",
+  "tipo": "BDR",
+  "volume_mediano": 92.0,
+  "descricao": "BKR US GREENDRE"
+ },
+ {
+  "symbol": "BBIG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 965987.0,
+  "descricao": "FII BBIG    CI"
+ },
+ {
+  "symbol": "BBIL39",
+  "tipo": "BDR",
+  "volume_mediano": 82.0,
+  "descricao": "JP BTB INTL DRE"
+ },
+ {
+  "symbol": "BBJP39",
+  "tipo": "BDR",
+  "volume_mediano": 343.0,
+  "descricao": "JP BTB JAPAODRE"
+ },
+ {
+  "symbol": "BBMR39",
+  "tipo": "BDR",
+  "volume_mediano": 57.0,
+  "descricao": "JP BTB REIT DRE"
+ },
+ {
+  "symbol": "BBOI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 62149.0,
+  "descricao": "BB ETF BOI GCI"
+ },
+ {
+  "symbol": "BBOV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2080940.0,
+  "descricao": "BB ETF IBOV CI"
+ },
+ {
+  "symbol": "BBRC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 56825.0,
+  "descricao": "FII BB CORP CI"
+ },
+ {
+  "symbol": "BBSD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12091.0,
+  "descricao": "BB ETF SP DVCI"
+ },
+ {
+  "symbol": "BBSE3",
+  "tipo": "ação",
+  "volume_mediano": 199942146.0,
+  "descricao": "BBSEGURIDADEON  ED  NM"
+ },
+ {
+  "symbol": "BBUG39",
+  "tipo": "BDR",
+  "volume_mediano": 10362.0,
+  "descricao": "GX CYBERSECTDRE"
+ },
+ {
+  "symbol": "BBYY34",
+  "tipo": "BDR",
+  "volume_mediano": 1681.0,
+  "descricao": "BEST BUY    DRN EB"
+ },
+ {
+  "symbol": "BCAT39",
+  "tipo": "BDR",
+  "volume_mediano": 257.0,
+  "descricao": "GX CATHOLVALDRE"
+ },
+ {
+  "symbol": "BCHI39",
+  "tipo": "BDR",
+  "volume_mediano": 31761.0,
+  "descricao": "MSCI CHINA  DRE"
+ },
+ {
+  "symbol": "BCHQ39",
+  "tipo": "BDR",
+  "volume_mediano": 93.0,
+  "descricao": "GX MSCICHINADRE"
+ },
+ {
+  "symbol": "BCIA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 295473.0,
+  "descricao": "FII BCIA    CI"
+ },
+ {
+  "symbol": "BCIC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 13299.0,
+  "descricao": "B INDEX CICLCI"
+ },
+ {
+  "symbol": "BCIR39",
+  "tipo": "BDR",
+  "volume_mediano": 8259.0,
+  "descricao": "FT NASDCYBERDRE"
+ },
+ {
+  "symbol": "BCLO39",
+  "tipo": "BDR",
+  "volume_mediano": 1938.0,
+  "descricao": "GX CLOUD CPTDRE"
+ },
+ {
+  "symbol": "BCNY39",
+  "tipo": "BDR",
+  "volume_mediano": 312.0,
+  "descricao": "BKR CHINA A DRE"
+ },
+ {
+  "symbol": "BCOM39",
+  "tipo": "BDR",
+  "volume_mediano": 27417.0,
+  "descricao": "BKR COMT ROLDRE"
+ },
+ {
+  "symbol": "BCPX39",
+  "tipo": "BDR",
+  "volume_mediano": 1445891.0,
+  "descricao": "GX COPPER MNDRE"
+ },
+ {
+  "symbol": "BCRB39",
+  "tipo": "BDR",
+  "volume_mediano": 323.0,
+  "descricao": "BKR LOWCARBODRE"
+ },
+ {
+  "symbol": "BCRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 302103.0,
+  "descricao": "FII BEES CRICI"
+ },
+ {
+  "symbol": "BCRP39",
+  "tipo": "BDR",
+  "volume_mediano": 150.0,
+  "descricao": "PMCO IGR CPIDRE"
+ },
+ {
+  "symbol": "BCSA34",
+  "tipo": "BDR",
+  "volume_mediano": 37623.0,
+  "descricao": "SANTANDER   DRN"
+ },
+ {
+  "symbol": "BCTE39",
+  "tipo": "BDR",
+  "volume_mediano": 6657.0,
+  "descricao": "GX CLEANCH  DRE"
+ },
+ {
+  "symbol": "BCWV39",
+  "tipo": "BDR",
+  "volume_mediano": 1290.0,
+  "descricao": "MSCIGLMIVOLFDRE"
+ },
+ {
+  "symbol": "BDEF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 19135.0,
+  "descricao": "B INDEX DEFECI"
+ },
+ {
+  "symbol": "BDIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1919585.0,
+  "descricao": "FIC INFR BTGCI"
+ },
+ {
+  "symbol": "BDIV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 195049.0,
+  "descricao": "FIP BTGDV IECI"
+ },
+ {
+  "symbol": "BDLL3",
+  "tipo": "ação",
+  "volume_mediano": 1045.0,
+  "descricao": "BARDELLA    ON"
+ },
+ {
+  "symbol": "BDLL4",
+  "tipo": "ação",
+  "volume_mediano": 1287.0,
+  "descricao": "BARDELLA    PN"
+ },
+ {
+  "symbol": "BDOM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12288.0,
+  "descricao": "INVESTO BDOMCI"
+ },
+ {
+  "symbol": "BDRE39",
+  "tipo": "BDR",
+  "volume_mediano": 151.0,
+  "descricao": "JP DV US SM DRE"
+ },
+ {
+  "symbol": "BDRI39",
+  "tipo": "BDR",
+  "volume_mediano": 351.0,
+  "descricao": "GX AEVEHICLEDRE"
+ },
+ {
+  "symbol": "BDVD39",
+  "tipo": "BDR",
+  "volume_mediano": 635.0,
+  "descricao": "GX SUPDIV USDRE ED"
+ },
+ {
+  "symbol": "BDVE39",
+  "tipo": "BDR",
+  "volume_mediano": 98.0,
+  "descricao": "BKR EMER DIVDRE"
+ },
+ {
+  "symbol": "BDVY39",
+  "tipo": "BDR",
+  "volume_mediano": 5728.0,
+  "descricao": "SELECT DIVIDDRE"
+ },
+ {
+  "symbol": "BECH39",
+  "tipo": "BDR",
+  "volume_mediano": 1868.0,
+  "descricao": "BKR CHILE   DRE"
+ },
+ {
+  "symbol": "BEEF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 38904.0,
+  "descricao": "MINERVA     BNS ORD NM"
+ },
+ {
+  "symbol": "BEEF3",
+  "tipo": "ação",
+  "volume_mediano": 35676968.0,
+  "descricao": "MINERVA     ON      NM"
+ },
+ {
+  "symbol": "BEEM39",
+  "tipo": "BDR",
+  "volume_mediano": 718896.0,
+  "descricao": "MSCI EMGMARKDRE"
+ },
+ {
+  "symbol": "BEES3",
+  "tipo": "ação",
+  "volume_mediano": 72528.0,
+  "descricao": "BANESTES    ON"
+ },
+ {
+  "symbol": "BEES4",
+  "tipo": "ação",
+  "volume_mediano": 25629.0,
+  "descricao": "BANESTES    PN"
+ },
+ {
+  "symbol": "BEFA39",
+  "tipo": "BDR",
+  "volume_mediano": 9564.0,
+  "descricao": "MSCI EAFE   DRE"
+ },
+ {
+  "symbol": "BEFG39",
+  "tipo": "BDR",
+  "volume_mediano": 1007.0,
+  "descricao": "MSCIEAFEGROWDRE"
+ },
+ {
+  "symbol": "BEFV39",
+  "tipo": "BDR",
+  "volume_mediano": 11194.0,
+  "descricao": "MSCIEAFEVALUDRE"
+ },
+ {
+  "symbol": "BEGD39",
+  "tipo": "BDR",
+  "volume_mediano": 21400.0,
+  "descricao": "TRTMSCI EAFEDRE"
+ },
+ {
+  "symbol": "BEGE39",
+  "tipo": "BDR",
+  "volume_mediano": 2140.0,
+  "descricao": "INC ESG AWARDRE"
+ },
+ {
+  "symbol": "BEGU39",
+  "tipo": "BDR",
+  "volume_mediano": 1033.0,
+  "descricao": "TRUSTMSCI USDRE"
+ },
+ {
+  "symbol": "BEMC39",
+  "tipo": "BDR",
+  "volume_mediano": 125825.0,
+  "descricao": "BKR EME XCHIDRE"
+ },
+ {
+  "symbol": "BEMV39",
+  "tipo": "BDR",
+  "volume_mediano": 2381.0,
+  "descricao": "MSCIEMMRKMI DRE"
+ },
+ {
+  "symbol": "BEPP39",
+  "tipo": "BDR",
+  "volume_mediano": 176298.0,
+  "descricao": "BKR MSCI JPNDRE"
+ },
+ {
+  "symbol": "BERK34",
+  "tipo": "BDR",
+  "volume_mediano": 3647023.0,
+  "descricao": "BERKSHIRE   DRN"
+ },
+ {
+  "symbol": "BERU39",
+  "tipo": "BDR",
+  "volume_mediano": 6145.0,
+  "descricao": "BKR MS RUSS DRE"
+ },
+ {
+  "symbol": "BEUW39",
+  "tipo": "BDR",
+  "volume_mediano": 30900.0,
+  "descricao": "BKR EQUALWG DRE"
+ },
+ {
+  "symbol": "BEWA39",
+  "tipo": "BDR",
+  "volume_mediano": 248.0,
+  "descricao": "MSCIAUSTRALIDRE"
+ },
+ {
+  "symbol": "BEWC39",
+  "tipo": "BDR",
+  "volume_mediano": 20110.0,
+  "descricao": "MSCI CANADA DRE"
+ },
+ {
+  "symbol": "BEWG39",
+  "tipo": "BDR",
+  "volume_mediano": 10148.0,
+  "descricao": "MSCI GERMANYDRE"
+ },
+ {
+  "symbol": "BEWH39",
+  "tipo": "BDR",
+  "volume_mediano": 393.0,
+  "descricao": "MSCIHONGKONGDRE"
+ },
+ {
+  "symbol": "BEWJ39",
+  "tipo": "BDR",
+  "volume_mediano": 468133.0,
+  "descricao": "MSCI JAPAN  DRE"
+ },
+ {
+  "symbol": "BEWL39",
+  "tipo": "BDR",
+  "volume_mediano": 1078.0,
+  "descricao": "MSCI SWITZERDRE"
+ },
+ {
+  "symbol": "BEWP39",
+  "tipo": "BDR",
+  "volume_mediano": 1113.0,
+  "descricao": "MSCI SPAIN  DRE"
+ },
+ {
+  "symbol": "BEWQ39",
+  "tipo": "BDR",
+  "volume_mediano": 250.0,
+  "descricao": "MSCI FRANCE DRE"
+ },
+ {
+  "symbol": "BEWT39",
+  "tipo": "BDR",
+  "volume_mediano": 67671.0,
+  "descricao": "MSCI TAIWAN DRE"
+ },
+ {
+  "symbol": "BEWU39",
+  "tipo": "BDR",
+  "volume_mediano": 1004.0,
+  "descricao": "MSCI UK     DRE"
+ },
+ {
+  "symbol": "BEWW39",
+  "tipo": "BDR",
+  "volume_mediano": 1383.0,
+  "descricao": "MSCI MEXICO DRE"
+ },
+ {
+  "symbol": "BEWY39",
+  "tipo": "BDR",
+  "volume_mediano": 2503550.0,
+  "descricao": "MSCISOUTHKORDRE"
+ },
+ {
+  "symbol": "BEWZ39",
+  "tipo": "BDR",
+  "volume_mediano": 1560.0,
+  "descricao": "MSCI BRAZIL DRE"
+ },
+ {
+  "symbol": "BEZU39",
+  "tipo": "BDR",
+  "volume_mediano": 1775.0,
+  "descricao": "MSCIEUROZONEDRE"
+ },
+ {
+  "symbol": "BFAL39",
+  "tipo": "BDR",
+  "volume_mediano": 158.0,
+  "descricao": "BKR FLL ANGLDRE"
+ },
+ {
+  "symbol": "BFAV39",
+  "tipo": "BDR",
+  "volume_mediano": 3106.0,
+  "descricao": "MSCIMINVOL FDRE"
+ },
+ {
+  "symbol": "BFBI39",
+  "tipo": "BDR",
+  "volume_mediano": 101.0,
+  "descricao": "FT NYSE BIOTDRE"
+ },
+ {
+  "symbol": "BFCG39",
+  "tipo": "BDR",
+  "volume_mediano": 1079.0,
+  "descricao": "FT NAT GAS  DRE"
+ },
+ {
+  "symbol": "BFDA39",
+  "tipo": "BDR",
+  "volume_mediano": 725.0,
+  "descricao": "FT RISIDIVIDDRE"
+ },
+ {
+  "symbol": "BFDL39",
+  "tipo": "BDR",
+  "volume_mediano": 1286.0,
+  "descricao": "FTMOR DV LEADRE"
+ },
+ {
+  "symbol": "BFDN39",
+  "tipo": "BDR",
+  "volume_mediano": 1300.0,
+  "descricao": "FT DJ INTERNDRE"
+ },
+ {
+  "symbol": "BFNX39",
+  "tipo": "BDR",
+  "volume_mediano": 276.0,
+  "descricao": "GX FINTECH  DRE"
+ },
+ {
+  "symbol": "BFPI39",
+  "tipo": "BDR",
+  "volume_mediano": 414.0,
+  "descricao": "FT INTL EQOPDRE"
+ },
+ {
+  "symbol": "BFPX39",
+  "tipo": "BDR",
+  "volume_mediano": 515.0,
+  "descricao": "FT EQ OPPORTDRE"
+ },
+ {
+  "symbol": "BFTA39",
+  "tipo": "BDR",
+  "volume_mediano": 1341.0,
+  "descricao": "FT TECH ALPHDRE"
+ },
+ {
+  "symbol": "BFTS39",
+  "tipo": "BDR",
+  "volume_mediano": 749.0,
+  "descricao": "FT CAPSTRENGDRE"
+ },
+ {
+  "symbol": "BFVD39",
+  "tipo": "BDR",
+  "volume_mediano": 380.0,
+  "descricao": "FT VLINE DIVDRE"
+ },
+ {
+  "symbol": "BFXH39",
+  "tipo": "BDR",
+  "volume_mediano": 6524.0,
+  "descricao": "FT HCAREALPHDRE"
+ },
+ {
+  "symbol": "BFXI39",
+  "tipo": "BDR",
+  "volume_mediano": 4385.0,
+  "descricao": "CHINALARGECADRE"
+ },
+ {
+  "symbol": "BGIP3",
+  "tipo": "ação",
+  "volume_mediano": 18896.0,
+  "descricao": "BANESE      ON"
+ },
+ {
+  "symbol": "BGIP4",
+  "tipo": "ação",
+  "volume_mediano": 18105.0,
+  "descricao": "BANESE      PN"
+ },
+ {
+  "symbol": "BGLC39",
+  "tipo": "BDR",
+  "volume_mediano": 1225.0,
+  "descricao": "BKR GLOB100 DRE"
+ },
+ {
+  "symbol": "BGNO39",
+  "tipo": "BDR",
+  "volume_mediano": 906.0,
+  "descricao": "GX GENOMBIOTDRE"
+ },
+ {
+  "symbol": "BGOV39",
+  "tipo": "BDR",
+  "volume_mediano": 12821.0,
+  "descricao": "BKR US TREASDRE"
+ },
+ {
+  "symbol": "BGOZ39",
+  "tipo": "BDR",
+  "volume_mediano": 568.0,
+  "descricao": "BKR TRSTRIPSDRE"
+ },
+ {
+  "symbol": "BGRB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8675.0,
+  "descricao": "FII BGRB    CI"
+ },
+ {
+  "symbol": "BGRT39",
+  "tipo": "BDR",
+  "volume_mediano": 3180.0,
+  "descricao": "GLOBAL REIT DRE"
+ },
+ {
+  "symbol": "BGWH39",
+  "tipo": "BDR",
+  "volume_mediano": 7979.0,
+  "descricao": "COREDIVGROWTDRE"
+ },
+ {
+  "symbol": "BHDV39",
+  "tipo": "BDR",
+  "volume_mediano": 483.0,
+  "descricao": "BKR CORE HDVDRE"
+ },
+ {
+  "symbol": "BHEF39",
+  "tipo": "BDR",
+  "volume_mediano": 704.0,
+  "descricao": "CURHEDGEMSCIDRE"
+ },
+ {
+  "symbol": "BHER39",
+  "tipo": "BDR",
+  "volume_mediano": 2601.0,
+  "descricao": "GX GAMES SPTDRE"
+ },
+ {
+  "symbol": "BHEW39",
+  "tipo": "BDR",
+  "volume_mediano": 5190.0,
+  "descricao": "BKR CH JAPANDRE"
+ },
+ {
+  "symbol": "BHEZ39",
+  "tipo": "BDR",
+  "volume_mediano": 19558.0,
+  "descricao": "BKR CH EUROZDRE"
+ },
+ {
+  "symbol": "BHIA3",
+  "tipo": "ação",
+  "volume_mediano": 3966647.0,
+  "descricao": "CASAS BAHIA ON      NM"
+ },
+ {
+  "symbol": "BHVN34",
+  "tipo": "BDR",
+  "volume_mediano": 229.0,
+  "descricao": "BIOHAVEN LTDDRN"
+ },
+ {
+  "symbol": "BHYC39",
+  "tipo": "BDR",
+  "volume_mediano": 5848.0,
+  "descricao": "BKR 0 5 YRHYDRE"
+ },
+ {
+  "symbol": "BHYG39",
+  "tipo": "BDR",
+  "volume_mediano": 10492.0,
+  "descricao": "BKR IBOXX HYDRE"
+ },
+ {
+  "symbol": "BHYS39",
+  "tipo": "BDR",
+  "volume_mediano": 2862.0,
+  "descricao": "PCOM 0T5 HY DRE"
+ },
+ {
+  "symbol": "BIAG39",
+  "tipo": "BDR",
+  "volume_mediano": 41021.0,
+  "descricao": "BKR INTLAGGTDRE"
+ },
+ {
+  "symbol": "BIAU39",
+  "tipo": "BDR",
+  "volume_mediano": 1131468.0,
+  "descricao": "GOLD TRUST  DRE"
+ },
+ {
+  "symbol": "BIBB39",
+  "tipo": "BDR",
+  "volume_mediano": 4183.0,
+  "descricao": "ICE BIOTECH DRE"
+ },
+ {
+  "symbol": "BICE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2625.0,
+  "descricao": "FII BRIO CRECI"
+ },
+ {
+  "symbol": "BICL39",
+  "tipo": "BDR",
+  "volume_mediano": 1577.0,
+  "descricao": "BKR GL CLEANDRE"
+ },
+ {
+  "symbol": "BICV39",
+  "tipo": "BDR",
+  "volume_mediano": 1052.0,
+  "descricao": "BKR CNVTIBLEDRE"
+ },
+ {
+  "symbol": "BIDB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 180772.0,
+  "descricao": "FIC INTER   CI"
+ },
+ {
+  "symbol": "BIDN39",
+  "tipo": "BDR",
+  "volume_mediano": 298.0,
+  "descricao": "BKR GENO IMMDRE"
+ },
+ {
+  "symbol": "BIDR39",
+  "tipo": "BDR",
+  "volume_mediano": 832.0,
+  "descricao": "BKR SELFDRIVDRE"
+ },
+ {
+  "symbol": "BIDU34",
+  "tipo": "BDR",
+  "volume_mediano": 170225.0,
+  "descricao": "BAIDU INC   DRN"
+ },
+ {
+  "symbol": "BIDV39",
+  "tipo": "BDR",
+  "volume_mediano": 747.0,
+  "descricao": "BKR INTL SLDDRE"
+ },
+ {
+  "symbol": "BIED3",
+  "tipo": "ação",
+  "volume_mediano": 7415.0,
+  "descricao": "BIOMA EDUC  ON"
+ },
+ {
+  "symbol": "BIEF39",
+  "tipo": "BDR",
+  "volume_mediano": 9583.0,
+  "descricao": "COREMSCIEAFEDRE"
+ },
+ {
+  "symbol": "BIEI39",
+  "tipo": "BDR",
+  "volume_mediano": 29800.0,
+  "descricao": "BKR 3 7 YRTRDRE"
+ },
+ {
+  "symbol": "BIEM39",
+  "tipo": "BDR",
+  "volume_mediano": 248635.0,
+  "descricao": "COREMSCI EMKDRE"
+ },
+ {
+  "symbol": "BIEO39",
+  "tipo": "BDR",
+  "volume_mediano": 2008.0,
+  "descricao": "BKR OIL GAS DRE"
+ },
+ {
+  "symbol": "BIET39",
+  "tipo": "BDR",
+  "volume_mediano": 9759.0,
+  "descricao": "BKR TECHSOFTDRE"
+ },
+ {
+  "symbol": "BIEU39",
+  "tipo": "BDR",
+  "volume_mediano": 334332.0,
+  "descricao": "COREMSCI EURDRE"
+ },
+ {
+  "symbol": "BIEV39",
+  "tipo": "BDR",
+  "volume_mediano": 2795.0,
+  "descricao": "EUROPE ETF  DRE"
+ },
+ {
+  "symbol": "BIFR39",
+  "tipo": "BDR",
+  "volume_mediano": 1587.0,
+  "descricao": "BKR US INFRADRE"
+ },
+ {
+  "symbol": "BIGE39",
+  "tipo": "BDR",
+  "volume_mediano": 128.0,
+  "descricao": "BKR NAM NATUDRE"
+ },
+ {
+  "symbol": "BIGF39",
+  "tipo": "BDR",
+  "volume_mediano": 948.0,
+  "descricao": "GLOBAL INFRADRE"
+ },
+ {
+  "symbol": "BIGO39",
+  "tipo": "BDR",
+  "volume_mediano": 1489.0,
+  "descricao": "BKR INTL TRSDRE"
+ },
+ {
+  "symbol": "BIGS39",
+  "tipo": "BDR",
+  "volume_mediano": 4344.0,
+  "descricao": "BKR 1 5YGRCODRE"
+ },
+ {
+  "symbol": "BIHA39",
+  "tipo": "BDR",
+  "volume_mediano": 311.0,
+  "descricao": "BKR CYBTECH DRE"
+ },
+ {
+  "symbol": "BIHE39",
+  "tipo": "BDR",
+  "volume_mediano": 547.0,
+  "descricao": "BKR PHARMACLDRE"
+ },
+ {
+  "symbol": "BIHF39",
+  "tipo": "BDR",
+  "volume_mediano": 112.0,
+  "descricao": "BKR HEALTHPRDRE"
+ },
+ {
+  "symbol": "BIHI39",
+  "tipo": "BDR",
+  "volume_mediano": 154.0,
+  "descricao": "USMEDICDEVICDRE"
+ },
+ {
+  "symbol": "BIIB34",
+  "tipo": "BDR",
+  "volume_mediano": 2440.0,
+  "descricao": "BIOGEN      DRN"
+ },
+ {
+  "symbol": "BIJH39",
+  "tipo": "BDR",
+  "volume_mediano": 1982.0,
+  "descricao": "CORE MIDCAP DRE"
+ },
+ {
+  "symbol": "BIJR39",
+  "tipo": "BDR",
+  "volume_mediano": 1434.0,
+  "descricao": "CORESMALLCAPDRE"
+ },
+ {
+  "symbol": "BIJS39",
+  "tipo": "BDR",
+  "volume_mediano": 2275.0,
+  "descricao": "BKR SPSM600VDRE"
+ },
+ {
+  "symbol": "BILB34",
+  "tipo": "BDR",
+  "volume_mediano": 1749.0,
+  "descricao": "BILBAOVIZ   DRN"
+ },
+ {
+  "symbol": "BILF39",
+  "tipo": "BDR",
+  "volume_mediano": 5070.0,
+  "descricao": "LATIN AMER40DRE"
+ },
+ {
+  "symbol": "BIME11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 17825.0,
+  "descricao": "FII BRIO ME CI  ER"
+ },
+ {
+  "symbol": "BINC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 667544.0,
+  "descricao": "FI BRAD BINCCI"
+ },
+ {
+  "symbol": "BIOM3",
+  "tipo": "ação",
+  "volume_mediano": 285336.0,
+  "descricao": "BIOMM       ON      N2"
+ },
+ {
+  "symbol": "BIPC39",
+  "tipo": "BDR",
+  "volume_mediano": 2361.0,
+  "descricao": "BKR CORPACIFDRE"
+ },
+ {
+  "symbol": "BITB39",
+  "tipo": "BDR",
+  "volume_mediano": 507.0,
+  "descricao": "BKR HM CNSTRDRE"
+ },
+ {
+  "symbol": "BITH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6916936.0,
+  "descricao": "BITCOIN HASHCI"
+ },
+ {
+  "symbol": "BITI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 226025.0,
+  "descricao": "ETF GALAXY BCI"
+ },
+ {
+  "symbol": "BITO39",
+  "tipo": "BDR",
+  "volume_mediano": 18402.0,
+  "descricao": "CORE SP TOTADRE"
+ },
+ {
+  "symbol": "BIVB39",
+  "tipo": "BDR",
+  "volume_mediano": 1480159.0,
+  "descricao": "CORE SP 500 DRE"
+ },
+ {
+  "symbol": "BIVE39",
+  "tipo": "BDR",
+  "volume_mediano": 94893.0,
+  "descricao": "SP500 VALUE DRE"
+ },
+ {
+  "symbol": "BIVW39",
+  "tipo": "BDR",
+  "volume_mediano": 2815.0,
+  "descricao": "SP500GROWTH DRE"
+ },
+ {
+  "symbol": "BIWF39",
+  "tipo": "BDR",
+  "volume_mediano": 1581.0,
+  "descricao": "RUSSEL1000GRDRE"
+ },
+ {
+  "symbol": "BIWM39",
+  "tipo": "BDR",
+  "volume_mediano": 49679.0,
+  "descricao": "RUSSELL 2000DRE"
+ },
+ {
+  "symbol": "BIXC39",
+  "tipo": "BDR",
+  "volume_mediano": 4926.0,
+  "descricao": "BKR GLB ENERDRE"
+ },
+ {
+  "symbol": "BIXG39",
+  "tipo": "BDR",
+  "volume_mediano": 1749.0,
+  "descricao": "BKR GL FIN  DRE"
+ },
+ {
+  "symbol": "BIXJ39",
+  "tipo": "BDR",
+  "volume_mediano": 11506.0,
+  "descricao": "GLOBALHEALTHDRE"
+ },
+ {
+  "symbol": "BIXN39",
+  "tipo": "BDR",
+  "volume_mediano": 5430.0,
+  "descricao": "GLOBAL TECH DRE"
+ },
+ {
+  "symbol": "BIXU39",
+  "tipo": "BDR",
+  "volume_mediano": 16768.0,
+  "descricao": "BKR TI STOCKDRE"
+ },
+ {
+  "symbol": "BIYC39",
+  "tipo": "BDR",
+  "volume_mediano": 3294.0,
+  "descricao": "BKR CODISCRTDRE"
+ },
+ {
+  "symbol": "BIYE39",
+  "tipo": "BDR",
+  "volume_mediano": 25336.0,
+  "descricao": "BKR US ENER DRE"
+ },
+ {
+  "symbol": "BIYF39",
+  "tipo": "BDR",
+  "volume_mediano": 37553.0,
+  "descricao": "US FINANCIALDRE"
+ },
+ {
+  "symbol": "BIYG39",
+  "tipo": "BDR",
+  "volume_mediano": 63.0,
+  "descricao": "USFINANCSERVDRE"
+ },
+ {
+  "symbol": "BIYJ39",
+  "tipo": "BDR",
+  "volume_mediano": 29645.0,
+  "descricao": "BKR US INDLSDRE"
+ },
+ {
+  "symbol": "BIYK39",
+  "tipo": "BDR",
+  "volume_mediano": 4973.0,
+  "descricao": "BKR COSTAPLEDRE"
+ },
+ {
+  "symbol": "BIYM39",
+  "tipo": "BDR",
+  "volume_mediano": 798.0,
+  "descricao": "BKR BASICMATDRE"
+ },
+ {
+  "symbol": "BIYP39",
+  "tipo": "BDR",
+  "volume_mediano": 160.0,
+  "descricao": "BKR TRANSPTNDRE"
+ },
+ {
+  "symbol": "BIYT39",
+  "tipo": "BDR",
+  "volume_mediano": 12738.0,
+  "descricao": "BKR 7 10 YRTDRE"
+ },
+ {
+  "symbol": "BIYW39",
+  "tipo": "BDR",
+  "volume_mediano": 55370.0,
+  "descricao": "US TECHNOLOGDRE"
+ },
+ {
+  "symbol": "BIZD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 33814.0,
+  "descricao": "INVESTO BIZDCI"
+ },
+ {
+  "symbol": "BKCH39",
+  "tipo": "BDR",
+  "volume_mediano": 1420.0,
+  "descricao": "GX BLOCKCHAIDRE"
+ },
+ {
+  "symbol": "BKNG34",
+  "tipo": "BDR",
+  "volume_mediano": 292574.0,
+  "descricao": "BOOKING     DRN"
+ },
+ {
+  "symbol": "BKSA39",
+  "tipo": "BDR",
+  "volume_mediano": 3539.0,
+  "descricao": "BKR SAUDARABDRE"
+ },
+ {
+  "symbol": "BKWB39",
+  "tipo": "BDR",
+  "volume_mediano": 16062.0,
+  "descricao": "KR CSI CHINADRE"
+ },
+ {
+  "symbol": "BKXI39",
+  "tipo": "BDR",
+  "volume_mediano": 73271.0,
+  "descricao": "BKR GB STAMPDRE"
+ },
+ {
+  "symbol": "BKYY39",
+  "tipo": "BDR",
+  "volume_mediano": 826.0,
+  "descricao": "FT CLOUD CPTDRE"
+ },
+ {
+  "symbol": "BLAK34",
+  "tipo": "BDR",
+  "volume_mediano": 108408.0,
+  "descricao": "BLACKROCK   DRN"
+ },
+ {
+  "symbol": "BLAU3",
+  "tipo": "ação",
+  "volume_mediano": 2098584.0,
+  "descricao": "BLAU        ON      NM"
+ },
+ {
+  "symbol": "BLBT39",
+  "tipo": "BDR",
+  "volume_mediano": 10040.0,
+  "descricao": "GX LITHIUM BDRE"
+ },
+ {
+  "symbol": "BLCA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 16345.0,
+  "descricao": "FII BLCA VBICI  ER"
+ },
+ {
+  "symbol": "BLMG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 148355.0,
+  "descricao": "FII BLUE LOGCI  ER"
+ },
+ {
+  "symbol": "BLMO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1761.0,
+  "descricao": "FII BLMO VBICI"
+ },
+ {
+  "symbol": "BLOG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 32.0,
+  "descricao": "FII BLOG    CI"
+ },
+ {
+  "symbol": "BLPA39",
+  "tipo": "BDR",
+  "volume_mediano": 156.0,
+  "descricao": "GX MLP ETF  DRE ED"
+ },
+ {
+  "symbol": "BLPX39",
+  "tipo": "BDR",
+  "volume_mediano": 1663.0,
+  "descricao": "GX MLP EN INDRE ED"
+ },
+ {
+  "symbol": "BLQD39",
+  "tipo": "BDR",
+  "volume_mediano": 14112.0,
+  "descricao": "BKR IBOX IGCDRE"
+ },
+ {
+  "symbol": "BLTP39",
+  "tipo": "BDR",
+  "volume_mediano": 714.0,
+  "descricao": "PMCO 15 YRTPDRE"
+ },
+ {
+  "symbol": "BLUE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 910.0,
+  "descricao": "FII BLUE    CI"
+ },
+ {
+  "symbol": "BMBB39",
+  "tipo": "BDR",
+  "volume_mediano": 2934.0,
+  "descricao": "BKR MBS     DRE"
+ },
+ {
+  "symbol": "BMEB3",
+  "tipo": "ação",
+  "volume_mediano": 195632.0,
+  "descricao": "MERCANTIL   ON  EJ  N1"
+ },
+ {
+  "symbol": "BMEB4",
+  "tipo": "ação",
+  "volume_mediano": 1828330.0,
+  "descricao": "MERCANTIL   PN  EJ  N1"
+ },
+ {
+  "symbol": "BMGB4",
+  "tipo": "ação",
+  "volume_mediano": 4735252.0,
+  "descricao": "BANCO BMG   PN      N1"
+ },
+ {
+  "symbol": "BMIL39",
+  "tipo": "BDR",
+  "volume_mediano": 1637.0,
+  "descricao": "GX MILLECONMDRE"
+ },
+ {
+  "symbol": "BMIN3",
+  "tipo": "ação",
+  "volume_mediano": 2938.0,
+  "descricao": "MERC INVEST ON"
+ },
+ {
+  "symbol": "BMIN4",
+  "tipo": "ação",
+  "volume_mediano": 4583.0,
+  "descricao": "MERC INVEST PN"
+ },
+ {
+  "symbol": "BMKS3",
+  "tipo": "ação",
+  "volume_mediano": 9370.0,
+  "descricao": "BIC MONARK  ON      MP"
+ },
+ {
+  "symbol": "BMLC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3966.0,
+  "descricao": "FII BMBRC LCCI  ER"
+ },
+ {
+  "symbol": "BMLT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 74010.0,
+  "descricao": "FII BMLT    CI"
+ },
+ {
+  "symbol": "BMMT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 41869.0,
+  "descricao": "B INDEX MOMECI"
+ },
+ {
+  "symbol": "BMOB3",
+  "tipo": "ação",
+  "volume_mediano": 7373574.0,
+  "descricao": "BEMOBI TECH ON      NM"
+ },
+ {
+  "symbol": "BMRE39",
+  "tipo": "BDR",
+  "volume_mediano": 245.0,
+  "descricao": "BKR MORTGAGEDRE"
+ },
+ {
+  "symbol": "BMTU39",
+  "tipo": "BDR",
+  "volume_mediano": 55605.0,
+  "descricao": "MSCIUSAMOM FDRE"
+ },
+ {
+  "symbol": "BMYB34",
+  "tipo": "BDR",
+  "volume_mediano": 3000.0,
+  "descricao": "BRISTOLMYERSDRN"
+ },
+ {
+  "symbol": "BNBR3",
+  "tipo": "ação",
+  "volume_mediano": 27926.0,
+  "descricao": "NORD BRASIL ON"
+ },
+ {
+  "symbol": "BNDA39",
+  "tipo": "BDR",
+  "volume_mediano": 20187.0,
+  "descricao": "MSCI INDIA  DRE"
+ },
+ {
+  "symbol": "BNDX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 156136.0,
+  "descricao": "INVESTO BNDXCI"
+ },
+ {
+  "symbol": "BNFS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 26979.0,
+  "descricao": "FII BANRISULCI"
+ },
+ {
+  "symbol": "BOAC34",
+  "tipo": "BDR",
+  "volume_mediano": 616779.0,
+  "descricao": "BANK AMERICADRN"
+ },
+ {
+  "symbol": "BOBR4",
+  "tipo": "ação",
+  "volume_mediano": 1258.0,
+  "descricao": "BOMBRIL     PN"
+ },
+ {
+  "symbol": "BODB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 783087.0,
+  "descricao": "FIC FI BCNA CI"
+ },
+ {
+  "symbol": "BOEF39",
+  "tipo": "BDR",
+  "volume_mediano": 240416.0,
+  "descricao": "BKR SP100   DRE"
+ },
+ {
+  "symbol": "BOEI34",
+  "tipo": "BDR",
+  "volume_mediano": 24434.0,
+  "descricao": "BOEING      DRN"
+ },
+ {
+  "symbol": "BONY34",
+  "tipo": "BDR",
+  "volume_mediano": 11663.0,
+  "descricao": "BNY MELLON  DRN"
+ },
+ {
+  "symbol": "BOTZ39",
+  "tipo": "BDR",
+  "volume_mediano": 33353.0,
+  "descricao": "GX ROBOTC AIDRE"
+ },
+ {
+  "symbol": "BOVA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 443867525.0,
+  "descricao": "ISHARES BOVACI"
+ },
+ {
+  "symbol": "BOVB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2613668.0,
+  "descricao": "ETF BRA IBOVCI"
+ },
+ {
+  "symbol": "BOVS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 590.0,
+  "descricao": "SAFRAETFIBOVCI"
+ },
+ {
+  "symbol": "BOVV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 62214552.0,
+  "descricao": "IT NOW IBOV CI"
+ },
+ {
+  "symbol": "BOVX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6636471.0,
+  "descricao": "TREND IBOVX CI"
+ },
+ {
+  "symbol": "BOXP34",
+  "tipo": "BDR",
+  "volume_mediano": 488.0,
+  "descricao": "BXP INC     DRN"
+ },
+ {
+  "symbol": "BPAC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 471819928.0,
+  "descricao": "BTGP BANCO  UNT EJ  N2"
+ },
+ {
+  "symbol": "BPAC3",
+  "tipo": "ação",
+  "volume_mediano": 296666.0,
+  "descricao": "BTGP BANCO  ON  EJ  N2"
+ },
+ {
+  "symbol": "BPAC5",
+  "tipo": "ação",
+  "volume_mediano": 156356.0,
+  "descricao": "BTGP BANCO  PNA EJ  N2"
+ },
+ {
+  "symbol": "BPFR39",
+  "tipo": "BDR",
+  "volume_mediano": 104.0,
+  "descricao": "GX USPREFERRDRE"
+ },
+ {
+  "symbol": "BPIC39",
+  "tipo": "BDR",
+  "volume_mediano": 2594.0,
+  "descricao": "BKR GBMM PRDDRE"
+ },
+ {
+  "symbol": "BPML11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 683351.0,
+  "descricao": "FII BTG SHOPCI"
+ },
+ {
+  "symbol": "BPVE39",
+  "tipo": "BDR",
+  "volume_mediano": 1729.0,
+  "descricao": "GX INFRA DEVDRE"
+ },
+ {
+  "symbol": "BQCL39",
+  "tipo": "BDR",
+  "volume_mediano": 781.0,
+  "descricao": "FT NSQ GREENDRE"
+ },
+ {
+  "symbol": "BQLT39",
+  "tipo": "BDR",
+  "volume_mediano": 232.0,
+  "descricao": "BKR A RATED DRE"
+ },
+ {
+  "symbol": "BQQW39",
+  "tipo": "BDR",
+  "volume_mediano": 2280.0,
+  "descricao": "FT NASD100EQDRE"
+ },
+ {
+  "symbol": "BQTC39",
+  "tipo": "BDR",
+  "volume_mediano": 876.0,
+  "descricao": "FT NASD100TCDRE"
+ },
+ {
+  "symbol": "BQUA39",
+  "tipo": "BDR",
+  "volume_mediano": 5050.0,
+  "descricao": "MSCIUSQUAL FDRE"
+ },
+ {
+  "symbol": "BQYL39",
+  "tipo": "BDR",
+  "volume_mediano": 2872.0,
+  "descricao": "GX NASDAQ100DRE"
+ },
+ {
+  "symbol": "BRAP3",
+  "tipo": "ação",
+  "volume_mediano": 524951.0,
+  "descricao": "BRADESPAR   ON      N1"
+ },
+ {
+  "symbol": "BRAP4",
+  "tipo": "ação",
+  "volume_mediano": 36358994.0,
+  "descricao": "BRADESPAR   PN      N1"
+ },
+ {
+  "symbol": "BRAV3",
+  "tipo": "ação",
+  "volume_mediano": 129357124.0,
+  "descricao": "BRAVA       ON  ATZ NM"
+ },
+ {
+  "symbol": "BRAX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 792140.0,
+  "descricao": "ISHARES BRAXCI"
+ },
+ {
+  "symbol": "BRAZ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 172.0,
+  "descricao": "BB ETF BRAZ CI"
+ },
+ {
+  "symbol": "BRBI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3701235.0,
+  "descricao": "BR PARTNERS UNT     N2"
+ },
+ {
+  "symbol": "BRCO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4616984.0,
+  "descricao": "FII BRESCO  CI"
+ },
+ {
+  "symbol": "BRCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1008841.0,
+  "descricao": "FII BC FUND CI  ER"
+ },
+ {
+  "symbol": "BREW11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 14290.0,
+  "descricao": "B INDEX BREWCI"
+ },
+ {
+  "symbol": "BREZ39",
+  "tipo": "BDR",
+  "volume_mediano": 57.0,
+  "descricao": "BKR RESMULTSDRE"
+ },
+ {
+  "symbol": "BRFT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 71747.0,
+  "descricao": "FIAGRO BRFT CI  EA"
+ },
+ {
+  "symbol": "BRIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1643.0,
+  "descricao": "FII BRIO IIICI  EA"
+ },
+ {
+  "symbol": "BRKM3",
+  "tipo": "ação",
+  "volume_mediano": 184954.0,
+  "descricao": "BRASKEM     ON      N1"
+ },
+ {
+  "symbol": "BRKM5",
+  "tipo": "ação",
+  "volume_mediano": 41302018.0,
+  "descricao": "BRASKEM     PNA     N1"
+ },
+ {
+  "symbol": "BRKM6",
+  "tipo": "ação",
+  "volume_mediano": 1598.0,
+  "descricao": "BRASKEM     PNB     N1"
+ },
+ {
+  "symbol": "BROF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 264549.0,
+  "descricao": "FII BROF    CI"
+ },
+ {
+  "symbol": "BRSR3",
+  "tipo": "ação",
+  "volume_mediano": 72419.0,
+  "descricao": "BANRISUL    ON      N1"
+ },
+ {
+  "symbol": "BRSR5",
+  "tipo": "ação",
+  "volume_mediano": 1832.0,
+  "descricao": "BANRISUL    PNA     N1"
+ },
+ {
+  "symbol": "BRSR6",
+  "tipo": "ação",
+  "volume_mediano": 17722288.0,
+  "descricao": "BANRISUL    PNB     N1"
+ },
+ {
+  "symbol": "BRST3",
+  "tipo": "ação",
+  "volume_mediano": 699910.0,
+  "descricao": "BRISANET    ON      NM"
+ },
+ {
+  "symbol": "BRXC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2994.0,
+  "descricao": "BTGIABRSELECCI"
+ },
+ {
+  "symbol": "BRZP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 851936.0,
+  "descricao": "FIP BRZ IE  CI"
+ },
+ {
+  "symbol": "BSCZ39",
+  "tipo": "BDR",
+  "volume_mediano": 403.0,
+  "descricao": "BKR MS EAFE DRE"
+ },
+ {
+  "symbol": "BSDV39",
+  "tipo": "BDR",
+  "volume_mediano": 6943.0,
+  "descricao": "GX SUPERDIVDDRE ED"
+ },
+ {
+  "symbol": "BSHV39",
+  "tipo": "BDR",
+  "volume_mediano": 152213.0,
+  "descricao": "BKR 0 1 SHV DRE"
+ },
+ {
+  "symbol": "BSHY39",
+  "tipo": "BDR",
+  "volume_mediano": 3223.0,
+  "descricao": "BKR 1 3 YRTRDRE"
+ },
+ {
+  "symbol": "BSIL39",
+  "tipo": "BDR",
+  "volume_mediano": 925917.0,
+  "descricao": "GX SILVER MNDRE"
+ },
+ {
+  "symbol": "BSIZ39",
+  "tipo": "BDR",
+  "volume_mediano": 843.0,
+  "descricao": "MSCIUSASIZF DRE"
+ },
+ {
+  "symbol": "BSLI3",
+  "tipo": "ação",
+  "volume_mediano": 81716.0,
+  "descricao": "BRB BANCO   ON"
+ },
+ {
+  "symbol": "BSLI4",
+  "tipo": "ação",
+  "volume_mediano": 41418.0,
+  "descricao": "BRB BANCO   PN"
+ },
+ {
+  "symbol": "BSLT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 73457.0,
+  "descricao": "FII BSLT    CI"
+ },
+ {
+  "symbol": "BSLV39",
+  "tipo": "BDR",
+  "volume_mediano": 3484113.0,
+  "descricao": "SILVER TRUSTDRE"
+ },
+ {
+  "symbol": "BSNS39",
+  "tipo": "BDR",
+  "volume_mediano": 401.0,
+  "descricao": "GX INTERTHGSDRE"
+ },
+ {
+  "symbol": "BSOC39",
+  "tipo": "BDR",
+  "volume_mediano": 450.0,
+  "descricao": "GX SOCIAL MDDRE"
+ },
+ {
+  "symbol": "BSOX39",
+  "tipo": "BDR",
+  "volume_mediano": 967114.0,
+  "descricao": "BKR SEMICONDDRE"
+ },
+ {
+  "symbol": "BSRE39",
+  "tipo": "BDR",
+  "volume_mediano": 378.0,
+  "descricao": "GX SUDIVREITDRE ED"
+ },
+ {
+  "symbol": "BSTI39",
+  "tipo": "BDR",
+  "volume_mediano": 7676.0,
+  "descricao": "BKR STIP    DRE"
+ },
+ {
+  "symbol": "BSUS39",
+  "tipo": "BDR",
+  "volume_mediano": 678.0,
+  "descricao": "ESGMSCIUSA LDRE"
+ },
+ {
+  "symbol": "BTAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 103902.0,
+  "descricao": "FIAGRO BTAG CI  ER"
+ },
+ {
+  "symbol": "BTAL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 446466.0,
+  "descricao": "FII BTG AGROCI"
+ },
+ {
+  "symbol": "BTCI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3107418.0,
+  "descricao": "FII BTG CRI CI  ER"
+ },
+ {
+  "symbol": "BTFL39",
+  "tipo": "BDR",
+  "volume_mediano": 6497.0,
+  "descricao": "BKR FLOT RTEDRE"
+ },
+ {
+  "symbol": "BTHF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3025954.0,
+  "descricao": "FII BTHF    CI  ER"
+ },
+ {
+  "symbol": "BTHI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9674.0,
+  "descricao": "BTG HOTEL FICI  ER"
+ },
+ {
+  "symbol": "BTIP39",
+  "tipo": "BDR",
+  "volume_mediano": 6987.0,
+  "descricao": "BKR TIP     DRE"
+ },
+ {
+  "symbol": "BTLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10830073.0,
+  "descricao": "FII BTLG    CI"
+ },
+ {
+  "symbol": "BTLT39",
+  "tipo": "BDR",
+  "volume_mediano": 195233.0,
+  "descricao": "BKR 20YR TRSDRE"
+ },
+ {
+  "symbol": "BTRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 139275.0,
+  "descricao": "FII BTG TAGRCI"
+ },
+ {
+  "symbol": "BTSI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 213.0,
+  "descricao": "FII BTSP II CI"
+ },
+ {
+  "symbol": "BTWR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 599.0,
+  "descricao": "FII BTOWERS CI"
+ },
+ {
+  "symbol": "BTYU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2155.0,
+  "descricao": "FII BTYU    CI  ER"
+ },
+ {
+  "symbol": "BURA39",
+  "tipo": "BDR",
+  "volume_mediano": 757915.0,
+  "descricao": "GX URANIUM  DRE"
+ },
+ {
+  "symbol": "BURT39",
+  "tipo": "BDR",
+  "volume_mediano": 3322.0,
+  "descricao": "BKR MS WLD  DRE"
+ },
+ {
+  "symbol": "BUSA39",
+  "tipo": "BDR",
+  "volume_mediano": 121.0,
+  "descricao": "BKR OPT USA DRE"
+ },
+ {
+  "symbol": "BUSM39",
+  "tipo": "BDR",
+  "volume_mediano": 4214.0,
+  "descricao": "MSCI US MVOLDRE"
+ },
+ {
+  "symbol": "BUSR39",
+  "tipo": "BDR",
+  "volume_mediano": 1469.0,
+  "descricao": "CORE US REITDRE"
+ },
+ {
+  "symbol": "BUTL39",
+  "tipo": "BDR",
+  "volume_mediano": 19239.0,
+  "descricao": "BKR US UTILTDRE"
+ },
+ {
+  "symbol": "BUZZ39",
+  "tipo": "BDR",
+  "volume_mediano": 161.0,
+  "descricao": "VE BUZZ ETF DRE"
+ },
+ {
+  "symbol": "BVAR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2595.0,
+  "descricao": "FII B VAREJOCI"
+ },
+ {
+  "symbol": "BVEG39",
+  "tipo": "BDR",
+  "volume_mediano": 762.0,
+  "descricao": "BKR GBL AGRODRE"
+ },
+ {
+  "symbol": "BVLU39",
+  "tipo": "BDR",
+  "volume_mediano": 10244.0,
+  "descricao": "MSCIUSVALUEFDRE"
+ },
+ {
+  "symbol": "BWCL39",
+  "tipo": "BDR",
+  "volume_mediano": 3493.0,
+  "descricao": "WT CLOU COMPDRE"
+ },
+ {
+  "symbol": "BXPO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 17286.0,
+  "descricao": "INVESTO BXPOCI"
+ },
+ {
+  "symbol": "BXTC39",
+  "tipo": "BDR",
+  "volume_mediano": 292.0,
+  "descricao": "EXPON TECHNLDRE"
+ },
+ {
+  "symbol": "BZRO39",
+  "tipo": "BDR",
+  "volume_mediano": 490.0,
+  "descricao": "PCOM 25 YRZCDRE"
+ },
+ {
+  "symbol": "CACR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 636194.0,
+  "descricao": "CARTESIA FIICI"
+ },
+ {
+  "symbol": "CALI3",
+  "tipo": "ação",
+  "volume_mediano": 5599.0,
+  "descricao": "CONST A LINDON"
+ },
+ {
+  "symbol": "CAMB3",
+  "tipo": "ação",
+  "volume_mediano": 94522.0,
+  "descricao": "CAMBUCI     ON"
+ },
+ {
+  "symbol": "CAML3",
+  "tipo": "ação",
+  "volume_mediano": 3842040.0,
+  "descricao": "CAMIL       ON      NM"
+ },
+ {
+  "symbol": "CAON34",
+  "tipo": "BDR",
+  "volume_mediano": 4637.0,
+  "descricao": "CAPITAL ONE DRN ED"
+ },
+ {
+  "symbol": "CAPE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 705250.0,
+  "descricao": "ISHARES CAP5CI"
+ },
+ {
+  "symbol": "CAPH34",
+  "tipo": "BDR",
+  "volume_mediano": 1265.0,
+  "descricao": "CAPRI HOLDI DRN"
+ },
+ {
+  "symbol": "CARE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2441.0,
+  "descricao": "FII DEA CARECI"
+ },
+ {
+  "symbol": "CASA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 82349.0,
+  "descricao": "ETF CASA    CI"
+ },
+ {
+  "symbol": "CASH3",
+  "tipo": "ação",
+  "volume_mediano": 4590631.0,
+  "descricao": "MELIUZ      ON      NM"
+ },
+ {
+  "symbol": "CASN3",
+  "tipo": "ação",
+  "volume_mediano": 1453.0,
+  "descricao": "CASAN       ON"
+ },
+ {
+  "symbol": "CASN4",
+  "tipo": "ação",
+  "volume_mediano": 1129.0,
+  "descricao": "CASAN       PN"
+ },
+ {
+  "symbol": "CATP34",
+  "tipo": "BDR",
+  "volume_mediano": 762580.0,
+  "descricao": "CATERPILLAR DRN"
+ },
+ {
+  "symbol": "CBAV3",
+  "tipo": "ação",
+  "volume_mediano": 23291951.0,
+  "descricao": "CBA         ON      NM"
+ },
+ {
+  "symbol": "CBEE3",
+  "tipo": "ação",
+  "volume_mediano": 4830.0,
+  "descricao": "AMPLA ENERG ON"
+ },
+ {
+  "symbol": "CBOP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2289.0,
+  "descricao": "FII CBOP PAXCI"
+ },
+ {
+  "symbol": "CCME11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 171570.0,
+  "descricao": "FII CANUMA  CI  ER"
+ },
+ {
+  "symbol": "CCTY3",
+  "tipo": "ação",
+  "volume_mediano": 7985.0,
+  "descricao": "RDVC CITY   ON      NM"
+ },
+ {
+  "symbol": "CDII11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6550748.0,
+  "descricao": "SPARTA CDII CI"
+ },
+ {
+  "symbol": "CEAB3",
+  "tipo": "ação",
+  "volume_mediano": 66248872.0,
+  "descricao": "CEA MODAS   ON      NM"
+ },
+ {
+  "symbol": "CEBR3",
+  "tipo": "ação",
+  "volume_mediano": 110937.0,
+  "descricao": "CEB         ON"
+ },
+ {
+  "symbol": "CEBR5",
+  "tipo": "ação",
+  "volume_mediano": 139272.0,
+  "descricao": "CEB         PNA"
+ },
+ {
+  "symbol": "CEBR6",
+  "tipo": "ação",
+  "volume_mediano": 57880.0,
+  "descricao": "CEB         PNB"
+ },
+ {
+  "symbol": "CEDO3",
+  "tipo": "ação",
+  "volume_mediano": 3008.0,
+  "descricao": "CEDRO       ON      N1"
+ },
+ {
+  "symbol": "CEDO4",
+  "tipo": "ação",
+  "volume_mediano": 14520.0,
+  "descricao": "CEDRO       PN      N1"
+ },
+ {
+  "symbol": "CEEB3",
+  "tipo": "ação",
+  "volume_mediano": 14420.0,
+  "descricao": "COELBA      ON"
+ },
+ {
+  "symbol": "CEEB5",
+  "tipo": "ação",
+  "volume_mediano": 4789.0,
+  "descricao": "COELBA      PNA"
+ },
+ {
+  "symbol": "CEED3",
+  "tipo": "ação",
+  "volume_mediano": 1791.0,
+  "descricao": "CEEE-D      ON"
+ },
+ {
+  "symbol": "CEED4",
+  "tipo": "ação",
+  "volume_mediano": 6700.0,
+  "descricao": "CEEE-D      PN"
+ },
+ {
+  "symbol": "CEGR3",
+  "tipo": "ação",
+  "volume_mediano": 8700.0,
+  "descricao": "CEG         ON"
+ },
+ {
+  "symbol": "CEOC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9826.0,
+  "descricao": "FII CEO CCP CI  ER"
+ },
+ {
+  "symbol": "CFII11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1000.0,
+  "descricao": "FII CF3 IMOBCI  ER"
+ },
+ {
+  "symbol": "CGAS3",
+  "tipo": "ação",
+  "volume_mediano": 24494.0,
+  "descricao": "COMGAS      ON"
+ },
+ {
+  "symbol": "CGAS5",
+  "tipo": "ação",
+  "volume_mediano": 61645.0,
+  "descricao": "COMGAS      PNA"
+ },
+ {
+  "symbol": "CGRA3",
+  "tipo": "ação",
+  "volume_mediano": 14676.0,
+  "descricao": "GRAZZIOTIN  ON"
+ },
+ {
+  "symbol": "CGRA4",
+  "tipo": "ação",
+  "volume_mediano": 84716.0,
+  "descricao": "GRAZZIOTIN  PN"
+ },
+ {
+  "symbol": "CHCM34",
+  "tipo": "BDR",
+  "volume_mediano": 29408.0,
+  "descricao": "CHARTER COMMDRN"
+ },
+ {
+  "symbol": "CHDC34",
+  "tipo": "BDR",
+  "volume_mediano": 1592.0,
+  "descricao": "CHURCH DWIGHDRN ED"
+ },
+ {
+  "symbol": "CHIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3749501.0,
+  "descricao": "INVESTO CHIPCI"
+ },
+ {
+  "symbol": "CHME34",
+  "tipo": "BDR",
+  "volume_mediano": 1168.0,
+  "descricao": "CME GROUP   DRN"
+ },
+ {
+  "symbol": "CHVX34",
+  "tipo": "BDR",
+  "volume_mediano": 398882.0,
+  "descricao": "CHEVRON     DRN"
+ },
+ {
+  "symbol": "CINF34",
+  "tipo": "BDR",
+  "volume_mediano": 895.0,
+  "descricao": "CINCINNATI  DRN"
+ },
+ {
+  "symbol": "CIXF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 887.0,
+  "descricao": "FII CIXF    CI"
+ },
+ {
+  "symbol": "CJCT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1161.0,
+  "descricao": "FII CJCTOWERCI"
+ },
+ {
+  "symbol": "CLIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 583592.0,
+  "descricao": "FII CLAVE INCI  ER"
+ },
+ {
+  "symbol": "CLOV34",
+  "tipo": "BDR",
+  "volume_mediano": 5359.0,
+  "descricao": "CLOVERHEALTHDRN"
+ },
+ {
+  "symbol": "CLSC3",
+  "tipo": "ação",
+  "volume_mediano": 13052.0,
+  "descricao": "CELESC      ON      N2"
+ },
+ {
+  "symbol": "CLSC4",
+  "tipo": "ação",
+  "volume_mediano": 396238.0,
+  "descricao": "CELESC      PN      N2"
+ },
+ {
+  "symbol": "CLXC34",
+  "tipo": "BDR",
+  "volume_mediano": 5683.0,
+  "descricao": "CLOROX CO   DRN ED"
+ },
+ {
+  "symbol": "CMCS34",
+  "tipo": "BDR",
+  "volume_mediano": 13757.0,
+  "descricao": "COMCAST     DRN"
+ },
+ {
+  "symbol": "CMDB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 68961.0,
+  "descricao": "BTG COMMODITCI"
+ },
+ {
+  "symbol": "CMIG3",
+  "tipo": "ação",
+  "volume_mediano": 958180.0,
+  "descricao": "CEMIG       ON      N1"
+ },
+ {
+  "symbol": "CMIG4",
+  "tipo": "ação",
+  "volume_mediano": 120594860.0,
+  "descricao": "CEMIG       PN      N1"
+ },
+ {
+  "symbol": "CMIN3",
+  "tipo": "ação",
+  "volume_mediano": 41224960.0,
+  "descricao": "CSNMINERACAOON      N2"
+ },
+ {
+  "symbol": "CNES11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 20968.0,
+  "descricao": "FII CENESP  CI"
+ },
+ {
+  "symbol": "CNIC34",
+  "tipo": "BDR",
+  "volume_mediano": 270.0,
+  "descricao": "CANAD NATIONDRN"
+ },
+ {
+  "symbol": "COCA34",
+  "tipo": "BDR",
+  "volume_mediano": 1569762.0,
+  "descricao": "COCA COLA   DRN"
+ },
+ {
+  "symbol": "COCE3",
+  "tipo": "ação",
+  "volume_mediano": 5181.0,
+  "descricao": "COELCE      ON"
+ },
+ {
+  "symbol": "COCE5",
+  "tipo": "ação",
+  "volume_mediano": 320852.0,
+  "descricao": "COELCE      PNA"
+ },
+ {
+  "symbol": "COGN3",
+  "tipo": "ação",
+  "volume_mediano": 54584810.0,
+  "descricao": "COGNA ON    ON  ATZ NM"
+ },
+ {
+  "symbol": "COIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2224002.0,
+  "descricao": "ETF BV COIN CI"
+ },
+ {
+  "symbol": "COLD34",
+  "tipo": "BDR",
+  "volume_mediano": 124.0,
+  "descricao": "AMERICOLD RTDRN"
+ },
+ {
+  "symbol": "COLG34",
+  "tipo": "BDR",
+  "volume_mediano": 20744.0,
+  "descricao": "COLGATE     DRN"
+ },
+ {
+  "symbol": "COPH34",
+  "tipo": "BDR",
+  "volume_mediano": 67495.0,
+  "descricao": "COPHILLIPS  DRN ED"
+ },
+ {
+  "symbol": "COPN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 222899.0,
+  "descricao": "FIP COPN    CI"
+ },
+ {
+  "symbol": "CORN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 26227.0,
+  "descricao": "BB ETF MILHOCI"
+ },
+ {
+  "symbol": "COTY34",
+  "tipo": "BDR",
+  "volume_mediano": 331.0,
+  "descricao": "COTY INC    DRN"
+ },
+ {
+  "symbol": "COWC34",
+  "tipo": "BDR",
+  "volume_mediano": 72154.0,
+  "descricao": "COSTCO      DRN"
+ },
+ {
+  "symbol": "CPFE3",
+  "tipo": "ação",
+  "volume_mediano": 53186670.0,
+  "descricao": "CPFL ENERGIAON      NM"
+ },
+ {
+  "symbol": "CPLE3",
+  "tipo": "ação",
+  "volume_mediano": 229318401.0,
+  "descricao": "COPEL       ON      NM"
+ },
+ {
+  "symbol": "CPLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 67073.0,
+  "descricao": "FII CPLG    CI  ES"
+ },
+ {
+  "symbol": "CPOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 848224.0,
+  "descricao": "FII CPOF    CI"
+ },
+ {
+  "symbol": "CPRE3",
+  "tipo": "ação",
+  "volume_mediano": 5472.0,
+  "descricao": "CPFL RENOVAVON"
+ },
+ {
+  "symbol": "CPRL34",
+  "tipo": "BDR",
+  "volume_mediano": 1550.0,
+  "descricao": "CANAD KANSASDRN"
+ },
+ {
+  "symbol": "CPSH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1560731.0,
+  "descricao": "FII CPSH    CI"
+ },
+ {
+  "symbol": "CPTI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2004610.0,
+  "descricao": "FIC IE CAP  CI"
+ },
+ {
+  "symbol": "CPTR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 171405.0,
+  "descricao": "FIAGRO CPTR CI  ER"
+ },
+ {
+  "symbol": "CPTS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6683282.0,
+  "descricao": "FII CAPI SECCI"
+ },
+ {
+  "symbol": "CPUR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8284.0,
+  "descricao": "FII CPHBC URCI"
+ },
+ {
+  "symbol": "CRAA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 481722.0,
+  "descricao": "FIAGRO CRAA CI  ER"
+ },
+ {
+  "symbol": "CRDA34",
+  "tipo": "BDR",
+  "volume_mediano": 852.0,
+  "descricao": "CREDIT ACCEPDRN"
+ },
+ {
+  "symbol": "CRFF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2321.0,
+  "descricao": "FII CX RBRA2CI"
+ },
+ {
+  "symbol": "CRIN34",
+  "tipo": "BDR",
+  "volume_mediano": 1032.0,
+  "descricao": "CARTERS INC DRN"
+ },
+ {
+  "symbol": "CRIP34",
+  "tipo": "BDR",
+  "volume_mediano": 1243.0,
+  "descricao": "CTRIPCOM    DRN"
+ },
+ {
+  "symbol": "CRPG3",
+  "tipo": "ação",
+  "volume_mediano": 3998.0,
+  "descricao": "CRISTAL     ON"
+ },
+ {
+  "symbol": "CRPG5",
+  "tipo": "ação",
+  "volume_mediano": 33934.0,
+  "descricao": "CRISTAL     PNA"
+ },
+ {
+  "symbol": "CRPG6",
+  "tipo": "ação",
+  "volume_mediano": 4348.0,
+  "descricao": "CRISTAL     PNB"
+ },
+ {
+  "symbol": "CRPT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 17971.0,
+  "descricao": "CRIPTO20 EMPCI"
+ },
+ {
+  "symbol": "CSAN3",
+  "tipo": "ação",
+  "volume_mediano": 97689880.0,
+  "descricao": "COSAN       ON      NM"
+ },
+ {
+  "symbol": "CSCO34",
+  "tipo": "BDR",
+  "volume_mediano": 239635.0,
+  "descricao": "CISCO       DRN"
+ },
+ {
+  "symbol": "CSED3",
+  "tipo": "ação",
+  "volume_mediano": 1219342.0,
+  "descricao": "CRUZEIRO EDUON      NM"
+ },
+ {
+  "symbol": "CSMG3",
+  "tipo": "ação",
+  "volume_mediano": 247127462.0,
+  "descricao": "COPASA      ON      NM"
+ },
+ {
+  "symbol": "CSNA3",
+  "tipo": "ação",
+  "volume_mediano": 69172689.0,
+  "descricao": "SID NACIONALON"
+ },
+ {
+  "symbol": "CSUD3",
+  "tipo": "ação",
+  "volume_mediano": 626096.0,
+  "descricao": "CSU DIGITAL ON      NM"
+ },
+ {
+  "symbol": "CSXC34",
+  "tipo": "BDR",
+  "volume_mediano": 565.0,
+  "descricao": "CSX CORP    DRN"
+ },
+ {
+  "symbol": "CTAX3",
+  "tipo": "ação",
+  "volume_mediano": 2956.0,
+  "descricao": "CONTAX      ON"
+ },
+ {
+  "symbol": "CTEM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 30.0,
+  "descricao": "FIAGRO CTEM CI"
+ },
+ {
+  "symbol": "CTGP34",
+  "tipo": "BDR",
+  "volume_mediano": 206523.0,
+  "descricao": "CITIGROUP   DRN"
+ },
+ {
+  "symbol": "CTKA3",
+  "tipo": "ação",
+  "volume_mediano": 5299.0,
+  "descricao": "KARSTEN     ON"
+ },
+ {
+  "symbol": "CTKA4",
+  "tipo": "ação",
+  "volume_mediano": 18750.0,
+  "descricao": "KARSTEN     PN"
+ },
+ {
+  "symbol": "CTSA3",
+  "tipo": "ação",
+  "volume_mediano": 354.0,
+  "descricao": "SANTANENSE  ON"
+ },
+ {
+  "symbol": "CTSA4",
+  "tipo": "ação",
+  "volume_mediano": 960.0,
+  "descricao": "SANTANENSE  PN"
+ },
+ {
+  "symbol": "CTSH34",
+  "tipo": "BDR",
+  "volume_mediano": 2260.0,
+  "descricao": "COGNIZANT   DRN"
+ },
+ {
+  "symbol": "CTXT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 131.0,
+  "descricao": "FII C TEXTILCI"
+ },
+ {
+  "symbol": "CURY3",
+  "tipo": "ação",
+  "volume_mediano": 106796524.0,
+  "descricao": "CURY S/A    ON      NM"
+ },
+ {
+  "symbol": "CVCB3",
+  "tipo": "ação",
+  "volume_mediano": 14043237.0,
+  "descricao": "CVC BRASIL  ON      NM"
+ },
+ {
+  "symbol": "CVSH34",
+  "tipo": "BDR",
+  "volume_mediano": 3797.0,
+  "descricao": "CVS HEALTH  DRN"
+ },
+ {
+  "symbol": "CXAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 146195.0,
+  "descricao": "FII CAIXA AGCI"
+ },
+ {
+  "symbol": "CXCE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 11027.0,
+  "descricao": "FII CX CEDAECI"
+ },
+ {
+  "symbol": "CXCI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 61258.0,
+  "descricao": "FII CAIXA CICI  ER"
+ },
+ {
+  "symbol": "CXCO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 102772.0,
+  "descricao": "FII CEF CORPCI"
+ },
+ {
+  "symbol": "CXRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 7147.0,
+  "descricao": "FII CX RBRAVCI"
+ },
+ {
+  "symbol": "CXSE3",
+  "tipo": "ação",
+  "volume_mediano": 94920312.0,
+  "descricao": "CAIXA SEGURION      NM"
+ },
+ {
+  "symbol": "CXTL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3082.0,
+  "descricao": "FII CX TRX  CI"
+ },
+ {
+  "symbol": "CYCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 472055.0,
+  "descricao": "FII CYRELA  CI"
+ },
+ {
+  "symbol": "CYLD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 464.0,
+  "descricao": "FII CYLD    CI"
+ },
+ {
+  "symbol": "CYRE3",
+  "tipo": "ação",
+  "volume_mediano": 139862362.0,
+  "descricao": "CYRELA REALTON      NM"
+ },
+ {
+  "symbol": "DAMA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1198.0,
+  "descricao": "FII DAMA    CI"
+ },
+ {
+  "symbol": "DAMT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 149.0,
+  "descricao": "FII DIAMANTECI"
+ },
+ {
+  "symbol": "DAPK33",
+  "tipo": "BDR",
+  "volume_mediano": 34615.0,
+  "descricao": "CUPOM DE IPCA"
+ },
+ {
+  "symbol": "DAPK35",
+  "tipo": "BDR",
+  "volume_mediano": 50288.0,
+  "descricao": "CUPOM DE IPCA"
+ },
+ {
+  "symbol": "DAPQ32",
+  "tipo": "BDR",
+  "volume_mediano": 52807.0,
+  "descricao": "CUPOM DE IPCA"
+ },
+ {
+  "symbol": "DASA3",
+  "tipo": "ação",
+  "volume_mediano": 2391372.0,
+  "descricao": "DASA        ON      NM"
+ },
+ {
+  "symbol": "DAYM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 942.0,
+  "descricao": "FII DAYC REMCI"
+ },
+ {
+  "symbol": "DBAG34",
+  "tipo": "BDR",
+  "volume_mediano": 36240.0,
+  "descricao": "DEUTSCHE AK DRN"
+ },
+ {
+  "symbol": "DCRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 52138.0,
+  "descricao": "FIAGRO DEVANCI  ER"
+ },
+ {
+  "symbol": "DDNB34",
+  "tipo": "BDR",
+  "volume_mediano": 2358.0,
+  "descricao": "DUPONT N INCDRN"
+ },
+ {
+  "symbol": "DEAI34",
+  "tipo": "BDR",
+  "volume_mediano": 13990.0,
+  "descricao": "DELTA       DRN"
+ },
+ {
+  "symbol": "DEEC34",
+  "tipo": "BDR",
+  "volume_mediano": 103486.0,
+  "descricao": "DEERE CO    DRN"
+ },
+ {
+  "symbol": "DEFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 63758.0,
+  "descricao": "DEFI HASH   CI"
+ },
+ {
+  "symbol": "DEOP34",
+  "tipo": "BDR",
+  "volume_mediano": 3841.0,
+  "descricao": "DIAGEO PL   DRN"
+ },
+ {
+  "symbol": "DESK3",
+  "tipo": "ação",
+  "volume_mediano": 6064924.0,
+  "descricao": "DESKTOP     ON      NM"
+ },
+ {
+  "symbol": "DEVA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 465532.0,
+  "descricao": "FII DEVANT  CI  ER"
+ },
+ {
+  "symbol": "DEXP3",
+  "tipo": "ação",
+  "volume_mediano": 481251.0,
+  "descricao": "DEXXOS PAR  ON      N1"
+ },
+ {
+  "symbol": "DEXP4",
+  "tipo": "ação",
+  "volume_mediano": 7876.0,
+  "descricao": "DEXXOS PAR  PN      N1"
+ },
+ {
+  "symbol": "DGCO34",
+  "tipo": "BDR",
+  "volume_mediano": 1484.0,
+  "descricao": "DOLLAR GENERDRN"
+ },
+ {
+  "symbol": "DHER34",
+  "tipo": "BDR",
+  "volume_mediano": 9555.0,
+  "descricao": "DANAHER CORPDRN"
+ },
+ {
+  "symbol": "DIRR3",
+  "tipo": "ação",
+  "volume_mediano": 86985812.0,
+  "descricao": "DIRECIONAL  ON      NM"
+ },
+ {
+  "symbol": "DISB34",
+  "tipo": "BDR",
+  "volume_mediano": 640032.0,
+  "descricao": "WALT DISNEY DRN"
+ },
+ {
+  "symbol": "DIVD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 899299.0,
+  "descricao": "IT NOW DIVD CI  ER"
+ },
+ {
+  "symbol": "DIVO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 14739547.0,
+  "descricao": "IT NOW IDIV CI"
+ },
+ {
+  "symbol": "DIVS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1151104.0,
+  "descricao": "SPARTA DIVS CI"
+ },
+ {
+  "symbol": "DLTR34",
+  "tipo": "BDR",
+  "volume_mediano": 9763.0,
+  "descricao": "DOLLAR TREE DRN"
+ },
+ {
+  "symbol": "DMVF3",
+  "tipo": "ação",
+  "volume_mediano": 216302.0,
+  "descricao": "D1000VFARMA ON      NM"
+ },
+ {
+  "symbol": "DOHL3",
+  "tipo": "ação",
+  "volume_mediano": 1002.0,
+  "descricao": "DOHLER      ON"
+ },
+ {
+  "symbol": "DOHL4",
+  "tipo": "ação",
+  "volume_mediano": 7830.0,
+  "descricao": "DOHLER      PN"
+ },
+ {
+  "symbol": "DOLA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1125176.0,
+  "descricao": "BB ETF DOLARCI"
+ },
+ {
+  "symbol": "DOLB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 54709.0,
+  "descricao": "BTG SP DOLARCI"
+ },
+ {
+  "symbol": "DOLL39",
+  "tipo": "BDR",
+  "volume_mediano": 3691.0,
+  "descricao": "BKR DOLL ETFDRE"
+ },
+ {
+  "symbol": "DOTZ3",
+  "tipo": "ação",
+  "volume_mediano": 256155.0,
+  "descricao": "DOTZ SA     ON      NM"
+ },
+ {
+  "symbol": "DPRO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 247.0,
+  "descricao": "FII DEVA PROCI  ER"
+ },
+ {
+  "symbol": "DTCR39",
+  "tipo": "BDR",
+  "volume_mediano": 32241.0,
+  "descricao": "GX DATAINFRADRE"
+ },
+ {
+  "symbol": "DTCY3",
+  "tipo": "ação",
+  "volume_mediano": 1000.0,
+  "descricao": "DTCOM-DIRECTON"
+ },
+ {
+  "symbol": "DUKB34",
+  "tipo": "BDR",
+  "volume_mediano": 4605.0,
+  "descricao": "DUKE ENERGY DRN ED"
+ },
+ {
+  "symbol": "DUOL34",
+  "tipo": "BDR",
+  "volume_mediano": 18790.0,
+  "descricao": "DUOLINGO INCDRN"
+ },
+ {
+  "symbol": "DVAI34",
+  "tipo": "BDR",
+  "volume_mediano": 3603.0,
+  "descricao": "DAVITA INC  DRN"
+ },
+ {
+  "symbol": "DVER11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 82106.0,
+  "descricao": "BB ETF DVER CI"
+ },
+ {
+  "symbol": "DVFF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 31366.0,
+  "descricao": "FII DEVA FOFCI  ER"
+ },
+ {
+  "symbol": "DXCO3",
+  "tipo": "ação",
+  "volume_mediano": 8768677.0,
+  "descricao": "DEXCO       ON      NM"
+ },
+ {
+  "symbol": "EALT3",
+  "tipo": "ação",
+  "volume_mediano": 4137.0,
+  "descricao": "ACO ALTONA  ON"
+ },
+ {
+  "symbol": "EALT4",
+  "tipo": "ação",
+  "volume_mediano": 53770.0,
+  "descricao": "ACO ALTONA  PN"
+ },
+ {
+  "symbol": "EBAY34",
+  "tipo": "BDR",
+  "volume_mediano": 3372.0,
+  "descricao": "EBAY        DRN"
+ },
+ {
+  "symbol": "EBIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1510.0,
+  "descricao": "EMPIRICUSBTCCI"
+ },
+ {
+  "symbol": "ECOO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5160.0,
+  "descricao": "ISHARES ECOOCI"
+ },
+ {
+  "symbol": "ECOR3",
+  "tipo": "ação",
+  "volume_mediano": 32922633.0,
+  "descricao": "ECORODOVIAS ON      NM"
+ },
+ {
+  "symbol": "EDFO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1986.0,
+  "descricao": "FII OURINVESCI"
+ },
+ {
+  "symbol": "EDGA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 28055.0,
+  "descricao": "FII GALERIA CI"
+ },
+ {
+  "symbol": "EDGE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1072.0,
+  "descricao": "FII EDGE    CI"
+ },
+ {
+  "symbol": "EGAF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 703432.0,
+  "descricao": "FIAGRO ECO  CI  ER"
+ },
+ {
+  "symbol": "EGDB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 15071.0,
+  "descricao": "FII EGDB    CI"
+ },
+ {
+  "symbol": "EGIE3",
+  "tipo": "ação",
+  "volume_mediano": 82138540.0,
+  "descricao": "ENGIE BRASILON      NM"
+ },
+ {
+  "symbol": "EGYR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 329.0,
+  "descricao": "FII ENERGY  CI"
+ },
+ {
+  "symbol": "EIRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4448.0,
+  "descricao": "FII EIRA    CI  ER"
+ },
+ {
+  "symbol": "EKTR3",
+  "tipo": "ação",
+  "volume_mediano": 5126.0,
+  "descricao": "ELEKTRO     ON"
+ },
+ {
+  "symbol": "EKTR4",
+  "tipo": "ação",
+  "volume_mediano": 7978.0,
+  "descricao": "ELEKTRO     PN"
+ },
+ {
+  "symbol": "ELAS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 48968.0,
+  "descricao": "SAFRAETFELASCI"
+ },
+ {
+  "symbol": "ELCI34",
+  "tipo": "BDR",
+  "volume_mediano": 485.0,
+  "descricao": "ESTEE LAUDERDRN"
+ },
+ {
+  "symbol": "EMAE4",
+  "tipo": "ação",
+  "volume_mediano": 90348.0,
+  "descricao": "EMAE        PN"
+ },
+ {
+  "symbol": "EMET11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 245.0,
+  "descricao": "FII EMET    CI  ER"
+ },
+ {
+  "symbol": "ENDD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 136059.0,
+  "descricao": "FIP END DEBTCI"
+ },
+ {
+  "symbol": "ENEV3",
+  "tipo": "ação",
+  "volume_mediano": 187443170.0,
+  "descricao": "ENEVA       ON      NM"
+ },
+ {
+  "symbol": "ENGI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 108090147.0,
+  "descricao": "ENERGISA    UNT ED  N2"
+ },
+ {
+  "symbol": "ENGI3",
+  "tipo": "ação",
+  "volume_mediano": 28020.0,
+  "descricao": "ENERGISA    ON  ED  N2"
+ },
+ {
+  "symbol": "ENGI4",
+  "tipo": "ação",
+  "volume_mediano": 41156.0,
+  "descricao": "ENERGISA    PN  ED  N2"
+ },
+ {
+  "symbol": "ENJU3",
+  "tipo": "ação",
+  "volume_mediano": 678559.0,
+  "descricao": "ENJOEI      ON      NM"
+ },
+ {
+  "symbol": "ENMT3",
+  "tipo": "ação",
+  "volume_mediano": 36943.0,
+  "descricao": "ENERGISA MT ON"
+ },
+ {
+  "symbol": "ENMT4",
+  "tipo": "ação",
+  "volume_mediano": 25221.0,
+  "descricao": "ENERGISA MT PN"
+ },
+ {
+  "symbol": "EPAR3",
+  "tipo": "ação",
+  "volume_mediano": 8007.0,
+  "descricao": "EMBPAR S/A  ON"
+ },
+ {
+  "symbol": "EQIR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 41709.0,
+  "descricao": "FII EQI RECECI"
+ },
+ {
+  "symbol": "EQIX34",
+  "tipo": "BDR",
+  "volume_mediano": 14925.0,
+  "descricao": "EQUINIX INC DRN"
+ },
+ {
+  "symbol": "EQPA3",
+  "tipo": "ação",
+  "volume_mediano": 48872.0,
+  "descricao": "EQTL PARA   ON"
+ },
+ {
+  "symbol": "EQPA5",
+  "tipo": "ação",
+  "volume_mediano": 1726.0,
+  "descricao": "EQTL PARA   PNA"
+ },
+ {
+  "symbol": "EQTL3",
+  "tipo": "ação",
+  "volume_mediano": 298578446.0,
+  "descricao": "EQUATORIAL  ON      NM"
+ },
+ {
+  "symbol": "ERPA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12396.0,
+  "descricao": "FII EUROPA  CI  ER"
+ },
+ {
+  "symbol": "ESGB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1502.0,
+  "descricao": "ETF ESG BTG CI"
+ },
+ {
+  "symbol": "ESPA3",
+  "tipo": "ação",
+  "volume_mediano": 368295.0,
+  "descricao": "ESPACOLASER ON      NM"
+ },
+ {
+  "symbol": "ESTR3",
+  "tipo": "ação",
+  "volume_mediano": 1251.0,
+  "descricao": "ESTRELA     ON"
+ },
+ {
+  "symbol": "ESTR4",
+  "tipo": "ação",
+  "volume_mediano": 1062.0,
+  "descricao": "ESTRELA     PN"
+ },
+ {
+  "symbol": "ESUD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 160400.0,
+  "descricao": "FIP IE II   CI"
+ },
+ {
+  "symbol": "ETER3",
+  "tipo": "ação",
+  "volume_mediano": 218946.0,
+  "descricao": "ETERNIT     ON      NM"
+ },
+ {
+  "symbol": "ETHA39",
+  "tipo": "BDR",
+  "volume_mediano": 27287.0,
+  "descricao": "BKR ETHEREUMDRE"
+ },
+ {
+  "symbol": "ETHE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4414927.0,
+  "descricao": "ETHER HASH  CI"
+ },
+ {
+  "symbol": "EUCA3",
+  "tipo": "ação",
+  "volume_mediano": 6855.0,
+  "descricao": "EUCATEX     ON      N1"
+ },
+ {
+  "symbol": "EUCA4",
+  "tipo": "ação",
+  "volume_mediano": 1760616.0,
+  "descricao": "EUCATEX     PN      N1"
+ },
+ {
+  "symbol": "EURO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 19868.0,
+  "descricao": "FII EUROPAR CI"
+ },
+ {
+  "symbol": "EVEN3",
+  "tipo": "ação",
+  "volume_mediano": 4779176.0,
+  "descricao": "EVEN        ON      NM"
+ },
+ {
+  "symbol": "EWBZ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 729301.0,
+  "descricao": "ISHARES EQWECI"
+ },
+ {
+  "symbol": "EXES11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 50984.0,
+  "descricao": "FII EXES    CI"
+ },
+ {
+  "symbol": "EXGR34",
+  "tipo": "BDR",
+  "volume_mediano": 11817.0,
+  "descricao": "EXPEDIA GROUDRN"
+ },
+ {
+  "symbol": "EXIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 49.0,
+  "descricao": "INFRA EXIF  CI  ER"
+ },
+ {
+  "symbol": "EXXO34",
+  "tipo": "BDR",
+  "volume_mediano": 740494.0,
+  "descricao": "EXXON MOBIL DRN ED"
+ },
+ {
+  "symbol": "EZTC3",
+  "tipo": "ação",
+  "volume_mediano": 19542344.0,
+  "descricao": "EZTEC       ON  ED  NM"
+ },
+ {
+  "symbol": "FAED11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 35210.0,
+  "descricao": "FII ANH EDUCCI  ER"
+ },
+ {
+  "symbol": "FAMB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8740.0,
+  "descricao": "FII ALMIRANTCI"
+ },
+ {
+  "symbol": "FASL34",
+  "tipo": "BDR",
+  "volume_mediano": 2084.0,
+  "descricao": "FASTENAL    DRN"
+ },
+ {
+  "symbol": "FATN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1801437.0,
+  "descricao": "FII ATHENA ICI  ER"
+ },
+ {
+  "symbol": "FCFL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 83552.0,
+  "descricao": "FII CAMPUSFLCI"
+ },
+ {
+  "symbol": "FCXO34",
+  "tipo": "BDR",
+  "volume_mediano": 1103446.0,
+  "descricao": "FREEPORT    DRN"
+ },
+ {
+  "symbol": "FDES11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 410.0,
+  "descricao": "FUNDES      CI"
+ },
+ {
+  "symbol": "FDMO34",
+  "tipo": "BDR",
+  "volume_mediano": 17093.0,
+  "descricao": "FORD MOTORS DRN ED"
+ },
+ {
+  "symbol": "FDXB34",
+  "tipo": "BDR",
+  "volume_mediano": 6594.0,
+  "descricao": "FEDEX CORP  DRN"
+ },
+ {
+  "symbol": "FESA3",
+  "tipo": "ação",
+  "volume_mediano": 3684.0,
+  "descricao": "FERBASA     ON      N1"
+ },
+ {
+  "symbol": "FESA4",
+  "tipo": "ação",
+  "volume_mediano": 4160598.0,
+  "descricao": "FERBASA     PN      N1"
+ },
+ {
+  "symbol": "FFTD34",
+  "tipo": "BDR",
+  "volume_mediano": 1107.0,
+  "descricao": "FIFTH THIRD DRN"
+ },
+ {
+  "symbol": "FGAA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 678242.0,
+  "descricao": "FIAGRO FGA  CI  ER"
+ },
+ {
+  "symbol": "FHER3",
+  "tipo": "ação",
+  "volume_mediano": 6586.0,
+  "descricao": "FER HERINGERON      NM"
+ },
+ {
+  "symbol": "FICT3",
+  "tipo": "ação",
+  "volume_mediano": 2450.0,
+  "descricao": "FICTORALIMENON"
+ },
+ {
+  "symbol": "FIEI3",
+  "tipo": "ação",
+  "volume_mediano": 18845.0,
+  "descricao": "FICA        ON"
+ },
+ {
+  "symbol": "FIGS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 92724.0,
+  "descricao": "FII GEN SHOPCI"
+ },
+ {
+  "symbol": "FIIB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 216333.0,
+  "descricao": "FII INDL BR CI"
+ },
+ {
+  "symbol": "FIIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 188790.0,
+  "descricao": "FII RB CAP ICI"
+ },
+ {
+  "symbol": "FIND11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2587593.0,
+  "descricao": "IT NOW IFNC CI"
+ },
+ {
+  "symbol": "FIQE3",
+  "tipo": "ação",
+  "volume_mediano": 3237650.0,
+  "descricao": "UNIFIQUE    ON      NM"
+ },
+ {
+  "symbol": "FISC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 252.0,
+  "descricao": "FII SC 401  CI  ER"
+ },
+ {
+  "symbol": "FIVN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1003.0,
+  "descricao": "FII VIDANOVACI"
+ },
+ {
+  "symbol": "FIXX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 19830.0,
+  "descricao": "ETF FIXX    CI"
+ },
+ {
+  "symbol": "FLCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 36454.0,
+  "descricao": "FII FL RECEBCI  ER"
+ },
+ {
+  "symbol": "FLMA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 29716.0,
+  "descricao": "FII S F LIMACI  ER"
+ },
+ {
+  "symbol": "FLRP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 7681.0,
+  "descricao": "FII FLORIPA CI"
+ },
+ {
+  "symbol": "FLRY3",
+  "tipo": "ação",
+  "volume_mediano": 30522360.0,
+  "descricao": "FLEURY      ON  EJ  NM"
+ },
+ {
+  "symbol": "FMOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 399.0,
+  "descricao": "FII MEMORIALCI"
+ },
+ {
+  "symbol": "FMSC34",
+  "tipo": "BDR",
+  "volume_mediano": 545.0,
+  "descricao": "FRESENIUS   DRN"
+ },
+ {
+  "symbol": "FMXB34",
+  "tipo": "BDR",
+  "volume_mediano": 1003.0,
+  "descricao": "FEMSA       DRN"
+ },
+ {
+  "symbol": "FNAM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1018980.0,
+  "descricao": "FINAM       CI *"
+ },
+ {
+  "symbol": "FNOR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 316750.0,
+  "descricao": "FINOR       CI *"
+ },
+ {
+  "symbol": "FOMO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 7149.0,
+  "descricao": "FOMO HASH   CI"
+ },
+ {
+  "symbol": "FOXC34",
+  "tipo": "BDR",
+  "volume_mediano": 1283.0,
+  "descricao": "FOX CORP    DRN"
+ },
+ {
+  "symbol": "FPAB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2274.0,
+  "descricao": "FII A BRANCACI  ER"
+ },
+ {
+  "symbol": "FPNG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 582.0,
+  "descricao": "FII P NEGRA CI"
+ },
+ {
+  "symbol": "FPOR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 201.0,
+  "descricao": "FIP PORT SUDCI"
+ },
+ {
+  "symbol": "FRAS3",
+  "tipo": "ação",
+  "volume_mediano": 3838158.0,
+  "descricao": "FRAS-LE     ON      N1"
+ },
+ {
+  "symbol": "FRCF32",
+  "tipo": "BDR",
+  "volume_mediano": 1636.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF33",
+  "tipo": "BDR",
+  "volume_mediano": 2113.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF34",
+  "tipo": "BDR",
+  "volume_mediano": 1323.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF35",
+  "tipo": "BDR",
+  "volume_mediano": 2052.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF36",
+  "tipo": "BDR",
+  "volume_mediano": 4237.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF37",
+  "tipo": "BDR",
+  "volume_mediano": 2416.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF38",
+  "tipo": "BDR",
+  "volume_mediano": 1420.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRCF39",
+  "tipo": "BDR",
+  "volume_mediano": 1110.0,
+  "descricao": "FRA DE CUPOM"
+ },
+ {
+  "symbol": "FRIO3",
+  "tipo": "ação",
+  "volume_mediano": 79497.0,
+  "descricao": "METALFRIO   ON      NM"
+ },
+ {
+  "symbol": "FSLR34",
+  "tipo": "BDR",
+  "volume_mediano": 17139.0,
+  "descricao": "FIRST SOLAR DRN"
+ },
+ {
+  "symbol": "FSPE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 570.0,
+  "descricao": "FISET PESCA CI"
+ },
+ {
+  "symbol": "FSRF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 550.0,
+  "descricao": "FISET FL REFCI"
+ },
+ {
+  "symbol": "FSTU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 410.0,
+  "descricao": "FISET TUR   CI"
+ },
+ {
+  "symbol": "FTCA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 44134.0,
+  "descricao": "FI AGRO FYTOCI"
+ },
+ {
+  "symbol": "FTCE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 124194.0,
+  "descricao": "FII OPPORTUNCI"
+ },
+ {
+  "symbol": "FVPQ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 30535.0,
+  "descricao": "FII V PARQUECI"
+ },
+ {
+  "symbol": "FYTO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 109632.0,
+  "descricao": "FII FYTO    CI  ER"
+ },
+ {
+  "symbol": "FZDA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 829.0,
+  "descricao": "FIAGRO FZDA CI"
+ },
+ {
+  "symbol": "FZDB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 354.0,
+  "descricao": "FIAGRO FZDB CI"
+ },
+ {
+  "symbol": "GAME11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 253461.0,
+  "descricao": "FII GUARD MUCI  ER"
+ },
+ {
+  "symbol": "GARE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9436069.0,
+  "descricao": "FII GUARDIANCI"
+ },
+ {
+  "symbol": "GCDL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12814.0,
+  "descricao": "FII GCDL    CI"
+ },
+ {
+  "symbol": "GCOI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12869.0,
+  "descricao": "FII GALAP SPCI  ERA"
+ },
+ {
+  "symbol": "GCRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 135020.0,
+  "descricao": "FIAGRO GLPG CI  ER"
+ },
+ {
+  "symbol": "GCRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 130522.0,
+  "descricao": "FII GLPG CRICI  ER"
+ },
+ {
+  "symbol": "GDBR34",
+  "tipo": "BDR",
+  "volume_mediano": 6856.0,
+  "descricao": "GEN DYNAMICSDRN"
+ },
+ {
+  "symbol": "GDXB39",
+  "tipo": "BDR",
+  "volume_mediano": 1548398.0,
+  "descricao": "VE GOLD ETF DRE"
+ },
+ {
+  "symbol": "GEHC34",
+  "tipo": "BDR",
+  "volume_mediano": 191.0,
+  "descricao": "GEHEALTHCAREDRN"
+ },
+ {
+  "symbol": "GENB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 51068.0,
+  "descricao": "ETF BTG GENBCI"
+ },
+ {
+  "symbol": "GEOO34",
+  "tipo": "BDR",
+  "volume_mediano": 70454.0,
+  "descricao": "GEAEROSPACE DRN"
+ },
+ {
+  "symbol": "GEPA3",
+  "tipo": "ação",
+  "volume_mediano": 6857.0,
+  "descricao": "GER PARANAP ON"
+ },
+ {
+  "symbol": "GEPA4",
+  "tipo": "ação",
+  "volume_mediano": 11373.0,
+  "descricao": "GER PARANAP PN"
+ },
+ {
+  "symbol": "GFDL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10403.0,
+  "descricao": "FII GFDL    CI"
+ },
+ {
+  "symbol": "GFSA3",
+  "tipo": "ação",
+  "volume_mediano": 1570804.0,
+  "descricao": "GAFISA      ON      NM"
+ },
+ {
+  "symbol": "GGBR3",
+  "tipo": "ação",
+  "volume_mediano": 447548.0,
+  "descricao": "GERDAU      ON      N1"
+ },
+ {
+  "symbol": "GGBR4",
+  "tipo": "ação",
+  "volume_mediano": 210917478.0,
+  "descricao": "GERDAU      PN      N1"
+ },
+ {
+  "symbol": "GGPS3",
+  "tipo": "ação",
+  "volume_mediano": 33786060.0,
+  "descricao": "GPS         ON      NM"
+ },
+ {
+  "symbol": "GGRC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 13125547.0,
+  "descricao": "FII GGR ZAG CI"
+ },
+ {
+  "symbol": "GILD34",
+  "tipo": "BDR",
+  "volume_mediano": 9039.0,
+  "descricao": "GILEAD      DRN"
+ },
+ {
+  "symbol": "GLCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3806.0,
+  "descricao": "FII GLCR    CI"
+ },
+ {
+  "symbol": "GLDX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 221577.0,
+  "descricao": "INVESTO GLDXCI"
+ },
+ {
+  "symbol": "GLPF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 16649.0,
+  "descricao": "FII GLPF    CI  ER"
+ },
+ {
+  "symbol": "GMAT3",
+  "tipo": "ação",
+  "volume_mediano": 18220094.0,
+  "descricao": "GRUPO MATEUSON      NM"
+ },
+ {
+  "symbol": "GMCO34",
+  "tipo": "BDR",
+  "volume_mediano": 30662.0,
+  "descricao": "GENERAL MOT DRN"
+ },
+ {
+  "symbol": "GOAT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 71300.0,
+  "descricao": "IT NOW SP+RFCI"
+ },
+ {
+  "symbol": "GOAU3",
+  "tipo": "ação",
+  "volume_mediano": 281216.0,
+  "descricao": "GERDAU MET  ON      N1"
+ },
+ {
+  "symbol": "GOAU4",
+  "tipo": "ação",
+  "volume_mediano": 73215818.0,
+  "descricao": "GERDAU MET  PN      N1"
+ },
+ {
+  "symbol": "GOGL34",
+  "tipo": "BDR",
+  "volume_mediano": 34038882.0,
+  "descricao": "ALPHABET    DRN"
+ },
+ {
+  "symbol": "GOGL35",
+  "tipo": "BDR",
+  "volume_mediano": 247349.0,
+  "descricao": "ALPHABET    DRN"
+ },
+ {
+  "symbol": "GOLD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 27690161.0,
+  "descricao": "TREND OURO  CI"
+ },
+ {
+  "symbol": "GOVE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6720.0,
+  "descricao": "IT NOW IGCT CI"
+ },
+ {
+  "symbol": "GPAR3",
+  "tipo": "ação",
+  "volume_mediano": 2642.0,
+  "descricao": "CELGPAR     ON"
+ },
+ {
+  "symbol": "GPRK34",
+  "tipo": "BDR",
+  "volume_mediano": 4405.0,
+  "descricao": "GEOPARK LTD DRN"
+ },
+ {
+  "symbol": "GPRO34",
+  "tipo": "BDR",
+  "volume_mediano": 4579.0,
+  "descricao": "GOPRO       DRN"
+ },
+ {
+  "symbol": "GPSI34",
+  "tipo": "BDR",
+  "volume_mediano": 2687.0,
+  "descricao": "GAP         DRN"
+ },
+ {
+  "symbol": "GPUS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 653043.0,
+  "descricao": "INVESTOGPS&PCI"
+ },
+ {
+  "symbol": "GRND3",
+  "tipo": "ação",
+  "volume_mediano": 9044907.0,
+  "descricao": "GRENDENE    ON      NM"
+ },
+ {
+  "symbol": "GRUL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 181728.0,
+  "descricao": "FII GRUL    CI"
+ },
+ {
+  "symbol": "GRWA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6597.0,
+  "descricao": "FIAGRO GRWA CI  ER"
+ },
+ {
+  "symbol": "GSFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 83351.0,
+  "descricao": "FII GENERAL CI"
+ },
+ {
+  "symbol": "GSGI34",
+  "tipo": "BDR",
+  "volume_mediano": 3520688.0,
+  "descricao": "GOLDMANSACHSDRN"
+ },
+ {
+  "symbol": "GSHP3",
+  "tipo": "ação",
+  "volume_mediano": 939.0,
+  "descricao": "GENERALSHOPPON"
+ },
+ {
+  "symbol": "GTWR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 652196.0,
+  "descricao": "FII G TOWERSCI"
+ },
+ {
+  "symbol": "GZIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 339636.0,
+  "descricao": "FII GAZIT   CI"
+ },
+ {
+  "symbol": "HAAA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 845.0,
+  "descricao": "FII HEDGEAAACI"
+ },
+ {
+  "symbol": "HABT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 899119.0,
+  "descricao": "FII HABIT IICI"
+ },
+ {
+  "symbol": "HAGA3",
+  "tipo": "ação",
+  "volume_mediano": 9294.0,
+  "descricao": "HAGA S/A    ON"
+ },
+ {
+  "symbol": "HAGA4",
+  "tipo": "ação",
+  "volume_mediano": 19909.0,
+  "descricao": "HAGA S/A    PN"
+ },
+ {
+  "symbol": "HALI34",
+  "tipo": "BDR",
+  "volume_mediano": 5738.0,
+  "descricao": "HALLIBURTON DRN"
+ },
+ {
+  "symbol": "HAPV3",
+  "tipo": "ação",
+  "volume_mediano": 55793132.0,
+  "descricao": "HAPVIDA     ON      NM"
+ },
+ {
+  "symbol": "HASH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10570510.0,
+  "descricao": "HASHDEX NCI CI"
+ },
+ {
+  "symbol": "HBCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 545.0,
+  "descricao": "FII HBC REN CI"
+ },
+ {
+  "symbol": "HBOR3",
+  "tipo": "ação",
+  "volume_mediano": 1684328.0,
+  "descricao": "HELBOR      ON      NM"
+ },
+ {
+  "symbol": "HBRE3",
+  "tipo": "ação",
+  "volume_mediano": 628267.0,
+  "descricao": "HBR REALTY  ON      NM"
+ },
+ {
+  "symbol": "HBSA3",
+  "tipo": "ação",
+  "volume_mediano": 5262224.0,
+  "descricao": "HIDROVIAS   ON      NM"
+ },
+ {
+  "symbol": "HBTS5",
+  "tipo": "ação",
+  "volume_mediano": 5808.0,
+  "descricao": "HABITASUL   PNA"
+ },
+ {
+  "symbol": "HCRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 27613.0,
+  "descricao": "FII CRIANCA CI  ER"
+ },
+ {
+  "symbol": "HCST11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 202.0,
+  "descricao": "FII HECT DESCI"
+ },
+ {
+  "symbol": "HCTR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 514917.0,
+  "descricao": "FII HECTARE CI  ER"
+ },
+ {
+  "symbol": "HDEL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 339.0,
+  "descricao": "FII HEDGE DVCI"
+ },
+ {
+  "symbol": "HDOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 355176.0,
+  "descricao": "FII HEDGE OFCI"
+ },
+ {
+  "symbol": "HERT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1585.0,
+  "descricao": "ETF HEQREITSCI"
+ },
+ {
+  "symbol": "HETA4",
+  "tipo": "ação",
+  "volume_mediano": 990.0,
+  "descricao": "HERCULES    PN"
+ },
+ {
+  "symbol": "HFOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1841147.0,
+  "descricao": "FII HTOPFOF3CI"
+ },
+ {
+  "symbol": "HGAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 160.0,
+  "descricao": "FIAGRO HIGH CI"
+ },
+ {
+  "symbol": "HGBL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 32058.0,
+  "descricao": "FII HGBL    CI"
+ },
+ {
+  "symbol": "HGBS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3624086.0,
+  "descricao": "FII HEDGEBS CI"
+ },
+ {
+  "symbol": "HGCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2832691.0,
+  "descricao": "FII HGCR PAXCI"
+ },
+ {
+  "symbol": "HGIC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1595.0,
+  "descricao": "FII HGI CRI CI  ER"
+ },
+ {
+  "symbol": "HGLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 15217820.0,
+  "descricao": "FII HGLG PAXCI"
+ },
+ {
+  "symbol": "HGRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1971600.0,
+  "descricao": "FII HGRE PAXCI"
+ },
+ {
+  "symbol": "HGRU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5859273.0,
+  "descricao": "FII HGRU PAXCI"
+ },
+ {
+  "symbol": "HIGH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1524921.0,
+  "descricao": "NUIBOVHIGHBTCI"
+ },
+ {
+  "symbol": "HIWP34",
+  "tipo": "BDR",
+  "volume_mediano": 166.0,
+  "descricao": "HIGHWOODS PRDRN ED"
+ },
+ {
+  "symbol": "HLOG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 45002.0,
+  "descricao": "FII HEDGELOGCI"
+ },
+ {
+  "symbol": "HODL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 928300.0,
+  "descricao": "INVESTO HODLCI"
+ },
+ {
+  "symbol": "HOFC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 142479.0,
+  "descricao": "FII HOFFICEICI"
+ },
+ {
+  "symbol": "HOME34",
+  "tipo": "BDR",
+  "volume_mediano": 19212.0,
+  "descricao": "HOME DEPOT  DRN"
+ },
+ {
+  "symbol": "HOMS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 16477.0,
+  "descricao": "FII HOMS    CI"
+ },
+ {
+  "symbol": "HONB34",
+  "tipo": "BDR",
+  "volume_mediano": 6972.0,
+  "descricao": "HONEYWELL   DRN ED"
+ },
+ {
+  "symbol": "HOND34",
+  "tipo": "BDR",
+  "volume_mediano": 2649.0,
+  "descricao": "HONDA MO    DRN"
+ },
+ {
+  "symbol": "HOOT4",
+  "tipo": "ação",
+  "volume_mediano": 9769.0,
+  "descricao": "HOTEIS OTHONPN"
+ },
+ {
+  "symbol": "HOSI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1576.0,
+  "descricao": "FII HOUSI   CI"
+ },
+ {
+  "symbol": "HPDP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 834.0,
+  "descricao": "FII HEDGEPDPCI"
+ },
+ {
+  "symbol": "HPQB34",
+  "tipo": "BDR",
+  "volume_mediano": 79578.0,
+  "descricao": "HP COMPANY  DRN"
+ },
+ {
+  "symbol": "HRDF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 25.0,
+  "descricao": "FII HREALTY CI"
+ },
+ {
+  "symbol": "HREC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 88779.0,
+  "descricao": "FII HEDGERECCI"
+ },
+ {
+  "symbol": "HSAF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 402156.0,
+  "descricao": "FII HSI CRI CI"
+ },
+ {
+  "symbol": "HSHY34",
+  "tipo": "BDR",
+  "volume_mediano": 6600.0,
+  "descricao": "HERSHEY CO  DRN ED"
+ },
+ {
+  "symbol": "HSLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 698090.0,
+  "descricao": "FII HSI LOG CI"
+ },
+ {
+  "symbol": "HSML11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3374433.0,
+  "descricao": "FII HSI MALLCI"
+ },
+ {
+  "symbol": "HTEK11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 38278.0,
+  "descricao": "IT NOW HCARECI"
+ },
+ {
+  "symbol": "HTMX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 407375.0,
+  "descricao": "FII HOTEL MXCI"
+ },
+ {
+  "symbol": "HUCG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1237.0,
+  "descricao": "FII UNIMED CCI"
+ },
+ {
+  "symbol": "HUSC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2623.0,
+  "descricao": "FII H UNIMEDCI"
+ },
+ {
+  "symbol": "HUSI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2078.0,
+  "descricao": "FII HUSI    CI"
+ },
+ {
+  "symbol": "HYEM39",
+  "tipo": "BDR",
+  "volume_mediano": 24790.0,
+  "descricao": "VANECK EMERGDRE"
+ },
+ {
+  "symbol": "HYPE3",
+  "tipo": "ação",
+  "volume_mediano": 50876448.0,
+  "descricao": "HYPERA      ON      NM"
+ },
+ {
+  "symbol": "IAAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 165772.0,
+  "descricao": "FIAGRO IAAG CI"
+ },
+ {
+  "symbol": "IAGR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4534.0,
+  "descricao": "FIAGRO SFI  CI"
+ },
+ {
+  "symbol": "IBBP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 37661.0,
+  "descricao": "FII IBBP    CI  ERS"
+ },
+ {
+  "symbol": "IBCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 38162.0,
+  "descricao": "FII BREI    CI  ER"
+ },
+ {
+  "symbol": "IBIT39",
+  "tipo": "BDR",
+  "volume_mediano": 827825.0,
+  "descricao": "BKR BITCOIN DRE"
+ },
+ {
+  "symbol": "IBKR34",
+  "tipo": "BDR",
+  "volume_mediano": 3716.0,
+  "descricao": "IB GROUP    DRN"
+ },
+ {
+  "symbol": "IBMB34",
+  "tipo": "BDR",
+  "volume_mediano": 457883.0,
+  "descricao": "IBM         DRN ED"
+ },
+ {
+  "symbol": "IBOB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1357127.0,
+  "descricao": "PACTUAL IBOVCI"
+ },
+ {
+  "symbol": "IBOV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8959208548.0,
+  "descricao": "IBOVESPA    IBO/"
+ },
+ {
+  "symbol": "ICRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 530955.0,
+  "descricao": "FII CI IPCA CI"
+ },
+ {
+  "symbol": "IDAP5",
+  "tipo": "ação",
+  "volume_mediano": 2209.0,
+  "descricao": "IDAP5"
+ },
+ {
+  "symbol": "IFCM3",
+  "tipo": "ação",
+  "volume_mediano": 96180.0,
+  "descricao": "INFRACOMM   ON      NM"
+ },
+ {
+  "symbol": "IFRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1896092.0,
+  "descricao": "FI ITAUINFRACI"
+ },
+ {
+  "symbol": "IFRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1473226.0,
+  "descricao": "FI ITAU IFRICI"
+ },
+ {
+  "symbol": "IGTI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 43028884.0,
+  "descricao": "IGUATEMI S.AUNT     N1"
+ },
+ {
+  "symbol": "IGTI3",
+  "tipo": "ação",
+  "volume_mediano": 148825.0,
+  "descricao": "IGUATEMI S.AON      N1"
+ },
+ {
+  "symbol": "IGTI4",
+  "tipo": "ação",
+  "volume_mediano": 8968.0,
+  "descricao": "IGUATEMI S.APN      N1"
+ },
+ {
+  "symbol": "INBR32",
+  "tipo": "BDR",
+  "volume_mediano": 57793456.0,
+  "descricao": "INTER CO    DR2"
+ },
+ {
+  "symbol": "INDE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8000.0,
+  "descricao": "FII INDE    CI"
+ },
+ {
+  "symbol": "INEP3",
+  "tipo": "ação",
+  "volume_mediano": 56240.0,
+  "descricao": "INEPAR      ON"
+ },
+ {
+  "symbol": "INEP4",
+  "tipo": "ação",
+  "volume_mediano": 17795.0,
+  "descricao": "INEPAR      PN"
+ },
+ {
+  "symbol": "INFB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10479.0,
+  "descricao": "INFB INFRA  CI"
+ },
+ {
+  "symbol": "INGG34",
+  "tipo": "BDR",
+  "volume_mediano": 1598.0,
+  "descricao": "ING GROEP   DRN ED"
+ },
+ {
+  "symbol": "INLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 148283.0,
+  "descricao": "FII INTER LGCI"
+ },
+ {
+  "symbol": "INRD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 45317.0,
+  "descricao": "FII INTER RDCI"
+ },
+ {
+  "symbol": "INTB3",
+  "tipo": "ação",
+  "volume_mediano": 19591532.0,
+  "descricao": "INTELBRAS   ON      NM"
+ },
+ {
+  "symbol": "INTU34",
+  "tipo": "BDR",
+  "volume_mediano": 127354.0,
+  "descricao": "INTUIT INC  DRN"
+ },
+ {
+  "symbol": "IRBR3",
+  "tipo": "ação",
+  "volume_mediano": 17524952.0,
+  "descricao": "IRBBRASIL REON      NM"
+ },
+ {
+  "symbol": "IRIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12204.0,
+  "descricao": "INFRA IRIF  CI  ER"
+ },
+ {
+  "symbol": "IRIM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2740268.0,
+  "descricao": "FII IRIM    CI  ER"
+ },
+ {
+  "symbol": "ISAE3",
+  "tipo": "ação",
+  "volume_mediano": 67790.0,
+  "descricao": "ISA ENERGIA ON      N1"
+ },
+ {
+  "symbol": "ISAE4",
+  "tipo": "ação",
+  "volume_mediano": 72016222.0,
+  "descricao": "ISA ENERGIA PN      N1"
+ },
+ {
+  "symbol": "ISEN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2779323.0,
+  "descricao": "ISENTO MAR29CI"
+ },
+ {
+  "symbol": "ISET11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 257358.0,
+  "descricao": "ISENTO SET28CI"
+ },
+ {
+  "symbol": "ISUS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 24122.0,
+  "descricao": "IT NOW ISE  CI"
+ },
+ {
+  "symbol": "ITIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 39155.0,
+  "descricao": "FII INTER IPCI"
+ },
+ {
+  "symbol": "ITIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 135274.0,
+  "descricao": "FII INTER ITCI"
+ },
+ {
+  "symbol": "ITLC34",
+  "tipo": "BDR",
+  "volume_mediano": 31777341.0,
+  "descricao": "INTEL       DRN"
+ },
+ {
+  "symbol": "ITRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 913932.0,
+  "descricao": "FII ITRI    CI"
+ },
+ {
+  "symbol": "ITSA3",
+  "tipo": "ação",
+  "volume_mediano": 1373703.0,
+  "descricao": "ITAUSA      ON      N1"
+ },
+ {
+  "symbol": "ITSA4",
+  "tipo": "ação",
+  "volume_mediano": 273733316.0,
+  "descricao": "ITAUSA      PN      N1"
+ },
+ {
+  "symbol": "ITUB3",
+  "tipo": "ação",
+  "volume_mediano": 90918894.0,
+  "descricao": "ITAUUNIBANCOON      N1"
+ },
+ {
+  "symbol": "ITUB4",
+  "tipo": "ação",
+  "volume_mediano": 896081896.0,
+  "descricao": "ITAUUNIBANCOPN      N1"
+ },
+ {
+  "symbol": "IVVB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 47057231.0,
+  "descricao": "ISHARE SP500CI"
+ },
+ {
+  "symbol": "IWMI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 100600.0,
+  "descricao": "ETF BV IWMI CI"
+ },
+ {
+  "symbol": "JALL3",
+  "tipo": "ação",
+  "volume_mediano": 2151769.0,
+  "descricao": "JALLESMACHADON      NM"
+ },
+ {
+  "symbol": "JASC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 937.0,
+  "descricao": "FII JASC RENCI"
+ },
+ {
+  "symbol": "JBSS32",
+  "tipo": "BDR",
+  "volume_mediano": 61120920.0,
+  "descricao": "JBS N.V.    DR2"
+ },
+ {
+  "symbol": "JCCJ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 240123.0,
+  "descricao": "FII JHSF CJ CI  ER"
+ },
+ {
+  "symbol": "JDCO34",
+  "tipo": "BDR",
+  "volume_mediano": 22139.0,
+  "descricao": "JD COM      DRN"
+ },
+ {
+  "symbol": "JFEN3",
+  "tipo": "ação",
+  "volume_mediano": 6110.0,
+  "descricao": "JOAO FORTES ON"
+ },
+ {
+  "symbol": "JFLL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9397.0,
+  "descricao": "FII JFL LIV CI"
+ },
+ {
+  "symbol": "JGPX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 338666.0,
+  "descricao": "FIAGRO JGP  CI"
+ },
+ {
+  "symbol": "JHSF3",
+  "tipo": "ação",
+  "volume_mediano": 36913132.0,
+  "descricao": "JHSF PART   ON      NM"
+ },
+ {
+  "symbol": "JMBI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 879861.0,
+  "descricao": "INFRA JMBI  CI"
+ },
+ {
+  "symbol": "JNJB34",
+  "tipo": "BDR",
+  "volume_mediano": 648908.0,
+  "descricao": "JOHNSON     DRN"
+ },
+ {
+  "symbol": "JOGO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 22139.0,
+  "descricao": "INVESTO JOGOCI"
+ },
+ {
+  "symbol": "JOPA3",
+  "tipo": "ação",
+  "volume_mediano": 2178.0,
+  "descricao": "JOSAPAR     ON"
+ },
+ {
+  "symbol": "JOPA4",
+  "tipo": "ação",
+  "volume_mediano": 3530.0,
+  "descricao": "JOSAPAR     PN"
+ },
+ {
+  "symbol": "JPMC34",
+  "tipo": "BDR",
+  "volume_mediano": 4001766.0,
+  "descricao": "JPMORGAN    DRN"
+ },
+ {
+  "symbol": "JPPA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 77774.0,
+  "descricao": "FII JPPA CRICI"
+ },
+ {
+  "symbol": "JSAF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1414405.0,
+  "descricao": "FII JS A FINCI"
+ },
+ {
+  "symbol": "JSCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 284537.0,
+  "descricao": "FII JSCR    CI"
+ },
+ {
+  "symbol": "JSLG3",
+  "tipo": "ação",
+  "volume_mediano": 4185346.0,
+  "descricao": "JSL         ON      NM"
+ },
+ {
+  "symbol": "JSRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2814801.0,
+  "descricao": "FII JS REAL CI"
+ },
+ {
+  "symbol": "JURO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4916594.0,
+  "descricao": "SPARTA INFRACI"
+ },
+ {
+  "symbol": "KCRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 296978.0,
+  "descricao": "FII KINEA CRCI"
+ },
+ {
+  "symbol": "KDIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2993721.0,
+  "descricao": "KINEA INFRAFCI"
+ },
+ {
+  "symbol": "KDOL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 37893.0,
+  "descricao": "FIAGRO KDOL CI"
+ },
+ {
+  "symbol": "KEPL3",
+  "tipo": "ação",
+  "volume_mediano": 5024090.0,
+  "descricao": "KEPLER WEBERON      NM"
+ },
+ {
+  "symbol": "KEVE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5692.0,
+  "descricao": "FII EVEN II CI"
+ },
+ {
+  "symbol": "KFOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 894517.0,
+  "descricao": "FII KINEAFOFCI"
+ },
+ {
+  "symbol": "KHCB34",
+  "tipo": "BDR",
+  "volume_mediano": 10289.0,
+  "descricao": "KRAFT HEINZ DRN"
+ },
+ {
+  "symbol": "KISU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 427723.0,
+  "descricao": "FII KILIMA  CI"
+ },
+ {
+  "symbol": "KIVO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 424906.0,
+  "descricao": "FII KIVO    CI"
+ },
+ {
+  "symbol": "KLBN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 79304147.0,
+  "descricao": "KLABIN S/A  UNT     N2"
+ },
+ {
+  "symbol": "KLBN3",
+  "tipo": "ação",
+  "volume_mediano": 2537280.0,
+  "descricao": "KLABIN S/A  ON      N2"
+ },
+ {
+  "symbol": "KLBN4",
+  "tipo": "ação",
+  "volume_mediano": 14351110.0,
+  "descricao": "KLABIN S/A  PN      N2"
+ },
+ {
+  "symbol": "KMBB34",
+  "tipo": "BDR",
+  "volume_mediano": 25507.0,
+  "descricao": "KIMBERLY CL DRN"
+ },
+ {
+  "symbol": "KMIC34",
+  "tipo": "BDR",
+  "volume_mediano": 7147.0,
+  "descricao": "KINDER MORGADRN"
+ },
+ {
+  "symbol": "KMPR34",
+  "tipo": "BDR",
+  "volume_mediano": 390.0,
+  "descricao": "KEMPER CORP DRN"
+ },
+ {
+  "symbol": "KNCA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3166458.0,
+  "descricao": "FIAGRO KINEACI"
+ },
+ {
+  "symbol": "KNCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 20757523.0,
+  "descricao": "FII KINEA RICI"
+ },
+ {
+  "symbol": "KNDI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1047364.0,
+  "descricao": "FI INFR KNDICI"
+ },
+ {
+  "symbol": "KNHF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3102406.0,
+  "descricao": "FII KINEA HFCI"
+ },
+ {
+  "symbol": "KNHY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2629049.0,
+  "descricao": "FII KINEA HYCI"
+ },
+ {
+  "symbol": "KNIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9440557.0,
+  "descricao": "FII KINEA IPCI"
+ },
+ {
+  "symbol": "KNOX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 205907.0,
+  "descricao": "FIP IE KNOX CI"
+ },
+ {
+  "symbol": "KNRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 336.0,
+  "descricao": "FII KII REALCI"
+ },
+ {
+  "symbol": "KNRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6383011.0,
+  "descricao": "FII KINEA   CI"
+ },
+ {
+  "symbol": "KNSC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4230444.0,
+  "descricao": "FII KINEA SCCI"
+ },
+ {
+  "symbol": "KNUQ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4202189.0,
+  "descricao": "FII KINEA UNCI"
+ },
+ {
+  "symbol": "KOPA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 117715.0,
+  "descricao": "FIAGRO KOPA CI"
+ },
+ {
+  "symbol": "KORE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1929853.0,
+  "descricao": "FII KORE    CI"
+ },
+ {
+  "symbol": "LAFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5758.0,
+  "descricao": "FIAGRO LAFI CI"
+ },
+ {
+  "symbol": "LAND3",
+  "tipo": "ação",
+  "volume_mediano": 349036.0,
+  "descricao": "TERRASANTAPAON      NM"
+ },
+ {
+  "symbol": "LASC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 74931.0,
+  "descricao": "FII LEGATUS CI"
+ },
+ {
+  "symbol": "LAVV3",
+  "tipo": "ação",
+  "volume_mediano": 4695396.0,
+  "descricao": "LAVVI       ON      NM"
+ },
+ {
+  "symbol": "LBRD34",
+  "tipo": "BDR",
+  "volume_mediano": 16572.0,
+  "descricao": "LIBERTY BROADRN"
+ },
+ {
+  "symbol": "LEVE3",
+  "tipo": "ação",
+  "volume_mediano": 6161862.0,
+  "descricao": "METAL LEVE  ON      NM"
+ },
+ {
+  "symbol": "LIFE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 700758.0,
+  "descricao": "FII LIFE    CI"
+ },
+ {
+  "symbol": "LIGT3",
+  "tipo": "ação",
+  "volume_mediano": 8429772.0,
+  "descricao": "LIGHT S/A   ON      NM"
+ },
+ {
+  "symbol": "LILY34",
+  "tipo": "BDR",
+  "volume_mediano": 4309205.0,
+  "descricao": "LILLY       DRN ED"
+ },
+ {
+  "symbol": "LJQQ3",
+  "tipo": "ação",
+  "volume_mediano": 2964320.0,
+  "descricao": "QUERO-QUERO ON      NM"
+ },
+ {
+  "symbol": "LMTB34",
+  "tipo": "BDR",
+  "volume_mediano": 33778.0,
+  "descricao": "LOCKHEED    DRN"
+ },
+ {
+  "symbol": "LOGG3",
+  "tipo": "ação",
+  "volume_mediano": 10588462.0,
+  "descricao": "LOG COM PROPON      NM"
+ },
+ {
+  "symbol": "LOGN3",
+  "tipo": "ação",
+  "volume_mediano": 315692.0,
+  "descricao": "LOG-IN      ON      NM"
+ },
+ {
+  "symbol": "LOWC34",
+  "tipo": "BDR",
+  "volume_mediano": 625.0,
+  "descricao": "LOWES COMPA DRN"
+ },
+ {
+  "symbol": "LPLP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 730.0,
+  "descricao": "FII LAGO PDRCI  ERA"
+ },
+ {
+  "symbol": "LPSB3",
+  "tipo": "ação",
+  "volume_mediano": 131542.0,
+  "descricao": "LOPES BRASILON      NM"
+ },
+ {
+  "symbol": "LRDI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 386.0,
+  "descricao": "FII LEBLON  CI"
+ },
+ {
+  "symbol": "LREN3",
+  "tipo": "ação",
+  "volume_mediano": 173827345.0,
+  "descricao": "LOJAS RENNERON      NM"
+ },
+ {
+  "symbol": "LSAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 47691.0,
+  "descricao": "FIAGRO LESTECI"
+ },
+ {
+  "symbol": "LUPA3",
+  "tipo": "ação",
+  "volume_mediano": 23357.0,
+  "descricao": "LUPATECH    ON  EG  NM"
+ },
+ {
+  "symbol": "LUXM4",
+  "tipo": "ação",
+  "volume_mediano": 4372.0,
+  "descricao": "TREVISA     PN"
+ },
+ {
+  "symbol": "LVBI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3095705.0,
+  "descricao": "FII LVBI VBICI"
+ },
+ {
+  "symbol": "LVOL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 563742.0,
+  "descricao": "NUIBOVLOWVOLCI"
+ },
+ {
+  "symbol": "LWSA3",
+  "tipo": "ação",
+  "volume_mediano": 11113369.0,
+  "descricao": "LWSA        ON      NM"
+ },
+ {
+  "symbol": "MACY34",
+  "tipo": "BDR",
+  "volume_mediano": 1168.0,
+  "descricao": "MACY S      DRN"
+ },
+ {
+  "symbol": "MANA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1300727.0,
+  "descricao": "FII MANATI  CI"
+ },
+ {
+  "symbol": "MAPT3",
+  "tipo": "ação",
+  "volume_mediano": 1193.0,
+  "descricao": "CEMEPE      ON"
+ },
+ {
+  "symbol": "MAPT4",
+  "tipo": "ação",
+  "volume_mediano": 1022.0,
+  "descricao": "CEMEPE      PN"
+ },
+ {
+  "symbol": "MATB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 330128.0,
+  "descricao": "IT NOW IMAT CI"
+ },
+ {
+  "symbol": "MATD3",
+  "tipo": "ação",
+  "volume_mediano": 781906.0,
+  "descricao": "MATER DEI   ON      NM"
+ },
+ {
+  "symbol": "MAXR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 25184.0,
+  "descricao": "FII MAX RET CI  ER"
+ },
+ {
+  "symbol": "MCCI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3674624.0,
+  "descricao": "FII MAUA    CI  ER"
+ },
+ {
+  "symbol": "MCDC34",
+  "tipo": "BDR",
+  "volume_mediano": 318956.0,
+  "descricao": "MCDONALDS   DRN"
+ },
+ {
+  "symbol": "MCLO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1948.0,
+  "descricao": "FII MCLO    CI  ER"
+ },
+ {
+  "symbol": "MCOR34",
+  "tipo": "BDR",
+  "volume_mediano": 11847.0,
+  "descricao": "MOODYS CORP DRN ED"
+ },
+ {
+  "symbol": "MCRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2336455.0,
+  "descricao": "FII MAUA RE CI"
+ },
+ {
+  "symbol": "MDIA3",
+  "tipo": "ação",
+  "volume_mediano": 7739747.0,
+  "descricao": "M.DIASBRANCOON      NM"
+ },
+ {
+  "symbol": "MDLZ34",
+  "tipo": "BDR",
+  "volume_mediano": 4749.0,
+  "descricao": "MONDELEZ INTDRN"
+ },
+ {
+  "symbol": "MDNE3",
+  "tipo": "ação",
+  "volume_mediano": 27106792.0,
+  "descricao": "MOURA DUBEUXON      NM"
+ },
+ {
+  "symbol": "MDTC34",
+  "tipo": "BDR",
+  "volume_mediano": 909.0,
+  "descricao": "MEDTRONIC   DRN"
+ },
+ {
+  "symbol": "MEAL3",
+  "tipo": "ação",
+  "volume_mediano": 104376.0,
+  "descricao": "IMC S/A     ON      NM"
+ },
+ {
+  "symbol": "MELI34",
+  "tipo": "BDR",
+  "volume_mediano": 36024799.0,
+  "descricao": "MERCADOLIBREDRN"
+ },
+ {
+  "symbol": "MELK3",
+  "tipo": "ação",
+  "volume_mediano": 1142880.0,
+  "descricao": "MELNICK     ON      NM"
+ },
+ {
+  "symbol": "META11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 7595.0,
+  "descricao": "META HASH   CI"
+ },
+ {
+  "symbol": "METB34",
+  "tipo": "BDR",
+  "volume_mediano": 847.0,
+  "descricao": "METLIFE INC DRN"
+ },
+ {
+  "symbol": "MFII11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 898122.0,
+  "descricao": "FII MERITO ICI"
+ },
+ {
+  "symbol": "MGEL4",
+  "tipo": "ação",
+  "volume_mediano": 12096.0,
+  "descricao": "MANGELS INDLPN"
+ },
+ {
+  "symbol": "MGHT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5296.0,
+  "descricao": "FII MOGNO HTCI"
+ },
+ {
+  "symbol": "MGLU3",
+  "tipo": "ação",
+  "volume_mediano": 95898670.0,
+  "descricao": "MAGAZ LUIZA ON      NM"
+ },
+ {
+  "symbol": "MILL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 11949.0,
+  "descricao": "DIGITAL LIFECI"
+ },
+ {
+  "symbol": "MILS3",
+  "tipo": "ação",
+  "volume_mediano": 10452386.0,
+  "descricao": "MILLS       ON      NM"
+ },
+ {
+  "symbol": "MKLC34",
+  "tipo": "BDR",
+  "volume_mediano": 5000.0,
+  "descricao": "MARKELGROUP DRN"
+ },
+ {
+  "symbol": "MLAS3",
+  "tipo": "ação",
+  "volume_mediano": 1833548.0,
+  "descricao": "MULTILASER  ON      NM"
+ },
+ {
+  "symbol": "MMMC34",
+  "tipo": "BDR",
+  "volume_mediano": 24732.0,
+  "descricao": "3M          DRN"
+ },
+ {
+  "symbol": "MMVE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2590.0,
+  "descricao": "FII MMVE OP CI"
+ },
+ {
+  "symbol": "MNDL3",
+  "tipo": "ação",
+  "volume_mediano": 14396.0,
+  "descricao": "MUNDIAL     ON"
+ },
+ {
+  "symbol": "MNPR3",
+  "tipo": "ação",
+  "volume_mediano": 28312.0,
+  "descricao": "MINUPAR     ON"
+ },
+ {
+  "symbol": "MOOO34",
+  "tipo": "BDR",
+  "volume_mediano": 1864.0,
+  "descricao": "ALTRIA GROUPDRN EB"
+ },
+ {
+  "symbol": "MOSC34",
+  "tipo": "BDR",
+  "volume_mediano": 143743.0,
+  "descricao": "MOSAIC CO   DRN"
+ },
+ {
+  "symbol": "MOTB39",
+  "tipo": "BDR",
+  "volume_mediano": 739.0,
+  "descricao": "VE MOAT ETF DRE"
+ },
+ {
+  "symbol": "MOTV3",
+  "tipo": "ação",
+  "volume_mediano": 114096750.0,
+  "descricao": "MOTIVA SA   ON      NM"
+ },
+ {
+  "symbol": "MOVI3",
+  "tipo": "ação",
+  "volume_mediano": 33916460.0,
+  "descricao": "MOVIDA      ON  ES  NM"
+ },
+ {
+  "symbol": "MRCK34",
+  "tipo": "BDR",
+  "volume_mediano": 100155.0,
+  "descricao": "MERCK       DRN"
+ },
+ {
+  "symbol": "MRVE3",
+  "tipo": "ação",
+  "volume_mediano": 45792420.0,
+  "descricao": "MRV         ON      NM"
+ },
+ {
+  "symbol": "MSBR34",
+  "tipo": "BDR",
+  "volume_mediano": 74545.0,
+  "descricao": "MORGAN STAN DRN"
+ },
+ {
+  "symbol": "MSCD34",
+  "tipo": "BDR",
+  "volume_mediano": 698207.0,
+  "descricao": "MASTERCARD  DRN"
+ },
+ {
+  "symbol": "MSFT34",
+  "tipo": "BDR",
+  "volume_mediano": 34294615.0,
+  "descricao": "MICROSOFT   DRN"
+ },
+ {
+  "symbol": "MSPA3",
+  "tipo": "ação",
+  "volume_mediano": 15003.0,
+  "descricao": "MELHOR SP   ON"
+ },
+ {
+  "symbol": "MSPA4",
+  "tipo": "ação",
+  "volume_mediano": 11850.0,
+  "descricao": "MELHOR SP   PN"
+ },
+ {
+  "symbol": "MTRE3",
+  "tipo": "ação",
+  "volume_mediano": 1845760.0,
+  "descricao": "MITRE REALTYON  ED  NM"
+ },
+ {
+  "symbol": "MTSA4",
+  "tipo": "ação",
+  "volume_mediano": 49256.0,
+  "descricao": "METISA      PN"
+ },
+ {
+  "symbol": "MULT3",
+  "tipo": "ação",
+  "volume_mediano": 82755956.0,
+  "descricao": "MULTIPLAN   ON      N2"
+ },
+ {
+  "symbol": "MUTC34",
+  "tipo": "BDR",
+  "volume_mediano": 115303416.0,
+  "descricao": "MICRON TECHNDRN"
+ },
+ {
+  "symbol": "MWET3",
+  "tipo": "ação",
+  "volume_mediano": 2208.0,
+  "descricao": "WETZEL S/A  ON"
+ },
+ {
+  "symbol": "MWET4",
+  "tipo": "ação",
+  "volume_mediano": 12969.0,
+  "descricao": "WETZEL S/A  PN"
+ },
+ {
+  "symbol": "MXRF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 13828714.0,
+  "descricao": "FII MAXI RENCI"
+ },
+ {
+  "symbol": "MYPK3",
+  "tipo": "ação",
+  "volume_mediano": 7092831.0,
+  "descricao": "IOCHP-MAXIONON      NM"
+ },
+ {
+  "symbol": "NASD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 18054420.0,
+  "descricao": "TREND NASDAQCI"
+ },
+ {
+  "symbol": "NATU3",
+  "tipo": "ação",
+  "volume_mediano": 64759194.0,
+  "descricao": "NATURA      ON      NM"
+ },
+ {
+  "symbol": "NAVT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 30789.0,
+  "descricao": "FII NAVI TOTCI  ER"
+ },
+ {
+  "symbol": "NBOV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 146739.0,
+  "descricao": "NUIBOVBRMAISCI"
+ },
+ {
+  "symbol": "NCRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1468.0,
+  "descricao": "FII NAVI CRICI  ER"
+ },
+ {
+  "symbol": "NDIV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 697678.0,
+  "descricao": "NU REND IBOVCI  ER"
+ },
+ {
+  "symbol": "NETE34",
+  "tipo": "BDR",
+  "volume_mediano": 3490.0,
+  "descricao": "NETEASE     DRN"
+ },
+ {
+  "symbol": "NEWL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 82455.0,
+  "descricao": "FII NEWPORT CI"
+ },
+ {
+  "symbol": "NEWU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1628.0,
+  "descricao": "FII NEWRU   CI"
+ },
+ {
+  "symbol": "NEXG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 52142.0,
+  "descricao": "FIAGRO NEXG CI  ER"
+ },
+ {
+  "symbol": "NEXP3",
+  "tipo": "ação",
+  "volume_mediano": 818.0,
+  "descricao": "NEXPE       ON"
+ },
+ {
+  "symbol": "NEXT34",
+  "tipo": "BDR",
+  "volume_mediano": 69926.0,
+  "descricao": "NEXTERA ENERDRN"
+ },
+ {
+  "symbol": "NFLX34",
+  "tipo": "BDR",
+  "volume_mediano": 4918483.0,
+  "descricao": "NETFLIX     DRN"
+ },
+ {
+  "symbol": "NIKE34",
+  "tipo": "BDR",
+  "volume_mediano": 706238.0,
+  "descricao": "NIKE        DRN"
+ },
+ {
+  "symbol": "NMRH34",
+  "tipo": "BDR",
+  "volume_mediano": 336.0,
+  "descricao": "NOMURA HO   DRN"
+ },
+ {
+  "symbol": "NOCG34",
+  "tipo": "BDR",
+  "volume_mediano": 4126.0,
+  "descricao": "NORTHROP GRUDRN"
+ },
+ {
+  "symbol": "NOKI34",
+  "tipo": "BDR",
+  "volume_mediano": 190990.0,
+  "descricao": "NOKIA CORP  DRN"
+ },
+ {
+  "symbol": "NORD3",
+  "tipo": "ação",
+  "volume_mediano": 2848.0,
+  "descricao": "NORDON MET  ON"
+ },
+ {
+  "symbol": "NSDV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 509989.0,
+  "descricao": "NU IBOV DIV CI"
+ },
+ {
+  "symbol": "NSLU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 107882.0,
+  "descricao": "FII LOURDES CI"
+ },
+ {
+  "symbol": "NTST34",
+  "tipo": "BDR",
+  "volume_mediano": 91.0,
+  "descricao": "NETSTREIT CODRN"
+ },
+ {
+  "symbol": "NUCL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 185934.0,
+  "descricao": "INVESTO NUCLCI"
+ },
+ {
+  "symbol": "NUIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 98568.0,
+  "descricao": "NU INFRA FICCI"
+ },
+ {
+  "symbol": "NUTR3",
+  "tipo": "ação",
+  "volume_mediano": 9890.0,
+  "descricao": "NUTRIPLANT  ON      MP"
+ },
+ {
+  "symbol": "NVDC34",
+  "tipo": "BDR",
+  "volume_mediano": 102727313.0,
+  "descricao": "NVIDIA CORP DRN"
+ },
+ {
+  "symbol": "NVHO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 621.0,
+  "descricao": "FII NOVOHORICI"
+ },
+ {
+  "symbol": "NVRP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3725.0,
+  "descricao": "FIP NVRAPOSOCI"
+ },
+ {
+  "symbol": "OCRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8034.0,
+  "descricao": "FII OCTO    CI"
+ },
+ {
+  "symbol": "OFSA3",
+  "tipo": "ação",
+  "volume_mediano": 155948.0,
+  "descricao": "OUROFINO S/AON      NM"
+ },
+ {
+  "symbol": "OGIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 49843.0,
+  "descricao": "NIKOS INFRA CI"
+ },
+ {
+  "symbol": "OIAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 90957.0,
+  "descricao": "FIAGRO INNOVCI  ER"
+ },
+ {
+  "symbol": "OIBR4",
+  "tipo": "ação",
+  "volume_mediano": 1104.0,
+  "descricao": "OI          PN      N1"
+ },
+ {
+  "symbol": "ONCO3",
+  "tipo": "ação",
+  "volume_mediano": 9129246.0,
+  "descricao": "ONCOCLINICASON      NM"
+ },
+ {
+  "symbol": "OPCT3",
+  "tipo": "ação",
+  "volume_mediano": 6482730.0,
+  "descricao": "OCEANPACT   ON      NM"
+ },
+ {
+  "symbol": "ORCL34",
+  "tipo": "BDR",
+  "volume_mediano": 13911737.0,
+  "descricao": "ORACLE      DRN"
+ },
+ {
+  "symbol": "ORLY34",
+  "tipo": "BDR",
+  "volume_mediano": 11335.0,
+  "descricao": "OREILLY AUT DRN"
+ },
+ {
+  "symbol": "ORVR3",
+  "tipo": "ação",
+  "volume_mediano": 42410518.0,
+  "descricao": "ORIZON      ON  EB  NM"
+ },
+ {
+  "symbol": "OSXB3",
+  "tipo": "ação",
+  "volume_mediano": 864.0,
+  "descricao": "OSX BRASIL  ON      NM"
+ },
+ {
+  "symbol": "OUJP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 533080.0,
+  "descricao": "FII OURI JPPCI"
+ },
+ {
+  "symbol": "OXYP34",
+  "tipo": "BDR",
+  "volume_mediano": 166357.0,
+  "descricao": "OCCIDENT PTRDRN"
+ },
+ {
+  "symbol": "PABY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 441.0,
+  "descricao": "FII PANAMBY CI"
+ },
+ {
+  "symbol": "PAGS34",
+  "tipo": "BDR",
+  "volume_mediano": 572892.0,
+  "descricao": "PAGSEGURO   DRN"
+ },
+ {
+  "symbol": "PASS3",
+  "tipo": "ação",
+  "volume_mediano": 21146390.0,
+  "descricao": "COMPASS     ON      NM"
+ },
+ {
+  "symbol": "PATA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 223.0,
+  "descricao": "FII PATA    CI"
+ },
+ {
+  "symbol": "PATC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10130.0,
+  "descricao": "FII PATC VBICI"
+ },
+ {
+  "symbol": "PATI3",
+  "tipo": "ação",
+  "volume_mediano": 7710.0,
+  "descricao": "PANATLANTICAON"
+ },
+ {
+  "symbol": "PATI4",
+  "tipo": "ação",
+  "volume_mediano": 9627.0,
+  "descricao": "PANATLANTICAPN"
+ },
+ {
+  "symbol": "PATL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 671068.0,
+  "descricao": "FII PATL VBICI"
+ },
+ {
+  "symbol": "PCAR3",
+  "tipo": "ação",
+  "volume_mediano": 9615610.0,
+  "descricao": "P.ACUCAR-CBDON      NM"
+ },
+ {
+  "symbol": "PDGR3",
+  "tipo": "ação",
+  "volume_mediano": 12667.0,
+  "descricao": "PDG REALT   ON  ES  NM"
+ },
+ {
+  "symbol": "PDTC3",
+  "tipo": "ação",
+  "volume_mediano": 57218.0,
+  "descricao": "PADTEC      ON      NM"
+ },
+ {
+  "symbol": "PEAB3",
+  "tipo": "ação",
+  "volume_mediano": 11668.0,
+  "descricao": "PAR AL BAHIAON"
+ },
+ {
+  "symbol": "PEAB4",
+  "tipo": "ação",
+  "volume_mediano": 19350.0,
+  "descricao": "PAR AL BAHIAPN"
+ },
+ {
+  "symbol": "PEMA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 274.0,
+  "descricao": "FII PERFORMACI"
+ },
+ {
+  "symbol": "PEPB34",
+  "tipo": "BDR",
+  "volume_mediano": 217527.0,
+  "descricao": "PEPSICO INC DRN"
+ },
+ {
+  "symbol": "PETR3",
+  "tipo": "ação",
+  "volume_mediano": 446341142.0,
+  "descricao": "PETROBRAS   ON      N2"
+ },
+ {
+  "symbol": "PETR4",
+  "tipo": "ação",
+  "volume_mediano": 1396704278.0,
+  "descricao": "PETROBRAS   PN      N2"
+ },
+ {
+  "symbol": "PEVC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 30205.0,
+  "descricao": "INVESTO PEVCCI"
+ },
+ {
+  "symbol": "PFIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1079452.0,
+  "descricao": "FIP PERFIN  CI"
+ },
+ {
+  "symbol": "PFIZ34",
+  "tipo": "BDR",
+  "volume_mediano": 134673.0,
+  "descricao": "PFIZER      DRN"
+ },
+ {
+  "symbol": "PFRM3",
+  "tipo": "ação",
+  "volume_mediano": 872154.0,
+  "descricao": "PROFARMA    ON      NM"
+ },
+ {
+  "symbol": "PGCO34",
+  "tipo": "BDR",
+  "volume_mediano": 54882.0,
+  "descricao": "PG          DRN"
+ },
+ {
+  "symbol": "PGMN3",
+  "tipo": "ação",
+  "volume_mediano": 16044377.0,
+  "descricao": "PAGUE MENOS ON      NM"
+ },
+ {
+  "symbol": "PHGN34",
+  "tipo": "BDR",
+  "volume_mediano": 2966.0,
+  "descricao": "KOPHILIPS   DRN"
+ },
+ {
+  "symbol": "PHMO34",
+  "tipo": "BDR",
+  "volume_mediano": 2322.0,
+  "descricao": "PHILIP MORRIDRN"
+ },
+ {
+  "symbol": "PIBB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 464027.0,
+  "descricao": "IT NOW PIBB CI"
+ },
+ {
+  "symbol": "PICE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 53802.0,
+  "descricao": "FIP PATR INFCI"
+ },
+ {
+  "symbol": "PINE3",
+  "tipo": "ação",
+  "volume_mediano": 56218.0,
+  "descricao": "PINE        ON      N2"
+ },
+ {
+  "symbol": "PINE4",
+  "tipo": "ação",
+  "volume_mediano": 11524142.0,
+  "descricao": "PINE        PN      N2"
+ },
+ {
+  "symbol": "PKIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 61108.0,
+  "descricao": "B INDEX PKINCI"
+ },
+ {
+  "symbol": "PLAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 125500.0,
+  "descricao": "FII PLAG    CI"
+ },
+ {
+  "symbol": "PLAS3",
+  "tipo": "ação",
+  "volume_mediano": 1276.0,
+  "descricao": "PLASCAR PARTON"
+ },
+ {
+  "symbol": "PLCA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 36865.0,
+  "descricao": "FIAGRO PLUR CI"
+ },
+ {
+  "symbol": "PLPL3",
+  "tipo": "ação",
+  "volume_mediano": 17620939.0,
+  "descricao": "PLANOEPLANO ON      NM"
+ },
+ {
+  "symbol": "PLRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 126.0,
+  "descricao": "FII POLO I  CI"
+ },
+ {
+  "symbol": "PMAM3",
+  "tipo": "ação",
+  "volume_mediano": 1057944.0,
+  "descricao": "PARANAPANEMAON      NM"
+ },
+ {
+  "symbol": "PMFO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 201915.0,
+  "descricao": "FII PMFO    CI  ER"
+ },
+ {
+  "symbol": "PMIS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 170904.0,
+  "descricao": "FII PMIS    CI"
+ },
+ {
+  "symbol": "PNCS34",
+  "tipo": "BDR",
+  "volume_mediano": 8934.0,
+  "descricao": "PNCFNANCIAL DRN"
+ },
+ {
+  "symbol": "PNDL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 208680.0,
+  "descricao": "FII PANORAMACI"
+ },
+ {
+  "symbol": "PNPR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 748815.0,
+  "descricao": "FII PAN PROPCI"
+ },
+ {
+  "symbol": "PNVL3",
+  "tipo": "ação",
+  "volume_mediano": 7613190.0,
+  "descricao": "DIMED       ON      NM"
+ },
+ {
+  "symbol": "POMO3",
+  "tipo": "ação",
+  "volume_mediano": 5310032.0,
+  "descricao": "MARCOPOLO   ON      N2"
+ },
+ {
+  "symbol": "POMO4",
+  "tipo": "ação",
+  "volume_mediano": 40566806.0,
+  "descricao": "MARCOPOLO   PN      N2"
+ },
+ {
+  "symbol": "PORD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 510955.0,
+  "descricao": "FII POLO CRICI"
+ },
+ {
+  "symbol": "POSI3",
+  "tipo": "ação",
+  "volume_mediano": 2340230.0,
+  "descricao": "POSITIVO TECON      NM"
+ },
+ {
+  "symbol": "PPEI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 105147.0,
+  "descricao": "FIP PRISMA  CI"
+ },
+ {
+  "symbol": "PPLA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 219.0,
+  "descricao": "PPLA        UNT"
+ },
+ {
+  "symbol": "PQAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 801.0,
+  "descricao": "FII PARQ ANHCI"
+ },
+ {
+  "symbol": "PQDP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 60183.0,
+  "descricao": "FII D PEDRO CI"
+ },
+ {
+  "symbol": "PRIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 71086.0,
+  "descricao": "INFRA PRIF  CI"
+ },
+ {
+  "symbol": "PRIO3",
+  "tipo": "ação",
+  "volume_mediano": 429427368.0,
+  "descricao": "PRIO        ON      NM"
+ },
+ {
+  "symbol": "PRNR3",
+  "tipo": "ação",
+  "volume_mediano": 6103058.0,
+  "descricao": "PRINER      ON      NM"
+ },
+ {
+  "symbol": "PRSN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 60.0,
+  "descricao": "FII PERSONALCI"
+ },
+ {
+  "symbol": "PRSV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 293.0,
+  "descricao": "FII P VARGASCI"
+ },
+ {
+  "symbol": "PSSA3",
+  "tipo": "ação",
+  "volume_mediano": 70482352.0,
+  "descricao": "PORTO SEGUROON      NM"
+ },
+ {
+  "symbol": "PSVM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3245.0,
+  "descricao": "PORTO VM    TPR"
+ },
+ {
+  "symbol": "PTBL3",
+  "tipo": "ação",
+  "volume_mediano": 491625.0,
+  "descricao": "PORTOBELLO  ON      NM"
+ },
+ {
+  "symbol": "PVBI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3385755.0,
+  "descricao": "FII PVBI VBICI"
+ },
+ {
+  "symbol": "PYPL34",
+  "tipo": "BDR",
+  "volume_mediano": 268099.0,
+  "descricao": "PAYPAL HOLD DRN"
+ },
+ {
+  "symbol": "QBTC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2169694.0,
+  "descricao": "QR BITCOIN  CI"
+ },
+ {
+  "symbol": "QCOM34",
+  "tipo": "BDR",
+  "volume_mediano": 2025611.0,
+  "descricao": "QUALCOMM    DRN"
+ },
+ {
+  "symbol": "QDFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3212.0,
+  "descricao": "QR DEFI     CI"
+ },
+ {
+  "symbol": "QETH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 305436.0,
+  "descricao": "QR ETHER    CI"
+ },
+ {
+  "symbol": "QQQI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1371340.0,
+  "descricao": "ETF BV QQQI CI"
+ },
+ {
+  "symbol": "QQQQ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 53515.0,
+  "descricao": "ETF QQQQ    CI"
+ },
+ {
+  "symbol": "QSOL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 219782.0,
+  "descricao": "QR SOLANA   CI"
+ },
+ {
+  "symbol": "QUAL3",
+  "tipo": "ação",
+  "volume_mediano": 4280796.0,
+  "descricao": "QUALICORP   ON      NM"
+ },
+ {
+  "symbol": "QUBT34",
+  "tipo": "BDR",
+  "volume_mediano": 102044.0,
+  "descricao": "QUANTUM COMPDRN"
+ },
+ {
+  "symbol": "RADL3",
+  "tipo": "ação",
+  "volume_mediano": 198974176.0,
+  "descricao": "RAIADROGASILON      NM"
+ },
+ {
+  "symbol": "RAIL3",
+  "tipo": "ação",
+  "volume_mediano": 135912022.0,
+  "descricao": "RUMO S.A.   ON      NM"
+ },
+ {
+  "symbol": "RAIZ4",
+  "tipo": "ação",
+  "volume_mediano": 3730126.0,
+  "descricao": "RAIZEN      PN      N2"
+ },
+ {
+  "symbol": "RANI3",
+  "tipo": "ação",
+  "volume_mediano": 4090905.0,
+  "descricao": "IRANI       ON  ED  NM"
+ },
+ {
+  "symbol": "RAPT3",
+  "tipo": "ação",
+  "volume_mediano": 51218.0,
+  "descricao": "RANDON PART ON      N1"
+ },
+ {
+  "symbol": "RAPT4",
+  "tipo": "ação",
+  "volume_mediano": 8992732.0,
+  "descricao": "RANDON PART PN      N1"
+ },
+ {
+  "symbol": "RBDS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 16.0,
+  "descricao": "FII RBRESID2CI"
+ },
+ {
+  "symbol": "RBHG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 188964.0,
+  "descricao": "FII RBCRI IVCI"
+ },
+ {
+  "symbol": "RBHY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 302456.0,
+  "descricao": "FII RB YIELDCI"
+ },
+ {
+  "symbol": "RBIF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 123988.0,
+  "descricao": "FIC FI RB ESCI"
+ },
+ {
+  "symbol": "RBIR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 38778.0,
+  "descricao": "FII RBRES IVCI"
+ },
+ {
+  "symbol": "RBLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 267.0,
+  "descricao": "FII RBCAP LGCI"
+ },
+ {
+  "symbol": "RBOP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12604.0,
+  "descricao": "FII MERC BR CI"
+ },
+ {
+  "symbol": "RBRD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 43315.0,
+  "descricao": "FII RB II   CI"
+ },
+ {
+  "symbol": "RBRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1688.0,
+  "descricao": "FII RBR III CI"
+ },
+ {
+  "symbol": "RBRL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 323039.0,
+  "descricao": "FII RBRL PAXCI"
+ },
+ {
+  "symbol": "RBRP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 780488.0,
+  "descricao": "FII RBRP PAXCI  ER"
+ },
+ {
+  "symbol": "RBRR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3623871.0,
+  "descricao": "FII RBRR PAXCI  ER"
+ },
+ {
+  "symbol": "RBRS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1854.0,
+  "descricao": "FII RIOB RR CI"
+ },
+ {
+  "symbol": "RBRX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1975724.0,
+  "descricao": "FII RBRX PAXCI"
+ },
+ {
+  "symbol": "RBRY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3765336.0,
+  "descricao": "FII RBRY PAXCI  ER"
+ },
+ {
+  "symbol": "RBTS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 963.0,
+  "descricao": "FII RB TFO  CI"
+ },
+ {
+  "symbol": "RBVA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1810028.0,
+  "descricao": "FII RIOB VA CI"
+ },
+ {
+  "symbol": "RCFA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6.0,
+  "descricao": "FII GP RCFA CI"
+ },
+ {
+  "symbol": "RCFF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 166.0,
+  "descricao": "FII RBR FEEDCI"
+ },
+ {
+  "symbol": "RCRB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 702949.0,
+  "descricao": "FII RIOB RC CI"
+ },
+ {
+  "symbol": "RCRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 39756.0,
+  "descricao": "FII RCRI    CI  ER"
+ },
+ {
+  "symbol": "RCSL3",
+  "tipo": "ação",
+  "volume_mediano": 21338.0,
+  "descricao": "RECRUSUL    ON"
+ },
+ {
+  "symbol": "RCSL4",
+  "tipo": "ação",
+  "volume_mediano": 2321320.0,
+  "descricao": "RECRUSUL    PN"
+ },
+ {
+  "symbol": "RDLI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 637.0,
+  "descricao": "FII RDLI    CI"
+ },
+ {
+  "symbol": "RDOR3",
+  "tipo": "ação",
+  "volume_mediano": 194544030.0,
+  "descricao": "REDE D OR   ON      NM"
+ },
+ {
+  "symbol": "RECD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 288.0,
+  "descricao": "FII RECD    CI"
+ },
+ {
+  "symbol": "RECM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10048.0,
+  "descricao": "FII RECM    CI  ER"
+ },
+ {
+  "symbol": "RECR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2918070.0,
+  "descricao": "FII REC RECECI  ER"
+ },
+ {
+  "symbol": "RECT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 379239.0,
+  "descricao": "FII REC RENDCI  ER"
+ },
+ {
+  "symbol": "RECV3",
+  "tipo": "ação",
+  "volume_mediano": 19817864.0,
+  "descricao": "PETRORECSA  ON      NM"
+ },
+ {
+  "symbol": "REDE3",
+  "tipo": "ação",
+  "volume_mediano": 4144.0,
+  "descricao": "REDE ENERGIAON"
+ },
+ {
+  "symbol": "REGN34",
+  "tipo": "BDR",
+  "volume_mediano": 19349.0,
+  "descricao": "REGENERON PHDRN"
+ },
+ {
+  "symbol": "REIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 230.0,
+  "descricao": "FII REIT RIVCI"
+ },
+ {
+  "symbol": "RELG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 31969.0,
+  "descricao": "FII REC LOG CI"
+ },
+ {
+  "symbol": "RENT3",
+  "tipo": "ação",
+  "volume_mediano": 287137104.0,
+  "descricao": "LOCALIZA    ON      NM"
+ },
+ {
+  "symbol": "RENV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9245.0,
+  "descricao": "FII RENV    CI  ER"
+ },
+ {
+  "symbol": "REVE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8344.0,
+  "descricao": "IT NOW GREENCI"
+ },
+ {
+  "symbol": "RFOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 233114.0,
+  "descricao": "FII RB CFOF CI"
+ },
+ {
+  "symbol": "RGTI34",
+  "tipo": "BDR",
+  "volume_mediano": 645090.0,
+  "descricao": "RIGETTI COMPDRN"
+ },
+ {
+  "symbol": "RICO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5586.0,
+  "descricao": "ETF RICO    CI"
+ },
+ {
+  "symbol": "RIFF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 152109.0,
+  "descricao": "FI INFRA RIFCI"
+ },
+ {
+  "symbol": "RIGG34",
+  "tipo": "BDR",
+  "volume_mediano": 43251.0,
+  "descricao": "TRANSOCEAN  DRN"
+ },
+ {
+  "symbol": "RINV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 447750.0,
+  "descricao": "FII REAL INVCI  ER"
+ },
+ {
+  "symbol": "RIOT34",
+  "tipo": "BDR",
+  "volume_mediano": 617008.0,
+  "descricao": "RIO TINTO   DRN ED"
+ },
+ {
+  "symbol": "RNEW3",
+  "tipo": "ação",
+  "volume_mediano": 30516.0,
+  "descricao": "RENOVA      ON      N2"
+ },
+ {
+  "symbol": "RNEW4",
+  "tipo": "ação",
+  "volume_mediano": 21692.0,
+  "descricao": "RENOVA      PN      N2"
+ },
+ {
+  "symbol": "RNGO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 24726.0,
+  "descricao": "FII RIONEGROCI"
+ },
+ {
+  "symbol": "ROMI3",
+  "tipo": "ação",
+  "volume_mediano": 804076.0,
+  "descricao": "ROMI        ON      NM"
+ },
+ {
+  "symbol": "ROOF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 810.0,
+  "descricao": "FII ROOFTOPICI"
+ },
+ {
+  "symbol": "ROST34",
+  "tipo": "BDR",
+  "volume_mediano": 14385.0,
+  "descricao": "ROSS STORES DRN EB"
+ },
+ {
+  "symbol": "ROXO34",
+  "tipo": "BDR",
+  "volume_mediano": 61255230.0,
+  "descricao": "NU HOLDINGS DRN"
+ },
+ {
+  "symbol": "RPAD3",
+  "tipo": "ação",
+  "volume_mediano": 1062.0,
+  "descricao": "ALFA HOLDINGON"
+ },
+ {
+  "symbol": "RPAD5",
+  "tipo": "ação",
+  "volume_mediano": 1357.0,
+  "descricao": "ALFA HOLDINGPNA"
+ },
+ {
+  "symbol": "RPAD6",
+  "tipo": "ação",
+  "volume_mediano": 2600.0,
+  "descricao": "ALFA HOLDINGPNB"
+ },
+ {
+  "symbol": "RPMG3",
+  "tipo": "ação",
+  "volume_mediano": 2562.0,
+  "descricao": "PET MANGUINHON"
+ },
+ {
+  "symbol": "RPRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 777538.0,
+  "descricao": "FII RBR PR  CI"
+ },
+ {
+  "symbol": "RSID3",
+  "tipo": "ação",
+  "volume_mediano": 2245.0,
+  "descricao": "ROSSI RESID ON      NM"
+ },
+ {
+  "symbol": "RSPD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 17435.0,
+  "descricao": "FII RBRESID3CI"
+ },
+ {
+  "symbol": "RSSL39",
+  "tipo": "BDR",
+  "volume_mediano": 1226.0,
+  "descricao": "GX RUSSL2000DRE"
+ },
+ {
+  "symbol": "RSUL4",
+  "tipo": "ação",
+  "volume_mediano": 144738.0,
+  "descricao": "RIOSULENSE  PN"
+ },
+ {
+  "symbol": "RURA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2512597.0,
+  "descricao": "FIAGRO RURA CI"
+ },
+ {
+  "symbol": "RVEE3",
+  "tipo": "ação",
+  "volume_mediano": 748.0,
+  "descricao": "REVEE       ON"
+ },
+ {
+  "symbol": "RYTT34",
+  "tipo": "BDR",
+  "volume_mediano": 29855.0,
+  "descricao": "RAYTHEONTECHDRN ED"
+ },
+ {
+  "symbol": "RZAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1132397.0,
+  "descricao": "FIAGRO RIZA CI"
+ },
+ {
+  "symbol": "RZAK11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1165303.0,
+  "descricao": "FII RIZA AKNCI"
+ },
+ {
+  "symbol": "RZAT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 710493.0,
+  "descricao": "FII ARCTIUM CI"
+ },
+ {
+  "symbol": "RZEO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1165.0,
+  "descricao": "FIAGRO RZEO CI"
+ },
+ {
+  "symbol": "RZLC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 270157.0,
+  "descricao": "FII RZLC    CI  ER"
+ },
+ {
+  "symbol": "RZNE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 100.0,
+  "descricao": "FIAGRO RZNE CI"
+ },
+ {
+  "symbol": "RZTR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2786100.0,
+  "descricao": "FII RIZA TX CI"
+ },
+ {
+  "symbol": "RZZR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 22176.0,
+  "descricao": "FII RZZR    CI  ER"
+ },
+ {
+  "symbol": "SANB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 100420141.0,
+  "descricao": "SANTANDER BRUNT"
+ },
+ {
+  "symbol": "SANB3",
+  "tipo": "ação",
+  "volume_mediano": 1814900.0,
+  "descricao": "SANTANDER BRON"
+ },
+ {
+  "symbol": "SANB4",
+  "tipo": "ação",
+  "volume_mediano": 2151206.0,
+  "descricao": "SANTANDER BRPN"
+ },
+ {
+  "symbol": "SAPI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 148464.0,
+  "descricao": "FII SAPI    CI"
+ },
+ {
+  "symbol": "SAPP34",
+  "tipo": "BDR",
+  "volume_mediano": 20329.0,
+  "descricao": "SAP SE      DRN"
+ },
+ {
+  "symbol": "SAPR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 38909024.0,
+  "descricao": "SANEPAR     UNT     N2"
+ },
+ {
+  "symbol": "SAPR3",
+  "tipo": "ação",
+  "volume_mediano": 701934.0,
+  "descricao": "SANEPAR     ON      N2"
+ },
+ {
+  "symbol": "SAPR4",
+  "tipo": "ação",
+  "volume_mediano": 6918084.0,
+  "descricao": "SANEPAR     PN      N2"
+ },
+ {
+  "symbol": "SBFG3",
+  "tipo": "ação",
+  "volume_mediano": 20042163.0,
+  "descricao": "GRUPO SBF   ON      NM"
+ },
+ {
+  "symbol": "SBSP3",
+  "tipo": "ação",
+  "volume_mediano": 380696418.0,
+  "descricao": "SABESP      ON      NM"
+ },
+ {
+  "symbol": "SBUB34",
+  "tipo": "BDR",
+  "volume_mediano": 6273.0,
+  "descricao": "STARBUCKS   DRN ED"
+ },
+ {
+  "symbol": "SCAR3",
+  "tipo": "ação",
+  "volume_mediano": 140870.0,
+  "descricao": "SAO CARLOS  ON      NM"
+ },
+ {
+  "symbol": "SCHW34",
+  "tipo": "BDR",
+  "volume_mediano": 25697.0,
+  "descricao": "SCHWAB      DRN ED"
+ },
+ {
+  "symbol": "SCPF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 801.0,
+  "descricao": "FII SCP     CI"
+ },
+ {
+  "symbol": "SCVB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 21959.0,
+  "descricao": "INVESTO SCVBCI"
+ },
+ {
+  "symbol": "SEED11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 91960.0,
+  "descricao": "FII HEDGE SDCI"
+ },
+ {
+  "symbol": "SEER3",
+  "tipo": "ação",
+  "volume_mediano": 7202856.0,
+  "descricao": "SER EDUCA   ON      NM"
+ },
+ {
+  "symbol": "SEQL3",
+  "tipo": "ação",
+  "volume_mediano": 37806.0,
+  "descricao": "SEQUOIA LOG ON      NM"
+ },
+ {
+  "symbol": "SEQR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 48404.0,
+  "descricao": "FII SEQUOIA CI  ER"
+ },
+ {
+  "symbol": "SHOW3",
+  "tipo": "ação",
+  "volume_mediano": 130708.0,
+  "descricao": "TIME FOR FUNON"
+ },
+ {
+  "symbol": "SHPH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 37291.0,
+  "descricao": "FII HIGIENOPCI"
+ },
+ {
+  "symbol": "SHPP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2165.0,
+  "descricao": "FII SHPP    CI  ER"
+ },
+ {
+  "symbol": "SHUL4",
+  "tipo": "ação",
+  "volume_mediano": 1986295.0,
+  "descricao": "SCHULZ      PN"
+ },
+ {
+  "symbol": "SILK11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12798.0,
+  "descricao": "IT NOW CHINACI"
+ },
+ {
+  "symbol": "SIMH3",
+  "tipo": "ação",
+  "volume_mediano": 17561544.0,
+  "descricao": "SIMPAR      ON      NM"
+ },
+ {
+  "symbol": "SIMN34",
+  "tipo": "BDR",
+  "volume_mediano": 7224.0,
+  "descricao": "SIMON PROP  DRN"
+ },
+ {
+  "symbol": "SIVR39",
+  "tipo": "BDR",
+  "volume_mediano": 36752.0,
+  "descricao": "ABDEN SILV  DRE"
+ },
+ {
+  "symbol": "SJAU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 428.0,
+  "descricao": "FII SJ AU   CI"
+ },
+ {
+  "symbol": "SLBG34",
+  "tipo": "BDR",
+  "volume_mediano": 6238.0,
+  "descricao": "SLB N.V     DRN"
+ },
+ {
+  "symbol": "SLCE3",
+  "tipo": "ação",
+  "volume_mediano": 37617232.0,
+  "descricao": "SLC AGRICOLAON      NM"
+ },
+ {
+  "symbol": "SLXB39",
+  "tipo": "BDR",
+  "volume_mediano": 118.0,
+  "descricao": "VE STEEL ETFDRE"
+ },
+ {
+  "symbol": "SMAB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3199.0,
+  "descricao": "BTG SMLL CAPCI"
+ },
+ {
+  "symbol": "SMAC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 303050.0,
+  "descricao": "IT NOW SMALLCI"
+ },
+ {
+  "symbol": "SMAL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 174085670.0,
+  "descricao": "ISHARES SMALCI"
+ },
+ {
+  "symbol": "SMFT3",
+  "tipo": "ação",
+  "volume_mediano": 95966351.0,
+  "descricao": "SMART FIT   ON      NM"
+ },
+ {
+  "symbol": "SMRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 99706.0,
+  "descricao": "FII SMRE    CI"
+ },
+ {
+  "symbol": "SMTO3",
+  "tipo": "ação",
+  "volume_mediano": 24056008.0,
+  "descricao": "SAO MARTINHOON      NM"
+ },
+ {
+  "symbol": "SNAG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1734727.0,
+  "descricao": "FIAGRO SUNO CI"
+ },
+ {
+  "symbol": "SNCI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 396561.0,
+  "descricao": "FII SUNO CRICI"
+ },
+ {
+  "symbol": "SNEC34",
+  "tipo": "BDR",
+  "volume_mediano": 33935.0,
+  "descricao": "SONY GROUP  DRN"
+ },
+ {
+  "symbol": "SNEL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3558666.0,
+  "descricao": "FII SUNO EL CI"
+ },
+ {
+  "symbol": "SNFF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 262612.0,
+  "descricao": "FII SUNOFOFICI"
+ },
+ {
+  "symbol": "SNFZ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 190822.0,
+  "descricao": "FIAGRO SNFZ CI"
+ },
+ {
+  "symbol": "SNID11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 77149.0,
+  "descricao": "SUNO FIC FI CI"
+ },
+ {
+  "symbol": "SNLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 70397.0,
+  "descricao": "FII SUNO LG CI"
+ },
+ {
+  "symbol": "SNME11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 166628.0,
+  "descricao": "FII SNME    CI"
+ },
+ {
+  "symbol": "SNSY3",
+  "tipo": "ação",
+  "volume_mediano": 3300.0,
+  "descricao": "SANSUY      ON"
+ },
+ {
+  "symbol": "SNSY5",
+  "tipo": "ação",
+  "volume_mediano": 5588.0,
+  "descricao": "SANSUY      PNA"
+ },
+ {
+  "symbol": "SOFF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 25434.0,
+  "descricao": "FII SOFF    CI"
+ },
+ {
+  "symbol": "SOJA3",
+  "tipo": "ação",
+  "volume_mediano": 4236165.0,
+  "descricao": "BOA SAFRA   ON      NM"
+ },
+ {
+  "symbol": "SOLH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 476510.0,
+  "descricao": "SOLANA HASH CI"
+ },
+ {
+  "symbol": "SOND5",
+  "tipo": "ação",
+  "volume_mediano": 7818.0,
+  "descricao": "SONDOTECNICAPNA"
+ },
+ {
+  "symbol": "SOND6",
+  "tipo": "ação",
+  "volume_mediano": 7210.0,
+  "descricao": "SONDOTECNICAPNB"
+ },
+ {
+  "symbol": "SPGI34",
+  "tipo": "BDR",
+  "volume_mediano": 3430.0,
+  "descricao": "SP GLOBAL   DRN"
+ },
+ {
+  "symbol": "SPMO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 73200.0,
+  "descricao": "FII SUPREMO CI"
+ },
+ {
+  "symbol": "SPTW11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 49174.0,
+  "descricao": "FII SPTW PAXCI"
+ },
+ {
+  "symbol": "SPUB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2377.0,
+  "descricao": "SAFRAIBOVESTCI"
+ },
+ {
+  "symbol": "SPVT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4736.0,
+  "descricao": "SAFRAIBOVPVTCI"
+ },
+ {
+  "symbol": "SPXB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 206128.0,
+  "descricao": "BTG S&P 500 CI"
+ },
+ {
+  "symbol": "SPXI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4536289.0,
+  "descricao": "IT NOW SPXI CI"
+ },
+ {
+  "symbol": "SPXR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12075317.0,
+  "descricao": "IT NOW SP BRCI"
+ },
+ {
+  "symbol": "SPXS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 324985.0,
+  "descricao": "FII SPX SYN CI  ER"
+ },
+ {
+  "symbol": "SPYI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1396141.0,
+  "descricao": "ETF BV SPYI CI"
+ },
+ {
+  "symbol": "SSFO34",
+  "tipo": "BDR",
+  "volume_mediano": 413941.0,
+  "descricao": "SALESFOR INCDRN"
+ },
+ {
+  "symbol": "STMN34",
+  "tipo": "BDR",
+  "volume_mediano": 15907.0,
+  "descricao": "STMICROEL   DRN"
+ },
+ {
+  "symbol": "STOC34",
+  "tipo": "BDR",
+  "volume_mediano": 4511535.0,
+  "descricao": "STONE CO    DRN"
+ },
+ {
+  "symbol": "STZB34",
+  "tipo": "BDR",
+  "volume_mediano": 1296.0,
+  "descricao": "CONSTELLATIODRN"
+ },
+ {
+  "symbol": "SUZB3",
+  "tipo": "ação",
+  "volume_mediano": 207702823.0,
+  "descricao": "SUZANO S.A. ON      NM"
+ },
+ {
+  "symbol": "SVAL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 276442.0,
+  "descricao": "INVESTO SVALCI"
+ },
+ {
+  "symbol": "SYNE3",
+  "tipo": "ação",
+  "volume_mediano": 1140687.0,
+  "descricao": "SYN PROP TECON      NM"
+ },
+ {
+  "symbol": "TAEE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 64273750.0,
+  "descricao": "TAESA       UNT     N2"
+ },
+ {
+  "symbol": "TAEE3",
+  "tipo": "ação",
+  "volume_mediano": 1191904.0,
+  "descricao": "TAESA       ON      N2"
+ },
+ {
+  "symbol": "TAEE4",
+  "tipo": "ação",
+  "volume_mediano": 2154126.0,
+  "descricao": "TAESA       PN      N2"
+ },
+ {
+  "symbol": "TAKP34",
+  "tipo": "BDR",
+  "volume_mediano": 176.0,
+  "descricao": "TAKEDAPH    DRN"
+ },
+ {
+  "symbol": "TASA3",
+  "tipo": "ação",
+  "volume_mediano": 45319.0,
+  "descricao": "TAURUS ARMASON      N2"
+ },
+ {
+  "symbol": "TASA4",
+  "tipo": "ação",
+  "volume_mediano": 1213140.0,
+  "descricao": "TAURUS ARMASPN      N2"
+ },
+ {
+  "symbol": "TBIL39",
+  "tipo": "BDR",
+  "volume_mediano": 17041.0,
+  "descricao": "GX T BILL   DRE"
+ },
+ {
+  "symbol": "TCIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 48170.0,
+  "descricao": "FII TOUR V  CI"
+ },
+ {
+  "symbol": "TCSA3",
+  "tipo": "ação",
+  "volume_mediano": 52040.0,
+  "descricao": "TECNISA     ON      NM"
+ },
+ {
+  "symbol": "TECK11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 8999779.0,
+  "descricao": "IT NOW TECK CI"
+ },
+ {
+  "symbol": "TECN3",
+  "tipo": "ação",
+  "volume_mediano": 422684.0,
+  "descricao": "TECHNOS     ON      NM"
+ },
+ {
+  "symbol": "TECX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 111632.0,
+  "descricao": "B INDEX TECXCI"
+ },
+ {
+  "symbol": "TELB3",
+  "tipo": "ação",
+  "volume_mediano": 4374.0,
+  "descricao": "TELEBRAS    ON"
+ },
+ {
+  "symbol": "TELB4",
+  "tipo": "ação",
+  "volume_mediano": 8079.0,
+  "descricao": "TELEBRAS    PN"
+ },
+ {
+  "symbol": "TELM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2794.0,
+  "descricao": "FII TELM    CI  ER"
+ },
+ {
+  "symbol": "TEND3",
+  "tipo": "ação",
+  "volume_mediano": 75551440.0,
+  "descricao": "TENDA       ON  ED  NM"
+ },
+ {
+  "symbol": "TEPP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1149002.0,
+  "descricao": "FII TEL PROPCI"
+ },
+ {
+  "symbol": "TEXA34",
+  "tipo": "BDR",
+  "volume_mediano": 38059.0,
+  "descricao": "TEXAS INC   DRN"
+ },
+ {
+  "symbol": "TFCO4",
+  "tipo": "ação",
+  "volume_mediano": 7395760.0,
+  "descricao": "TRACK FIELD PN      N2"
+ },
+ {
+  "symbol": "TGAR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3534659.0,
+  "descricao": "FII TG ATIVOCI"
+ },
+ {
+  "symbol": "TGMA3",
+  "tipo": "ação",
+  "volume_mediano": 4965600.0,
+  "descricao": "TEGMA       ON  EDJ NM"
+ },
+ {
+  "symbol": "TGTB34",
+  "tipo": "BDR",
+  "volume_mediano": 3635.0,
+  "descricao": "TARGET CORP DRN ED"
+ },
+ {
+  "symbol": "THGI34",
+  "tipo": "BDR",
+  "volume_mediano": 4014.0,
+  "descricao": "HANOVER INSUDRN"
+ },
+ {
+  "symbol": "TIMS3",
+  "tipo": "ação",
+  "volume_mediano": 119118816.0,
+  "descricao": "TIM         ON      NM"
+ },
+ {
+  "symbol": "TJKB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 33611.0,
+  "descricao": "FII TJK RENDCI"
+ },
+ {
+  "symbol": "TJXC34",
+  "tipo": "BDR",
+  "volume_mediano": 59502.0,
+  "descricao": "TJX COMPANIEDRN ED"
+ },
+ {
+  "symbol": "TMCO34",
+  "tipo": "BDR",
+  "volume_mediano": 75841.0,
+  "descricao": "TOYOTAMO    DRN"
+ },
+ {
+  "symbol": "TMOS34",
+  "tipo": "BDR",
+  "volume_mediano": 33101.0,
+  "descricao": "THERMFISCHERDRN"
+ },
+ {
+  "symbol": "TMPS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 76831.0,
+  "descricao": "FII ITAU TEMCI"
+ },
+ {
+  "symbol": "TOKY3",
+  "tipo": "ação",
+  "volume_mediano": 58192.0,
+  "descricao": "GRUPO TOKY  ON      NM"
+ },
+ {
+  "symbol": "TOPP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 491069.0,
+  "descricao": "FII TOPP PAXCI  ER"
+ },
+ {
+  "symbol": "TORD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 11038.0,
+  "descricao": "FII TORDE EICI  ER"
+ },
+ {
+  "symbol": "TOTS3",
+  "tipo": "ação",
+  "volume_mediano": 134760717.0,
+  "descricao": "TOTVS       ON      NM"
+ },
+ {
+  "symbol": "TPIS3",
+  "tipo": "ação",
+  "volume_mediano": 310312.0,
+  "descricao": "TRIUNFO PARTON      NM"
+ },
+ {
+  "symbol": "TPRY34",
+  "tipo": "BDR",
+  "volume_mediano": 4616.0,
+  "descricao": "TAPESTRY INCDRN"
+ },
+ {
+  "symbol": "TRBL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 777933.0,
+  "descricao": "FII SDI LOG CI"
+ },
+ {
+  "symbol": "TRIG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 60259.0,
+  "descricao": "TRG SMIC CAPCI"
+ },
+ {
+  "symbol": "TRIS3",
+  "tipo": "ação",
+  "volume_mediano": 1115441.0,
+  "descricao": "TRISUL      ON      NM"
+ },
+ {
+  "symbol": "TRNT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2100.0,
+  "descricao": "FII TORRE NOCI"
+ },
+ {
+  "symbol": "TRVC34",
+  "tipo": "BDR",
+  "volume_mediano": 554.0,
+  "descricao": "TRAVELERS   DRN"
+ },
+ {
+  "symbol": "TRXB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12104.0,
+  "descricao": "FII TRX R IICI"
+ },
+ {
+  "symbol": "TRXF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 17624962.0,
+  "descricao": "FII TRX REALCI  ES"
+ },
+ {
+  "symbol": "TRXY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 148198.0,
+  "descricao": "FII TRXY    CI"
+ },
+ {
+  "symbol": "TSER11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 285.0,
+  "descricao": "FII TISHMAN CI"
+ },
+ {
+  "symbol": "TSLA34",
+  "tipo": "BDR",
+  "volume_mediano": 58601823.0,
+  "descricao": "TESLA INC   DRN"
+ },
+ {
+  "symbol": "TSMC34",
+  "tipo": "BDR",
+  "volume_mediano": 25551710.0,
+  "descricao": "TAIWANSMFAC DRN"
+ },
+ {
+  "symbol": "TSNC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 84.0,
+  "descricao": "FII TRANSINCCI"
+ },
+ {
+  "symbol": "TSNF34",
+  "tipo": "BDR",
+  "volume_mediano": 34377.0,
+  "descricao": "TYSON FOODS DRN EB"
+ },
+ {
+  "symbol": "TTEN3",
+  "tipo": "ação",
+  "volume_mediano": 15446094.0,
+  "descricao": "3TENTOS     ON      NM"
+ },
+ {
+  "symbol": "TUPY3",
+  "tipo": "ação",
+  "volume_mediano": 8995856.0,
+  "descricao": "TUPY        ON      NM"
+ },
+ {
+  "symbol": "TVRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 827761.0,
+  "descricao": "FII TIVIO RICI"
+ },
+ {
+  "symbol": "TXRX3",
+  "tipo": "ação",
+  "volume_mediano": 934.0,
+  "descricao": "TEX RENAUX  ON"
+ },
+ {
+  "symbol": "TXRX4",
+  "tipo": "ação",
+  "volume_mediano": 428.0,
+  "descricao": "TEX RENAUX  PN"
+ },
+ {
+  "symbol": "TXSA34",
+  "tipo": "BDR",
+  "volume_mediano": 270793.0,
+  "descricao": "TERNIUMSA   DRN"
+ },
+ {
+  "symbol": "UBSG34",
+  "tipo": "BDR",
+  "volume_mediano": 2575.0,
+  "descricao": "UBS GROUP   DRN"
+ },
+ {
+  "symbol": "UCAS3",
+  "tipo": "ação",
+  "volume_mediano": 14340.0,
+  "descricao": "UNICASA     ON      NM"
+ },
+ {
+  "symbol": "UGPA3",
+  "tipo": "ação",
+  "volume_mediano": 181127241.0,
+  "descricao": "ULTRAPAR    ON      NM"
+ },
+ {
+  "symbol": "ULEV34",
+  "tipo": "BDR",
+  "volume_mediano": 9766.0,
+  "descricao": "UNILEVER    DRN ED"
+ },
+ {
+  "symbol": "UNHH34",
+  "tipo": "BDR",
+  "volume_mediano": 327865.0,
+  "descricao": "UNITEDHEALTHDRN"
+ },
+ {
+  "symbol": "UNIP3",
+  "tipo": "ação",
+  "volume_mediano": 284028.0,
+  "descricao": "UNIPAR      ON"
+ },
+ {
+  "symbol": "UNIP5",
+  "tipo": "ação",
+  "volume_mediano": 13467.0,
+  "descricao": "UNIPAR      PNA"
+ },
+ {
+  "symbol": "UNIP6",
+  "tipo": "ação",
+  "volume_mediano": 7393424.0,
+  "descricao": "UNIPAR      PNB"
+ },
+ {
+  "symbol": "UPAC34",
+  "tipo": "BDR",
+  "volume_mediano": 2486.0,
+  "descricao": "UNIONPACIFICDRN"
+ },
+ {
+  "symbol": "UPSS34",
+  "tipo": "BDR",
+  "volume_mediano": 6716.0,
+  "descricao": "UPS         DRN ED"
+ },
+ {
+  "symbol": "URHF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2380.0,
+  "descricao": "FII URHF    CI"
+ },
+ {
+  "symbol": "URPR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 529857.0,
+  "descricao": "FII URCA RENCI"
+ },
+ {
+  "symbol": "USBC34",
+  "tipo": "BDR",
+  "volume_mediano": 5168.0,
+  "descricao": "US BANCORP  DRN"
+ },
+ {
+  "symbol": "USDB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 654599.0,
+  "descricao": "INVESTO USDBCI"
+ },
+ {
+  "symbol": "USIM3",
+  "tipo": "ação",
+  "volume_mediano": 3949488.0,
+  "descricao": "USIMINAS    ON      N1"
+ },
+ {
+  "symbol": "USIM5",
+  "tipo": "ação",
+  "volume_mediano": 93021139.0,
+  "descricao": "USIMINAS    PNA     N1"
+ },
+ {
+  "symbol": "USIM6",
+  "tipo": "ação",
+  "volume_mediano": 1600.0,
+  "descricao": "USIMINAS    PNB     N1"
+ },
+ {
+  "symbol": "USTK11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 195568.0,
+  "descricao": "INVESTO USTKCI"
+ },
+ {
+  "symbol": "UTEC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1849648.0,
+  "descricao": "XPETFUSTECH CI"
+ },
+ {
+  "symbol": "VALE3",
+  "tipo": "ação",
+  "volume_mediano": 1229877636.0,
+  "descricao": "VALE        ON  EDJ NM"
+ },
+ {
+  "symbol": "VAMO3",
+  "tipo": "ação",
+  "volume_mediano": 32517818.0,
+  "descricao": "VAMOS       ON      NM"
+ },
+ {
+  "symbol": "VANG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 142164.0,
+  "descricao": "VANG INFRA  CI"
+ },
+ {
+  "symbol": "VBBR3",
+  "tipo": "ação",
+  "volume_mediano": 270529604.0,
+  "descricao": "VIBRA       ON      NM"
+ },
+ {
+  "symbol": "VCJR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2000366.0,
+  "descricao": "FII VECTIS  CI"
+ },
+ {
+  "symbol": "VCRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 570811.0,
+  "descricao": "FIAGRO VCRA CI"
+ },
+ {
+  "symbol": "VCRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 205101.0,
+  "descricao": "FII VINCI CRCI"
+ },
+ {
+  "symbol": "VCRR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 130314.0,
+  "descricao": "FII VECT RENCI"
+ },
+ {
+  "symbol": "VERZ34",
+  "tipo": "BDR",
+  "volume_mediano": 61834.0,
+  "descricao": "VERIZON     DRN"
+ },
+ {
+  "symbol": "VFCO34",
+  "tipo": "BDR",
+  "volume_mediano": 228.0,
+  "descricao": "VF CORP     DRN"
+ },
+ {
+  "symbol": "VGHF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2237329.0,
+  "descricao": "FII VALOR HECI"
+ },
+ {
+  "symbol": "VGIA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1736950.0,
+  "descricao": "FIAGRO VGIA CI  ER"
+ },
+ {
+  "symbol": "VGIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1689176.0,
+  "descricao": "FII VALORAIPCI  ER"
+ },
+ {
+  "symbol": "VGIR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4074403.0,
+  "descricao": "FII VALREIIICI  ER"
+ },
+ {
+  "symbol": "VGRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 267913.0,
+  "descricao": "FII VGRI    CI"
+ },
+ {
+  "symbol": "VHFA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1291.0,
+  "descricao": "FIAGRO VHFA CI  ERA"
+ },
+ {
+  "symbol": "VIGT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 257116.0,
+  "descricao": "FIP VINCI IECI"
+ },
+ {
+  "symbol": "VILG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2108844.0,
+  "descricao": "FII VINCI LGCI"
+ },
+ {
+  "symbol": "VINO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 447852.0,
+  "descricao": "FII VINCI OFCI"
+ },
+ {
+  "symbol": "VISA34",
+  "tipo": "BDR",
+  "volume_mediano": 920038.0,
+  "descricao": "VISA INC    DRN ED"
+ },
+ {
+  "symbol": "VISC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4654396.0,
+  "descricao": "FII VINCI SCCI"
+ },
+ {
+  "symbol": "VITT3",
+  "tipo": "ação",
+  "volume_mediano": 580282.0,
+  "descricao": "VITTIA      ON      NM"
+ },
+ {
+  "symbol": "VIUR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 101648.0,
+  "descricao": "FII VINCI IUCI"
+ },
+ {
+  "symbol": "VIVA3",
+  "tipo": "ação",
+  "volume_mediano": 59006122.0,
+  "descricao": "VIVARA S.A. ON      NM"
+ },
+ {
+  "symbol": "VIVR3",
+  "tipo": "ação",
+  "volume_mediano": 13546.0,
+  "descricao": "VIVER       ON      NM"
+ },
+ {
+  "symbol": "VIVT3",
+  "tipo": "ação",
+  "volume_mediano": 160849102.0,
+  "descricao": "TELEF BRASILON"
+ },
+ {
+  "symbol": "VLID3",
+  "tipo": "ação",
+  "volume_mediano": 4139544.0,
+  "descricao": "VALID       ON  ED  NM"
+ },
+ {
+  "symbol": "VLOE34",
+  "tipo": "BDR",
+  "volume_mediano": 7508.0,
+  "descricao": "VALERO ENER DRN"
+ },
+ {
+  "symbol": "VLYB34",
+  "tipo": "BDR",
+  "volume_mediano": 154.0,
+  "descricao": "VALLEY NTIONDRN"
+ },
+ {
+  "symbol": "VOTS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1101.0,
+  "descricao": "FII V MASTERCI"
+ },
+ {
+  "symbol": "VPPR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 76640.0,
+  "descricao": "FII V2 PRIMECI"
+ },
+ {
+  "symbol": "VRSN34",
+  "tipo": "BDR",
+  "volume_mediano": 1196.0,
+  "descricao": "VERISIGN INCDRN"
+ },
+ {
+  "symbol": "VRTA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1781713.0,
+  "descricao": "FII FATOR VECI"
+ },
+ {
+  "symbol": "VRTM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 130256.0,
+  "descricao": "FII VRTM    CI"
+ },
+ {
+  "symbol": "VRTX34",
+  "tipo": "BDR",
+  "volume_mediano": 8640.0,
+  "descricao": "VERTEX PHARMDRN"
+ },
+ {
+  "symbol": "VSHO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 13990.0,
+  "descricao": "FII VOT SHOPCI"
+ },
+ {
+  "symbol": "VSLH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 63811.0,
+  "descricao": "FII VERS CRICI  ER"
+ },
+ {
+  "symbol": "VSPT3",
+  "tipo": "ação",
+  "volume_mediano": 2402252394.0,
+  "descricao": "FER C ATLANTON"
+ },
+ {
+  "symbol": "VSTE3",
+  "tipo": "ação",
+  "volume_mediano": 50250.0,
+  "descricao": "VESTE       ON      NM"
+ },
+ {
+  "symbol": "VTRU3",
+  "tipo": "ação",
+  "volume_mediano": 6236662.0,
+  "descricao": "VITRUEDUCA  ON      NM"
+ },
+ {
+  "symbol": "VULC3",
+  "tipo": "ação",
+  "volume_mediano": 12638238.0,
+  "descricao": "VULCABRAS   ON      NM"
+ },
+ {
+  "symbol": "VVCO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 447.0,
+  "descricao": "FII V2EDCORPCI"
+ },
+ {
+  "symbol": "VVCR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4977.0,
+  "descricao": "FII V2 RECE CI"
+ },
+ {
+  "symbol": "VVEO3",
+  "tipo": "ação",
+  "volume_mediano": 1053940.0,
+  "descricao": "VIVEO       ON      NM"
+ },
+ {
+  "symbol": "VVMR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1935.0,
+  "descricao": "FII MULT RENCI"
+ },
+ {
+  "symbol": "VVRI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1438.0,
+  "descricao": "FII V2 RENDACI"
+ },
+ {
+  "symbol": "VXXV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 345989.0,
+  "descricao": "FII VX XVI  CI"
+ },
+ {
+  "symbol": "WABC34",
+  "tipo": "BDR",
+  "volume_mediano": 8101.0,
+  "descricao": "WESTERN BCORDRN ED"
+ },
+ {
+  "symbol": "WALM34",
+  "tipo": "BDR",
+  "volume_mediano": 727915.0,
+  "descricao": "WAL MART    DRN"
+ },
+ {
+  "symbol": "WATC34",
+  "tipo": "BDR",
+  "volume_mediano": 1047.0,
+  "descricao": "WATERS CORP DRN"
+ },
+ {
+  "symbol": "WEGE3",
+  "tipo": "ação",
+  "volume_mediano": 315887280.0,
+  "descricao": "WEG         ON      NM"
+ },
+ {
+  "symbol": "WEST3",
+  "tipo": "ação",
+  "volume_mediano": 51524.0,
+  "descricao": "WESTWING    ON      NM"
+ },
+ {
+  "symbol": "WFCO34",
+  "tipo": "BDR",
+  "volume_mediano": 145434.0,
+  "descricao": "WELLS FARGO DRN ED"
+ },
+ {
+  "symbol": "WHGR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 212671.0,
+  "descricao": "FII WHG REALCI"
+ },
+ {
+  "symbol": "WHRL3",
+  "tipo": "ação",
+  "volume_mediano": 5102.0,
+  "descricao": "WHIRLPOOL   ON"
+ },
+ {
+  "symbol": "WHRL4",
+  "tipo": "ação",
+  "volume_mediano": 25130.0,
+  "descricao": "WHIRLPOOL   PN"
+ },
+ {
+  "symbol": "WIZC3",
+  "tipo": "ação",
+  "volume_mediano": 2598036.0,
+  "descricao": "WIZ CO      ON      NM"
+ },
+ {
+  "symbol": "WLMM3",
+  "tipo": "ação",
+  "volume_mediano": 3274.0,
+  "descricao": "WLM IND COM ON"
+ },
+ {
+  "symbol": "WLMM4",
+  "tipo": "ação",
+  "volume_mediano": 17834.0,
+  "descricao": "WLM IND COM PN"
+ },
+ {
+  "symbol": "WPLZ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2487.0,
+  "descricao": "FII W PLAZA CI"
+ },
+ {
+  "symbol": "WRLD11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5234951.0,
+  "descricao": "INVESTO WRLDCI"
+ },
+ {
+  "symbol": "WTSP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 633.0,
+  "descricao": "FII WTC SP  CI"
+ },
+ {
+  "symbol": "WUNI34",
+  "tipo": "BDR",
+  "volume_mediano": 3631.0,
+  "descricao": "WESTERNUNIONDRN"
+ },
+ {
+  "symbol": "XBOV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2920.0,
+  "descricao": "CAIXAETFXBOVCI"
+ },
+ {
+  "symbol": "XFIX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 197833.0,
+  "descricao": "TREND IFIX-LCI"
+ },
+ {
+  "symbol": "XINA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 825740.0,
+  "descricao": "XPETFCHINA  CI"
+ },
+ {
+  "symbol": "XPCA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 530639.0,
+  "descricao": "FIAGRO XP CACI"
+ },
+ {
+  "symbol": "XPCI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1461919.0,
+  "descricao": "FII XP CRED CI"
+ },
+ {
+  "symbol": "XPCM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 12400.0,
+  "descricao": "FII XP MACAECI"
+ },
+ {
+  "symbol": "XPID11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 80210.0,
+  "descricao": "FIRF XP IE  CI"
+ },
+ {
+  "symbol": "XPIE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1113833.0,
+  "descricao": "FIP XP INFRACI"
+ },
+ {
+  "symbol": "XPIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 687993.0,
+  "descricao": "FII XP INDL CI"
+ },
+ {
+  "symbol": "XPLG11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 7102937.0,
+  "descricao": "FII XP LOG  CI"
+ },
+ {
+  "symbol": "XPML11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 14176577.0,
+  "descricao": "FII XP MALLSCI"
+ },
+ {
+  "symbol": "XPSF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 288824.0,
+  "descricao": "FII XP SELECCI"
+ },
+ {
+  "symbol": "XRAY34",
+  "tipo": "BDR",
+  "volume_mediano": 239.0,
+  "descricao": "DENTSPLY SIRDRN"
+ },
+ {
+  "symbol": "XRPH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 169734.0,
+  "descricao": "XRP HASH    CI"
+ },
+ {
+  "symbol": "XRXB34",
+  "tipo": "BDR",
+  "volume_mediano": 3786.0,
+  "descricao": "XEROX CORP  DRN"
+ },
+ {
+  "symbol": "YDUQ3",
+  "tipo": "ação",
+  "volume_mediano": 26702386.0,
+  "descricao": "YDUQS PART  ON      NM"
+ },
+ {
+  "symbol": "YUFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 183.0,
+  "descricao": "FII YUCA    CI"
+ },
+ {
+  "symbol": "YUMR34",
+  "tipo": "BDR",
+  "volume_mediano": 8330.0,
+  "descricao": "YUM BRANDS  DRN"
+ },
+ {
+  "symbol": "ZAGH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1125.0,
+  "descricao": "FII ZAGH    CI  ER"
+ },
+ {
+  "symbol": "ZAVC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4334.0,
+  "descricao": "FII ZAVIT C CI"
+ },
+ {
+  "symbol": "ZAVI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 26590.0,
+  "descricao": "FII ZAVIT R CI"
+ },
+ {
+  "symbol": "ZIFI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1550.0,
+  "descricao": "FII ZION    CI"
+ },
+ {
+  "symbol": "OIBR3",
+  "tipo": "ação",
+  "volume_mediano": 60028.0,
+  "descricao": "OI          ON      N1"
+ },
+ {
+  "symbol": "STYI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 16050.0,
+  "descricao": "FII STYI    CI"
+ },
+ {
+  "symbol": "PMLL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3763238.0,
+  "descricao": "FII PMLL PAXCI"
+ },
+ {
+  "symbol": "GBTC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 27832.0,
+  "descricao": "GBTC BV HASHCI"
+ },
+ {
+  "symbol": "APXU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 428.0,
+  "descricao": "FII APXU    CI"
+ },
+ {
+  "symbol": "MAGM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 659.0,
+  "descricao": "FII MAGM    CI  ER"
+ },
+ {
+  "symbol": "PDBM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 115.0,
+  "descricao": "FII PDBM    CI"
+ },
+ {
+  "symbol": "PSKY34",
+  "tipo": "BDR",
+  "volume_mediano": 332.0,
+  "descricao": "PARA SKYDNC DRN"
+ },
+ {
+  "symbol": "NBIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 22764.0,
+  "descricao": "NUBITCOINFUTCI"
+ },
+ {
+  "symbol": "ARGE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 99916.0,
+  "descricao": "INVESTOARGE CI"
+ },
+ {
+  "symbol": "AZTE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2263.0,
+  "descricao": "AZT ENERGIA BNS ORD"
+ },
+ {
+  "symbol": "AURO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 282509.0,
+  "descricao": "ETF BV AURO CI"
+ },
+ {
+  "symbol": "BIOM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 595.0,
+  "descricao": "BIOMM       BNS ORD N2"
+ },
+ {
+  "symbol": "ISTT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1631009.0,
+  "descricao": "ISENTO SET29CI"
+ },
+ {
+  "symbol": "BEST11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 483011.0,
+  "descricao": "INVESTOBEST CI"
+ },
+ {
+  "symbol": "ACWX39",
+  "tipo": "BDR",
+  "volume_mediano": 2315.0,
+  "descricao": "MSCI ACWI USDRE"
+ },
+ {
+  "symbol": "BEIS39",
+  "tipo": "BDR",
+  "volume_mediano": 617.0,
+  "descricao": "MSCI ISRAEL DRE"
+ },
+ {
+  "symbol": "BEWD39",
+  "tipo": "BDR",
+  "volume_mediano": 390.0,
+  "descricao": "MSCI SWEDEN DRE"
+ },
+ {
+  "symbol": "BEWI39",
+  "tipo": "BDR",
+  "volume_mediano": 214.0,
+  "descricao": "MSCI ITALY  DRE"
+ },
+ {
+  "symbol": "BEWS39",
+  "tipo": "BDR",
+  "volume_mediano": 554.0,
+  "descricao": "MSCISINGAPORDRE"
+ },
+ {
+  "symbol": "BEZA39",
+  "tipo": "BDR",
+  "volume_mediano": 436.0,
+  "descricao": "MSCI SAFRICADRE"
+ },
+ {
+  "symbol": "BIEZ39",
+  "tipo": "BDR",
+  "volume_mediano": 659.0,
+  "descricao": "USOIL EQSRV DRE"
+ },
+ {
+  "symbol": "BIYZ39",
+  "tipo": "BDR",
+  "volume_mediano": 4906.0,
+  "descricao": "US TELECOM  DRE"
+ },
+ {
+  "symbol": "EIDO39",
+  "tipo": "BDR",
+  "volume_mediano": 4356.0,
+  "descricao": "MSCIINDONESIDRE"
+ },
+ {
+  "symbol": "EWJV39",
+  "tipo": "BDR",
+  "volume_mediano": 2932.0,
+  "descricao": "MSCI JAPAN VDRE"
+ },
+ {
+  "symbol": "QTOP39",
+  "tipo": "BDR",
+  "volume_mediano": 830.0,
+  "descricao": "NASDAQ TOP30DRE"
+ },
+ {
+  "symbol": "TOPB39",
+  "tipo": "BDR",
+  "volume_mediano": 567.0,
+  "descricao": "TOP20USSTOCKDRE"
+ },
+ {
+  "symbol": "BITC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 48863.0,
+  "descricao": "BPTEVABITC  CI"
+ },
+ {
+  "symbol": "EETH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1181.0,
+  "descricao": "BPTEVAETHE  CI"
+ },
+ {
+  "symbol": "UTLL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1761941.0,
+  "descricao": "INVESTOUTIL CI"
+ },
+ {
+  "symbol": "MBRF3",
+  "tipo": "ação",
+  "volume_mediano": 103845216.0,
+  "descricao": "MARFRIG     ON  ATZ NM"
+ },
+ {
+  "symbol": "PCIP11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2436337.0,
+  "descricao": "FII PCIP PAXCI  ER"
+ },
+ {
+  "symbol": "AADA39",
+  "tipo": "BDR",
+  "volume_mediano": 93.0,
+  "descricao": "21SH CARDANODRE"
+ },
+ {
+  "symbol": "AETH39",
+  "tipo": "BDR",
+  "volume_mediano": 521.0,
+  "descricao": "21SH ETHEREUDRE"
+ },
+ {
+  "symbol": "BASK39",
+  "tipo": "BDR",
+  "volume_mediano": 195.0,
+  "descricao": "21SH BASKET DRE"
+ },
+ {
+  "symbol": "CBTC39",
+  "tipo": "BDR",
+  "volume_mediano": 122.0,
+  "descricao": "21SH BITCOINDRE"
+ },
+ {
+  "symbol": "SOLN39",
+  "tipo": "BDR",
+  "volume_mediano": 382.0,
+  "descricao": "21SH SOLANA DRE"
+ },
+ {
+  "symbol": "VWRA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 754208.0,
+  "descricao": "INVESTOVWRA CI"
+ },
+ {
+  "symbol": "WDCN3",
+  "tipo": "ação",
+  "volume_mediano": 34104.0,
+  "descricao": "WDC NETWORKSON      NM"
+ },
+ {
+  "symbol": "RBFY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2557.0,
+  "descricao": "FII RBFY    CI"
+ },
+ {
+  "symbol": "OBTC3",
+  "tipo": "ação",
+  "volume_mediano": 1144794.0,
+  "descricao": "ORANJEBTC   ON"
+ },
+ {
+  "symbol": "VINF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 237049.0,
+  "descricao": "INFRA VINF  CI"
+ },
+ {
+  "symbol": "QLBR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 712777.0,
+  "descricao": "RBINVESTOETFCI"
+ },
+ {
+  "symbol": "GOLB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1135094.0,
+  "descricao": "BTGP GOLB   CI"
+ },
+ {
+  "symbol": "PSEC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1994574.0,
+  "descricao": "FII PSEC PAXCI  ER"
+ },
+ {
+  "symbol": "GDIV11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 56691.0,
+  "descricao": "ETF BV GDIV CI"
+ },
+ {
+  "symbol": "EMBJ3",
+  "tipo": "ação",
+  "volume_mediano": 334734536.0,
+  "descricao": "EMBRAER     ON      NM"
+ },
+ {
+  "symbol": "SPBZ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 6886.0,
+  "descricao": "BTG SPHEDGE CI"
+ },
+ {
+  "symbol": "SUIN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 83950.0,
+  "descricao": "INFRA SUIN  CI"
+ },
+ {
+  "symbol": "GLDI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 361561.0,
+  "descricao": "IT NOW GOLD CI"
+ },
+ {
+  "symbol": "AXIA3",
+  "tipo": "ação",
+  "volume_mediano": 512175388.0,
+  "descricao": "AXIA ENERGIAON  ATZ NM"
+ },
+ {
+  "symbol": "GSRF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 15253.0,
+  "descricao": "FII GSRF    CI"
+ },
+ {
+  "symbol": "HJCT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 11500.0,
+  "descricao": "FII HJCT    CI"
+ },
+ {
+  "symbol": "ONCO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1484.0,
+  "descricao": "ONCOCLINICASBNS ORD NM"
+ },
+ {
+  "symbol": "ISNT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4152370.0,
+  "descricao": "ISENTO MAR28CI"
+ },
+ {
+  "symbol": "GXUS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 110438.0,
+  "descricao": "GLPG GLBEXUSCI"
+ },
+ {
+  "symbol": "ARND3",
+  "tipo": "ação",
+  "volume_mediano": 580.0,
+  "descricao": "ARANDU      ON      NM"
+ },
+ {
+  "symbol": "BVBR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 14366.0,
+  "descricao": "INVCONSTQBRLCI"
+ },
+ {
+  "symbol": "GBIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1620.0,
+  "descricao": "GLPG BITCOINCI"
+ },
+ {
+  "symbol": "BULZ11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 137875.0,
+  "descricao": "GENIAL HBETACI"
+ },
+ {
+  "symbol": "XBIT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 90654.0,
+  "descricao": "TREND BTC   CI"
+ },
+ {
+  "symbol": "XETH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 65241.0,
+  "descricao": "TREND ETH   CI"
+ },
+ {
+  "symbol": "ETHY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 267560.0,
+  "descricao": "ETF BV ETHY CI"
+ },
+ {
+  "symbol": "CLOB11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 185.0,
+  "descricao": "BTGP CLOB   CI"
+ },
+ {
+  "symbol": "GOLX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 5132506.0,
+  "descricao": "TREND OURO HCI"
+ },
+ {
+  "symbol": "DOLX11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 612471.0,
+  "descricao": "TREND DOLAR CI"
+ },
+ {
+  "symbol": "PMRL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 16071.0,
+  "descricao": "FII PMRL    CI"
+ },
+ {
+  "symbol": "SPXH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 933014.0,
+  "descricao": "TREND SP BRLCI"
+ },
+ {
+  "symbol": "TOKY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 395.0,
+  "descricao": "GRUPO TOKY  BNS ORD NM"
+ },
+ {
+  "symbol": "RENT4",
+  "tipo": "ação",
+  "volume_mediano": 3669604.0,
+  "descricao": "LOCALIZA    PN      NM"
+ },
+ {
+  "symbol": "TRUE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 9355.0,
+  "descricao": "FII TRUEMULTCI"
+ },
+ {
+  "symbol": "XLPR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10607.0,
+  "descricao": "FII XLPR RI CI"
+ },
+ {
+  "symbol": "CYRE4",
+  "tipo": "ação",
+  "volume_mediano": 5051352.0,
+  "descricao": "CYRELA REALTPN      NM"
+ },
+ {
+  "symbol": "AUAU3",
+  "tipo": "ação",
+  "volume_mediano": 7804554.0,
+  "descricao": "PETZCOBASI  ON      NM"
+ },
+ {
+  "symbol": "ISNN11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 1130489.0,
+  "descricao": "ISENTO JUL28CI"
+ },
+ {
+  "symbol": "ONDA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4965.0,
+  "descricao": "FII ONDA ME CI"
+ },
+ {
+  "symbol": "TRPL11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 17.0,
+  "descricao": "FII TRPL    CI"
+ },
+ {
+  "symbol": "OURO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 218775.0,
+  "descricao": "B INDEX OUROCI"
+ },
+ {
+  "symbol": "SPYR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 112742.0,
+  "descricao": "B INDEX SPYRCI"
+ },
+ {
+  "symbol": "DAPK37",
+  "tipo": "BDR",
+  "volume_mediano": 14800.0,
+  "descricao": "CUPOM DE IPCA"
+ },
+ {
+  "symbol": "RMBS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 4097.0,
+  "descricao": "FII RMBS    CI  ER"
+ },
+ {
+  "symbol": "LMAI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2601.0,
+  "descricao": "LABINAFII   CI"
+ },
+ {
+  "symbol": "MIDW11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 43892.0,
+  "descricao": "FII MIDW    CI"
+ },
+ {
+  "symbol": "RBFM11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 248667.0,
+  "descricao": "FII RIOB MT CI"
+ },
+ {
+  "symbol": "CAUT11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 109350.0,
+  "descricao": "FIDC CAURIS FIDCEA"
+ },
+ {
+  "symbol": "HIRE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2910.0,
+  "descricao": "FII HIRE    CI"
+ },
+ {
+  "symbol": "VCTH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 57954.0,
+  "descricao": "FII VCTH    CI"
+ },
+ {
+  "symbol": "RIAA3",
+  "tipo": "ação",
+  "volume_mediano": 9101656.0,
+  "descricao": "RIACHUELO   ON      NM"
+ },
+ {
+  "symbol": "PIPE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 282655.0,
+  "descricao": "ETF BV PIPE CI"
+ },
+ {
+  "symbol": "JEPI39",
+  "tipo": "BDR",
+  "volume_mediano": 21663.0,
+  "descricao": "JPM JEPI    DRE"
+ },
+ {
+  "symbol": "BODI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 148601.0,
+  "descricao": "FIC FI BODI CI"
+ },
+ {
+  "symbol": "ROCA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 80.0,
+  "descricao": "FIAGRO ROCA CI"
+ },
+ {
+  "symbol": "ADSH11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 2747.0,
+  "descricao": "FII ADSH    CI"
+ },
+ {
+  "symbol": "ARTE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 41954.0,
+  "descricao": "FII ARTE    CI  ER"
+ },
+ {
+  "symbol": "XBCI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 595080.0,
+  "descricao": "ETF BV XBCI CI  ER"
+ },
+ {
+  "symbol": "XSPI11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 61796.0,
+  "descricao": "ETF BV XSPI CI  ER"
+ },
+ {
+  "symbol": "IVWO11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 64807.0,
+  "descricao": "INVESTOEMERGCI"
+ },
+ {
+  "symbol": "AZUL3",
+  "tipo": "ação",
+  "volume_mediano": 2099252.0,
+  "descricao": "AZUL        ON      N2"
+ },
+ {
+  "symbol": "SLVR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 446133.0,
+  "descricao": "TREND PRATA CI"
+ },
+ {
+  "symbol": "REME11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 51978.0,
+  "descricao": "FII REME    CI"
+ },
+ {
+  "symbol": "SAUD3",
+  "tipo": "ação",
+  "volume_mediano": 50000522.0,
+  "descricao": "BRADSAUDE   ON      NM"
+ },
+ {
+  "symbol": "BISE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3954143.0,
+  "descricao": "INFRA BISE  CI"
+ },
+ {
+  "symbol": "ORVR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 465234.0,
+  "descricao": "ORIZON      BNS ORD NM"
+ },
+ {
+  "symbol": "LKFT34",
+  "tipo": "BDR",
+  "volume_mediano": 24.0,
+  "descricao": "LAKEFRONTBIODRN"
+ },
+ {
+  "symbol": "COLO39",
+  "tipo": "BDR",
+  "volume_mediano": 4023.0,
+  "descricao": "GX COLOMBIA DRE"
+ },
+ {
+  "symbol": "GOEX39",
+  "tipo": "BDR",
+  "volume_mediano": 207.0,
+  "descricao": "GX GOLD EXP DRE"
+ },
+ {
+  "symbol": "SHLD39",
+  "tipo": "BDR",
+  "volume_mediano": 2361.0,
+  "descricao": "GX DEFENSE  DRE"
+ },
+ {
+  "symbol": "SPXU11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 3242785.0,
+  "descricao": "TRD SPX USD CI"
+ },
+ {
+  "symbol": "BTER11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 686821.0,
+  "descricao": "INVESTOBTER CI"
+ },
+ {
+  "symbol": "OROF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 200.0,
+  "descricao": "GLPG OURO   CI"
+ },
+ {
+  "symbol": "PRAF11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 303.0,
+  "descricao": "GLPG PRATA  CI"
+ },
+ {
+  "symbol": "TOPY11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 13483.0,
+  "descricao": "ETF BV TOPY CI"
+ },
+ {
+  "symbol": "SPCX34",
+  "tipo": "BDR",
+  "volume_mediano": 78754147.0,
+  "descricao": "SPACE X     DRN"
+ },
+ {
+  "symbol": "KNPR11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 11648.0,
+  "descricao": "FII KINEA PRCI"
+ },
+ {
+  "symbol": "PREE11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 10121.0,
+  "descricao": "SPARTA PREE CI"
+ },
+ {
+  "symbol": "RARA11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 361137.0,
+  "descricao": "INVESTRARA11CI"
+ },
+ {
+  "symbol": "ECOM3",
+  "tipo": "ação",
+  "volume_mediano": 5586.0,
+  "descricao": "ECONOMATICA ON      NM"
+ },
+ {
+  "symbol": "BNKS11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 29320.0,
+  "descricao": "INVESTOBANK CI"
+ },
+ {
+  "symbol": "ABTC11",
+  "tipo": "unit/ETF/FII",
+  "volume_mediano": 663030.0,
+  "descricao": "BTGP ABTC   CI"
+ }
+]
