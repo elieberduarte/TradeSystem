@@ -1,0 +1,44 @@
+[
+ {
+  "label": "donchian isolada",
+  "pnl": 53047.0,
+  "return_pct": 53.0,
+  "drawdown_pct": 6.6,
+  "calmar": 7.98
+ },
+ {
+  "label": "tk_cross isolada",
+  "pnl": 30130.0,
+  "return_pct": 30.1,
+  "drawdown_pct": 14.1,
+  "calmar": 2.14
+ },
+ {
+  "label": "squeeze isolada",
+  "pnl": 48287.0,
+  "return_pct": 48.3,
+  "drawdown_pct": 3.7,
+  "calmar": 12.89
+ },
+ {
+  "label": "donchian + tk_cross",
+  "pnl": 41589.0,
+  "return_pct": 41.6,
+  "drawdown_pct": 6.0,
+  "calmar": 6.91
+ },
+ {
+  "label": "donchian + squeeze",
+  "pnl": 50667.0,
+  "return_pct": 50.7,
+  "drawdown_pct": 4.3,
+  "calmar": 11.7
+ },
+ {
+  "label": "as três (1/3 cada)",
+  "pnl": 43822.0,
+  "return_pct": 43.8,
+  "drawdown_pct": 4.5,
+  "calmar": 9.79
+ }
+]
