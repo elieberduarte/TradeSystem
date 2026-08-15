@@ -103,8 +103,11 @@
     onclick="ONLY_BQ = !ONLY_BQ; this.setAttribute('aria-pressed', ONLY_BQ); render()">
     💎 só barato × qualidade</button>
   <button id="only-blue" aria-pressed="false"
-    onclick="ONLY_BLUE = !ONLY_BLUE; this.setAttribute('aria-pressed', ONLY_BLUE); if (ONLY_BLUE) { SORT = 'blue_chip_rank'; ASC = true; } render()">
+    onclick="ONLY_BLUE = !ONLY_BLUE; ONLY_SMALL = false; document.getElementById('only-small').setAttribute('aria-pressed', false); this.setAttribute('aria-pressed', ONLY_BLUE); if (ONLY_BLUE) { SORT = 'blue_chip_rank'; ASC = true; } render()">
     🏛️ carteira blue chip (qualidade composta)</button>
+  <button id="only-small" aria-pressed="false"
+    onclick="ONLY_SMALL = !ONLY_SMALL; ONLY_BLUE = false; document.getElementById('only-blue').setAttribute('aria-pressed', false); this.setAttribute('aria-pressed', ONLY_SMALL); if (ONLY_SMALL) { SORT = 'small_growth_rank'; ASC = true; } render()">
+    🚀 small caps de crescimento lucrativo</button>
   <span id="count" style="color:var(--muted); font-size:12px"></span>
 </div>
 
@@ -130,7 +133,7 @@ const COLUMNS = [
   ["roe_medio", "ROE 5a"], ["lucro_5a", "Lucros 5a"], ["cagr_receita", "CAGR rec."],
   ["divida_pl", "Dív/PL"], ["volume_mediano_mi", "Liq. (mi/dia)"],
 ];
-let DATA = null, SORT = "pl", ASC = true, ONLY_BQ = false, ONLY_BLUE = false;
+let DATA = null, SORT = "pl", ASC = true, ONLY_BQ = false, ONLY_BLUE = false, ONLY_SMALL = false;
 
 const pct = v => v === null || v === undefined ? "—"
   : `<span class="${v >= 0 ? "pos" : "neg"}">${(v * 100).toFixed(1)}%</span>`;
@@ -142,7 +145,8 @@ function render() {
   let rows = DATA.papeis.filter(r =>
     (!query || r.ticker.includes(query) || r.empresa.toUpperCase().includes(query))
     && (!ONLY_BQ || r.barato_qualidade)
-    && (!ONLY_BLUE || r.blue_chip_rank !== null && r.blue_chip_rank !== undefined));
+    && (!ONLY_BLUE || r.blue_chip_rank !== null && r.blue_chip_rank !== undefined)
+    && (!ONLY_SMALL || r.small_growth_rank !== null && r.small_growth_rank !== undefined));
   rows.sort((a, b) => {
     const va = a[SORT], vb = b[SORT];
     if (va === null || va === undefined) return 1;
@@ -159,10 +163,12 @@ function render() {
   document.getElementById("body").innerHTML = rows.map(r => {
     const blue = r.blue_chip_rank !== null && r.blue_chip_rank !== undefined && r.blue_chip_rank <= 15
       ? `<span class="tag" style="background:var(--accent)">🏛️ ${r.blue_chip_rank}º</span>` : "";
+    const small = r.small_growth_rank !== null && r.small_growth_rank !== undefined && r.small_growth_rank <= 15
+      ? `<span class="tag" style="background:var(--good)">🚀 ${r.small_growth_rank}º</span>` : "";
     const lucros = r.anos_lucrativos !== null && r.anos_lucrativos !== undefined
       ? `${r.anos_lucrativos}/${r.anos_observados}` : "—";
     return `<tr>
-    <td><b>${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}${blue}</td>
+    <td><b>${r.ticker}</b>${r.barato_qualidade ? '<span class="tag">B×Q</span>' : ""}${blue}${small}</td>
     <td style="color:var(--ink-2)">${r.empresa}</td>
     <td>${num(r.preco)}</td>
     <td>${num(r.pl)}</td>

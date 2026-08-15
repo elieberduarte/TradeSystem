@@ -195,6 +195,36 @@ def blue_chip_ranking(frame: pd.DataFrame) -> pd.Series:
     return score.rank(method="first").astype(int)
 
 
+SMALL_CAP_MAX_BI = 10.0       # valor de mercado máximo (R$ bi) para small cap
+
+
+def small_growth_ranking(frame: pd.DataFrame) -> pd.Series:
+    """Small caps de crescimento LUCRATIVO — não de crescimento a qualquer preço.
+
+    "Small growth" puro é o pior canto histórico do mercado (as ações-
+    loteria); o prêmio documentado em small caps é o de QUALIDADE. O
+    ranking exige as duas coisas ao mesmo tempo: expansão de receita E
+    retorno sobre capital, com histórico de lucro e dívida sob controle.
+    """
+    eligible = frame[
+        frame["valor_mercado_bi"].notna()
+        & (frame["valor_mercado_bi"] <= SMALL_CAP_MAX_BI)
+    ].copy()
+    if eligible.empty:
+        return pd.Series(dtype=float)
+    ranks = pd.DataFrame(index=eligible.index)
+    ranks["cagr"] = eligible["cagr_receita"].rank(ascending=False)
+    ranks["roe"] = eligible["roe_medio"].rank(ascending=False)
+    ranks["lucrativo"] = (
+        eligible["anos_lucrativos"] / eligible["anos_observados"]
+    ).rank(ascending=False)
+    ranks["margem"] = eligible["margem"].rank(ascending=False)
+    ranks["divida"] = eligible["divida_pl"].rank(ascending=True)
+    worst = len(eligible)
+    score = ranks.fillna(worst).mean(axis=1)
+    return score.rank(method="first").astype(int)
+
+
 def main() -> None:
     scan = json.loads((ROOT / "web" / "universe_scan.json").read_text(encoding="utf-8"))
     liquid = {r["symbol"]: r for r in scan
@@ -279,6 +309,7 @@ def main() -> None:
             "cresc_receita": round(rec / rec_prev - 1, 4)
                              if rec and rec_prev and rec_prev > 0 else None,
             "lucro_mi": round(ll / 1e6, 0),
+            "valor_mercado_bi": round(market_cap / 1e9, 2) if market_cap else None,
         })
     mt5.shutdown()
 
@@ -294,6 +325,8 @@ def main() -> None:
     )
     frame["blue_chip_rank"] = blue_chip_ranking(frame)
     frame["blue_chip_rank"] = frame["blue_chip_rank"].astype("Int64")
+    frame["small_growth_rank"] = small_growth_ranking(frame)
+    frame["small_growth_rank"] = frame["small_growth_rank"].astype("Int64")
 
     # Cruzamento barato × qualidade × solidez (medianas do próprio universo)
     valid = frame.dropna(subset=["pl", "roe", "divida_pl"])
@@ -320,6 +353,20 @@ def main() -> None:
     picks = frame[frame["barato_qualidade"]].sort_values("pl")
     print(f"\n{len(frame)} ações com balanço + preço · "
           f"medianas: P/L {med_pl:.1f} · ROE {med_roe:.1%} · dív/PL {med_debt:.2f}")
+
+    smalls = frame.dropna(subset=["small_growth_rank"]).sort_values("small_growth_rank")
+    print(f"\n── Small caps de crescimento lucrativo (valor de mercado ≤ "
+          f"R$ {SMALL_CAP_MAX_BI:.0f} bi) ──")
+    print(f"{'#':>3} {'ticker':<8} {'VM(bi)':>7} {'CAGR rec':>9} {'ROE 5a':>8} "
+          f"{'lucros':>7} {'margem':>8} {'P/L':>6}")
+    for _, r in smalls.head(15).iterrows():
+        cagr = f"{r['cagr_receita']:.1%}" if pd.notna(r["cagr_receita"]) else "—"
+        roe_m = f"{r['roe_medio']:.1%}" if pd.notna(r["roe_medio"]) else "—"
+        margem = f"{r['margem']:.1%}" if pd.notna(r["margem"]) else "—"
+        pl_txt = f"{r['pl']:.1f}" if pd.notna(r["pl"]) else "—"
+        print(f"{int(r['small_growth_rank']):>3} {r['ticker']:<8} "
+              f"{r['valor_mercado_bi']:>7} {cagr:>9} {roe_m:>8} "
+              f"{int(r['anos_lucrativos'])}/{int(r['anos_observados']):<5} {margem:>8} {pl_txt:>6}")
 
     blues = frame.dropna(subset=["blue_chip_rank"]).sort_values("blue_chip_rank")
     print(f"\n── Carteira blue chip candidata (qualidade composta, "

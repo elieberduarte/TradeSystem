@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-08-15T00:14:36",
+ "atualizado": "2026-08-15T00:33:31",
  "medianas": {
   "pl": 9.5,
   "roe": 0.16,
@@ -20,11 +20,13 @@
    "dy": null,
    "cresc_receita": 0.0274,
    "lucro_mi": 6560.0,
+   "valor_mercado_bi": 142.79,
    "cagr_receita": 0.066,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0531,
    "blue_chip_rank": 44,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -41,11 +43,13 @@
    "dy": null,
    "cresc_receita": -0.0118,
    "lucro_mi": -271.0,
+   "valor_mercado_bi": null,
    "cagr_receita": -0.2188,
    "anos_lucrativos": 1,
    "anos_observados": 4,
    "roe_medio": 0.543,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -62,11 +66,13 @@
    "dy": 0.0439,
    "cresc_receita": 0.16,
    "lucro_mi": 3424.0,
+   "valor_mercado_bi": 30.81,
    "cagr_receita": 0.1382,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1749,
    "blue_chip_rank": 10,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -83,11 +89,13 @@
    "dy": 0.0129,
    "cresc_receita": 0.0865,
    "lucro_mi": -225.0,
+   "valor_mercado_bi": 2.21,
    "cagr_receita": 0.0935,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": -0.0229,
    "blue_chip_rank": null,
+   "small_growth_rank": 43,
    "barato_qualidade": false
   },
   {
@@ -104,11 +112,13 @@
    "dy": 0.0581,
    "cresc_receita": -0.0064,
    "lucro_mi": 865.0,
+   "valor_mercado_bi": 25.92,
    "cagr_receita": 0.1206,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0192,
    "blue_chip_rank": 47,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -125,11 +135,13 @@
    "dy": null,
    "cresc_receita": null,
    "lucro_mi": 0.0,
+   "valor_mercado_bi": null,
    "cagr_receita": null,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": 0.0874,
    "blue_chip_rank": 53,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -146,11 +158,13 @@
    "dy": 0.0707,
    "cresc_receita": 0.0408,
    "lucro_mi": 5743.0,
+   "valor_mercado_bi": 49.78,
    "cagr_receita": 0.0408,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2708,
    "blue_chip_rank": 27,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -167,11 +181,13 @@
    "dy": 0.1234,
    "cresc_receita": 0.1463,
    "lucro_mi": 2858.0,
+   "valor_mercado_bi": 35.52,
    "cagr_receita": 0.026,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3052,
    "blue_chip_rank": 21,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -188,11 +204,13 @@
    "dy": null,
    "cresc_receita": 0.0671,
    "lucro_mi": 6178.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.0745,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0752,
    "blue_chip_rank": 39,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -209,11 +227,13 @@
    "dy": null,
    "cresc_receita": 0.098,
    "lucro_mi": 586.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.1128,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": 0.0089,
    "blue_chip_rank": 49,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -230,11 +250,13 @@
    "dy": 0.0348,
    "cresc_receita": 0.0406,
    "lucro_mi": 3503.0,
+   "valor_mercado_bi": 29.64,
    "cagr_receita": -0.0058,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2017,
    "blue_chip_rank": 45,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -251,11 +273,13 @@
    "dy": 0.0463,
    "cresc_receita": 0.0345,
    "lucro_mi": 1190.0,
+   "valor_mercado_bi": 13.55,
    "cagr_receita": 0.0067,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1269,
    "blue_chip_rank": 36,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -272,11 +296,13 @@
    "dy": 0.0981,
    "cresc_receita": 0.1813,
    "lucro_mi": 2511.0,
+   "valor_mercado_bi": 17.34,
    "cagr_receita": 0.1997,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1492,
    "blue_chip_rank": 14,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -293,11 +319,13 @@
    "dy": 0.0818,
    "cresc_receita": 0.19,
    "lucro_mi": 2504.0,
+   "valor_mercado_bi": 65.68,
    "cagr_receita": 0.2427,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1079,
    "blue_chip_rank": 28,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -314,11 +342,13 @@
    "dy": null,
    "cresc_receita": -0.0328,
    "lucro_mi": 638.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.0199,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1776,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -335,11 +365,13 @@
    "dy": 0.477,
    "cresc_receita": 0.0081,
    "lucro_mi": 213.0,
+   "valor_mercado_bi": 1.23,
    "cagr_receita": 0.042,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": -0.3893,
    "blue_chip_rank": null,
+   "small_growth_rank": 56,
    "barato_qualidade": false
   },
   {
@@ -356,11 +388,13 @@
    "dy": 0.0536,
    "cresc_receita": 0.167,
    "lucro_mi": 867.0,
+   "valor_mercado_bi": 4.01,
    "cagr_receita": 0.2387,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1846,
    "blue_chip_rank": null,
+   "small_growth_rank": 24,
    "barato_qualidade": false
   },
   {
@@ -377,11 +411,13 @@
    "dy": 0.0109,
    "cresc_receita": 0.6172,
    "lucro_mi": 1692.0,
+   "valor_mercado_bi": 41.31,
    "cagr_receita": 0.443,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0385,
    "blue_chip_rank": 33,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -398,11 +434,13 @@
    "dy": 0.0137,
    "cresc_receita": 0.1187,
    "lucro_mi": 214.0,
+   "valor_mercado_bi": 1.44,
    "cagr_receita": 0.0976,
    "anos_lucrativos": 1,
    "anos_observados": 4,
    "roe_medio": -0.011,
    "blue_chip_rank": null,
+   "small_growth_rank": 39,
    "barato_qualidade": false
   },
   {
@@ -419,11 +457,13 @@
    "dy": 0.0,
    "cresc_receita": 0.0921,
    "lucro_mi": -142.0,
+   "valor_mercado_bi": 3.4,
    "cagr_receita": 0.0996,
    "anos_lucrativos": 0,
    "anos_observados": 4,
    "roe_medio": -0.0119,
    "blue_chip_rank": 48,
+   "small_growth_rank": 45,
    "barato_qualidade": false
   },
   {
@@ -440,11 +480,13 @@
    "dy": 0.1089,
    "cresc_receita": 0.0435,
    "lucro_mi": 945.0,
+   "valor_mercado_bi": 14.74,
    "cagr_receita": 0.3702,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0962,
    "blue_chip_rank": 4,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -461,11 +503,13 @@
    "dy": 0.0855,
    "cresc_receita": 0.1019,
    "lucro_mi": 4844.0,
+   "valor_mercado_bi": 76.73,
    "cagr_receita": 0.3433,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1287,
    "blue_chip_rank": 23,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -482,11 +526,13 @@
    "dy": 0.291,
    "cresc_receita": 0.1791,
    "lucro_mi": 261.0,
+   "valor_mercado_bi": 2.01,
    "cagr_receita": 0.175,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0589,
    "blue_chip_rank": null,
+   "small_growth_rank": 31,
    "barato_qualidade": false
   },
   {
@@ -503,11 +549,13 @@
    "dy": 0.075,
    "cresc_receita": 0.0802,
    "lucro_mi": 660.0,
+   "valor_mercado_bi": 5.85,
    "cagr_receita": 0.01,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0874,
    "blue_chip_rank": null,
+   "small_growth_rank": 25,
    "barato_qualidade": false
   },
   {
@@ -524,11 +572,13 @@
    "dy": 0.0161,
    "cresc_receita": 0.0685,
    "lucro_mi": 215.0,
+   "valor_mercado_bi": 14.24,
    "cagr_receita": 0.2131,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0294,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -545,11 +595,13 @@
    "dy": 0.0858,
    "cresc_receita": -0.0135,
    "lucro_mi": 15988.0,
+   "valor_mercado_bi": 238.37,
    "cagr_receita": 0.0345,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1736,
    "blue_chip_rank": 11,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -566,11 +618,13 @@
    "dy": 0.053,
    "cresc_receita": 0.2977,
    "lucro_mi": 641.0,
+   "valor_mercado_bi": 10.22,
    "cagr_receita": 0.352,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0945,
    "blue_chip_rank": 42,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -587,11 +641,13 @@
    "dy": 0.0117,
    "cresc_receita": 0.1823,
    "lucro_mi": 1992.0,
+   "valor_mercado_bi": 73.97,
    "cagr_receita": 0.2133,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0425,
    "blue_chip_rank": 43,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -608,11 +664,13 @@
    "dy": 0.0373,
    "cresc_receita": 0.0763,
    "lucro_mi": 1141.0,
+   "valor_mercado_bi": 13.19,
    "cagr_receita": 0.1507,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1707,
    "blue_chip_rank": 24,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -629,11 +687,13 @@
    "dy": 0.0095,
    "cresc_receita": 0.0795,
    "lucro_mi": 81.0,
+   "valor_mercado_bi": 2.47,
    "cagr_receita": 0.1968,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0694,
    "blue_chip_rank": null,
+   "small_growth_rank": 26,
    "barato_qualidade": false
   },
   {
@@ -650,11 +710,13 @@
    "dy": 0.1211,
    "cresc_receita": 1.1637,
    "lucro_mi": 1869.0,
+   "valor_mercado_bi": 7.3,
    "cagr_receita": 0.223,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1568,
    "blue_chip_rank": null,
+   "small_growth_rank": 6,
    "barato_qualidade": true
   },
   {
@@ -671,11 +733,13 @@
    "dy": 0.1396,
    "cresc_receita": -0.0395,
    "lucro_mi": 548.0,
+   "valor_mercado_bi": 2.43,
    "cagr_receita": 0.1016,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0806,
    "blue_chip_rank": null,
+   "small_growth_rank": 11,
    "barato_qualidade": false
   },
   {
@@ -692,11 +756,13 @@
    "dy": 0.0,
    "cresc_receita": 0.2106,
    "lucro_mi": -1043.0,
+   "valor_mercado_bi": 2.67,
    "cagr_receita": 0.1796,
    "anos_lucrativos": 0,
    "anos_observados": 4,
    "roe_medio": -0.0638,
    "blue_chip_rank": null,
+   "small_growth_rank": 54,
    "barato_qualidade": false
   },
   {
@@ -713,11 +779,13 @@
    "dy": 0.3647,
    "cresc_receita": 0.0896,
    "lucro_mi": 1475.0,
+   "valor_mercado_bi": 3.42,
    "cagr_receita": 0.0746,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0806,
    "blue_chip_rank": null,
+   "small_growth_rank": 28,
    "barato_qualidade": true
   },
   {
@@ -734,11 +802,13 @@
    "dy": 0.1311,
    "cresc_receita": 0.3752,
    "lucro_mi": 1081.0,
+   "valor_mercado_bi": 10.32,
    "cagr_receita": 0.3374,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.5196,
    "blue_chip_rank": 2,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -755,11 +825,13 @@
    "dy": 0.3865,
    "cresc_receita": 0.0318,
    "lucro_mi": 180.0,
+   "valor_mercado_bi": 2.0,
    "cagr_receita": 0.0655,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0503,
    "blue_chip_rank": null,
+   "small_growth_rank": 48,
    "barato_qualidade": false
   },
   {
@@ -776,11 +848,13 @@
    "dy": 0.1652,
    "cresc_receita": 0.1321,
    "lucro_mi": 363.0,
+   "valor_mercado_bi": 2.09,
    "cagr_receita": 0.0462,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0893,
    "blue_chip_rank": null,
+   "small_growth_rank": 18,
    "barato_qualidade": false
   },
   {
@@ -797,11 +871,13 @@
    "dy": 0.1348,
    "cresc_receita": 0.1324,
    "lucro_mi": 161.0,
+   "valor_mercado_bi": 1.98,
    "cagr_receita": 0.0475,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1073,
    "blue_chip_rank": null,
+   "small_growth_rank": 19,
    "barato_qualidade": false
   },
   {
@@ -818,11 +894,13 @@
    "dy": 0.0,
    "cresc_receita": 0.2399,
    "lucro_mi": 105.0,
+   "valor_mercado_bi": 1.92,
    "cagr_receita": 0.2112,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": 0.0149,
    "blue_chip_rank": null,
+   "small_growth_rank": 42,
    "barato_qualidade": false
   },
   {
@@ -839,11 +917,13 @@
    "dy": 0.0293,
    "cresc_receita": 0.1698,
    "lucro_mi": 694.0,
+   "valor_mercado_bi": 7.79,
    "cagr_receita": 0.2331,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1953,
    "blue_chip_rank": null,
+   "small_growth_rank": 22,
    "barato_qualidade": false
   },
   {
@@ -860,11 +940,13 @@
    "dy": null,
    "cresc_receita": 0.0585,
    "lucro_mi": 257.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.0413,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0233,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -881,11 +963,13 @@
    "dy": 0.0,
    "cresc_receita": 0.0852,
    "lucro_mi": 2251.0,
+   "valor_mercado_bi": 47.69,
    "cagr_receita": 0.3479,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3011,
    "blue_chip_rank": 18,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -902,11 +986,13 @@
    "dy": 0.0,
    "cresc_receita": 0.0477,
    "lucro_mi": -41.0,
+   "valor_mercado_bi": 0.66,
    "cagr_receita": 0.0681,
    "anos_lucrativos": 0,
    "anos_observados": 4,
    "roe_medio": -0.6002,
    "blue_chip_rank": null,
+   "small_growth_rank": 55,
    "barato_qualidade": false
   },
   {
@@ -923,11 +1009,13 @@
    "dy": null,
    "cresc_receita": 0.1626,
    "lucro_mi": 74.0,
+   "valor_mercado_bi": 1.5,
    "cagr_receita": 0.1881,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": -0.0116,
    "blue_chip_rank": null,
+   "small_growth_rank": 40,
    "barato_qualidade": false
   },
   {
@@ -944,11 +1032,13 @@
    "dy": null,
    "cresc_receita": 0.5012,
    "lucro_mi": 420.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.4339,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1615,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -965,11 +1055,13 @@
    "dy": 0.0,
    "cresc_receita": 0.3319,
    "lucro_mi": 1411.0,
+   "valor_mercado_bi": 8.53,
    "cagr_receita": 0.8897,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0348,
    "blue_chip_rank": 46,
+   "small_growth_rank": 29,
    "barato_qualidade": false
   },
   {
@@ -986,11 +1078,13 @@
    "dy": null,
    "cresc_receita": -0.0783,
    "lucro_mi": -3671.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.1197,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": -0.8769,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1007,11 +1101,13 @@
    "dy": null,
    "cresc_receita": 0.5646,
    "lucro_mi": -141.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.0823,
    "anos_lucrativos": 1,
    "anos_observados": 4,
    "roe_medio": -0.1786,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1028,11 +1124,13 @@
    "dy": 0.2378,
    "cresc_receita": 0.0818,
    "lucro_mi": 328.0,
+   "valor_mercado_bi": 2.0,
    "cagr_receita": 0.0731,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1091,
    "blue_chip_rank": null,
+   "small_growth_rank": 32,
    "barato_qualidade": false
   },
   {
@@ -1049,11 +1147,13 @@
    "dy": 0.271,
    "cresc_receita": 0.0572,
    "lucro_mi": 13438.0,
+   "valor_mercado_bi": 51.88,
    "cagr_receita": 0.0019,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.2771,
    "blue_chip_rank": 35,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1070,11 +1170,13 @@
    "dy": 0.0797,
    "cresc_receita": 0.4105,
    "lucro_mi": 911.0,
+   "valor_mercado_bi": 3.01,
    "cagr_receita": 0.4081,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1133,
    "blue_chip_rank": null,
+   "small_growth_rank": 10,
    "barato_qualidade": false
   },
   {
@@ -1091,11 +1193,13 @@
    "dy": 0.2322,
    "cresc_receita": 0.297,
    "lucro_mi": 980.0,
+   "valor_mercado_bi": 6.74,
    "cagr_receita": 0.2616,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2773,
    "blue_chip_rank": 5,
+   "small_growth_rank": 7,
    "barato_qualidade": false
   },
   {
@@ -1112,11 +1216,13 @@
    "dy": 0.2215,
    "cresc_receita": 0.121,
    "lucro_mi": 1870.0,
+   "valor_mercado_bi": 35.24,
    "cagr_receita": 0.3294,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0756,
    "blue_chip_rank": 19,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1133,11 +1239,13 @@
    "dy": 0.1824,
    "cresc_receita": 0.0736,
    "lucro_mi": 4900.0,
+   "valor_mercado_bi": 29.4,
    "cagr_receita": 0.0745,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2133,
    "blue_chip_rank": 8,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -1154,11 +1262,13 @@
    "dy": 0.0389,
    "cresc_receita": 0.0574,
    "lucro_mi": 1416.0,
+   "valor_mercado_bi": 21.26,
    "cagr_receita": 0.1048,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1568,
    "blue_chip_rank": 31,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1175,11 +1285,13 @@
    "dy": 0.1166,
    "cresc_receita": null,
    "lucro_mi": 9017.0,
+   "valor_mercado_bi": 71.75,
    "cagr_receita": null,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.8428,
    "blue_chip_rank": 13,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -1196,11 +1308,13 @@
    "dy": null,
    "cresc_receita": 0.4207,
    "lucro_mi": 8.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.2433,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1228,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1217,11 +1331,13 @@
    "dy": 0.0015,
    "cresc_receita": 0.0548,
    "lucro_mi": 370.0,
+   "valor_mercado_bi": 1.7,
    "cagr_receita": 0.197,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0841,
    "blue_chip_rank": null,
+   "small_growth_rank": 14,
    "barato_qualidade": false
   },
   {
@@ -1238,11 +1354,13 @@
    "dy": 0.0235,
    "cresc_receita": 0.0883,
    "lucro_mi": 318.0,
+   "valor_mercado_bi": 2.34,
    "cagr_receita": 0.1519,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.0358,
    "blue_chip_rank": null,
+   "small_growth_rank": 46,
    "barato_qualidade": false
   },
   {
@@ -1259,11 +1377,13 @@
    "dy": 0.1102,
    "cresc_receita": -0.0968,
    "lucro_mi": 1460.0,
+   "valor_mercado_bi": 17.74,
    "cagr_receita": -0.0622,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2365,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1280,11 +1400,13 @@
    "dy": 0.0704,
    "cresc_receita": null,
    "lucro_mi": 4292.0,
+   "valor_mercado_bi": 53.85,
    "cagr_receita": null,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2912,
    "blue_chip_rank": 15,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1301,11 +1423,13 @@
    "dy": 0.0842,
    "cresc_receita": 0.2248,
    "lucro_mi": 329.0,
+   "valor_mercado_bi": 2.96,
    "cagr_receita": 0.0542,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.148,
    "blue_chip_rank": null,
+   "small_growth_rank": 36,
    "barato_qualidade": false
   },
   {
@@ -1322,11 +1446,13 @@
    "dy": 0.1451,
    "cresc_receita": 0.2674,
    "lucro_mi": 423.0,
+   "valor_mercado_bi": 1.38,
    "cagr_receita": 0.3004,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3873,
    "blue_chip_rank": null,
+   "small_growth_rank": 5,
    "barato_qualidade": false
   },
   {
@@ -1343,11 +1469,13 @@
    "dy": 0.0664,
    "cresc_receita": 0.1976,
    "lucro_mi": 1857.0,
+   "valor_mercado_bi": 9.06,
    "cagr_receita": 0.2085,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1445,
    "blue_chip_rank": null,
+   "small_growth_rank": 15,
    "barato_qualidade": true
   },
   {
@@ -1364,11 +1492,13 @@
    "dy": 0.0476,
    "cresc_receita": 0.1666,
    "lucro_mi": 301.0,
+   "valor_mercado_bi": 3.53,
    "cagr_receita": 0.1895,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1882,
    "blue_chip_rank": null,
+   "small_growth_rank": 13,
    "barato_qualidade": false
   },
   {
@@ -1385,11 +1515,13 @@
    "dy": 0.0489,
    "cresc_receita": 0.6349,
    "lucro_mi": -558.0,
+   "valor_mercado_bi": 8.85,
    "cagr_receita": 0.3368,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": 0.0321,
    "blue_chip_rank": null,
+   "small_growth_rank": 44,
    "barato_qualidade": false
   },
   {
@@ -1406,11 +1538,13 @@
    "dy": 0.0749,
    "cresc_receita": 0.0137,
    "lucro_mi": 110605.0,
+   "valor_mercado_bi": 606.38,
    "cagr_receita": -0.0811,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3029,
    "blue_chip_rank": 29,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -1427,11 +1561,13 @@
    "dy": 0.0834,
    "cresc_receita": 0.0137,
    "lucro_mi": 110605.0,
+   "valor_mercado_bi": 544.61,
    "cagr_receita": -0.0811,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3029,
    "blue_chip_rank": 26,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -1448,11 +1584,13 @@
    "dy": 0.0606,
    "cresc_receita": 0.0664,
    "lucro_mi": 2542.0,
+   "valor_mercado_bi": 35.83,
    "cagr_receita": -0.0029,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1584,
    "blue_chip_rank": 38,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1469,11 +1607,13 @@
    "dy": 0.0,
    "cresc_receita": -0.1398,
    "lucro_mi": 391.0,
+   "valor_mercado_bi": 4.26,
    "cagr_receita": -0.0957,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": 0.0134,
    "blue_chip_rank": null,
+   "small_growth_rank": 50,
    "barato_qualidade": false
   },
   {
@@ -1490,11 +1630,13 @@
    "dy": 0.0766,
    "cresc_receita": 0.0368,
    "lucro_mi": 11811.0,
+   "valor_mercado_bi": 260.72,
    "cagr_receita": -0.0194,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2259,
    "blue_chip_rank": 22,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1511,11 +1653,13 @@
    "dy": 0.0532,
    "cresc_receita": 0.0422,
    "lucro_mi": 1418.0,
+   "valor_mercado_bi": 50.47,
    "cagr_receita": -0.0536,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1266,
    "blue_chip_rank": 32,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1532,11 +1676,13 @@
    "dy": 0.1048,
    "cresc_receita": 0.1744,
    "lucro_mi": 620.0,
+   "valor_mercado_bi": 4.9,
    "cagr_receita": 0.1796,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2201,
    "blue_chip_rank": 3,
+   "small_growth_rank": 3,
    "barato_qualidade": true
   },
   {
@@ -1553,11 +1699,13 @@
    "dy": 0.1946,
    "cresc_receita": -0.0532,
    "lucro_mi": 482.0,
+   "valor_mercado_bi": 6.79,
    "cagr_receita": -0.109,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3382,
    "blue_chip_rank": null,
+   "small_growth_rank": 34,
    "barato_qualidade": false
   },
   {
@@ -1574,11 +1722,13 @@
    "dy": 0.0415,
    "cresc_receita": 0.0975,
    "lucro_mi": 1979.0,
+   "valor_mercado_bi": 37.29,
    "cagr_receita": 0.0138,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2081,
    "blue_chip_rank": 34,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1595,11 +1745,13 @@
    "dy": 0.0,
    "cresc_receita": -0.0865,
    "lucro_mi": -10961.0,
+   "valor_mercado_bi": 4.35,
    "cagr_receita": -0.0985,
    "anos_lucrativos": 0,
    "anos_observados": 4,
    "roe_medio": 0.464,
    "blue_chip_rank": null,
+   "small_growth_rank": 57,
    "barato_qualidade": false
   },
   {
@@ -1616,11 +1768,13 @@
    "dy": 0.1454,
    "cresc_receita": 0.0539,
    "lucro_mi": 8462.0,
+   "valor_mercado_bi": 16.25,
    "cagr_receita": 0.2205,
    "anos_lucrativos": 3,
    "anos_observados": 3,
    "roe_medio": 0.1923,
    "blue_chip_rank": 6,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1637,11 +1791,13 @@
    "dy": 0.1198,
    "cresc_receita": 0.0454,
    "lucro_mi": 587.0,
+   "valor_mercado_bi": 2.42,
    "cagr_receita": 0.0889,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.074,
    "blue_chip_rank": 16,
+   "small_growth_rank": 23,
    "barato_qualidade": false
   },
   {
@@ -1658,11 +1814,13 @@
    "dy": 0.0,
    "cresc_receita": 0.0172,
    "lucro_mi": -815.0,
+   "valor_mercado_bi": 1.34,
    "cagr_receita": 0.0334,
    "anos_lucrativos": 0,
    "anos_observados": 4,
    "roe_medio": -0.4137,
    "blue_chip_rank": null,
+   "small_growth_rank": 59,
    "barato_qualidade": false
   },
   {
@@ -1679,11 +1837,13 @@
    "dy": 0.83,
    "cresc_receita": 0.0175,
    "lucro_mi": 205.0,
+   "valor_mercado_bi": 3.03,
    "cagr_receita": 0.0124,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": -0.0227,
    "blue_chip_rank": 40,
+   "small_growth_rank": 51,
    "barato_qualidade": false
   },
   {
@@ -1700,11 +1860,13 @@
    "dy": 0.3632,
    "cresc_receita": -0.0804,
    "lucro_mi": -10194.0,
+   "valor_mercado_bi": 8.62,
    "cagr_receita": 0.0057,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": -0.0954,
    "blue_chip_rank": 50,
+   "small_growth_rank": 60,
    "barato_qualidade": false
   },
   {
@@ -1721,11 +1883,13 @@
    "dy": 0.2711,
    "cresc_receita": 0.1679,
    "lucro_mi": 1165.0,
+   "valor_mercado_bi": 3.73,
    "cagr_receita": 0.1196,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3182,
    "blue_chip_rank": null,
+   "small_growth_rank": 4,
    "barato_qualidade": true
   },
   {
@@ -1742,11 +1906,13 @@
    "dy": 0.1656,
    "cresc_receita": 0.0377,
    "lucro_mi": 836.0,
+   "valor_mercado_bi": 4.81,
    "cagr_receita": 0.0676,
    "anos_lucrativos": 5,
    "anos_observados": 5,
    "roe_medio": 0.1724,
    "blue_chip_rank": null,
+   "small_growth_rank": 27,
    "barato_qualidade": false
   },
   {
@@ -1763,11 +1929,13 @@
    "dy": 0.0195,
    "cresc_receita": 0.1744,
    "lucro_mi": 921.0,
+   "valor_mercado_bi": 18.32,
    "cagr_receita": 0.1502,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1458,
    "blue_chip_rank": 25,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1784,11 +1952,13 @@
    "dy": 0.0839,
    "cresc_receita": 0.1008,
    "lucro_mi": 109.0,
+   "valor_mercado_bi": 1.32,
    "cagr_receita": -0.3763,
    "anos_lucrativos": 3,
    "anos_observados": 3,
    "roe_medio": 0.1397,
    "blue_chip_rank": null,
+   "small_growth_rank": 30,
    "barato_qualidade": false
   },
   {
@@ -1805,11 +1975,13 @@
    "dy": 0.0893,
    "cresc_receita": 0.0609,
    "lucro_mi": 583.0,
+   "valor_mercado_bi": 7.42,
    "cagr_receita": 0.0835,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.5028,
    "blue_chip_rank": 1,
+   "small_growth_rank": 1,
    "barato_qualidade": false
   },
   {
@@ -1826,11 +1998,13 @@
    "dy": 0.0161,
    "cresc_receita": 0.2582,
    "lucro_mi": 142.0,
+   "valor_mercado_bi": 1.99,
    "cagr_receita": 0.2263,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2678,
    "blue_chip_rank": null,
+   "small_growth_rank": 2,
    "barato_qualidade": false
   },
   {
@@ -1847,11 +2021,13 @@
    "dy": 0.0828,
    "cresc_receita": 0.1862,
    "lucro_mi": 609.0,
+   "valor_mercado_bi": 4.43,
    "cagr_receita": 0.0858,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.6456,
    "blue_chip_rank": null,
+   "small_growth_rank": 21,
    "barato_qualidade": false
   },
   {
@@ -1868,11 +2044,13 @@
    "dy": null,
    "cresc_receita": 0.0789,
    "lucro_mi": 597.0,
+   "valor_mercado_bi": null,
    "cagr_receita": 0.2293,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1065,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -1889,11 +2067,13 @@
    "dy": 0.0058,
    "cresc_receita": 0.0152,
    "lucro_mi": -2910.0,
+   "valor_mercado_bi": 7.38,
    "cagr_receita": -0.0683,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.005,
    "blue_chip_rank": 52,
+   "small_growth_rank": 49,
    "barato_qualidade": false
   },
   {
@@ -1910,11 +2090,13 @@
    "dy": 0.0369,
    "cresc_receita": 0.1111,
    "lucro_mi": 568.0,
+   "valor_mercado_bi": 8.24,
    "cagr_receita": 0.0296,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": -0.0712,
    "blue_chip_rank": null,
+   "small_growth_rank": 37,
    "barato_qualidade": false
   },
   {
@@ -1931,11 +2113,13 @@
    "dy": 0.1839,
    "cresc_receita": 0.0023,
    "lucro_mi": 217.0,
+   "valor_mercado_bi": 2.96,
    "cagr_receita": -0.0321,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0599,
    "blue_chip_rank": null,
+   "small_growth_rank": 41,
    "barato_qualidade": false
   },
   {
@@ -1952,11 +2136,13 @@
    "dy": 6.9383,
    "cresc_receita": 0.0753,
    "lucro_mi": 230.0,
+   "valor_mercado_bi": 0.01,
    "cagr_receita": -0.0014,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": 0.0101,
    "blue_chip_rank": null,
+   "small_growth_rank": 53,
    "barato_qualidade": false
   },
   {
@@ -1973,11 +2159,13 @@
    "dy": 0.1358,
    "cresc_receita": 0.0017,
    "lucro_mi": 16550.0,
+   "valor_mercado_bi": 139.27,
    "cagr_receita": -0.0094,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1699,
    "blue_chip_rank": 12,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -1994,11 +2182,13 @@
    "dy": 0.0226,
    "cresc_receita": 0.1384,
    "lucro_mi": 1300.0,
+   "valor_mercado_bi": 29.0,
    "cagr_receita": 0.1504,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1833,
    "blue_chip_rank": 20,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -2015,11 +2205,13 @@
    "dy": 0.0485,
    "cresc_receita": 0.6094,
    "lucro_mi": 848.0,
+   "valor_mercado_bi": 3.34,
    "cagr_receita": 0.2096,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": -4.0664,
    "blue_chip_rank": null,
+   "small_growth_rank": 52,
    "barato_qualidade": false
   },
   {
@@ -2036,11 +2228,13 @@
    "dy": 0.0179,
    "cresc_receita": 0.2707,
    "lucro_mi": 484.0,
+   "valor_mercado_bi": 3.96,
    "cagr_receita": 0.2004,
    "anos_lucrativos": 2,
    "anos_observados": 4,
    "roe_medio": -0.1208,
    "blue_chip_rank": 51,
+   "small_growth_rank": 38,
    "barato_qualidade": false
   },
   {
@@ -2057,11 +2251,13 @@
    "dy": 0.0537,
    "cresc_receita": 0.0259,
    "lucro_mi": -1785.0,
+   "valor_mercado_bi": 15.61,
    "cagr_receita": 0.026,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.1632,
    "blue_chip_rank": 37,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -2078,11 +2274,13 @@
    "dy": 0.1499,
    "cresc_receita": 0.183,
    "lucro_mi": 2396.0,
+   "valor_mercado_bi": 11.19,
    "cagr_receita": 0.203,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1609,
    "blue_chip_rank": 7,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -2099,11 +2297,13 @@
    "dy": 0.1541,
    "cresc_receita": 0.183,
    "lucro_mi": 2396.0,
+   "valor_mercado_bi": 10.89,
    "cagr_receita": 0.203,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1609,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": true
   },
   {
@@ -2120,11 +2320,13 @@
    "dy": 0.0307,
    "cresc_receita": 0.153,
    "lucro_mi": 2688.0,
+   "valor_mercado_bi": 40.68,
    "cagr_receita": 0.06,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.094,
    "blue_chip_rank": 41,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -2141,11 +2343,13 @@
    "dy": 0.1007,
    "cresc_receita": -0.0622,
    "lucro_mi": 484.0,
+   "valor_mercado_bi": 4.57,
    "cagr_receita": 0.0176,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1899,
    "blue_chip_rank": null,
+   "small_growth_rank": 17,
    "barato_qualidade": true
   },
   {
@@ -2162,11 +2366,13 @@
    "dy": 0.0254,
    "cresc_receita": 0.0742,
    "lucro_mi": 6776.0,
+   "valor_mercado_bi": 211.79,
    "cagr_receita": 0.1091,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3118,
    "blue_chip_rank": 9,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -2183,11 +2389,13 @@
    "dy": 0.1613,
    "cresc_receita": -0.0912,
    "lucro_mi": -655.0,
+   "valor_mercado_bi": 1.99,
    "cagr_receita": -0.0162,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.021,
    "blue_chip_rank": null,
+   "small_growth_rank": 58,
    "barato_qualidade": false
   },
   {
@@ -2204,11 +2412,13 @@
    "dy": 0.2922,
    "cresc_receita": 0.054,
    "lucro_mi": 1236.0,
+   "valor_mercado_bi": 4.88,
    "cagr_receita": 0.187,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2447,
    "blue_chip_rank": null,
+   "small_growth_rank": 8,
    "barato_qualidade": false
   },
   {
@@ -2225,11 +2435,13 @@
    "dy": 0.2773,
    "cresc_receita": 0.054,
    "lucro_mi": 1236.0,
+   "valor_mercado_bi": 5.15,
    "cagr_receita": 0.187,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.2447,
    "blue_chip_rank": null,
+   "small_growth_rank": 9,
    "barato_qualidade": false
   },
   {
@@ -2246,11 +2458,13 @@
    "dy": 3.6771,
    "cresc_receita": 0.103,
    "lucro_mi": -60.0,
+   "valor_mercado_bi": 0.38,
    "cagr_receita": 0.0563,
    "anos_lucrativos": 3,
    "anos_observados": 4,
    "roe_medio": 0.1214,
    "blue_chip_rank": null,
+   "small_growth_rank": 47,
    "barato_qualidade": false
   },
   {
@@ -2267,11 +2481,13 @@
    "dy": 0.209,
    "cresc_receita": 0.2506,
    "lucro_mi": 565.0,
+   "valor_mercado_bi": 6.73,
    "cagr_receita": 0.0059,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1673,
    "blue_chip_rank": null,
+   "small_growth_rank": 35,
    "barato_qualidade": false
   },
   {
@@ -2288,11 +2504,13 @@
    "dy": 0.0675,
    "cresc_receita": -0.0168,
    "lucro_mi": 645.0,
+   "valor_mercado_bi": 3.18,
    "cagr_receita": 0.0094,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1672,
    "blue_chip_rank": null,
+   "small_growth_rank": 12,
    "barato_qualidade": true
   },
   {
@@ -2309,11 +2527,13 @@
    "dy": 0.1491,
    "cresc_receita": -0.0728,
    "lucro_mi": 156.0,
+   "valor_mercado_bi": 1.0,
    "cagr_receita": -0.0637,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.3622,
    "blue_chip_rank": null,
+   "small_growth_rank": 20,
    "barato_qualidade": true
   },
   {
@@ -2330,11 +2550,13 @@
    "dy": 0.0159,
    "cresc_receita": 0.1153,
    "lucro_mi": 125.0,
+   "valor_mercado_bi": 1.67,
    "cagr_receita": 0.1137,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0849,
    "blue_chip_rank": null,
+   "small_growth_rank": 33,
    "barato_qualidade": false
   },
   {
@@ -2351,11 +2573,13 @@
    "dy": 0.0613,
    "cresc_receita": 0.0422,
    "lucro_mi": 1414.0,
+   "valor_mercado_bi": 43.16,
    "cagr_receita": -0.0536,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1252,
    "blue_chip_rank": 30,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -2372,11 +2596,13 @@
    "dy": 0.0605,
    "cresc_receita": 0.0965,
    "lucro_mi": 1458.0,
+   "valor_mercado_bi": 11.34,
    "cagr_receita": 0.0605,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1189,
    "blue_chip_rank": 17,
+   "small_growth_rank": null,
    "barato_qualidade": false
   },
   {
@@ -2393,11 +2619,13 @@
    "dy": 0.077,
    "cresc_receita": 0.2805,
    "lucro_mi": 809.0,
+   "valor_mercado_bi": 4.98,
    "cagr_receita": 0.3361,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.1832,
    "blue_chip_rank": null,
+   "small_growth_rank": 16,
    "barato_qualidade": false
   },
   {
@@ -2414,11 +2642,13 @@
    "dy": 0.0002,
    "cresc_receita": 0.0017,
    "lucro_mi": 63.0,
+   "valor_mercado_bi": 224.33,
    "cagr_receita": -0.0094,
    "anos_lucrativos": 4,
    "anos_observados": 4,
    "roe_medio": 0.0714,
    "blue_chip_rank": null,
+   "small_growth_rank": null,
    "barato_qualidade": false
   }
  ]
