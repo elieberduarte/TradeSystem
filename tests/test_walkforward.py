@@ -64,11 +64,37 @@ def test_walkforward_gera_janelas_e_resultado_oos():
         train_bars=150, test_bars=100,
     )
 
-    # 400 candles, treino 150 + teste 100, passo 100 → 2 janelas
-    assert len(report.windows) == 2
+    # 400 candles, treino 150 + teste 100, passo 100 → 2 janelas cheias
+    # + a janela final PARCIAL (50 barras), que antes era descartada
+    assert len(report.windows) == 3
     for window in report.windows:
         assert window.best_params == {"direction": "buy"}
         assert window.test_end > window.test_start
     # Em alta constante, o out-of-sample agregado deve ser lucrativo
     assert report.oos_pnl > 0
-    assert "Janelas: 2" in report.summary()
+    assert "Janelas: 3" in report.summary()
+
+
+def test_janela_final_parcial_cobre_o_fim_do_historico():
+    """O fim do histórico não pode ser jogado fora: a última janela
+    entra mesmo incompleta, desde que tenha o tamanho mínimo."""
+    candles = make_candles([1000.0 + i * 2 for i in range(400)])
+    wf = make_walkforward()
+    report = wf.run(
+        "WIN", candles, {"direction": ["buy", "sell"]},
+        train_bars=150, test_bars=100,
+    )
+    assert report.windows[-1].test_end == candles.index[-1]
+
+
+def test_sobra_menor_que_o_minimo_e_descartada():
+    # 370 candles: janelas cheias em 0 e 100; sobra de 20 barras no
+    # start 200 entra (mínimo = 20); com 15 de sobra, não entraria
+    candles = make_candles([1000.0 + i * 2 for i in range(365)])
+    wf = make_walkforward()
+    report = wf.run(
+        "WIN", candles, {"direction": ["buy", "sell"]},
+        train_bars=150, test_bars=100,
+    )
+    # start 200: 200 + 150 + 20 = 370 > 365 → sem janela parcial
+    assert len(report.windows) == 2

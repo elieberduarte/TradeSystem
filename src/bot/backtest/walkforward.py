@@ -170,16 +170,24 @@ class WalkForward:
         grid: dict[str, list],
         train_bars: int,
         test_bars: int,
+        # Tamanho mínimo da ÚLTIMA janela, que pode ser parcial. Exigir a
+        # janela inteira jogava fora o fim do histórico — no diário, os
+        # últimos ~6 meses nunca eram testados (treino 500 + teste 125
+        # sobre ~1.250 pregões deixa 123 de sobra, e 123 < 125).
+        # None = um quinto da janela normal, com piso de 20 barras.
+        min_test_bars: int | None = None,
     ) -> WalkForwardReport:
         report = WalkForwardReport()
         total = len(candles)
+        minimum = min_test_bars if min_test_bars is not None else max(20, test_bars // 5)
         start = 0
-        while start + train_bars + test_bars <= total:
+        while start + train_bars + minimum <= total:
             train = candles.iloc[start : start + train_bars]
             # O teste recebe o warmup final do treino como contexto; o motor
             # só decide a partir do candle `warmup`, ou seja, dentro do teste.
             test_from = start + train_bars - self.warmup
-            test = candles.iloc[max(test_from, 0) : start + train_bars + test_bars]
+            test_until = min(start + train_bars + test_bars, total)
+            test = candles.iloc[max(test_from, 0) : test_until]
 
             best_params, train_result = self.optimize(symbol, train, grid)
             test_result = self._backtest(symbol, test, best_params)
