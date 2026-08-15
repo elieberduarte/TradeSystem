@@ -1,0 +1,294 @@
+{
+ "WIN$N": [
+  {
+   "align": "a favor",
+   "rr": 1.0,
+   "n": 2614,
+   "acerto": 0.4763,
+   "rw": 0.5,
+   "ev_liq": -18.55
+  },
+  {
+   "align": "a favor + perna forte",
+   "rr": 1.0,
+   "n": 681,
+   "acerto": 0.511,
+   "rw": 0.5,
+   "ev_liq": -6.53
+  },
+  {
+   "align": "contra",
+   "rr": 1.0,
+   "n": 2469,
+   "acerto": 0.4439,
+   "rw": 0.5,
+   "ev_liq": -28.91
+  },
+  {
+   "align": "contra + perna forte",
+   "rr": 1.0,
+   "n": 555,
+   "acerto": 0.4631,
+   "rw": 0.5,
+   "ev_liq": -25.72
+  },
+  {
+   "align": "neutro",
+   "rr": 1.0,
+   "n": 3243,
+   "acerto": 0.4434,
+   "rw": 0.5,
+   "ev_liq": -33.44
+  },
+  {
+   "align": "neutro + perna forte",
+   "rr": 1.0,
+   "n": 811,
+   "acerto": 0.4414,
+   "rw": 0.5,
+   "ev_liq": -36.18
+  },
+  {
+   "align": "a favor",
+   "rr": 2.0,
+   "n": 2422,
+   "acerto": 0.313,
+   "rw": 0.3333,
+   "ev_liq": -26.0
+  },
+  {
+   "align": "a favor + perna forte",
+   "rr": 2.0,
+   "n": 623,
+   "acerto": 0.3419,
+   "rw": 0.3333,
+   "ev_liq": -10.58
+  },
+  {
+   "align": "contra",
+   "rr": 2.0,
+   "n": 2305,
+   "acerto": 0.2733,
+   "rw": 0.3333,
+   "ev_liq": -45.78
+  },
+  {
+   "align": "contra + perna forte",
+   "rr": 2.0,
+   "n": 509,
+   "acerto": 0.2888,
+   "rw": 0.3333,
+   "ev_liq": -44.44
+  },
+  {
+   "align": "neutro",
+   "rr": 2.0,
+   "n": 3040,
+   "acerto": 0.2832,
+   "rw": 0.3333,
+   "ev_liq": -46.55
+  },
+  {
+   "align": "neutro + perna forte",
+   "rr": 2.0,
+   "n": 768,
+   "acerto": 0.2891,
+   "rw": 0.3333,
+   "ev_liq": -45.54
+  },
+  {
+   "align": "a favor",
+   "rr": 3.0,
+   "n": 2242,
+   "acerto": 0.2061,
+   "rw": 0.25,
+   "ev_liq": -55.28
+  },
+  {
+   "align": "a favor + perna forte",
+   "rr": 3.0,
+   "n": 582,
+   "acerto": 0.244,
+   "rw": 0.25,
+   "ev_liq": -25.55
+  },
+  {
+   "align": "contra",
+   "rr": 3.0,
+   "n": 2141,
+   "acerto": 0.1742,
+   "rw": 0.25,
+   "ev_liq": -78.29
+  },
+  {
+   "align": "contra + perna forte",
+   "rr": 3.0,
+   "n": 463,
+   "acerto": 0.1814,
+   "rw": 0.25,
+   "ev_liq": -89.61
+  },
+  {
+   "align": "neutro",
+   "rr": 3.0,
+   "n": 2850,
+   "acerto": 0.1853,
+   "rw": 0.25,
+   "ev_liq": -76.57
+  },
+  {
+   "align": "neutro + perna forte",
+   "rr": 3.0,
+   "n": 716,
+   "acerto": 0.2011,
+   "rw": 0.25,
+   "ev_liq": -72.69
+  }
+ ],
+ "WDO$N": [
+  {
+   "align": "a favor",
+   "rr": 1.0,
+   "n": 2017,
+   "acerto": 0.4199,
+   "rw": 0.5,
+   "ev_liq": -1.5
+  },
+  {
+   "align": "a favor + perna forte",
+   "rr": 1.0,
+   "n": 500,
+   "acerto": 0.46,
+   "rw": 0.5,
+   "ev_liq": -1.22
+  },
+  {
+   "align": "contra",
+   "rr": 1.0,
+   "n": 2137,
+   "acerto": 0.4024,
+   "rw": 0.5,
+   "ev_liq": -1.54
+  },
+  {
+   "align": "contra + perna forte",
+   "rr": 1.0,
+   "n": 520,
+   "acerto": 0.3981,
+   "rw": 0.5,
+   "ev_liq": -1.68
+  },
+  {
+   "align": "neutro",
+   "rr": 1.0,
+   "n": 3328,
+   "acerto": 0.4029,
+   "rw": 0.5,
+   "ev_liq": -1.62
+  },
+  {
+   "align": "neutro + perna forte",
+   "rr": 1.0,
+   "n": 757,
+   "acerto": 0.4188,
+   "rw": 0.5,
+   "ev_liq": -1.65
+  },
+  {
+   "align": "a favor",
+   "rr": 2.0,
+   "n": 1823,
+   "acerto": 0.2595,
+   "rw": 0.3333,
+   "ev_liq": -2.04
+  },
+  {
+   "align": "a favor + perna forte",
+   "rr": 2.0,
+   "n": 443,
+   "acerto": 0.307,
+   "rw": 0.3333,
+   "ev_liq": -1.44
+  },
+  {
+   "align": "contra",
+   "rr": 2.0,
+   "n": 1975,
+   "acerto": 0.2466,
+   "rw": 0.3333,
+   "ev_liq": -2.01
+  },
+  {
+   "align": "contra + perna forte",
+   "rr": 2.0,
+   "n": 481,
+   "acerto": 0.2245,
+   "rw": 0.3333,
+   "ev_liq": -2.38
+  },
+  {
+   "align": "neutro",
+   "rr": 2.0,
+   "n": 3080,
+   "acerto": 0.2412,
+   "rw": 0.3333,
+   "ev_liq": -2.29
+  },
+  {
+   "align": "neutro + perna forte",
+   "rr": 2.0,
+   "n": 677,
+   "acerto": 0.2555,
+   "rw": 0.3333,
+   "ev_liq": -2.36
+  },
+  {
+   "align": "a favor",
+   "rr": 3.0,
+   "n": 1686,
+   "acerto": 0.1667,
+   "rw": 0.25,
+   "ev_liq": -3.03
+  },
+  {
+   "align": "a favor + perna forte",
+   "rr": 3.0,
+   "n": 400,
+   "acerto": 0.1975,
+   "rw": 0.25,
+   "ev_liq": -2.62
+  },
+  {
+   "align": "contra",
+   "rr": 3.0,
+   "n": 1839,
+   "acerto": 0.1561,
+   "rw": 0.25,
+   "ev_liq": -2.92
+  },
+  {
+   "align": "contra + perna forte",
+   "rr": 3.0,
+   "n": 446,
+   "acerto": 0.1457,
+   "rw": 0.25,
+   "ev_liq": -3.09
+  },
+  {
+   "align": "neutro",
+   "rr": 3.0,
+   "n": 2857,
+   "acerto": 0.1519,
+   "rw": 0.25,
+   "ev_liq": -3.23
+  },
+  {
+   "align": "neutro + perna forte",
+   "rr": 3.0,
+   "n": 619,
+   "acerto": 0.1583,
+   "rw": 0.25,
+   "ev_liq": -3.55
+  }
+ ]
+}
