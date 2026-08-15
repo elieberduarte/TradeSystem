@@ -54,8 +54,27 @@ def swing_risk() -> RiskManager:
     )
 
 
-def export(report, symbol: str, strategy: str) -> dict:
+def trade_window(trade, candles, positions, before: int = 12, after: int = 8):
+    """Candles ao redor do trade, para o gráfico clicável do painel."""
+    entry_idx = positions.get(trade.entry_time)
+    exit_idx = positions.get(trade.exit_time)
+    if entry_idx is None or exit_idx is None:
+        return None
+    start = max(0, entry_idx - before)
+    end = min(len(candles) - 1, exit_idx + after)
+    return [
+        {
+            "date": str(ts.date()),
+            "o": round(float(row["open"]), 2), "h": round(float(row["high"]), 2),
+            "l": round(float(row["low"]), 2), "c": round(float(row["close"]), 2),
+        }
+        for ts, row in candles.iloc[start : end + 1].iterrows()
+    ]
+
+
+def export(report, symbol: str, strategy: str, candles) -> dict:
     trades = report.oos_trades
+    positions = {ts: i for i, ts in enumerate(candles.index)}
     daily: dict[str, float] = {}
     for t in trades:
         key = str(t.exit_time.date())
@@ -95,6 +114,12 @@ def export(report, symbol: str, strategy: str) -> dict:
                 "date": str(t.exit_time.date()), "side": t.side,
                 "entry": t.entry_price, "exit": t.exit_price,
                 "reason": t.exit_reason, "pnl": round(t.pnl, 2),
+                "entry_date": str(t.entry_time.date()),
+                "exit_date": str(t.exit_time.date()),
+                "stop": round(t.stop_loss, 2),
+                "target": round(t.take_profit, 2),
+                "qty": t.quantity,
+                "candles": trade_window(t, candles, positions),
             }
             for t in trades[-10:]
         ],
@@ -162,7 +187,7 @@ def main() -> None:
         if trades:
             wins = sum(1 for t in trades if t.pnl > 0)
             print(f"  Win rate OOS: {wins / len(trades):.1%}")
-        payload["strategies"][f"{name} · {symbol} 1d"] = export(report, symbol, name)
+        payload["strategies"][f"{name} · {symbol} 1d"] = export(report, symbol, name, candles)
         print()
 
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")

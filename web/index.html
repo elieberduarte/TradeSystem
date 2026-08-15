@@ -421,13 +421,71 @@ function renderDaily(values, labels) {
   });
 }
 
+let TRADE_ROWS = [];
+
 function renderTrades(rows) {
-  $("trades").innerHTML = rows.map(t => {
+  TRADE_ROWS = rows;
+  $("trades").innerHTML = rows.map((t, i) => {
     const cls = t.pnl > 0 ? "up" : (t.pnl < 0 ? "down" : "");
-    return `<tr><td>${t.date}</td><td>${t.side === "buy" ? "Compra" : "Venda"}</td>
+    const clickable = Array.isArray(t.candles) && t.candles.length;
+    return `<tr ${clickable ? `onclick="toggleTradeChart(${i}, this)" style="cursor:pointer" title="Clique para ver o gráfico"` : ""}>
+      <td>${clickable ? "📈 " : ""}${t.date}</td><td>${t.side === "buy" ? "Compra" : "Venda"}</td>
       <td class="num">${t.entry.toLocaleString("pt-BR")}</td><td class="num">${t.exit.toLocaleString("pt-BR")}</td>
       <td>${t.reason}</td><td class="num ${cls}" style="font-weight:700">${fmtBRL(t.pnl)}</td></tr>`;
   }).join("");
+}
+
+/* ─── Gráfico da operação, aberto no clique da linha ─── */
+function tradeChartSVG(t) {
+  const W = 900, H = 300, m = { t: 12, r: 100, b: 20, l: 8 };
+  const candles = t.candles;
+  const levels = [t.entry, t.exit, t.stop, t.target].filter(v => v != null);
+  const lo = Math.min(...candles.map(c => c.l), ...levels);
+  const hi = Math.max(...candles.map(c => c.h), ...levels);
+  const pad = (hi - lo) * 0.06, yMin = lo - pad, yMax = hi + pad;
+  const bw = (W - m.l - m.r) / candles.length;
+  const x = i => m.l + i * bw + bw / 2;
+  const y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (H - m.t - m.b);
+  const entryIdx = candles.findIndex(c => c.date === t.entry_date);
+  const exitIdx = candles.findIndex(c => c.date === t.exit_date);
+  let el = "";
+  if (entryIdx >= 0 && exitIdx >= 0)
+    el += `<rect x="${x(entryIdx)}" y="${m.t}" width="${Math.max(1, x(exitIdx) - x(entryIdx))}" height="${H - m.t - m.b}" fill="var(--series-1)" opacity="0.07"/>`;
+  candles.forEach((c, i) => {
+    const color = c.c >= c.o ? "#1baf7a" : "var(--series-8)";
+    el += `<line x1="${x(i)}" y1="${y(c.h)}" x2="${x(i)}" y2="${y(c.l)}" stroke="${color}" stroke-width="1"/>`;
+    el += `<rect x="${x(i) - Math.max(1.5, bw * 0.3)}" y="${Math.min(y(c.o), y(c.c))}"
+      width="${Math.max(3, bw * 0.6)}" height="${Math.max(1.5, Math.abs(y(c.c) - y(c.o)))}" fill="${color}"/>`;
+  });
+  const line = (v, color, label, dash) => v == null ? "" :
+    `<line x1="${m.l}" y1="${y(v)}" x2="${W - m.r}" y2="${y(v)}" stroke="${color}" stroke-width="1.5" ${dash ? 'stroke-dasharray="6 4"' : ""}/>
+     <text x="${W - m.r + 6}" y="${y(v) + 4}" font-size="11" font-weight="700" fill="${color}">${label} ${v.toLocaleString("pt-BR")}</text>`;
+  el += line(t.target, "var(--delta-good)", "alvo", true);
+  el += line(t.entry, "var(--series-1)", "entrada", false);
+  el += line(t.stop, "var(--delta-bad)", "stop", true);
+  if (entryIdx >= 0)
+    el += `<path d="M${x(entryIdx)} ${y(t.entry)} l-6 ${t.side === "buy" ? 11 : -11} h12 z" fill="var(--series-1)"/>`;
+  if (exitIdx >= 0)
+    el += `<circle cx="${x(exitIdx)}" cy="${y(t.exit)}" r="5.5" fill="var(--surface)"
+      stroke="${t.pnl >= 0 ? "var(--delta-good)" : "var(--delta-bad)"}" stroke-width="2.5"/>`;
+  el += `<text x="${m.l}" y="${H - 5}" font-size="10" fill="var(--muted)">${candles[0].date}</text>`;
+  el += `<text x="${W - m.r}" y="${H - 5}" font-size="10" fill="var(--muted)" text-anchor="end">${candles[candles.length - 1].date}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}">${el}</svg>`;
+}
+
+function toggleTradeChart(i, row) {
+  const open = row.nextElementSibling;
+  if (open && open.classList.contains("trade-chart-row")) { open.remove(); return; }
+  document.querySelectorAll(".trade-chart-row").forEach(r => r.remove());
+  const t = TRADE_ROWS[i];
+  const detail = document.createElement("tr");
+  detail.className = "trade-chart-row";
+  detail.innerHTML = `<td colspan="6" style="padding:10px 4px">
+    <div style="font-size:12px;color:var(--muted);margin-bottom:6px">
+      ${t.side === "buy" ? "COMPRA" : "VENDA"} em ${t.entry_date} → saída em ${t.exit_date}
+      (${t.reason}) · ${t.qty ?? "?"} contrato(s) · cada candle = 1 pregão</div>
+    ${tradeChartSVG(t)}</td>`;
+  row.after(detail);
 }
 
 function renderWalkforward(windows) {
@@ -566,7 +624,10 @@ async function loadReal(preferred) {
   $("daily-sub").textContent = `PnL por dia out-of-sample (R$) · últimos ${dd.length} dias com trade`;
   renderDaily(dd.map(p => p.value), dd.map(p => p.date));
 
-  $("trades-sub").textContent = `Últimos ${s.last_trades.length} trades out-of-sample · ${s.strategy}`;
+  const hasCharts = s.last_trades.some(t => Array.isArray(t.candles) && t.candles.length);
+  $("trades-sub").textContent = `Últimos ${s.last_trades.length} trades out-of-sample · ${s.strategy}` +
+    (hasCharts ? " · 📈 clique num trade para ver o gráfico da operação"
+               : " · re-rode o backtest para habilitar os gráficos por trade");
   renderTrades(s.last_trades.slice().reverse());
 
   $("wf-title").textContent = `Walk-forward · ${s.strategy} (${s.symbol} ${s.timeframe})`;
