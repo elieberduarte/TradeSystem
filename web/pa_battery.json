@@ -1,0 +1,217 @@
+{
+ "WIN$N": {
+  "H1 capitulação (cai e fecha embaixo)": {
+   "n": 111,
+   "favor": 0.514,
+   "p_favor": 0.7758,
+   "media_atr": -0.003,
+   "p_media": 0.9609
+  },
+  "H2 fecha no decil inferior": {
+   "n": 152,
+   "favor": 0.414,
+   "p_favor": 0.035,
+   "media_atr": -0.099,
+   "p_media": 0.0584
+  },
+  "H8 queda forte no FUNDO do canal": {
+   "n": 46,
+   "favor": 0.63,
+   "p_favor": 0.0768,
+   "media_atr": 0.15,
+   "p_media": 0.0895
+  },
+  "H1 martelo (cai 1 ATR, fecha em cima)": {
+   "n": 19,
+   "sem_amostra": true
+  },
+  "H4 gap and go (3 dias)": {
+   "n": 65,
+   "favor": 0.508,
+   "p_favor": 0.9013,
+   "media_atr": -0.182,
+   "p_media": 0.1873
+  },
+  "H2 fecha no decil superior": {
+   "n": 181,
+   "favor": 0.497,
+   "p_favor": 0.9407,
+   "media_atr": 0.012,
+   "p_media": 0.8192
+  },
+  "H3 range anão: expansão amanhã": {
+   "n": 51,
+   "favor": 0.49,
+   "p_favor": 0.8886,
+   "media_atr": 0.07,
+   "p_media": 0.2322
+  },
+  "H6 três fechamentos vendedores": {
+   "n": 65,
+   "favor": 0.477,
+   "p_favor": 0.7098,
+   "media_atr": -0.067,
+   "p_media": 0.4364
+  },
+  "H7 falso rompimento p/ cima → cai?": {
+   "n": 87,
+   "favor": 0.414,
+   "p_favor": 0.1078,
+   "media_atr": -0.202,
+   "p_media": 0.0103
+  },
+  "H8 queda forte no MEIO do canal": {
+   "n": 30,
+   "favor": 0.533,
+   "p_favor": 0.715,
+   "media_atr": -0.07,
+   "p_media": 0.4904
+  },
+  "H7 falso rompimento p/ baixo → sobe?": {
+   "n": 80,
+   "favor": 0.512,
+   "p_favor": 0.8231,
+   "media_atr": 0.094,
+   "p_media": 0.1847
+  },
+  "H10 fundo duplo → repica?": {
+   "n": 25,
+   "sem_amostra": true
+  },
+  "H5 bandeira de 2 candles (D+1)": {
+   "n": 40,
+   "favor": 0.425,
+   "p_favor": 0.3428,
+   "media_atr": -0.167,
+   "p_media": 0.0838
+  },
+  "H5 bandeira de 2 candles (3 dias)": {
+   "n": 40,
+   "favor": 0.35,
+   "p_favor": 0.0578,
+   "media_atr": -0.161,
+   "p_media": 0.327
+  },
+  "H6 três fechamentos compradores": {
+   "n": 100,
+   "favor": 0.51,
+   "p_favor": 0.8415,
+   "media_atr": -0.055,
+   "p_media": 0.4847
+  },
+  "H3 range gigante continua": {
+   "n": 24,
+   "sem_amostra": true
+  },
+  "H9 'V' de um dia → continua?": {
+   "n": 1,
+   "sem_amostra": true
+  }
+ },
+ "WDO$N": {
+  "H5 bandeira de 2 candles (D+1)": {
+   "n": 33,
+   "favor": 0.576,
+   "p_favor": 0.3841,
+   "media_atr": 0.023,
+   "p_media": 0.7734
+  },
+  "H5 bandeira de 2 candles (3 dias)": {
+   "n": 33,
+   "favor": 0.606,
+   "p_favor": 0.223,
+   "media_atr": 0.239,
+   "p_media": 0.1852
+  },
+  "H2 fecha no decil inferior": {
+   "n": 157,
+   "favor": 0.452,
+   "p_favor": 0.2313,
+   "media_atr": -0.059,
+   "p_media": 0.1801
+  },
+  "H6 três fechamentos vendedores": {
+   "n": 104,
+   "favor": 0.442,
+   "p_favor": 0.2393,
+   "media_atr": -0.059,
+   "p_media": 0.3109
+  },
+  "H2 fecha no decil superior": {
+   "n": 141,
+   "favor": 0.461,
+   "p_favor": 0.3543,
+   "media_atr": -0.002,
+   "p_media": 0.9789
+  },
+  "H1 capitulação (cai e fecha embaixo)": {
+   "n": 107,
+   "favor": 0.486,
+   "p_favor": 0.7718,
+   "media_atr": 0.037,
+   "p_media": 0.5264
+  },
+  "H8 queda forte no MEIO do canal": {
+   "n": 38,
+   "favor": 0.579,
+   "p_favor": 0.3304,
+   "media_atr": 0.094,
+   "p_media": 0.2923
+  },
+  "H9 'V' de um dia → continua?": {
+   "n": 4,
+   "sem_amostra": true
+  },
+  "H6 três fechamentos compradores": {
+   "n": 83,
+   "favor": 0.47,
+   "p_favor": 0.5831,
+   "media_atr": -0.04,
+   "p_media": 0.5983
+  },
+  "H7 falso rompimento p/ cima → cai?": {
+   "n": 66,
+   "favor": 0.545,
+   "p_favor": 0.4602,
+   "media_atr": 0.011,
+   "p_media": 0.9091
+  },
+  "H4 gap and go (3 dias)": {
+   "n": 58,
+   "favor": 0.5,
+   "p_favor": 1.0,
+   "media_atr": -0.022,
+   "p_media": 0.8932
+  },
+  "H10 fundo duplo → repica?": {
+   "n": 17,
+   "sem_amostra": true
+  },
+  "H8 queda forte no FUNDO do canal": {
+   "n": 28,
+   "sem_amostra": true
+  },
+  "H3 range gigante continua": {
+   "n": 29,
+   "sem_amostra": true
+  },
+  "H7 falso rompimento p/ baixo → sobe?": {
+   "n": 78,
+   "favor": 0.487,
+   "p_favor": 0.8208,
+   "media_atr": 0.071,
+   "p_media": 0.3581
+  },
+  "H3 range anão: expansão amanhã": {
+   "n": 49,
+   "favor": 0.286,
+   "p_favor": 0.0027,
+   "media_atr": -0.154,
+   "p_media": 0.0002
+  },
+  "H1 martelo (cai 1 ATR, fecha em cima)": {
+   "n": 8,
+   "sem_amostra": true
+  }
+ }
+}
