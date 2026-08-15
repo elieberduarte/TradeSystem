@@ -187,6 +187,22 @@
   <div class="tile"><div class="label">Custos no teste</div><div class="value" id="k6">—</div><div class="delta">slippage + emolumentos</div></div>
 </div>
 
+<!-- ══════════ A carteira operada ══════════ -->
+<div class="card" id="portfolio-card" style="display:none; margin-bottom:12px; border-left:3px solid var(--status-good)">
+  <h2>🏆 Carteira de futuros — o sistema que o bot opera</h2>
+  <div class="sub" id="portfolio-sub">—</div>
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--status-good)"></span>CDI + carteira (a conta real: margem é garantia, o capital segue rendendo CDI)</span>
+    <span><span class="swatch" style="background:var(--baseline)"></span>CDI puro</span>
+  </div>
+  <svg id="portfolio-eq" viewBox="0 0 1160 260" role="img" aria-label="Carteira de futuros somada ao CDI, comparada ao CDI puro"></svg>
+  <div class="sub" style="margin-top:8px">
+    Os backtests individuais abaixo são o <b>laboratório</b> (a maioria é reprovada e fica como registro).
+    Nenhum instrumento isolado é o sistema — o Donchian é medíocre no WIN e negativo no WDO;
+    a vantagem só existe na soma dos 13 contratos.
+  </div>
+</div>
+
 <!-- ══════════ Gráficos principais ══════════ -->
 <div class="grid">
   <div class="card">
@@ -710,9 +726,62 @@ async function loadReplication() {
   </tr>`).join("");
 }
 
+/* ─── A carteira de futuros: CDI + estratégia vs CDI puro ─── */
+async function loadPortfolio() {
+  let rows;
+  try {
+    const resp = await fetch("futures_portfolio.json", { cache: "no-store" });
+    if (!resp.ok) throw new Error();
+    rows = await resp.json();
+  } catch { return; }
+
+  // A config OPERADA pelo bot (config.yaml: 100k, 10 vagas, só compra),
+  // não a vencedora estatística — o painel mostra o que se opera
+  const usable = rows.filter(r => r.equity_curve && r.calmar !== null);
+  const best = usable.find(r => r.capital === 100000 && r.slots === 10 && r.long_only)
+            || usable.sort((a, b) => b.calmar - a.calmar)[0];
+  if (!best) return;
+
+  const capital = best.capital;
+  const points = best.equity_curve;
+  // CDI acumulado por dias úteis decorridos desde o primeiro ponto
+  const cdiCurve = points.map((p, i) => {
+    const days = Math.round((new Date(p.d) - new Date(points[0].d)) / 86_400_000 * (252 / 365));
+    return capital * (Math.pow(1 + CDI_DAILY, Math.max(days, 0)) - 1);
+  });
+  const combined = points.map((p, i) => p.v + cdiCurve[i]);
+
+  $("portfolio-card").style.display = "";
+  $("portfolio-sub").textContent =
+    `Donchian só compra · 13 futuros · R$ ${capital.toLocaleString("pt-BR")} · ${best.slots} vagas · ` +
+    `retorno da carteira ${best.return_pct}% em ${best.years} anos (${best.annual_pct}% a.a.) + CDI na garantia · ` +
+    `drawdown ${best.drawdown_pct}% · Calmar ${best.calmar} · ${best.positive}/${best.instruments} instrumentos positivos`;
+
+  const svg = $("portfolio-eq");
+  const W = 1160, H = 260, m = { t: 12, r: 14, b: 24, l: 60 };
+  const all = combined.concat(cdiCurve);
+  const yMin = Math.min(0, ...all), yMax = Math.max(...all) * 1.06;
+  const n = points.length;
+  const x = i => m.l + (n === 1 ? 0.5 : i / (n - 1)) * (W - m.l - m.r);
+  const y = v => m.t + (1 - (v - yMin) / (yMax - yMin)) * (H - m.t - m.b);
+  let el = "";
+  for (let s = 0; s <= 4; s++) {
+    const v = yMin + (s / 4) * (yMax - yMin);
+    el += `<line x1="${m.l}" y1="${y(v)}" x2="${W - m.r}" y2="${y(v)}" stroke="var(--grid)"/>`;
+    el += `<text x="${m.l - 6}" y="${y(v) + 4}" text-anchor="end" font-size="10" fill="var(--muted)">${fmtBRL(v)}</text>`;
+  }
+  const path = arr => arr.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  el += `<path d="${path(cdiCurve)}" fill="none" stroke="var(--baseline)" stroke-width="2" stroke-dasharray="5 4"/>`;
+  el += `<path d="${path(combined)}" fill="none" stroke="var(--status-good)" stroke-width="2.5"/>`;
+  el += `<text x="${m.l}" y="${H - 6}" font-size="10" fill="var(--muted)">${points[0].d}</text>`;
+  el += `<text x="${W - m.r}" y="${H - 6}" font-size="10" fill="var(--muted)" text-anchor="end">${points[n - 1].d}</text>`;
+  svg.innerHTML = el;
+}
+
 loadReal();
 loadReplication();
 loadRanking();
+loadPortfolio();
 
 /* Recarrega sozinho quando um backtest novo grava o results.json */
 setInterval(async () => {

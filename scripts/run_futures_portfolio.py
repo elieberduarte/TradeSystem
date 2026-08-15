@@ -115,7 +115,12 @@ def run(store: HistoryStore, capital: float, slots: int, long_only: bool) -> dic
 
     total = float(frame["pnl"].sum())
     years = (tf["saida"].max() - tf["saida"].min()).days / 365.25
+    # Curva diária acumulada, para o painel mostrar A CARTEIRA (o
+    # sistema operado), e não só instrumentos isolados
+    by_day = tf.groupby("saida")["pnl"].sum().cumsum()
+    equity_curve = [{"d": str(d.date()), "v": round(float(v), 0)} for d, v in by_day.items()]
     return {
+        "equity_curve": equity_curve,
         "capital": capital, "slots": slots, "long_only": long_only,
         "instruments": len(frame), "positive": int(frame["positivo"].sum()),
         "trades": int(frame["trades"].sum()),
