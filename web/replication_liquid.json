@@ -1,0 +1,182 @@
+[
+ {
+  "grupo": "TODOS",
+  "papeis": 174,
+  "positivos": 130,
+  "replica": 0.747,
+  "pnl_mediano": 3077.0,
+  "sharpe_medio": 0.137,
+  "trades": 3328,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· já testados (28)",
+  "papeis": 18,
+  "positivos": 15,
+  "replica": 0.833,
+  "pnl_mediano": 2886.0,
+  "sharpe_medio": 0.168,
+  "trades": 368,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· INÉDITOS",
+  "papeis": 156,
+  "positivos": 115,
+  "replica": 0.737,
+  "pnl_mediano": 3088.0,
+  "sharpe_medio": 0.134,
+  "trades": 2960,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· ações",
+  "papeis": 125,
+  "positivos": 86,
+  "replica": 0.688,
+  "pnl_mediano": 2694.0,
+  "sharpe_medio": 0.086,
+  "trades": 2351,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· units/ETFs/FIIs",
+  "papeis": 33,
+  "positivos": 29,
+  "replica": 0.879,
+  "pnl_mediano": 2913.0,
+  "sharpe_medio": 0.264,
+  "trades": 630,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· BDRs",
+  "papeis": 16,
+  "positivos": 15,
+  "replica": 0.938,
+  "pnl_mediano": 8664.0,
+  "sharpe_medio": 0.276,
+  "trades": 347,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· small (terço menos líquido)",
+  "papeis": 58,
+  "positivos": 42,
+  "replica": 0.724,
+  "pnl_mediano": 2829.0,
+  "sharpe_medio": 0.138,
+  "trades": 1087,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· mid",
+  "papeis": 58,
+  "positivos": 40,
+  "replica": 0.69,
+  "pnl_mediano": 2578.0,
+  "sharpe_medio": 0.092,
+  "trades": 1096,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "· large (terço mais líquido)",
+  "papeis": 58,
+  "positivos": 48,
+  "replica": 0.828,
+  "pnl_mediano": 3406.0,
+  "sharpe_medio": 0.18,
+  "trades": 1145,
+  "estrategia": "donchian"
+ },
+ {
+  "grupo": "TODOS",
+  "papeis": 170,
+  "positivos": 112,
+  "replica": 0.659,
+  "pnl_mediano": 1462.0,
+  "sharpe_medio": 0.005,
+  "trades": 1667,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· já testados (28)",
+  "papeis": 17,
+  "positivos": 14,
+  "replica": 0.824,
+  "pnl_mediano": 1874.0,
+  "sharpe_medio": 0.239,
+  "trades": 190,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· INÉDITOS",
+  "papeis": 153,
+  "positivos": 98,
+  "replica": 0.641,
+  "pnl_mediano": 1450.0,
+  "sharpe_medio": -0.02,
+  "trades": 1477,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· ações",
+  "papeis": 124,
+  "positivos": 77,
+  "replica": 0.621,
+  "pnl_mediano": 1317.0,
+  "sharpe_medio": -0.088,
+  "trades": 1221,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· units/ETFs/FIIs",
+  "papeis": 30,
+  "positivos": 25,
+  "replica": 0.833,
+  "pnl_mediano": 1501.0,
+  "sharpe_medio": 0.295,
+  "trades": 289,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· BDRs",
+  "papeis": 16,
+  "positivos": 10,
+  "replica": 0.625,
+  "pnl_mediano": 3131.0,
+  "sharpe_medio": 0.189,
+  "trades": 157,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· small (terço menos líquido)",
+  "papeis": 57,
+  "positivos": 35,
+  "replica": 0.614,
+  "pnl_mediano": 1145.0,
+  "sharpe_medio": -0.047,
+  "trades": 554,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· mid",
+  "papeis": 56,
+  "positivos": 32,
+  "replica": 0.571,
+  "pnl_mediano": 434.0,
+  "sharpe_medio": -0.233,
+  "trades": 547,
+  "estrategia": "squeeze"
+ },
+ {
+  "grupo": "· large (terço mais líquido)",
+  "papeis": 57,
+  "positivos": 45,
+  "replica": 0.789,
+  "pnl_mediano": 2834.0,
+  "sharpe_medio": 0.293,
+  "trades": 566,
+  "estrategia": "squeeze"
+ }
+]
