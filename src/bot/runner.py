@@ -350,6 +350,17 @@ class Runner:
         self.journal_path.parent.mkdir(parents=True, exist_ok=True)
         stamp = datetime.now().isoformat(timespec="seconds")
         with self.journal_path.open("a", encoding="utf-8") as handle:
+            # Um ciclo SEM decisão também deixa rastro: sem isso, "o bot
+            # rodou e não achou nada" e "o bot não rodou" ficam idênticos
+            # no journal — e foi exatamente essa dúvida que apareceu no
+            # primeiro dia de operação.
+            if not decisions:
+                handle.write(json.dumps(
+                    {"ts": stamp, "executado": executed, "action": "ciclo",
+                     "symbol": "*",
+                     "reason": "ciclo concluído sem sinais, rolagens ou vetos"},
+                    ensure_ascii=False,
+                ) + "\n")
             for decision in decisions:
                 handle.write(json.dumps(
                     {"ts": stamp, "executado": executed, **asdict(decision)},
