@@ -1,0 +1,852 @@
+{
+ "WIN$N": {
+  "preco": 171435.0,
+  "range_tipico": 2991.25,
+  "intraday": [
+   {
+    "kind": "topo",
+    "price": 173305.0,
+    "origin": "topo confirmado na barra 3",
+    "known_at": 3
+   },
+   {
+    "kind": "fundo",
+    "price": 171740.0,
+    "origin": "fundo confirmado na barra 30",
+    "known_at": 30
+   },
+   {
+    "kind": "topo",
+    "price": 172685.0,
+    "origin": "topo confirmado na barra 48",
+    "known_at": 48
+   },
+   {
+    "kind": "fundo",
+    "price": 172215.0,
+    "origin": "fundo confirmado na barra 88",
+    "known_at": 88
+   },
+   {
+    "kind": "topo",
+    "price": 172665.0,
+    "origin": "topo confirmado na barra 113",
+    "known_at": 113
+   },
+   {
+    "kind": "fundo",
+    "price": 171795.0,
+    "origin": "fundo confirmado na barra 126",
+    "known_at": 126
+   },
+   {
+    "kind": "topo",
+    "price": 172245.0,
+    "origin": "topo confirmado na barra 130",
+    "known_at": 130
+   },
+   {
+    "kind": "fundo",
+    "price": 167655.0,
+    "origin": "fundo confirmado na barra 198",
+    "known_at": 198
+   },
+   {
+    "kind": "meio",
+    "price": 172522.5,
+    "origin": "50% da perna 173,305→171,740",
+    "known_at": 30
+   },
+   {
+    "kind": "meio",
+    "price": 172212.5,
+    "origin": "50% da perna 171,740→172,685",
+    "known_at": 48
+   },
+   {
+    "kind": "meio",
+    "price": 172450.0,
+    "origin": "50% da perna 172,685→172,215",
+    "known_at": 88
+   },
+   {
+    "kind": "meio",
+    "price": 172440.0,
+    "origin": "50% da perna 172,215→172,665",
+    "known_at": 113
+   },
+   {
+    "kind": "meio",
+    "price": 172230.0,
+    "origin": "50% da perna 172,665→171,795",
+    "known_at": 126
+   },
+   {
+    "kind": "meio",
+    "price": 172020.0,
+    "origin": "50% da perna 171,795→172,245",
+    "known_at": 130
+   },
+   {
+    "kind": "meio",
+    "price": 169950.0,
+    "origin": "50% da perna 172,245→167,655",
+    "known_at": 198
+   },
+   {
+    "kind": "redondo",
+    "price": 166000.0,
+    "origin": "redondo 166,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 167000.0,
+    "origin": "redondo 167,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 168000.0,
+    "origin": "redondo 168,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 169000.0,
+    "origin": "redondo 169,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 170000.0,
+    "origin": "redondo 170,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 171000.0,
+    "origin": "redondo 171,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 172000.0,
+    "origin": "redondo 172,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 173000.0,
+    "origin": "redondo 173,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 174000.0,
+    "origin": "redondo 174,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 175000.0,
+    "origin": "redondo 175,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 176000.0,
+    "origin": "redondo 176,000",
+    "known_at": -1
+   }
+  ],
+  "diario": [
+   {
+    "kind": "fundo",
+    "price": 182115.0,
+    "origin": "fundo confirmado na barra 1155",
+    "known_at": 1155
+   },
+   {
+    "kind": "topo",
+    "price": 201720.0,
+    "origin": "topo confirmado na barra 1169",
+    "known_at": 1169
+   },
+   {
+    "kind": "fundo",
+    "price": 168750.0,
+    "origin": "fundo confirmado na barra 1210",
+    "known_at": 1210
+   },
+   {
+    "kind": "topo",
+    "price": 180515.0,
+    "origin": "topo confirmado na barra 1228",
+    "known_at": 1228
+   },
+   {
+    "kind": "fundo",
+    "price": 174000.0,
+    "origin": "fundo confirmado na barra 1239",
+    "known_at": 1239
+   },
+   {
+    "kind": "topo",
+    "price": 178725.0,
+    "origin": "topo confirmado na barra 1244",
+    "known_at": 1244
+   },
+   {
+    "kind": "meio",
+    "price": 191917.5,
+    "origin": "50% da perna 182,115→201,720",
+    "known_at": 1169
+   },
+   {
+    "kind": "meio",
+    "price": 185235.0,
+    "origin": "50% da perna 201,720→168,750",
+    "known_at": 1210
+   },
+   {
+    "kind": "meio",
+    "price": 174632.5,
+    "origin": "50% da perna 168,750→180,515",
+    "known_at": 1228
+   },
+   {
+    "kind": "meio",
+    "price": 177257.5,
+    "origin": "50% da perna 180,515→174,000",
+    "known_at": 1239
+   },
+   {
+    "kind": "meio",
+    "price": 176362.5,
+    "origin": "50% da perna 174,000→178,725",
+    "known_at": 1244
+   },
+   {
+    "kind": "redondo",
+    "price": 158000.0,
+    "origin": "redondo 158,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 159000.0,
+    "origin": "redondo 159,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 160000.0,
+    "origin": "redondo 160,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 161000.0,
+    "origin": "redondo 161,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 162000.0,
+    "origin": "redondo 162,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 163000.0,
+    "origin": "redondo 163,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 164000.0,
+    "origin": "redondo 164,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 165000.0,
+    "origin": "redondo 165,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 166000.0,
+    "origin": "redondo 166,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 167000.0,
+    "origin": "redondo 167,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 168000.0,
+    "origin": "redondo 168,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 169000.0,
+    "origin": "redondo 169,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 170000.0,
+    "origin": "redondo 170,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 171000.0,
+    "origin": "redondo 171,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 172000.0,
+    "origin": "redondo 172,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 173000.0,
+    "origin": "redondo 173,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 174000.0,
+    "origin": "redondo 174,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 175000.0,
+    "origin": "redondo 175,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 176000.0,
+    "origin": "redondo 176,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 177000.0,
+    "origin": "redondo 177,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 178000.0,
+    "origin": "redondo 178,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 179000.0,
+    "origin": "redondo 179,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 180000.0,
+    "origin": "redondo 180,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 181000.0,
+    "origin": "redondo 181,000",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 182000.0,
+    "origin": "redondo 182,000",
+    "known_at": -1
+   }
+  ]
+ },
+ "WDO$N": {
+  "preco": 5177.5,
+  "range_tipico": 42.3,
+  "intraday": [
+   {
+    "kind": "topo",
+    "price": 5146.0,
+    "origin": "topo confirmado na barra 80",
+    "known_at": 80
+   },
+   {
+    "kind": "fundo",
+    "price": 5124.5,
+    "origin": "fundo confirmado na barra 131",
+    "known_at": 131
+   },
+   {
+    "kind": "topo",
+    "price": 5192.0,
+    "origin": "topo confirmado na barra 160",
+    "known_at": 160
+   },
+   {
+    "kind": "fundo",
+    "price": 5183.5,
+    "origin": "fundo confirmado na barra 187",
+    "known_at": 187
+   },
+   {
+    "kind": "topo",
+    "price": 5202.0,
+    "origin": "topo confirmado na barra 196",
+    "known_at": 196
+   },
+   {
+    "kind": "fundo",
+    "price": 5184.0,
+    "origin": "fundo confirmado na barra 224",
+    "known_at": 224
+   },
+   {
+    "kind": "topo",
+    "price": 5190.5,
+    "origin": "topo confirmado na barra 226",
+    "known_at": 226
+   },
+   {
+    "kind": "fundo",
+    "price": 5161.0,
+    "origin": "fundo confirmado na barra 237",
+    "known_at": 237
+   },
+   {
+    "kind": "meio",
+    "price": 5135.25,
+    "origin": "50% da perna 5,146→5,124",
+    "known_at": 131
+   },
+   {
+    "kind": "meio",
+    "price": 5158.25,
+    "origin": "50% da perna 5,124→5,192",
+    "known_at": 160
+   },
+   {
+    "kind": "meio",
+    "price": 5187.75,
+    "origin": "50% da perna 5,192→5,184",
+    "known_at": 187
+   },
+   {
+    "kind": "meio",
+    "price": 5192.75,
+    "origin": "50% da perna 5,184→5,202",
+    "known_at": 196
+   },
+   {
+    "kind": "meio",
+    "price": 5193.0,
+    "origin": "50% da perna 5,202→5,184",
+    "known_at": 224
+   },
+   {
+    "kind": "meio",
+    "price": 5187.25,
+    "origin": "50% da perna 5,184→5,190",
+    "known_at": 226
+   },
+   {
+    "kind": "meio",
+    "price": 5175.75,
+    "origin": "50% da perna 5,190→5,161",
+    "known_at": 237
+   },
+   {
+    "kind": "redondo",
+    "price": 5110.0,
+    "origin": "redondo 5,110",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5120.0,
+    "origin": "redondo 5,120",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5130.0,
+    "origin": "redondo 5,130",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5140.0,
+    "origin": "redondo 5,140",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5150.0,
+    "origin": "redondo 5,150",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5160.0,
+    "origin": "redondo 5,160",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5170.0,
+    "origin": "redondo 5,170",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5180.0,
+    "origin": "redondo 5,180",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5190.0,
+    "origin": "redondo 5,190",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5200.0,
+    "origin": "redondo 5,200",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5210.0,
+    "origin": "redondo 5,210",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5220.0,
+    "origin": "redondo 5,220",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5230.0,
+    "origin": "redondo 5,230",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5240.0,
+    "origin": "redondo 5,240",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5250.0,
+    "origin": "redondo 5,250",
+    "known_at": -1
+   }
+  ],
+  "diario": [
+   {
+    "kind": "topo",
+    "price": 5074.5,
+    "origin": "topo confirmado na barra 1186",
+    "known_at": 1186
+   },
+   {
+    "kind": "fundo",
+    "price": 5007.0,
+    "origin": "fundo confirmado na barra 1195",
+    "known_at": 1195
+   },
+   {
+    "kind": "topo",
+    "price": 5223.5,
+    "origin": "topo confirmado na barra 1203",
+    "known_at": 1203
+   },
+   {
+    "kind": "fundo",
+    "price": 5073.0,
+    "origin": "fundo confirmado na barra 1208",
+    "known_at": 1208
+   },
+   {
+    "kind": "topo",
+    "price": 5245.0,
+    "origin": "topo confirmado na barra 1220",
+    "known_at": 1220
+   },
+   {
+    "kind": "fundo",
+    "price": 5067.5,
+    "origin": "fundo confirmado na barra 1241",
+    "known_at": 1241
+   },
+   {
+    "kind": "meio",
+    "price": 5040.75,
+    "origin": "50% da perna 5,074→5,007",
+    "known_at": 1195
+   },
+   {
+    "kind": "meio",
+    "price": 5115.25,
+    "origin": "50% da perna 5,007→5,224",
+    "known_at": 1203
+   },
+   {
+    "kind": "meio",
+    "price": 5148.25,
+    "origin": "50% da perna 5,224→5,073",
+    "known_at": 1208
+   },
+   {
+    "kind": "meio",
+    "price": 5159.0,
+    "origin": "50% da perna 5,073→5,245",
+    "known_at": 1220
+   },
+   {
+    "kind": "meio",
+    "price": 5156.25,
+    "origin": "50% da perna 5,245→5,068",
+    "known_at": 1241
+   },
+   {
+    "kind": "redondo",
+    "price": 5040.0,
+    "origin": "redondo 5,040",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5050.0,
+    "origin": "redondo 5,050",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5060.0,
+    "origin": "redondo 5,060",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5070.0,
+    "origin": "redondo 5,070",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5080.0,
+    "origin": "redondo 5,080",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5090.0,
+    "origin": "redondo 5,090",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5100.0,
+    "origin": "redondo 5,100",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5110.0,
+    "origin": "redondo 5,110",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5120.0,
+    "origin": "redondo 5,120",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5130.0,
+    "origin": "redondo 5,130",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5140.0,
+    "origin": "redondo 5,140",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5150.0,
+    "origin": "redondo 5,150",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5160.0,
+    "origin": "redondo 5,160",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5170.0,
+    "origin": "redondo 5,170",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5180.0,
+    "origin": "redondo 5,180",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5190.0,
+    "origin": "redondo 5,190",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5200.0,
+    "origin": "redondo 5,200",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5210.0,
+    "origin": "redondo 5,210",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5220.0,
+    "origin": "redondo 5,220",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5230.0,
+    "origin": "redondo 5,230",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5240.0,
+    "origin": "redondo 5,240",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5250.0,
+    "origin": "redondo 5,250",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5260.0,
+    "origin": "redondo 5,260",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5270.0,
+    "origin": "redondo 5,270",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5280.0,
+    "origin": "redondo 5,280",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5290.0,
+    "origin": "redondo 5,290",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5300.0,
+    "origin": "redondo 5,300",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5310.0,
+    "origin": "redondo 5,310",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5320.0,
+    "origin": "redondo 5,320",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5330.0,
+    "origin": "redondo 5,330",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5340.0,
+    "origin": "redondo 5,340",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5350.0,
+    "origin": "redondo 5,350",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5360.0,
+    "origin": "redondo 5,360",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5370.0,
+    "origin": "redondo 5,370",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5380.0,
+    "origin": "redondo 5,380",
+    "known_at": -1
+   },
+   {
+    "kind": "redondo",
+    "price": 5390.0,
+    "origin": "redondo 5,390",
+    "known_at": -1
+   }
+  ]
+ }
+}
