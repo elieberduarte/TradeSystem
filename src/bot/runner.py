@@ -262,6 +262,23 @@ class Runner:
                 self.store.update_from_broker(self.broker, symbol, "1d", limit=1_000)
             except Exception as exc:  # noqa: BLE001 — um símbolo fora do ar não para o ciclo
                 print(f"  aviso: {symbol} sem atualização ({exc})")
+        self._accumulate_b3_flow()
+
+    def _accumulate_b3_flow(self) -> None:
+        """Acumula o fluxo oficial dos players (BDI) a cada ciclo.
+
+        A API da B3 só retém ~21 pregões; rodando junto com o bot, o
+        acervo local cresce sem intervenção. Falha aqui nunca derruba o
+        ciclo — é coleta de pesquisa, não de operação.
+        """
+        try:
+            from datetime import date
+            from src.bot.data.b3_bdi import collect_open_interest, collect_participacao, workdays
+            days = sorted(workdays(str(date.today())))
+            collect_participacao(days)
+            collect_open_interest(days)
+        except Exception as exc:  # noqa: BLE001
+            print(f"  aviso: fluxo B3 não acumulado neste ciclo ({exc})")
 
     def _expiry_of(self, symbol: str):
         probe = getattr(self.broker, "contract_expiry", None)
