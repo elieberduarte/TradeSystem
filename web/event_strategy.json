@@ -1,0 +1,28 @@
+[
+ {
+  "label": "PEAD (evento real)",
+  "trades": 668,
+  "acerto": 0.513,
+  "pnl_total": 147311.0,
+  "pnl_medio": 220.5,
+  "sharpe_trade": 0.169,
+  "t": 4.38,
+  "stops": 0.374,
+  "papeis": 114,
+  "positivos": 75,
+  "replica": 0.658
+ },
+ {
+  "label": "placebo (dia forte sem evento)",
+  "trades": 668,
+  "acerto": 0.439,
+  "pnl_total": 23481.0,
+  "pnl_medio": 35.2,
+  "sharpe_trade": 0.029,
+  "t": 0.74,
+  "stops": 0.419,
+  "papeis": 114,
+  "positivos": 58,
+  "replica": 0.509
+ }
+]
