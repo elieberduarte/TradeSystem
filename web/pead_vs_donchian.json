@@ -1,0 +1,24 @@
+{
+ "correlacao": 0.183,
+ "sobreposicao": 0.216,
+ "carteiras": [
+  {
+   "label": "PEAD isolado",
+   "pnl": 141451.0,
+   "calmar": 4.05,
+   "dd_pct": 35.0
+  },
+  {
+   "label": "Donchian isolado",
+   "pnl": 303902.0,
+   "calmar": 2.97,
+   "dd_pct": 102.3
+  },
+  {
+   "label": "50/50",
+   "pnl": 222676.0,
+   "calmar": 3.71,
+   "dd_pct": 60.0
+  }
+ ]
+}
