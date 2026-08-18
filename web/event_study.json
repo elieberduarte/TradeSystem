@@ -1,0 +1,79 @@
+{
+ "H1 eventos, reação forte (todos)": {
+  "n": 1915,
+  "favor": 0.538,
+  "p_favor": 0.0009,
+  "media_atr": 0.256,
+  "p_media": 0.0,
+  "replica": "76/127"
+ },
+ "H2 · só RESULTADOS": {
+  "n": 1289,
+  "favor": 0.551,
+  "p_favor": 0.0003,
+  "media_atr": 0.28,
+  "p_media": 0.0003,
+  "replica": "74/120"
+ },
+ "H2 · só FATOS RELEVANTES": {
+  "n": 626,
+  "favor": 0.511,
+  "p_favor": 0.5758,
+  "media_atr": 0.206,
+  "p_media": 0.0601,
+  "replica": "35/55"
+ },
+ "H3 · reação POSITIVA": {
+  "n": 1026,
+  "favor": 0.567,
+  "p_favor": 0.0,
+  "media_atr": 0.556,
+  "p_media": 0.0,
+  "replica": "83/112"
+ },
+ "H3 · reação NEGATIVA": {
+  "n": 889,
+  "favor": 0.504,
+  "p_favor": 0.8144,
+  "media_atr": -0.09,
+  "p_media": 0.2906,
+  "replica": "37/89"
+ },
+ "H4 PLACEBO dias fortes sem evento": {
+  "n": 1077,
+  "favor": 0.517,
+  "p_favor": 0.2596,
+  "media_atr": 0.073,
+  "p_media": 0.4223,
+  "replica": "52/97"
+ },
+ "H4 · placebo positivo": {
+  "n": 584,
+  "favor": 0.533,
+  "p_favor": 0.1158,
+  "media_atr": 0.308,
+  "p_media": 0.0189,
+  "replica": "29/51"
+ },
+ "H4 · placebo negativo": {
+  "n": 493,
+  "favor": 0.499,
+  "p_favor": 0.9641,
+  "media_atr": -0.205,
+  "p_media": 0.0925,
+  "replica": "21/42"
+ },
+ "(ref) eventos com reação FRACA": {
+  "n": 7435,
+  "favor": 0.498,
+  "p_favor": 0.7719,
+  "media_atr": 0.076,
+  "p_media": 0.0086,
+  "replica": "77/130"
+ },
+ "evento_menos_placebo": {
+  "diff_atr": 0.183,
+  "z": 1.66,
+  "p": 0.097
+ }
+}
