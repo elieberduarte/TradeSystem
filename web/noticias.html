@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notícias & Eventos — TradeSystem</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --border: rgba(11,11,11,0.10);
+    --chip: #f0efec; --good: #006300; --bad: #d03b3b; --accent: #2a78d6; --gold: #9a6a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark; --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+      --muted: #898781; --grid: #2c2c2a; --border: rgba(255,255,255,0.10); --chip: #383835;
+      --good: #0ca30c; --bad: #e66767; --accent: #3987e5; --gold: #eda100;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark; --page: #0d0d0d; --surface: #1a1a19; --ink: #fff; --ink-2: #c3c2b7;
+    --muted: #898781; --grid: #2c2c2a; --border: rgba(255,255,255,0.10); --chip: #383835;
+    --good: #0ca30c; --bad: #e66767; --accent: #3987e5; --gold: #eda100;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--page); color: var(--ink); padding: 16px; max-width: 1180px; margin: 0 auto;
+         font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 21px; margin-bottom: 4px; }
+  h2 { font-size: 15px; margin-bottom: 4px; }
+  .lead { color: var(--ink-2); margin-bottom: 14px; font-size: 13.5px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+  .sub { color: var(--muted); font-size: 12.5px; margin-bottom: 10px; }
+  .banner { background: var(--chip); border: 1px dashed var(--grid); border-radius: 10px; padding: 9px 14px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 14px; }
+  .signal { border-left: 3px solid var(--good); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th { text-align: left; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 6px 8px; border-bottom: 1px solid var(--grid); }
+  td { padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tag { font-size: 10.5px; font-weight: 700; padding: 1px 8px; border-radius: 999px; background: var(--chip); color: var(--ink-2); }
+  .tag.resultado { background: var(--accent); color: #fff; }
+  .tag.fato { background: var(--gold); color: #fff; }
+  .tag.oferta { background: #7a3fb0; color: #fff; }
+  .pos { color: var(--good); font-weight: 700; } .neg { color: var(--bad); font-weight: 700; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .filters button { background: var(--surface); color: var(--ink-2); border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .filters button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: transparent; }
+  .headline { font-size: 12.5px; padding: 4px 0; border-bottom: 1px solid var(--grid); }
+  .headline:last-child { border-bottom: none; }
+  .headline .src { color: var(--muted); font-size: 11px; }
+  .scroll-x { overflow-x: auto; }
+</style>
+</head>
+<body>
+
+<h1>📰 Notícias & Eventos</h1>
+<p class="lead">
+  Fonte primária: CVM (comunicados oficiais, com data de entrega). Manchetes RSS só como contexto.
+  <a href="index.html">← voltar ao painel</a>
+</p>
+
+<div class="banner" id="banner">Carregando…</div>
+
+<div class="card signal">
+  <h2>🟢 Sinais PEAD armados</h2>
+  <div class="sub">
+    Regra medida no estudo pré-registrado: comunicado de <b>resultado</b> + reação D→D+1 ≥ +1 ATR
+    → deriva média de +0,56 ATR nos 14 pregões seguintes (t=4,38 com custos, replica em 66% dos papéis).
+    Só o lado comprador tem edge; a reação negativa é moeda. Janela: entrar até D+1, sair em D+15 ou stop 2×ATR.
+  </div>
+  <div class="scroll-x">
+    <table>
+      <thead><tr><th>Papel</th><th>Entregue</th><th class="num">Reação (ATR)</th><th class="num">Dia da janela</th><th>Documento</th></tr></thead>
+      <tbody id="signals"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Eventos CVM recentes</h2>
+    <div class="sub">Reação = variação de fechamento D→D+1 em ATR(14). Fatos relevantes e ofertas são informativos (sem deriva medida).</div>
+    <div class="filters" id="filters"></div>
+    <div class="scroll-x">
+      <table>
+        <thead><tr><th>Papel</th><th>Data</th><th>Tipo</th><th class="num">Reação</th><th>Assunto</th></tr></thead>
+        <tbody id="events"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Manchetes (contexto)</h2>
+    <div class="sub">Google News por ticker, só para papéis com evento recente. Não gera sinal — não há edge medido em manchete.</div>
+    <div id="headlines"></div>
+  </div>
+</div>
+
+<div class="banner">
+  <b>Como ler:</b> a CVM é a fonte que tem edge medido; a manchete explica o "porquê" quando você quiser,
+  mas o gatilho é o <i>fato entregue + a reação do preço</i>. O buscador roda junto com o ciclo diário do bot
+  (<code>scripts/news_watch.py</code>) e reescreve <code>news_watch.json</code>.
+</div>
+
+<script>
+"use strict";
+let DATA = null, FILTER = "todos";
+const fmt = v => v === null || v === undefined ? "—"
+  : `<span class="${v >= 0 ? "pos" : "neg"}">${v >= 0 ? "+" : ""}${v.toFixed(2)}</span>`;
+
+function renderEvents() {
+  const rows = DATA.eventos.filter(e => FILTER === "todos" || e.tipo === FILTER);
+  document.getElementById("events").innerHTML = rows.slice(0, 120).map(e => `<tr>
+    <td><b>${e.ticker}</b>${e.sinal_pead ? " 🟢" : ""}</td>
+    <td style="white-space:nowrap">${e.data_entrega}</td>
+    <td><span class="tag ${e.tipo}">${e.tipo}</span></td>
+    <td class="num">${fmt(e.reacao_atr)}</td>
+    <td>${e.link ? `<a href="${e.link}" target="_blank" rel="noopener">${e.assunto || "(sem assunto)"}</a>` : (e.assunto || "—")}
+        <div style="color:var(--muted);font-size:11px">${e.motivo}</div></td>
+  </tr>`).join("") || `<tr><td colspan="5" style="color:var(--muted)">nenhum evento neste filtro</td></tr>`;
+  const counts = {};
+  DATA.eventos.forEach(e => counts[e.tipo] = (counts[e.tipo] || 0) + 1);
+  document.getElementById("filters").innerHTML = ["todos", "resultado", "fato", "provento", "oferta", "outro"]
+    .map(t => `<button aria-pressed="${FILTER === t}" onclick="FILTER='${t}'; renderEvents()">${t}${t === "todos" ? ` (${DATA.eventos.length})` : counts[t] ? ` (${counts[t]})` : ""}</button>`).join("");
+}
+
+async function load() {
+  try {
+    const resp = await fetch("news_watch.json", { cache: "no-store" });
+    if (!resp.ok) throw new Error();
+    DATA = await resp.json();
+  } catch {
+    document.getElementById("banner").textContent = "Rode python scripts/news_watch.py para gerar os dados.";
+    return;
+  }
+  const papeis = new Set(DATA.eventos.map(e => e.ticker)).size;
+  document.getElementById("banner").innerHTML =
+    `<b>${DATA.eventos.length} eventos</b> em ${papeis} papéis · <b>${DATA.sinais_pead.length} sinal(is) PEAD armado(s)</b> · atualizado ${DATA.atualizado.slice(0, 16).replace("T", " ")}`;
+
+  document.getElementById("signals").innerHTML = DATA.sinais_pead.length ? DATA.sinais_pead.map(s => `<tr>
+    <td><b>${s.ticker}</b></td><td>${s.data_entrega}</td>
+    <td class="num">${fmt(s.reacao_atr)}</td>
+    <td class="num">${s.dias_apos} / 14</td>
+    <td>${s.link ? `<a href="${s.link}" target="_blank" rel="noopener">${s.assunto}</a>` : s.assunto}</td>
+  </tr>`).join("") : `<tr><td colspan="5" style="color:var(--muted)">nenhum sinal armado agora — fora da temporada de resultados ou reações abaixo de +1 ATR</td></tr>`;
+
+  renderEvents();
+
+  const news = DATA.manchetes || {};
+  const tickers = Object.keys(news).filter(t => news[t] && news[t].length);
+  document.getElementById("headlines").innerHTML = tickers.length ? tickers.map(t => `
+    <div style="margin-bottom:10px"><b>${t}</b>
+      ${news[t].slice(0, 4).map(h => `<div class="headline"><a href="${h.link}" target="_blank" rel="noopener">${h.titulo}</a>
+        <div class="src">${h.data ? h.data.slice(0, 16) : ""}</div></div>`).join("")}
+    </div>`).join("") : `<div style="color:var(--muted);font-size:12.5px">sem manchetes coletadas</div>`;
+}
+load();
+</script>
+</body>
+</html>

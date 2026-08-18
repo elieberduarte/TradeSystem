@@ -263,6 +263,31 @@ class Runner:
             except Exception as exc:  # noqa: BLE001 — um símbolo fora do ar não para o ciclo
                 print(f"  aviso: {symbol} sem atualização ({exc})")
         self._accumulate_b3_flow()
+        self._refresh_news_watch()
+
+    def _refresh_news_watch(self) -> None:
+        """Atualiza o buscador de notícias (CVM + RSS) para o painel.
+
+        Pesquisa, não operação: o PEAD ainda não está no runner como
+        estratégia — o feed mostra os sinais armados para leitura
+        humana até a decisão de carteira. Falha aqui não derruba o ciclo.
+        """
+        try:
+            import json
+            from src.bot.data.news_watch import build_feed, headlines, to_payload
+            root = self.journal_path.parent.parent
+            liquid_path = root / "data" / "liquid_universe.json"
+            if not liquid_path.exists():
+                return
+            liquid = json.loads(liquid_path.read_text(encoding="utf-8"))["symbols"]
+            tickers = [s for s in liquid if s[-2:] not in ("32", "33", "34", "35", "39")]
+            feed = build_feed(self.store, tickers, 10, root / "data" / "cvm")
+            watch = sorted({r.ticker for r in feed if r.tipo in ("resultado", "fato")})[:25]
+            payload = to_payload(feed, {t: headlines(t) for t in watch})
+            (root / "web" / "news_watch.json").write_text(
+                json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+        except Exception as exc:  # noqa: BLE001
+            print(f"  aviso: buscador de notícias não atualizado ({exc})")
 
     def _accumulate_b3_flow(self) -> None:
         """Acumula o fluxo oficial dos players (BDI) a cada ciclo.
