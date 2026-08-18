@@ -48,6 +48,28 @@ def book_imbalance(bids: np.ndarray, asks: np.ndarray, levels: int) -> float:
     return (b - a) / (b + a) if (b + a) > 0 else 0.0
 
 
+def classify_book(bid1: float, ask1: float, cross_limit: float = 0.005) -> str:
+    """O estado do book naquele instante — três realidades, não uma.
+
+    'continuo'  bid < ask: o pregão normal, onde imbalance faz sentido.
+    'leilao'    book CRUZADO por muito (ordens nos limites do túnel de
+                ±10%, quantidades agregadas gigantes). Em leilão as
+                ordens se cruzam de propósito: é assim que o preço
+                teórico de abertura é formado. Não é erro de leitura —
+                é outro mercado, e a métrica de desequilíbrio contínuo
+                não se aplica.
+    'cruzado'   bid ligeiramente acima do ask (< `cross_limit` do preço):
+                a leitura pegou o book no meio de uma atualização.
+                Descartável.
+    """
+    if ask1 > bid1:
+        return "continuo"
+    mid = (bid1 + ask1) / 2.0
+    if mid > 0 and (bid1 - ask1) / mid > cross_limit:
+        return "leilao"
+    return "cruzado"
+
+
 def lee_ready(last: np.ndarray, bid: np.ndarray, ask: np.ndarray,
               prev_side: int = 0) -> np.ndarray:
     """Lado agressor por negócio: +1 compra, −1 venda, 0 indefinido.
@@ -125,13 +147,19 @@ class FlowRecorder:
             return None
         bid_qty = np.array([b.volume for b in bids], dtype=float)
         ask_qty = np.array([a.volume for a in asks], dtype=float)
+        estado = classify_book(bids[0].price, asks[0].price)
+        # Imbalance só tem sentido no mercado contínuo: em leilão o book
+        # é cruzado por construção e as quantidades são agregados do
+        # leilão, não profundidade comparável.
+        contínuo = estado == "continuo"
         row = {
             "ts_ms": now_ms,
             "bid1": bids[0].price, "ask1": asks[0].price,
             "bid1_qty": bids[0].volume, "ask1_qty": asks[0].volume,
             "spread": asks[0].price - bids[0].price,
-            "imb_l1": book_imbalance(bid_qty, ask_qty, 1),
-            "imb_lk": book_imbalance(bid_qty, ask_qty, self.levels),
+            "estado": estado,
+            "imb_l1": book_imbalance(bid_qty, ask_qty, 1) if contínuo else float("nan"),
+            "imb_lk": book_imbalance(bid_qty, ask_qty, self.levels) if contínuo else float("nan"),
             "bid_depth_lk": float(bid_qty[:self.levels].sum()),
             "ask_depth_lk": float(ask_qty[:self.levels].sum()),
             "levels": min(len(bids), len(asks)),

@@ -48,3 +48,31 @@ def test_lee_ready_herda_lado_anterior_entre_chamadas():
 def test_cumulative_delta():
     ticks = pd.DataFrame({"volume": [10.0, 5.0, 20.0], "side": [1, -1, 1]})
     assert cumulative_delta(ticks).tolist() == [10.0, 5.0, 25.0]
+
+
+# ─────────────── Estados do book (leilão, cruzamento, contínuo) ───────────────
+
+from src.bot.data.flow_recorder import classify_book
+
+
+def test_book_continuo():
+    assert classify_book(169_760.0, 169_765.0) == "continuo"   # 1 tick de spread
+    assert classify_book(5_217.0, 5_217.5) == "continuo"
+
+
+def test_book_de_leilao_e_cruzado_por_muito():
+    # O caso real de 18/08: ordens nos limites do túnel de ±10%
+    assert classify_book(186_845.0, 152_880.0) == "leilao"
+    assert classify_book(5_500.0, 5_000.0) == "leilao"
+
+
+def test_cruzamento_momentaneo_nao_e_leilao():
+    # bid 1 tick acima do ask: leitura no meio de uma atualização
+    assert classify_book(169_810.0, 169_805.0) == "cruzado"
+    assert classify_book(169_760.0, 169_760.0) == "cruzado"    # iguais
+
+
+def test_limite_de_cruzamento_e_relativo_ao_preco():
+    # 0,5% de 170.000 = 850 pontos: abaixo disso é ruído de leitura
+    assert classify_book(170_400.0, 170_000.0) == "cruzado"
+    assert classify_book(171_000.0, 170_000.0) == "leilao"
