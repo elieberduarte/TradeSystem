@@ -138,3 +138,54 @@ def test_mapeamento_de_raizes():
     assert position_root("DI1F27", roots) == "DI1F27"
     assert position_root("T10U26", roots) == "T10"
     assert position_root("PETR4", roots) is None
+
+
+# ───────── Trava de sanidade do candle parcial (tarefa atrasada) ─────────
+
+class _StoreFake:
+    def __init__(self, frame): self.frame = frame
+    def load(self, symbol, timeframe): return self.frame
+    def update_from_broker(self, *a, **k): return self.frame
+
+
+class _BrokerFake:
+    def get_open_positions(self): return []
+    def realized_pnl(self, since_days): return 0.0
+    def get_balance(self): return 100_000.0
+    def is_demo(self): return True
+
+
+def _frame_com_candle_de_hoje(rompe_ontem: bool) -> pd.DataFrame:
+    """400 candles laterais; o penúltimo rompe (ou não) e o de HOJE não."""
+    import numpy as np
+    n = 400
+    base = 100.0
+    rows = [(base, base + 1, base - 1, base)] * n
+    if rompe_ontem:
+        rows[-2] = (base, base + 8, base, base + 7)     # rompimento ontem
+    rows[-1] = (base, base + 1, base - 1, base)          # hoje: parcial, sem sinal
+    idx = pd.date_range(end=pd.Timestamp.now().normalize(), periods=n, freq="B")
+    return pd.DataFrame(
+        {"open": [r[0] for r in rows], "high": [r[1] for r in rows],
+         "low": [r[2] for r in rows], "close": [r[3] for r in rows],
+         "volume": [1000.0] * n}, index=idx)
+
+
+def test_ciclo_antes_do_fechamento_descarta_candle_parcial(tmp_path, monkeypatch, capsys):
+    """Tarefa atrasada rodando de manhã não pode ler o candle de hoje."""
+    from src.bot.runner import Runner
+
+    frame = _frame_com_candle_de_hoje(rompe_ontem=True)
+    runner = Runner(_BrokerFake(), _StoreFake(frame),
+                    RunnerConfig(symbols=["WIN$N"], min_history=100),
+                    journal_path=tmp_path / "j.jsonl", status_path=tmp_path / "s.json")
+
+    # 8h03 da manhã, com include_today=True (o que a tarefa 'run' faz)
+    manha = datetime.now().replace(hour=8, minute=3, second=0, microsecond=0)
+    monkeypatch.setattr("src.bot.runner.datetime", type("D", (), {
+        "now": staticmethod(lambda: manha), "combine": datetime.combine,
+    }))
+    decisions = runner.cycle(execute=False, include_today=True)
+
+    assert "parcial" in capsys.readouterr().out          # avisou
+    assert any(d.action == "abrir" for d in decisions)   # achou o sinal de ontem

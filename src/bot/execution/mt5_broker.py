@@ -5,6 +5,7 @@ que ofereça B3 (XP, Clear, Rico, etc.), e o pacote `MetaTrader5` do pip.
 """
 
 import re
+import time
 from datetime import datetime, timedelta, timezone
 
 import pandas as pd
@@ -169,15 +170,29 @@ class MT5Broker(BrokerInterface):
             raise ConnectionError(f"Sem informação de conta: {mt5.last_error()}")
         return info.trade_mode == mt5.ACCOUNT_TRADE_MODE_DEMO
 
-    def last_price(self, symbol: str) -> float:
+    def last_price(self, symbol: str, timeout: float = 5.0) -> float:
+        """Último preço, esperando a assinatura do símbolo se preciso.
+
+        `symbol_select` cria a assinatura e o servidor só manda a
+        primeira cotação alguns décimos depois — perguntar no instante
+        zero devolve zeros. Foi o que derrubou a primeira ordem real do
+        bot (CCMU26, 19/08): símbolo recém-selecionado, tick zerado,
+        "mercado fechado" num mercado que estava aberto. Aqui a espera é
+        explícita e curta; se estourar, aí sim o mercado está fechado.
+        """
         self._ensure_symbol(symbol)
-        tick = mt5.symbol_info_tick(symbol)
-        price = (tick.last or tick.bid or tick.ask) if tick else 0.0
-        if not price:
-            # Mercado fechado (agro encerra ~16h): sem preço não há como
-            # ancorar stop/alvo — quem trata é a repesca da manhã
-            raise RuntimeError(f"Sem cotação para {symbol} (mercado fechado?)")
-        return price
+        deadline = time.monotonic() + timeout
+        while True:
+            tick = mt5.symbol_info_tick(symbol)
+            price = (tick.last or tick.bid or tick.ask) if tick else 0.0
+            if price:
+                return price
+            if time.monotonic() >= deadline:
+                raise RuntimeError(
+                    f"Sem cotação para {symbol} após {timeout:.0f}s "
+                    f"(mercado fechado ou símbolo sem negociação)"
+                )
+            time.sleep(0.25)
 
     def front_contract(self, root: str, min_days: int = 3) -> str:
         """Contrato vigente pelo vencimento real informado pelo terminal.

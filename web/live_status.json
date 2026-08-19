@@ -1,7 +1,28 @@
 {
- "atualizado": "2026-08-18T09:06:09",
- "executado": true,
+ "atualizado": "2026-08-19T11:17:32",
+ "executado": false,
  "saldo": 1000000.0,
  "posicoes": [],
- "decisoes": []
+ "decisoes": [
+  {
+   "action": "vetar",
+   "symbol": "ICF$N",
+   "reason": "sinal válido, mas risco/caixa não compram 1 contrato",
+   "side": "buy",
+   "quantity": 0,
+   "entry_ref": 420.0,
+   "stop_distance": 26.390521524341864,
+   "target_distance": 79.17156457302553
+  },
+  {
+   "action": "abrir",
+   "symbol": "CCM$N",
+   "reason": "rompimento do canal de 20 dias",
+   "side": "buy",
+   "quantity": 1,
+   "entry_ref": 71.5,
+   "stop_distance": 1.7330304780115569,
+   "target_distance": 5.199091434034685
+  }
+ ]
 }

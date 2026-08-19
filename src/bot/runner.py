@@ -22,7 +22,7 @@ real sem opt-in explícito no config.
 import json
 import re
 from dataclasses import asdict, dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time as _time, timedelta, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -35,6 +35,8 @@ from src.bot.strategies.donchian import DonchianStrategy
 from src.bot.universe import FUT_MARGIN, FUT_POINT_VALUE, FUTUROS, fut_block_of
 
 MONTH_CODE = r"[FGHJKMNQUVXZ]\d\d$"
+# Depois deste horário o candle diário já está formado (B3 encerra 17h)
+CLOSE_TIME = _time(17, 30)
 
 
 @dataclass
@@ -230,6 +232,16 @@ class Runner:
     def cycle(self, execute: bool = False, include_today: bool = True) -> list[Decision]:
         now = datetime.now()
         self._refresh_history()
+
+        # Trava de sanidade: o candle de hoje só vale DEPOIS do fechamento.
+        # Sem isso, uma tarefa atrasada (PC desligado às 17h40, Windows
+        # rodando o ciclo na manhã seguinte) leria um candle parcial como
+        # se fosse fechamento — foi o que aconteceu em 19/08, quando o
+        # ciclo das 8h03 perdeu o rompimento do milho do dia anterior.
+        if include_today and now.time() < CLOSE_TIME:
+            include_today = False
+            print(f"  aviso: ciclo rodando às {now:%H:%M} (antes do fechamento) — "
+                  f"o candle de hoje está parcial e foi descartado")
 
         candles = {}
         for symbol in self.config.symbols:
