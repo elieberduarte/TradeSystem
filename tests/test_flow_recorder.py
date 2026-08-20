@@ -76,3 +76,19 @@ def test_limite_de_cruzamento_e_relativo_ao_preco():
     # 0,5% de 170.000 = 850 pontos: abaixo disso é ruído de leitura
     assert classify_book(170_400.0, 170_000.0) == "cruzado"
     assert classify_book(171_000.0, 170_000.0) == "leilao"
+
+
+def test_cvd_ignora_leilao():
+    """Volume de leilão é acumulado, não negócio — não pode entrar no CVD."""
+    ticks = pd.DataFrame({
+        "volume": [20_770.0, 20_770.0, 10.0, 5.0],
+        "side": [1, 1, 1, -1],
+        "estado": ["leilao", "leilao", "continuo", "continuo"],
+    })
+    assert cumulative_delta(ticks).tolist() == [10.0, 5.0]
+
+
+def test_cvd_sem_coluna_estado_usa_tudo():
+    """Compatível com o acervo antigo (antes da classificação)."""
+    ticks = pd.DataFrame({"volume": [10.0, 5.0], "side": [1, -1]})
+    assert cumulative_delta(ticks).tolist() == [10.0, 5.0]

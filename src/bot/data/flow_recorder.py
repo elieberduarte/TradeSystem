@@ -189,10 +189,23 @@ class FlowRecorder:
         s = int(side[0])
         if s != 0:
             self._last_side[symbol] = s
+        # O estado importa tanto quanto no book: em LEILÃO o `last` é o
+        # preço teórico e `volume_real` é o ACUMULADO do leilão, repetido
+        # a cada leitura. Contá-lo como negócio inflou o CVD do WIN em
+        # 1,3 milhão de contratos no dia 18/08 — o volume do dia inteiro.
+        estado = classify_book(tick.bid, tick.ask)
         self._tick_rows[symbol].append({
-            "ts_ms": int(tick.time_msc), "last": float(tick.last),
+            # Duas bases de tempo, explícitas: o servidor carimba o
+            # horário de Brasília COMO SE fosse UTC, o que deixava a
+            # série de ticks 3h fora da do book. `ts_ms` é sempre o
+            # epoch UTC real do momento da captura — o mesmo relógio do
+            # book, para que as duas séries sejam cruzáveis.
+            "ts_ms": int(time.time() * 1000),
+            "ts_server_ms": int(tick.time_msc),
+            "last": float(tick.last),
             "bid": float(tick.bid), "ask": float(tick.ask),
-            "volume": float(tick.volume_real or tick.volume or 0.0), "side": s,
+            "volume": float(tick.volume_real or tick.volume or 0.0),
+            "side": s, "estado": estado,
         })
         self._last_tick_msc[symbol] = int(tick.time_msc)
         return 1
@@ -231,5 +244,12 @@ class FlowRecorder:
 
 
 def cumulative_delta(ticks: pd.DataFrame) -> pd.Series:
-    """CVD: soma acumulada de (volume × lado)."""
-    return (ticks["volume"] * ticks["side"]).cumsum()
+    """CVD: soma acumulada de (volume × lado), só no mercado contínuo.
+
+    Ticks de leilão carregam o volume ACUMULADO do leilão, não o de um
+    negócio — somá-los conta o mesmo volume dezenas de vezes.
+    """
+    frame = ticks
+    if "estado" in frame.columns:
+        frame = frame[frame["estado"] == "continuo"]
+    return (frame["volume"] * frame["side"]).cumsum()
