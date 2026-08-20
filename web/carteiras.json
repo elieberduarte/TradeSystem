@@ -1,0 +1,429 @@
+{
+ "atualizado": "2026-08-20T18:50:20",
+ "cdi_anual": 0.1415,
+ "carteiras": [
+  {
+   "nome": "Defensiva",
+   "perfil": "baixo",
+   "aporte": 20000.0,
+   "caixa": 105.7,
+   "valor_atual": 20000.0,
+   "resultado": 0.0,
+   "retorno_pct": 0.0,
+   "dias": 0,
+   "cdi_periodo_pct": 0.0,
+   "vs_cdi_pp": 0.0,
+   "posicoes": [
+    {
+     "ticker": "BBSE3",
+     "quantidade": 89,
+     "preco_entrada": 37.3,
+     "preco_atual": 37.3,
+     "valor_inicial": 3319.7,
+     "valor_atual": 3319.7,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "vol 18% a.a., beta 0.47, DY 11.7%, ROE 5a 84%, dív/PL 0.37"
+    },
+    {
+     "ticker": "ISAE4",
+     "quantidade": 130,
+     "preco_entrada": 25.63,
+     "preco_atual": 25.63,
+     "valor_inicial": 3331.9,
+     "valor_atual": 3331.9,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "vol 21% a.a., beta 0.83, DY 9.8%, ROE 5a 15%, dív/PL 0.75"
+    },
+    {
+     "ticker": "CMIG4",
+     "quantidade": 326,
+     "preco_entrada": 10.21,
+     "preco_atual": 10.21,
+     "valor_inicial": 3328.46,
+     "valor_atual": 3328.46,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "vol 23% a.a., beta 0.89, DY 18.2%, ROE 5a 21%, dív/PL 0.68"
+    },
+    {
+     "ticker": "ABEV3",
+     "quantidade": 227,
+     "preco_entrada": 14.62,
+     "preco_atual": 14.62,
+     "valor_inicial": 3318.74,
+     "valor_atual": 3318.74,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "vol 24% a.a., beta 0.65, DY 8.6%, ROE 5a 17%, dív/PL 0.04"
+    },
+    {
+     "ticker": "PETR4",
+     "quantidade": 78,
+     "preco_entrada": 42.45,
+     "preco_atual": 42.45,
+     "valor_inicial": 3311.1,
+     "valor_atual": 3311.1,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "vol 25% a.a., beta 0.50, DY 8.3%, ROE 5a 30%, dív/PL 0.92"
+    },
+    {
+     "ticker": "VALE3",
+     "quantidade": 46,
+     "preco_entrada": 71.4,
+     "preco_atual": 71.4,
+     "valor_inicial": 3284.4,
+     "valor_atual": 3284.4,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "vol 26% a.a., beta 0.82, DY 7.7%, ROE 5a 23%, dív/PL 0.55"
+    }
+   ],
+   "vol_realizada": null,
+   "pior_queda": null,
+   "dy_medio_estimado": 0.1072,
+   "descricao": "Blue chips de baixa volatilidade que pagam dividendo e lucram todo ano",
+   "criterios": [
+    "liquidez ≥ R$ 50 mi/dia",
+    "volatilidade no terço inferior",
+    "beta < 1",
+    "DY ≥ mediana",
+    "ROE 5a ≥ mediana",
+    "dívida ≤ mediana",
+    "lucrativa em todos os anos"
+   ]
+  },
+  {
+   "nome": "Qualidade",
+   "perfil": "medio",
+   "aporte": 20000.0,
+   "caixa": 89.55,
+   "valor_atual": 20000.0,
+   "resultado": 0.0,
+   "retorno_pct": 0.0,
+   "dias": 0,
+   "cdi_periodo_pct": 0.0,
+   "vs_cdi_pp": 0.0,
+   "posicoes": [
+    {
+     "ticker": "CURY3",
+     "quantidade": 62,
+     "preco_entrada": 32.12,
+     "preco_atual": 32.12,
+     "valor_inicial": 1991.44,
+     "valor_atual": 1991.44,
+     "retorno_pct": 0.0,
+     "resultado": -0.0,
+     "motivo": "ROE 5a 52%, P/L 9.5, vol 35%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "SAUD3",
+     "quantidade": 145,
+     "preco_entrada": 13.78,
+     "preco_atual": 13.78,
+     "valor_inicial": 1998.1,
+     "valor_atual": 1998.1,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "ROE 5a 50%, P/L 12.7, vol 32%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "PETR3",
+     "quantidade": 42,
+     "preco_entrada": 47.47,
+     "preco_atual": 47.47,
+     "valor_inicial": 1993.74,
+     "valor_atual": 1993.74,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "ROE 5a 30%, P/L 5.5, vol 28%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "CXSE3",
+     "quantidade": 111,
+     "preco_entrada": 17.95,
+     "preco_atual": 17.95,
+     "valor_inicial": 1992.45,
+     "valor_atual": 1992.45,
+     "retorno_pct": 0.0,
+     "resultado": -0.0,
+     "motivo": "ROE 5a 29%, P/L 12.6, vol 23%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "DIRR3",
+     "quantidade": 187,
+     "preco_entrada": 10.66,
+     "preco_atual": 10.66,
+     "valor_inicial": 1993.42,
+     "valor_atual": 1993.42,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "ROE 5a 28%, P/L 6.9, vol 36%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "CPFE3",
+     "quantidade": 48,
+     "preco_entrada": 41.18,
+     "preco_atual": 41.18,
+     "valor_inicial": 1976.64,
+     "valor_atual": 1976.64,
+     "retorno_pct": 0.0,
+     "resultado": -0.0,
+     "motivo": "ROE 5a 27%, P/L 8.7, vol 23%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "POMO4",
+     "quantidade": 488,
+     "preco_entrada": 4.09,
+     "preco_atual": 4.09,
+     "valor_inicial": 1995.92,
+     "valor_atual": 1995.92,
+     "retorno_pct": 0.0,
+     "resultado": -0.0,
+     "motivo": "ROE 5a 24%, P/L 4.2, vol 36%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "VIVA3",
+     "quantidade": 96,
+     "preco_entrada": 20.66,
+     "preco_atual": 20.66,
+     "valor_inicial": 1983.36,
+     "valor_atual": 1983.36,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "ROE 5a 22%, P/L 7.9, vol 38%, 4/4 anos lucrativa"
+    },
+    {
+     "ticker": "SBSP3",
+     "quantidade": 84,
+     "preco_entrada": 23.69,
+     "preco_atual": 23.69,
+     "valor_inicial": 1989.96,
+     "valor_atual": 1989.96,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "ROE 5a 19%, P/L 1.9, vol 26%, 3/3 anos lucrativa"
+    },
+    {
+     "ticker": "PSSA3",
+     "quantidade": 42,
+     "preco_entrada": 47.51,
+     "preco_atual": 47.51,
+     "valor_inicial": 1995.42,
+     "valor_atual": 1995.42,
+     "retorno_pct": 0.0,
+     "resultado": -0.0,
+     "motivo": "ROE 5a 17%, P/L 9.0, vol 24%, 4/4 anos lucrativa"
+    }
+   ],
+   "vol_realizada": null,
+   "pior_queda": null,
+   "dy_medio_estimado": 0.124,
+   "descricao": "Empresas rentáveis e consistentes a múltiplo razoável",
+   "criterios": [
+    "liquidez ≥ R$ 20 mi/dia",
+    "ROE 5a ≥ mediana",
+    "lucrativa em todos os anos",
+    "dívida ≤ 1,5× mediana",
+    "P/L positivo ≤ 3º quartil",
+    "volatilidade moderada"
+   ]
+  },
+  {
+   "nome": "Crescimento",
+   "perfil": "alto",
+   "aporte": 20000.0,
+   "caixa": 72.56,
+   "valor_atual": 20000.0,
+   "resultado": 0.0,
+   "retorno_pct": 0.0,
+   "dias": 0,
+   "cdi_periodo_pct": 0.0,
+   "vs_cdi_pp": 0.0,
+   "posicoes": [
+    {
+     "ticker": "AZZA3",
+     "quantidade": 133,
+     "preco_entrada": 14.95,
+     "preco_atual": 14.95,
+     "valor_inicial": 1988.35,
+     "valor_atual": 1988.35,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 41%, ROE 5a 11%, VM R$ 3.0 bi, vol 48%"
+    },
+    {
+     "ticker": "TTEN3",
+     "quantidade": 193,
+     "preco_entrada": 10.32,
+     "preco_atual": 10.32,
+     "valor_inicial": 1991.76,
+     "valor_atual": 1991.76,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 34%, ROE 5a 18%, VM R$ 5.0 bi, vol 38%"
+    },
+    {
+     "ticker": "PLPL3",
+     "quantidade": 291,
+     "preco_entrada": 6.85,
+     "preco_atual": 6.85,
+     "valor_inicial": 1993.35,
+     "valor_atual": 1993.35,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 30%, ROE 5a 39%, VM R$ 1.4 bi, vol 47%"
+    },
+    {
+     "ticker": "ECOR3",
+     "quantidade": 334,
+     "preco_entrada": 5.98,
+     "preco_atual": 5.98,
+     "valor_inicial": 1997.32,
+     "valor_atual": 1997.32,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 24%, ROE 5a 18%, VM R$ 4.0 bi, vol 48%"
+    },
+    {
+     "ticker": "GGPS3",
+     "quantidade": 172,
+     "preco_entrada": 11.59,
+     "preco_atual": 11.59,
+     "valor_inicial": 1993.48,
+     "valor_atual": 1993.48,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 23%, ROE 5a 20%, VM R$ 7.8 bi, vol 31%"
+    },
+    {
+     "ticker": "TFCO4",
+     "quantidade": 151,
+     "preco_entrada": 13.17,
+     "preco_atual": 13.17,
+     "valor_inicial": 1988.67,
+     "valor_atual": 1988.67,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 23%, ROE 5a 27%, VM R$ 2.0 bi, vol 31%"
+    },
+    {
+     "ticker": "JHSF3",
+     "quantidade": 192,
+     "preco_entrada": 10.39,
+     "preco_atual": 10.39,
+     "valor_inicial": 1994.88,
+     "valor_atual": 1994.88,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 22%, ROE 5a 16%, VM R$ 7.3 bi, vol 37%"
+    },
+    {
+     "ticker": "GMAT3",
+     "quantidade": 506,
+     "preco_entrada": 3.95,
+     "preco_atual": 3.95,
+     "valor_inicial": 1998.7,
+     "valor_atual": 1998.7,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 21%, ROE 5a 14%, VM R$ 9.1 bi, vol 37%"
+    },
+    {
+     "ticker": "VTRU3",
+     "quantidade": 157,
+     "preco_entrada": 12.67,
+     "preco_atual": 12.67,
+     "valor_inicial": 1989.19,
+     "valor_atual": 1989.19,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 20%, ROE 5a 8%, VM R$ 1.7 bi, vol 51%"
+    },
+    {
+     "ticker": "DESK3",
+     "quantidade": 106,
+     "preco_entrada": 18.79,
+     "preco_atual": 18.79,
+     "valor_inicial": 1991.74,
+     "valor_atual": 1991.74,
+     "retorno_pct": 0.0,
+     "resultado": 0.0,
+     "motivo": "CAGR receita 20%, ROE 5a 7%, VM R$ 2.5 bi, vol 50%"
+    }
+   ],
+   "vol_realizada": null,
+   "pior_queda": null,
+   "dy_medio_estimado": 0.0599,
+   "descricao": "Small caps que crescem receita COM lucro — não crescimento a qualquer preço",
+   "criterios": [
+    "liquidez ≥ R$ 5 mi/dia",
+    "valor de mercado ≤ R$ 10 bi",
+    "CAGR de receita ≥ 15%",
+    "lucrativa (o filtro que separa de loteria)",
+    "sem exigir dividendo"
+   ]
+  },
+  {
+   "nome": "Índice (BOVA11)",
+   "perfil": "referencia",
+   "aporte": 20000.0,
+   "caixa": 5.42,
+   "valor_atual": 20000.0,
+   "resultado": -0.0,
+   "retorno_pct": -0.0,
+   "dias": 0,
+   "cdi_periodo_pct": 0.0,
+   "vs_cdi_pp": -0.0,
+   "posicoes": [
+    {
+     "ticker": "BOVA11",
+     "quantidade": 122,
+     "preco_entrada": 163.89,
+     "preco_atual": 163.89,
+     "valor_inicial": 19994.58,
+     "valor_atual": 19994.58,
+     "retorno_pct": 0.0,
+     "resultado": -0.0,
+     "motivo": "benchmark de renda variável"
+    }
+   ],
+   "vol_realizada": null,
+   "pior_queda": null,
+   "dy_medio_estimado": 0.0,
+   "descricao": "O mercado inteiro num papel — a régua que qualquer carteira precisa bater",
+   "criterios": [
+    "ETF do Ibovespa",
+    "peso único"
+   ]
+  }
+ ],
+ "historico": [
+  {
+   "data": "2026-08-20",
+   "carteira": "Defensiva",
+   "valor": 20000.0,
+   "retorno_pct": 0.0
+  },
+  {
+   "data": "2026-08-20",
+   "carteira": "Qualidade",
+   "valor": 20000.0,
+   "retorno_pct": 0.0
+  },
+  {
+   "data": "2026-08-20",
+   "carteira": "Crescimento",
+   "valor": 20000.0,
+   "retorno_pct": 0.0
+  },
+  {
+   "data": "2026-08-20",
+   "carteira": "Índice (BOVA11)",
+   "valor": 20000.0,
+   "retorno_pct": -0.0
+  }
+ ]
+}

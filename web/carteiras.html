@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carteiras por perfil — TradeSystem</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --border:rgba(11,11,11,.10); --chip:#f0efec;
+    --good:#006300; --bad:#d03b3b; --accent:#2a78d6;
+    --baixo:#1baf7a; --medio:#eda100; --alto:#d03b3b; --ref:#6b7c93;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark; --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink-2:#c3c2b7;
+      --muted:#898781; --grid:#2c2c2a; --border:rgba(255,255,255,.10); --chip:#383835;
+      --good:#0ca30c; --bad:#e66767; --accent:#3987e5;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark; --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink-2:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --border:rgba(255,255,255,.10); --chip:#383835;
+    --good:#0ca30c; --bad:#e66767; --accent:#3987e5;
+  }
+  * { box-sizing:border-box; margin:0 }
+  body { background:var(--page); color:var(--ink); padding:16px; max-width:1200px; margin:0 auto;
+         font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif }
+  h1 { font-size:21px; margin-bottom:4px } h2 { font-size:15px; margin-bottom:6px }
+  .lead { color:var(--ink-2); margin-bottom:14px; font-size:13.5px }
+  a { color:var(--accent); text-decoration:none } a:hover { text-decoration:underline }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+          padding:14px 16px; margin-bottom:12px }
+  .sub { color:var(--muted); font-size:12.5px; margin-bottom:10px }
+  .banner { background:var(--chip); border:1px dashed var(--grid); border-radius:10px;
+            padding:9px 14px; font-size:12.5px; color:var(--ink-2); margin-bottom:14px }
+  .banner.warn { border-color:var(--bad); border-style:solid }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-bottom:12px }
+  .pf { border-top:3px solid var(--ref) }
+  .pf.baixo { border-color:var(--baixo) } .pf.medio { border-color:var(--medio) } .pf.alto { border-color:var(--alto) }
+  .pf .nome { font-size:16px; font-weight:700 }
+  .pf .valor { font-size:26px; font-weight:700; margin:4px 0; font-variant-numeric:tabular-nums }
+  .kv { display:flex; justify-content:space-between; font-size:12.5px; padding:3px 0; color:var(--ink-2) }
+  .kv b { color:var(--ink); font-variant-numeric:tabular-nums }
+  table { width:100%; border-collapse:collapse; font-size:12.5px }
+  th { text-align:right; color:var(--muted); font-size:11px; text-transform:uppercase;
+       letter-spacing:.04em; padding:5px 8px; border-bottom:1px solid var(--grid) }
+  th:first-child, td:first-child { text-align:left }
+  td { padding:5px 8px; border-bottom:1px solid var(--grid); text-align:right; font-variant-numeric:tabular-nums }
+  tr:last-child td { border-bottom:none }
+  .pos { color:var(--good); font-weight:700 } .neg { color:var(--bad); font-weight:700 }
+  .tag { font-size:10.5px; font-weight:700; padding:1px 8px; border-radius:999px; color:#fff }
+  .tag.baixo { background:var(--baixo) } .tag.medio { background:var(--medio) }
+  .tag.alto { background:var(--alto) } .tag.referencia { background:var(--ref) }
+  .scroll-x { overflow-x:auto }
+  svg { display:block; width:100%; height:auto }
+  .legend { display:flex; flex-wrap:wrap; gap:14px; font-size:12px; color:var(--ink-2); margin:6px 0 }
+  .legend span { display:inline-flex; align-items:center; gap:6px }
+  .sw { width:14px; height:3px; border-radius:2px }
+  .crit { font-size:11.5px; color:var(--muted); margin-top:6px }
+</style>
+</head>
+<body>
+
+<h1>📊 Carteiras por perfil de risco</h1>
+<p class="lead">
+  Três carteiras de R$ 20 mil montadas por critérios clássicos, mais o índice como régua.
+  <a href="index.html">← voltar ao painel</a>
+</p>
+
+<div class="banner">
+  <b>Retorno TOTAL, não só preço.</b> A série de preços do MT5 é ajustada por proventos — a valorização
+  medida <b>já inclui dividendos e JCP reinvestidos</b>. Somá-los por fora seria contar duas vezes;
+  o "DY médio" abaixo mostra apenas quanto do retorno tende a vir de distribuição.
+</div>
+
+<div class="cards" id="cards"></div>
+
+<div class="card">
+  <h2>Composição</h2>
+  <div class="sub">Pesos iguais (1/N), lotes inteiros — o que não coube virou caixa, como na corretora</div>
+  <div id="composicao"></div>
+</div>
+
+<div class="card">
+  <h2>Simulação retroativa · 3 anos</h2>
+  <div class="banner warn" style="margin-bottom:10px">
+    ⚠️ <b>O retorno aqui é otimista por construção.</b> Os papéis foram escolhidos com dados de hoje:
+    empresas que existem, são líquidas e têm bons fundamentos <i>agora</i>. Isso é viés de sobrevivência
+    e look-ahead somados — as que quebraram no caminho nunca entram. <b>Use esta tabela para comparar
+    RISCO</b> (volatilidade, quedas, correlação), que depende da natureza dos papéis e não de quais
+    foram escolhidos. A medição limpa é a que começou hoje, no card acima.
+  </div>
+  <div class="scroll-x"><table>
+    <thead><tr><th>Carteira</th><th>Retorno a.a.</th><th>Volatilidade</th><th>Pior queda</th>
+      <th>Pior mês</th><th>Calmar</th><th>Sharpe vs CDI</th></tr></thead>
+    <tbody id="retro"></tbody>
+  </table></div>
+  <div class="legend" id="legenda"></div>
+  <svg id="curvas" viewBox="0 0 1140 320"></svg>
+</div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const brl = v => "R$ " + v.toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2});
+const pct = (v, d=1) => v === null || v === undefined ? "—"
+  : `<span class="${v >= 0 ? "pos" : "neg"}">${(v*100).toFixed(d)}%</span>`;
+const CORES = {baixo:"var(--baixo)", medio:"var(--medio)", alto:"var(--alto)", referencia:"var(--ref)"};
+
+async function load() {
+  const atual = await fetch("carteiras.json", {cache:"no-store"}).then(r => r.json()).catch(() => null);
+  const retro = await fetch("carteiras_retroativo.json", {cache:"no-store"}).then(r => r.json()).catch(() => null);
+  if (!atual) { document.body.insertAdjacentHTML("beforeend",
+      "<div class='card'>Rode <code>python scripts/build_carteiras.py</code> e <code>track_carteiras.py</code>.</div>"); return; }
+
+  $("cards").innerHTML = atual.carteiras.map(c => `
+    <div class="card pf ${c.perfil}">
+      <div class="nome">${c.nome} <span class="tag ${c.perfil}">${c.perfil}</span></div>
+      <div class="valor">${brl(c.valor_atual)}</div>
+      <div class="kv"><span>Retorno</span><b>${pct(c.retorno_pct, 2)}</b></div>
+      <div class="kv"><span>vs CDI no período</span><b>${pct(c.vs_cdi_pp, 2)}</b></div>
+      <div class="kv"><span>Volatilidade realizada</span><b>${c.vol_realizada === null ? "—" : (c.vol_realizada*100).toFixed(1)+"%"}</b></div>
+      <div class="kv"><span>Pior queda</span><b>${c.pior_queda === null ? "—" : (c.pior_queda*100).toFixed(1)+"%"}</b></div>
+      <div class="kv"><span>DY médio (estimado)</span><b>${(c.dy_medio_estimado*100).toFixed(1)}%</b></div>
+      <div class="kv"><span>Papéis / caixa</span><b>${c.posicoes.length} / ${brl(c.caixa)}</b></div>
+      <div class="crit">${c.descricao}</div>
+    </div>`).join("");
+
+  $("composicao").innerHTML = atual.carteiras.map(c => `
+    <div style="margin-bottom:14px">
+      <b>${c.nome}</b> <span class="tag ${c.perfil}">${c.perfil}</span>
+      <div class="crit">critérios: ${c.criterios.join(" · ")}</div>
+      <div class="scroll-x"><table>
+        <thead><tr><th>Papel</th><th>Qtd</th><th>Entrada</th><th>Atual</th><th>Valor</th>
+          <th>Retorno</th><th style="text-align:left">Por que entrou</th></tr></thead>
+        <tbody>${c.posicoes.map(p => `<tr>
+          <td><b>${p.ticker}</b></td><td>${p.quantidade}</td><td>${p.preco_entrada.toFixed(2)}</td>
+          <td>${p.preco_atual.toFixed(2)}</td><td>${brl(p.valor_atual)}</td><td>${pct(p.retorno_pct, 2)}</td>
+          <td style="text-align:left;color:var(--muted);font-size:11.5px">${p.motivo || "—"}</td>
+        </tr>`).join("")}</tbody>
+      </table></div>
+    </div>`).join("");
+
+  if (!retro) return;
+  $("retro").innerHTML = retro.estatisticas.map(s => `<tr>
+    <td><b>${s.carteira}</b> <span class="tag ${s.perfil}">${s.perfil}</span></td>
+    <td>${pct(s.cagr)}</td><td>${(s.vol*100).toFixed(1)}%</td>
+    <td class="neg">${(s.drawdown*100).toFixed(1)}%</td><td class="neg">${(s.pior_mes*100).toFixed(1)}%</td>
+    <td>${s.calmar.toFixed(2)}</td><td>${s.sharpe_cdi.toFixed(2)}</td></tr>`).join("")
+    + `<tr><td><b>CDI</b></td><td>${pct(0.1415)}</td><td>0,0%</td><td>0,0%</td><td>0,0%</td><td>—</td><td>—</td></tr>`;
+
+  const curvas = retro.curvas, nomes = Object.keys(curvas);
+  const perfilDe = {}; retro.estatisticas.forEach(s => perfilDe[s.carteira] = s.perfil);
+  $("legenda").innerHTML = nomes.map(n =>
+    `<span><span class="sw" style="background:${CORES[perfilDe[n]]}"></span>${n}</span>`).join("");
+
+  const W=1140, H=320, m={t:12,r:14,b:24,l:52};
+  const todos = nomes.flatMap(n => curvas[n].map(p => p.v));
+  const yMin = Math.min(...todos)*0.98, yMax = Math.max(...todos)*1.02;
+  const n0 = Math.max(...nomes.map(n => curvas[n].length));
+  const x = i => m.l + (i/(n0-1))*(W-m.l-m.r);
+  const y = v => m.t + (1-(v-yMin)/(yMax-yMin))*(H-m.t-m.b);
+  let el = "";
+  for (let s=0; s<=4; s++) { const v = yMin+(s/4)*(yMax-yMin);
+    el += `<line x1="${m.l}" y1="${y(v)}" x2="${W-m.r}" y2="${y(v)}" stroke="var(--grid)"/>
+           <text x="${m.l-6}" y="${y(v)+4}" text-anchor="end" font-size="10" fill="var(--muted)">${v.toFixed(2)}x</text>`; }
+  nomes.forEach(nome => {
+    const pts = curvas[nome].map((p,i) => (i?"L":"M")+x(i).toFixed(1)+" "+y(p.v).toFixed(1)).join(" ");
+    el += `<path d="${pts}" fill="none" stroke="${CORES[perfilDe[nome]]}" stroke-width="2"/>`;
+  });
+  const primeira = curvas[nomes[0]];
+  el += `<text x="${m.l}" y="${H-6}" font-size="10" fill="var(--muted)">${primeira[0].d}</text>
+         <text x="${W-m.r}" y="${H-6}" font-size="10" fill="var(--muted)" text-anchor="end">${primeira[primeira.length-1].d}</text>`;
+  $("curvas").innerHTML = el;
+}
+load();
+</script>
+</body>
+</html>

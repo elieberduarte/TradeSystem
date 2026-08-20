@@ -21,6 +21,7 @@ real sem opt-in explícito no config.
 
 import json
 import re
+import sys
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, time as _time, timedelta, timezone
 from pathlib import Path
@@ -276,6 +277,23 @@ class Runner:
                 print(f"  aviso: {symbol} sem atualização ({exc})")
         self._accumulate_b3_flow()
         self._refresh_news_watch()
+        self._track_carteiras()
+
+    def _track_carteiras(self) -> None:
+        """Registra o valor das carteiras teóricas do dia (pesquisa).
+
+        Um ponto por dia por carteira — a comparação entre perfis só
+        vira evidência com série. Falha aqui nunca derruba o ciclo.
+        """
+        try:
+            import subprocess
+            root = self.journal_path.parent.parent
+            if not (root / "data" / "carteiras.json").exists():
+                return
+            subprocess.run([sys.executable, str(root / "scripts" / "track_carteiras.py")],
+                           cwd=root, capture_output=True, timeout=300)
+        except Exception as exc:  # noqa: BLE001
+            print(f"  aviso: carteiras não acompanhadas neste ciclo ({exc})")
 
     def _refresh_news_watch(self) -> None:
         """Atualiza o buscador de notícias (CVM + RSS) para o painel.
